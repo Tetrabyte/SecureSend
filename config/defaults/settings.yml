@@ -19,8 +19,8 @@
 # Environment variable override:
 # PWP__ENABLE_URL_PUSHES='false'
 #
-enable_url_pushes: false
-
+enable_url_pushes: true
+ 
 ### File Uploads
 #
 # File uploads are disabled by default since they require a place to store
@@ -109,7 +109,7 @@ host_protocol: 'https'
 #
 # Set this value without a trailing slash ('/').
 #
- override_base_url: 'https://securesend.remoteit.co.uk'
+override_base_url: 'https://securesend.remoteit.co.uk'
 
 ## Expiration Settings for Password Pushes
 #
@@ -123,7 +123,7 @@ pw:
   # PWP__PW__EXPIRE_AFTER_DAYS_MIN=1
   # PWP__PW__EXPIRE_AFTER_DAYS_MAX=90
   #
-  expire_after_days_default: 14
+  expire_after_days_default: 7
   expire_after_days_min: 1
   expire_after_days_max: 90
 
@@ -136,9 +136,9 @@ pw:
   # PWP__PW__EXPIRE_AFTER_VIEWS_MIN=1
   # PWP__PW__EXPIRE_AFTER_VIEWS_MAX=100
   #
-  expire_after_views_default: 20
+  expire_after_views_default: 5
   expire_after_views_min: 1
-  expire_after_views_max: 50
+  expire_after_views_max: 100
 
   # Retrieval Step for Password Pushes
   #
@@ -238,7 +238,7 @@ url:
   # Environment variable override:
   # PWP__URL__RETRIEVAL_STEP_DEFAULT='true'
   #
-  retrieval_step_default: false
+  retrieval_step_default: true
 
 ### File Upload: Expiration & Storage Settings
 #
@@ -320,7 +320,7 @@ files:
 
   # File Storage
   #
-  # Tbyte Secure Send can store uploaded files into Amazon S3, Google Cloud Services
+  # Password Pusher can store uploaded files into Amazon S3, Google Cloud Services
   # or Microsoft Azure.
   #
   # Choose your file storage preference by setting the following option to
@@ -365,7 +365,6 @@ files:
     storage_access_key: ''
     # Environment Variable Override: PWP__FILES__AS__CONTAINER=''
     container: ''
-
 
 ### Password Generator Defaults
 #
@@ -440,7 +439,7 @@ brand:
   #
   # Environment variable override: PWP__BRAND__TITLE='Acme Corp.'
   #
- title: 'Tbyte Secure Send'
+  title: 'Tbyte Secure Send'
 
   ### Site Tagline
   #

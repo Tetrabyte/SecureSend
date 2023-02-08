@@ -1,6 +1,6 @@
 Apipie.configure do |config|
   config.app_name                = "Tbyte Secure Send"
-  config.copyright               = "&copy; <?php echo date("Y"); ?> Tetrabyte"
+  config.copyright               = "&copy; 2023 Tetrabyte"
   config.api_base_url            = ""
   config.doc_base_url            = "/api"
   config.api_controllers_matcher = "#{Rails.root}/app/controllers/**/*.rb"
