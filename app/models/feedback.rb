@@ -19,7 +19,7 @@ class Feedback < MailForm::Base
     if Settings.brand.title
       headers[:subject] = Settings.brand.title + ' Feedback'
     else
-      headers[:subject] = _('Password Pusher Feedback')
+      headers[:subject] = _('Tbyte Secure Send Feedback')
     end
 
     headers

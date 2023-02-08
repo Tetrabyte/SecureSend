@@ -49,7 +49,7 @@ enable_file_pushes: false
 # Environment variable override:
 # PWP__ENABLE_LOGINS='false'
 #
-enable_logins: false
+enable_logins: true
 
 ## Disable Signups
 #
@@ -61,11 +61,11 @@ enable_logins: false
 # Environment variable override:
 # PWP__DISABLE_SIGNUPS='false'
 #
-disable_signups: false
+disable_signups: true
 
 ### Allow Anonymous
 #
-# By default, Password Pusher can be used by anonymous users to push
+# By default, Tbyte Secure Send can be used by anonymous users to push
 # new passwords and generate secret URLs.  If you want to limit functionality
 # to logged in  users only, set the following value to true.
 #
@@ -85,7 +85,7 @@ allow_anonymous: true
 # Environment variable override:
 # PWP__HOST_DOMAIN='pwpush.com'
 #
-# host_domain: 'pwpush.com'
+host_domain: 'securesend.remoteit.co.uk'
 
 ### Host Protocol
 #
@@ -109,7 +109,7 @@ host_protocol: 'https'
 #
 # Set this value without a trailing slash ('/').
 #
-# override_base_url: 'https://pwpush.mydomain.com'
+ override_base_url: 'https://securesend.remoteit.co.uk'
 
 ## Expiration Settings for Password Pushes
 #
@@ -123,7 +123,7 @@ pw:
   # PWP__PW__EXPIRE_AFTER_DAYS_MIN=1
   # PWP__PW__EXPIRE_AFTER_DAYS_MAX=90
   #
-  expire_after_days_default: 7
+  expire_after_days_default: 14
   expire_after_days_min: 1
   expire_after_days_max: 90
 
@@ -136,9 +136,9 @@ pw:
   # PWP__PW__EXPIRE_AFTER_VIEWS_MIN=1
   # PWP__PW__EXPIRE_AFTER_VIEWS_MAX=100
   #
-  expire_after_views_default: 5
+  expire_after_views_default: 20
   expire_after_views_min: 1
-  expire_after_views_max: 100
+  expire_after_views_max: 50
 
   # Retrieval Step for Password Pushes
   #
@@ -160,7 +160,7 @@ pw:
   # Environment variable override:
   # PWP__PW__RETRIEVAL_STEP_DEFAULT='true'
   #
-  retrieval_step_default: false
+  retrieval_step_default: true
 
   # Deletable Password Pushes
   #
@@ -320,7 +320,7 @@ files:
 
   # File Storage
   #
-  # Password Pusher can store uploaded files into Amazon S3, Google Cloud Services
+  # Tbyte Secure Send can store uploaded files into Amazon S3, Google Cloud Services
   # or Microsoft Azure.
   #
   # Choose your file storage preference by setting the following option to
@@ -440,7 +440,7 @@ brand:
   #
   # Environment variable override: PWP__BRAND__TITLE='Acme Corp.'
   #
-  # title: 'Password Pusher'
+ title: 'Tbyte Secure Send'
 
   ### Site Tagline
   #
@@ -452,7 +452,7 @@ brand:
   #
   # Environment variable override: PWP__BRAND__SHOW_FOOTER_MENU='true'
   #
-  show_footer_menu: true
+  show_footer_menu: false
 
   ### Site logo
   #
@@ -558,28 +558,10 @@ throttling:
 # https://guides.rubyonrails.org/action_mailer_basics.html#action-mailer-configuration
 #
 mail:
-  # Email delivery errors will be shown in the application
-  # Environment Variable Override: PWP__MAIL__RAISE_DELIVERY_ERRORS='false'
-  raise_delivery_errors: false
-
-  # Allows you to use a remote mail server. Just change it from its default "localhost" setting.
-  # Environment Variable Override: PWP__MAIL__SMTP_ADDRESS='smtp.example.com'
-  # smtp_address: smtp.example.com
-
-  # If your mail server requires authentication, set the username in this setting.
-  # Environment Variable Override: PWP__MAIL__SMTP_USER_NAME='apikey'
-  # smtp_user_name: 'apikey'
-
-  # If your mail server requires authentication, set the password in this setting.
-  # Environment Variable Override: PWP__MAIL__SMTP_PASSWORD='something@&#$'
-  # smtp_password: ''
-
-  # If you need to specify a HELO domain, you can do it here.
-  # Environment Variable Override: PWP__MAIL__SMTP_DOMAIN='xyz.dev'
-  # smtp_domain: ''
-
-  # Port of the SMTP server
-  # Environment Variable Override: PWP__MAIL__SMTP_PORT='587'
+  raise_delivery_errors: true
+  smtp_address: server4.tetrabyte.com
+  smtp_user_name: 'no-reply@remoteit.co.uk'
+  smtp_password: ''
   smtp_port: 587
 
   # If your mail server requires authentication, you need to specify the
@@ -615,8 +597,7 @@ mail:
 
   # Configure the e-mail address which will be shown as 'From' in emails
   # See config/initializers/devise.rb where this is used
-  # Environment Variable Override: PWP__MAIL__MAILER_SENDER='"Password Pusher" <pglombardo@pwpush.com>'
-  # mailer_sender: '"Password Pusher" <pglombardo@pwpush.com>'
+  mailer_sender: '"Tbyte Secure Send" <support@remoteit.co.uk>'
 
 ### Feedback Form
 feedback:
@@ -624,7 +605,7 @@ feedback:
   # Feedback form.
   #
   # Environment Variable Override: PWP__FEEDBACK__EMAIL='my@email.com'
-  email: 'feedback@pwpush.com'
+  email: 'support@tbyte.com'
 
 ### Docker Precompilation
 #
@@ -633,7 +614,7 @@ feedback:
 # This is useful if you modified the assets (e.g. CSS, JS, images) to customize
 # the theme etc...  Assets are precompiled before serving.
 #
-# precompile: false
+precompile: true
 
 ### Language & Internationalization
 #

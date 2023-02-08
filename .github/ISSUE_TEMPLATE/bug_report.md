@@ -24,7 +24,7 @@ Steps to reproduce the behavior:
 
 ### Environment
 
-Where are you running/using Password Pusher?
+Where are you running/using Tbyte Secure Send?
 
 - [ ] pwpush.com
 - [ ] Docker
@@ -40,7 +40,7 @@ Where are you running/using Password Pusher?
 - [ ] Source Code
 - [ ] Other (please specify)
 
-If applicable, what version of Password Pusher?
+If applicable, what version of Tbyte Secure Send?
 
 ### Screenshots
 

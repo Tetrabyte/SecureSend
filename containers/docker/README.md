@@ -1,4 +1,4 @@
-# Password Pusher & Docker Containers
+# Tbyte Secure Send & Docker Containers
 
 ## Container Types
 
@@ -33,7 +33,7 @@ For a quick boot of a database backed application, see the available Docker Comp
 
 This is a single container that runs independently using sqlite3 with no persistent storage (if you recreate the container the data is lost); best if don't care too much about the data and and looking for simplicity in deployment.
 
-To run an ephemeral version of Password Pusher that saves no data after a container restart:
+To run an ephemeral version of Tbyte Secure Send that saves no data after a container restart:
 `docker run -p "8000:5100" pglombardo/pwpush-ephemeral:latest`
 
 _This example is set to listen on port 8000 for requests e.g. http://0.0.0.0:8000._

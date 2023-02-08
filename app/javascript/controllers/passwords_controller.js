@@ -12,8 +12,9 @@ export default class extends Controller {
     }
 
     connect() {
-        spoilerAlert('spoiler, .spoiler', {max: 10, partial: 4});
+        spoilerAlert('spoiler, .spoiler', {max: 0, partial: 0});
     }
+    document.addEventListener("DOMContentLoaded", ready);
 
     updateCharacterCount(event) {
         let characterCount = this.payloadInputTarget.value.length;
