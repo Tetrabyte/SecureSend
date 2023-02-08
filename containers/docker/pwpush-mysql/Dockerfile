@@ -1,7 +1,7 @@
 # pwpush-mysql
 FROM ruby:3.2-slim AS build-env
 
-LABEL maintainer='pglombardo@hey.com'
+LABEL maintainer='support@tbyte.com'
 
 RUN apt-get update && apt-get install -y curl ca-certificates gnupg
 
@@ -45,7 +45,7 @@ RUN rm -rf node_modules tmp/cache vendor/assets spec \
 
 FROM ruby:3.2-slim
 
-LABEL maintainer='pglombardo@hey.com'
+LABEL maintainer='support@tbyte.com'
 
 # install packages
 RUN apt-get update \
