@@ -1,5 +1,8 @@
 <div class="container h-100">
     <div class="d-flex flex-column min-vh-100 justify-content-center align-items-center">
-        <p> <%=link_to _("Click Here to Proceed"), @secret_url %> </p>
+        <center><p>Tetrabyte are now using this system to send sensitive information to clients. </br>
+            Data stored in this system is deleted after a set period of time and/or a maximum number of views. </br>
+            This means that sensitive information is no longer left in emails or tickets and your data is secure. </p></center>
+        <p> <%=link_to _("Click here to view the information"), @secret_url, class: "btn btn-primary" %> </p>
     </div>
 </div>
