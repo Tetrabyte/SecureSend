@@ -521,28 +521,28 @@ throttling:
   # Default: 1000
   #
   # Environment Variable Override: PWP__THROTTLING__DAILY='1000'
-  daily: 1000
+  daily: 10000
 
   # ..maximum number of allowed HTTP requests per hour
   #
   # Default: 100
   #
   # Environment Variable Override: PWP__THROTTLING__HOURLY='100'
-  hourly: 100
+  hourly: 1000
 
   # ..maximum number of allowed HTTP requests per minute
   #
   # Default: 30
   #
   # Environment Variable Override: PWP__THROTTLING__MINUTE='30'
-  minute: 30
+  minute: 300
 
   # ..maximum number of allowed HTTP requests per second
   #
   # Default: 2
   #
   # Environment Variable Override: PWP__THROTTLING__SECOND='2'
-  second: 2
+  second: 20
 
 
 ### Mail Server Configuration
