@@ -158,10 +158,10 @@ msgstr "Virheellinen URL-osoite: Täytyy olla kelvollinen URI-malli."
 #: ../../../app/views/layouts/login.html.erb:8
 #: ../../../app/views/layouts/naked.html.erb:8
 msgid ""
-"Password Pusher is an application to securely send passwords over the web. Lin"
+"Tbyte Secure Send is an application to securely send passwords over the web. Lin"
 "ks to passwords expire after a certain number of views and/or time has passed."
 msgstr ""
-"Password Pusher on sovellus salasanojen välittämiseen verkossa. Linkit salasan"
+"Tbyte Secure Send on sovellus salasanojen välittämiseen verkossa. Linkit salasan"
 "oihin vanhenevat, kun tietty määrä näyttökertoja ja/tai aikaa on kulunut."
 
 #: ../../../app/views/devise/mailer/confirmation_instructions.html.erb:24
@@ -1382,19 +1382,19 @@ msgstr ""
 "Tbyte Secure Send on sovellus salasanojen välittämiseen verkossa. Linkit salasan"
 "oihin vanhenevat, kun tietty määrä näyttökertoja ja/tai aikaa on kulunut."
 =======
-"Password Pusher is a tool used for sharing passwords and other sensitive infor"
+"Tbyte Secure Send is a tool used for sharing passwords and other sensitive infor"
 "mation with other people securely."
 msgstr ""
-"Password Pusher on työkalu salasanojen ja muiden arkaluonteisten tietojen jaka"
+"Tbyte Secure Send on työkalu salasanojen ja muiden arkaluonteisten tietojen jaka"
 "miseen muiden ihmisten kanssa turvallisesti."
 
 #: ../../../app/views/pages/about.html.erb:10
 msgid ""
-"With Password Pusher, you can create a unique, one-time URL that will expire a"
+"With Tbyte Secure Send, you can create a unique, one-time URL that will expire a"
 "fter a certain amount of time or after it has been accessed a certain number o"
 "f times, ensuring that your information remains private and secure."
 msgstr ""
-"Password Pusherin avulla voit luoda ainutlaatuisen, kertaluonteisen URL-osoitt"
+"Tbyte Secure Sendin avulla voit luoda ainutlaatuisen, kertaluonteisen URL-osoitt"
 "een, joka vanhenee tietyn ajan kuluttua tai sen jälkeen, kun sitä on käytetty "
 "tietyn määrän kertoja, mikä varmistaa, että tietosi pysyvät yksityisinä ja tur"
 "vassa."
@@ -1411,10 +1411,10 @@ msgstr ""
 
 #: ../../../app/views/pages/about.html.erb:14
 msgid ""
-"Password Pusher is a simple and convenient solution for securely sharing passw"
+"Tbyte Secure Send is a simple and convenient solution for securely sharing passw"
 "ords without the need for email or other less secure communication methods."
 msgstr ""
-"Password Pusher on yksinkertainen ja kätevä ratkaisu salasanojen turvalliseen "
+"Tbyte Secure Send on yksinkertainen ja kätevä ratkaisu salasanojen turvalliseen "
 "jakamiseen ilman sähköpostia tai muita vähemmän turvallisia viestintätapoja."
 
 #: ../../../app/views/pages/about.html.erb:17
@@ -1494,8 +1494,8 @@ msgid "Star the Github project"
 msgstr "Tähditä Github-projekti"
 
 #: ../../../app/views/pages/about.html.erb:57
-msgid "It's gasoline for the algos that trend Password Pusher."
-msgstr "Se on bensiiniä Password Pusherin trendikkäille algoille."
+msgid "It's gasoline for the algos that trend Tbyte Secure Send."
+msgstr "Se on bensiiniä Tbyte Secure Sendin trendikkäille algoille."
 
 #: ../../../app/views/pages/about.html.erb:60
 #: ../../../app/views/pages/translate.html.erb:3
@@ -1526,8 +1526,8 @@ msgstr ""
 " ja muusta."
 
 #: ../../../app/views/pages/about.html.erb:69
-msgid "Follow Password Pusher on"
-msgstr "Seuraa Password Pusheria"
+msgid "Follow Tbyte Secure Send on"
+msgstr "Seuraa Tbyte Secure Sendia"
 >>>>>>> upstream/master
 
 #: ../../../app/views/pages/about.html.erb:76
@@ -1559,12 +1559,12 @@ msgid "with this link"
 msgstr "tällä linkillä"
 
 #: ../../../app/views/pages/about.html.erb:81
-msgid "to get Password Pusher a hosting credit."
-msgstr "saadaksesi Password Pusherille hosting-hyvityksen."
+msgid "to get Tbyte Secure Send a hosting credit."
+msgstr "saadaksesi Tbyte Secure Sendille hosting-hyvityksen."
 
 #: ../../../app/views/pages/about.html.erb:85
-msgid "Thank you for supporting Password Pusher!"
-msgstr "Kiitos Password Pusherin tukemisesta!"
+msgid "Thank you for supporting Tbyte Secure Send!"
+msgstr "Kiitos Tbyte Secure Sendin tukemisesta!"
 
 #: ../../../app/views/pages/about.html.erb:87
 #: ../../../app/views/shared/_footer.html.erb:26
@@ -1576,7 +1576,7 @@ msgid ""
 "If you are giving a presentation, authoring a blog post or video about Passwor"
 "d Pusher, feel free to contact me for any questions."
 msgstr ""
-"Jos pidät esityksen, kirjoitat blogikirjoituksen tai videon Password Pusherist"
+"Jos pidät esityksen, kirjoitat blogikirjoituksen tai videon Tbyte Secure Sendist"
 "a, ota minuun yhteyttä, jos sinulla on kysyttävää."
 
 <<<<<<< HEAD
@@ -1617,8 +1617,8 @@ msgid "The first git commit to Tbyte Secure Send was on"
 msgstr "Ensimmäinen git-muutos Tbyte Secure Sendiin oli"
 =======
 #: ../../../app/views/pages/about.html.erb:110
-msgid "The first git commit to Password Pusher was on"
-msgstr "Ensimmäinen git-muutos Password Pusheriin oli"
+msgid "The first git commit to Tbyte Secure Send was on"
+msgstr "Ensimmäinen git-muutos Tbyte Secure Sendiin oli"
 >>>>>>> upstream/master
 
 #: ../../../app/views/pages/about.html.erb:114
@@ -1927,7 +1927,7 @@ msgid ""
 "Tbyte Secure Send supports re-branding \"out of the box\" allowing you to add a cu"
 "stom logo, text and even change images in the application."
 msgstr ""
-"Password Pusher tukee uudelleenbrändäystä \"pakkauksesta\", jolloin voit lisätä "
+"Tbyte Secure Send tukee uudelleenbrändäystä \"pakkauksesta\", jolloin voit lisätä "
 "mukautetun logon, tekstiä ja jopa vaihtaa kuvia sovellukseen."
 
 #: ../../../app/views/pages/faq.html.erb:165
@@ -2129,20 +2129,20 @@ msgid ""
 "If you feel inclined to support Tbyte Secure Send, you can sign up to Digital Oc"
 "ean using the badge below."
 msgstr ""
-"Jos tunnet halua tukea Password Pusheria, voit rekisteröityä Digital Oceaniin "
+"Jos tunnet halua tukea Tbyte Secure Sendia, voit rekisteröityä Digital Oceaniin "
 "käyttämällä alla olevaa merkkiä."
 
 #: ../../../app/views/pages/faq.html.erb:280
 msgid "Tbyte Secure Send will get a hosting credit for the first $25 you spend."
 msgstr ""
-"Password Pusher saa isännöintihyvityksen ensimmäisestä käyttämästäsi 25 dollar"
+"Tbyte Secure Send saa isännöintihyvityksen ensimmäisestä käyttämästäsi 25 dollar"
 "ista."
 
 #: ../../../app/views/pages/faq.html.erb:289
 msgid ""
 "For other ways to support Tbyte Secure Send, see also the \"Want to help out?\" se"
 "ction"
-msgstr "Muita tapoja tukea Password Pusheria on myös kohdassa \"Haluatko auttaa?\" osio"
+msgstr "Muita tapoja tukea Tbyte Secure Sendia on myös kohdassa \"Haluatko auttaa?\" osio"
 
 #: ../../../app/views/pages/faq.html.erb:290
 msgid "on the about page"
@@ -2250,8 +2250,8 @@ msgid ""
 msgstr "Avaimen luominen voidaan tehdä myös ohjelmiston komentoriviltä suorittamalla:"
 
 #: ../../../app/views/pages/generate_key.html.erb:80
-msgid "See also the Password Pusher"
-msgstr "Katso myös Password Pusher"
+msgid "See also the Tbyte Secure Send"
+msgstr "Katso myös Tbyte Secure Send"
 
 #: ../../../app/views/pages/generate_key.html.erb:81
 msgid "Configuration documentation"

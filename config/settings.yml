@@ -363,7 +363,7 @@ files:
 
   # File Storage
   #
-  # Password Pusher can store uploaded files into Amazon S3, Google Cloud Services
+  # Tbyte Secure Send can store uploaded files into Amazon S3, Google Cloud Services
   # or Microsoft Azure.
   #
   # Choose your file storage preference by setting the following option to
@@ -662,7 +662,7 @@ precompile: true
 
 ### Themes
 #
-# Password Pusher uses Bootswatch themes.  See https://bootswatch.com/
+# Tbyte Secure Send uses Bootswatch themes.  See https://bootswatch.com/
 #
 # The following are the available themes.  The default theme is 'default'.
 #

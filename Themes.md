@@ -1,10 +1,10 @@
 # Themes
 
-This page serves as a gallery of the themes available in Password Pusher.  To select a theme for your instance, simply set the `PWP__THEME` environment variable or update the corresponding value in your [config/settings.yml](https://github.com/pglombardo/PasswordPusher/blob/master/config/settings.yml) file.
+This page serves as a gallery of the themes available in Tbyte Secure Send.  To select a theme for your instance, simply set the `PWP__THEME` environment variable or update the corresponding value in your [config/settings.yml](https://github.com/pglombardo/PasswordPusher/blob/master/config/settings.yml) file.
 
 For more information on themes, see [the Themes section in the Configuration document](https://github.com/pglombardo/PasswordPusher/blob/master/Configuration.md#themes) which explains themes in their entirety and how to add custom CSS to further customize the application.
 
-These themes are bundled in Password Pusher but come from the great [Bootswatch](https://bootswatch.com) project and are licensed under the MIT License.
+These themes are bundled in Tbyte Secure Send but come from the great [Bootswatch](https://bootswatch.com) project and are licensed under the MIT License.
 
 # Branding
 

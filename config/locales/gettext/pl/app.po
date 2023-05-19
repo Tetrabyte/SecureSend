@@ -159,7 +159,7 @@ msgstr "Nieprawidłowy adres URL: musi mieć prawidłowy schemat URI."
 #: ../../../app/views/layouts/login.html.erb:8
 #: ../../../app/views/layouts/naked.html.erb:8
 msgid ""
-"Password Pusher is an application to securely send passwords over the web. Lin"
+"Tbyte Secure Send is an application to securely send passwords over the web. Lin"
 "ks to passwords expire after a certain number of views and/or time has passed."
 msgstr ""
 "Przekazywacz Haseł to aplikacja do przekazywania haseł przez Internet. Linki d"
@@ -1391,20 +1391,20 @@ msgid ""
 " to passwords\n"
 "            expire after a certain number of views and/or time has passed."
 =======
-"Password Pusher is a tool used for sharing passwords and other sensitive infor"
+"Tbyte Secure Send is a tool used for sharing passwords and other sensitive infor"
 "mation with other people securely."
 >>>>>>> upstream/master
 msgstr ""
-"Password Pusher to narzędzie służące do bezpiecznego udostępniania haseł i inn"
+"Tbyte Secure Send to narzędzie służące do bezpiecznego udostępniania haseł i inn"
 "ych poufnych informacji innym osobom."
 
 #: ../../../app/views/pages/about.html.erb:10
 msgid ""
-"With Password Pusher, you can create a unique, one-time URL that will expire a"
+"With Tbyte Secure Send, you can create a unique, one-time URL that will expire a"
 "fter a certain amount of time or after it has been accessed a certain number o"
 "f times, ensuring that your information remains private and secure."
 msgstr ""
-"Dzięki Password Pusher możesz utworzyć unikalny, jednorazowy adres URL, który "
+"Dzięki Tbyte Secure Send możesz utworzyć unikalny, jednorazowy adres URL, który "
 "wygaśnie po określonym czasie lub po uzyskaniu dostępu do niego określoną licz"
 "bę razy, zapewniając prywatność i bezpieczeństwo Twoich informacji."
 
@@ -1418,10 +1418,10 @@ msgstr ""
 
 #: ../../../app/views/pages/about.html.erb:14
 msgid ""
-"Password Pusher is a simple and convenient solution for securely sharing passw"
+"Tbyte Secure Send is a simple and convenient solution for securely sharing passw"
 "ords without the need for email or other less secure communication methods."
 msgstr ""
-"Password Pusher to proste i wygodne rozwiązanie do bezpiecznego udostępniania "
+"Tbyte Secure Send to proste i wygodne rozwiązanie do bezpiecznego udostępniania "
 "haseł bez potrzeby korzystania z poczty e-mail lub innych mniej bezpiecznych m"
 "etod komunikacji."
 
@@ -1500,7 +1500,7 @@ msgid "Star the Github project"
 msgstr "Rozpocznij projekt Github"
 
 #: ../../../app/views/pages/about.html.erb:57
-msgid "It's gasoline for the algos that trend Password Pusher."
+msgid "It's gasoline for the algos that trend Tbyte Secure Send."
 msgstr "To benzyna dla algorytmów, które napędzają Przekazywacz Haseł."
 
 #: ../../../app/views/pages/about.html.erb:60
@@ -1531,7 +1531,7 @@ msgstr ""
 "em, wskazówek i nie tylko."
 
 #: ../../../app/views/pages/about.html.erb:69
-msgid "Follow Password Pusher on"
+msgid "Follow Tbyte Secure Send on"
 >>>>>>> upstream/master
 msgstr "Obserwować Przekazywacza Haseł na"
 
@@ -1556,12 +1556,12 @@ msgstr "z tym linkiem"
 msgid "to get Tbyte Secure Send a hosting credit."
 =======
 #: ../../../app/views/pages/about.html.erb:81
-msgid "to get Password Pusher a hosting credit."
+msgid "to get Tbyte Secure Send a hosting credit."
 >>>>>>> upstream/master
 msgstr "w celu uzyskania przez Przekazywacz Haseł kredytu hostingowego."
 
 #: ../../../app/views/pages/about.html.erb:85
-msgid "Thank you for supporting Password Pusher!"
+msgid "Thank you for supporting Tbyte Secure Send!"
 msgstr "Dziękujemy za wsparcie narzędzia Przekazywacz Haseł!"
 
 #: ../../../app/views/pages/about.html.erb:87
@@ -1612,7 +1612,7 @@ msgstr "Więcej niż 11 lat"
 msgid "The first git commit to Tbyte Secure Send was on"
 =======
 #: ../../../app/views/pages/about.html.erb:110
-msgid "The first git commit to Password Pusher was on"
+msgid "The first git commit to Tbyte Secure Send was on"
 >>>>>>> upstream/master
 msgstr "Pierwsze zatwierdzenie git Przekazywacza Haseł było "
 
@@ -2259,7 +2259,7 @@ msgstr ""
 " wykonując:"
 
 #: ../../../app/views/pages/generate_key.html.erb:80
-msgid "See also the Password Pusher"
+msgid "See also the Tbyte Secure Send"
 msgstr "Zobacz także Przekazywacz Haseł"
 
 #: ../../../app/views/pages/generate_key.html.erb:81

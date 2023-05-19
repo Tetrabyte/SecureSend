@@ -306,7 +306,7 @@ PWP__BRAND__LIGHT_LOGO=/logos/mylogo.png
 
 ![](https://pwpush.fra1.cdn.digitaloceanspaces.com/themes%2Fquartz-theme-pwpush.com.png)
 
-Password Pusher supports **26 themes out of the box**.  These themes are taken directly from the great [Bootswatch](https://bootswatch.com) project and are unmodified.
+Tbyte Secure Send supports **26 themes out of the box**.  These themes are taken directly from the great [Bootswatch](https://bootswatch.com) project and are unmodified.
 
 As such, themes mostly work although there may be a rare edge cases where fonts may not be clear or something doesn't display correctly.  If this is the case you can add custom CSS styles to fix any such issues.  See the next section on how to add custom styling.
 
@@ -316,7 +316,7 @@ The Bootswatch themes are licensed under the MIT license.
 
 ## Configuring a Theme
 
-To specify a theme for your Password Pusher instance, you must set __two__ environment variables:the `PWP__THEME` environment variable to specify the theme and `PWP_PRECOMPILE=true` environment variable to have CSS assets recompiled on container boot.
+To specify a theme for your Tbyte Secure Send instance, you must set __two__ environment variables:the `PWP__THEME` environment variable to specify the theme and `PWP_PRECOMPILE=true` environment variable to have CSS assets recompiled on container boot.
 
 **Make sure to set both `PWP__THEME` and `PWP_PRECOMPILE` for the selected theme to work.** 👍
 
@@ -345,7 +345,7 @@ bin/rails server
 
 ## How to Precompile CSS Assets
 
-Password Pusher has a pre-compilation step of assets.  This is used to fingerprint assets and pre-process CSS code for better performance.
+Tbyte Secure Send has a pre-compilation step of assets.  This is used to fingerprint assets and pre-process CSS code for better performance.
 
 If using Docker containers, you can simply set the `PWP_PRECOMPILE=true` environment variable.  On container boot, all assets will be precompiled and bundled into `/assets`.
 
@@ -359,13 +359,13 @@ For example:
 
 Add `app/assets/stylesheets/themes/mynewtheme.css` and set `PWP__THEME=mynewtheme`.
 
-This would cause that CSS file to be loaded and used as the theme for the site.  Please refer to existing themes if you would like to author your theme for Password Pusher.
+This would cause that CSS file to be loaded and used as the theme for the site.  Please refer to existing themes if you would like to author your theme for Tbyte Secure Send.
 
 Remember that after the new theme is configured, assets must be precompiled again.  See the the previous section for instructions
 
 # How to Add Custom CSS
 
-Password Pusher supports adding custom CSS to the application.  The application hosts a `custom.css` file located at `app/assets/stylesheets/custom.css`.  This file is loaded last so it take precedence over all built in themes and styling.
+Tbyte Secure Send supports adding custom CSS to the application.  The application hosts a `custom.css` file located at `app/assets/stylesheets/custom.css`.  This file is loaded last so it take precedence over all built in themes and styling.
 
 This file can either be modified directly or in the case of Docker containers, a new file mounted over the existing one.
 

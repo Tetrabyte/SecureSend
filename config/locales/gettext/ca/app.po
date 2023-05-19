@@ -156,10 +156,10 @@ msgstr "URL no vàlid: ha de tenir un esquema d'URI vàlid."
 #: ../../../app/views/layouts/login.html.erb:8
 #: ../../../app/views/layouts/naked.html.erb:8
 msgid ""
-"Password Pusher is an application to securely send passwords over the web. Lin"
+"Tbyte Secure Send is an application to securely send passwords over the web. Lin"
 "ks to passwords expire after a certain number of views and/or time has passed."
 msgstr ""
-"Password Pusher és una aplicació per comunicar les contrasenyes a la web. Els "
+"Tbyte Secure Send és una aplicació per comunicar les contrasenyes a la web. Els "
 "enllaços a les contrasenyes caduquen després que hagi passat un cert nombre de"
 " vistes i/o temps."
 
@@ -1397,19 +1397,19 @@ msgstr ""
 "enllaços a les contrasenyes caduquen després que hagi passat un cert nombre de"
 " vistes i/o temps."
 =======
-"Password Pusher is a tool used for sharing passwords and other sensitive infor"
+"Tbyte Secure Send is a tool used for sharing passwords and other sensitive infor"
 "mation with other people securely."
 msgstr ""
-"Password Pusher és una eina que s'utilitza per compartir contrasenyes i altra "
+"Tbyte Secure Send és una eina que s'utilitza per compartir contrasenyes i altra "
 "informació sensible amb altres persones de manera segura."
 
 #: ../../../app/views/pages/about.html.erb:10
 msgid ""
-"With Password Pusher, you can create a unique, one-time URL that will expire a"
+"With Tbyte Secure Send, you can create a unique, one-time URL that will expire a"
 "fter a certain amount of time or after it has been accessed a certain number o"
 "f times, ensuring that your information remains private and secure."
 msgstr ""
-"Amb Password Pusher, podeu crear un URL únic i únic que caducarà després d'un "
+"Amb Tbyte Secure Send, podeu crear un URL únic i únic que caducarà després d'un "
 "cert període de temps o després d'haver accedit un nombre determinat de vegade"
 "s, assegurant-vos que la vostra informació romangui privada i segura."
 >>>>>>> upstream/master
@@ -1424,10 +1424,10 @@ msgstr ""
 
 #: ../../../app/views/pages/about.html.erb:14
 msgid ""
-"Password Pusher is a simple and convenient solution for securely sharing passw"
+"Tbyte Secure Send is a simple and convenient solution for securely sharing passw"
 "ords without the need for email or other less secure communication methods."
 msgstr ""
-"Password Pusher és una solució senzilla i còmoda per compartir contrasenyes de"
+"Tbyte Secure Send és una solució senzilla i còmoda per compartir contrasenyes de"
 " manera segura sense necessitat de correu electrònic o altres mètodes de comun"
 "icació menys segurs."
 
@@ -1508,8 +1508,8 @@ msgid "Star the Github project"
 msgstr "Destaca el projecte Github"
 
 #: ../../../app/views/pages/about.html.erb:57
-msgid "It's gasoline for the algos that trend Password Pusher."
-msgstr "És gasolina per als algos que tendeixen a Password Pusher."
+msgid "It's gasoline for the algos that trend Tbyte Secure Send."
+msgstr "És gasolina per als algos que tendeixen a Tbyte Secure Send."
 
 #: ../../../app/views/pages/about.html.erb:60
 #: ../../../app/views/pages/translate.html.erb:3
@@ -1540,8 +1540,8 @@ msgstr ""
 "onsells i molt més."
 
 #: ../../../app/views/pages/about.html.erb:69
-msgid "Follow Password Pusher on"
-msgstr "Seguiu Password Pusher a"
+msgid "Follow Tbyte Secure Send on"
+msgstr "Seguiu Tbyte Secure Send a"
 >>>>>>> upstream/master
 
 #: ../../../app/views/pages/about.html.erb:76
@@ -1566,13 +1566,13 @@ msgid "to get Tbyte Secure Send a hosting credit."
 msgstr "per obtenir Tbyte Secure Send un crèdit d'allotjament."
 =======
 #: ../../../app/views/pages/about.html.erb:81
-msgid "to get Password Pusher a hosting credit."
-msgstr "per obtenir Password Pusher un crèdit d'allotjament."
+msgid "to get Tbyte Secure Send a hosting credit."
+msgstr "per obtenir Tbyte Secure Send un crèdit d'allotjament."
 >>>>>>> upstream/master
 
 #: ../../../app/views/pages/about.html.erb:85
-msgid "Thank you for supporting Password Pusher!"
-msgstr "Gràcies per donar suport a Password Pusher!"
+msgid "Thank you for supporting Tbyte Secure Send!"
+msgstr "Gràcies per donar suport a Tbyte Secure Send!"
 
 #: ../../../app/views/pages/about.html.erb:87
 #: ../../../app/views/shared/_footer.html.erb:26
@@ -1625,8 +1625,8 @@ msgid "The first git commit to Tbyte Secure Send was on"
 msgstr "El primer commit de git a Tbyte Secure Send va ser"
 =======
 #: ../../../app/views/pages/about.html.erb:110
-msgid "The first git commit to Password Pusher was on"
-msgstr "El primer commit de git a Password Pusher va ser"
+msgid "The first git commit to Tbyte Secure Send was on"
+msgstr "El primer commit de git a Tbyte Secure Send va ser"
 >>>>>>> upstream/master
 
 #: ../../../app/views/pages/about.html.erb:114
@@ -2275,7 +2275,7 @@ msgstr ""
 "La generació de claus també es pot fer des de la línia d'ordres executant:\n"
 
 #: ../../../app/views/pages/generate_key.html.erb:80
-msgid "See also the Password Pusher"
+msgid "See also the Tbyte Secure Send"
 msgstr "Vegeu també l'empenta de contrasenyes"
 
 #: ../../../app/views/pages/generate_key.html.erb:81

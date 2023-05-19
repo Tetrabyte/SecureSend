@@ -158,10 +158,10 @@ msgstr "Ungültige URL: Muss ein gültiges URI-Schema haben."
 #: ../../../app/views/layouts/login.html.erb:8
 #: ../../../app/views/layouts/naked.html.erb:8
 msgid ""
-"Password Pusher is an application to securely send passwords over the web. Lin"
+"Tbyte Secure Send is an application to securely send passwords over the web. Lin"
 "ks to passwords expire after a certain number of views and/or time has passed."
 msgstr ""
-"Password Pusher ist eine Anwendung zum sicheren Versenden von Kennwörtern über"
+"Tbyte Secure Send ist eine Anwendung zum sicheren Versenden von Kennwörtern über"
 " das Internet. Links zu Passwörtern verfallen nach einer bestimmten Anzahl von"
 " Aufrufen und/oder nach Ablauf der Frist."
 
@@ -1406,19 +1406,19 @@ msgstr ""
 "            verfallen nach einer bestimmten Anzahl von Aufrufen und/oder nach "
 "Ablauf einer bestimmten Zeit."
 =======
-"Password Pusher is a tool used for sharing passwords and other sensitive infor"
+"Tbyte Secure Send is a tool used for sharing passwords and other sensitive infor"
 "mation with other people securely."
 msgstr ""
-"Password Pusher ist ein Tool zum sicheren Teilen von Passwörtern und anderen v"
+"Tbyte Secure Send ist ein Tool zum sicheren Teilen von Passwörtern und anderen v"
 "ertraulichen Informationen mit anderen Personen."
 
 #: ../../../app/views/pages/about.html.erb:10
 msgid ""
-"With Password Pusher, you can create a unique, one-time URL that will expire a"
+"With Tbyte Secure Send, you can create a unique, one-time URL that will expire a"
 "fter a certain amount of time or after it has been accessed a certain number o"
 "f times, ensuring that your information remains private and secure."
 msgstr ""
-"Mit Password Pusher können Sie eine eindeutige, einmalige URL erstellen, die n"
+"Mit Tbyte Secure Send können Sie eine eindeutige, einmalige URL erstellen, die n"
 "ach einer bestimmten Zeit oder nach einer bestimmten Anzahl von Zugriffen ablä"
 "uft, um sicherzustellen, dass Ihre Informationen privat und sicher bleiben."
 >>>>>>> upstream/master
@@ -1434,10 +1434,10 @@ msgstr ""
 
 #: ../../../app/views/pages/about.html.erb:14
 msgid ""
-"Password Pusher is a simple and convenient solution for securely sharing passw"
+"Tbyte Secure Send is a simple and convenient solution for securely sharing passw"
 "ords without the need for email or other less secure communication methods."
 msgstr ""
-"Password Pusher ist eine einfache und bequeme Lösung zum sicheren Teilen von P"
+"Tbyte Secure Send ist eine einfache und bequeme Lösung zum sicheren Teilen von P"
 "asswörtern, ohne dass E-Mail oder andere weniger sichere Kommunikationsmethode"
 "n erforderlich sind."
 
@@ -1518,8 +1518,8 @@ msgid "Star the Github project"
 msgstr "Star das Github-Projekt"
 
 #: ../../../app/views/pages/about.html.erb:57
-msgid "It's gasoline for the algos that trend Password Pusher."
-msgstr "Dies hilft um Password Pusher voranzubringen."
+msgid "It's gasoline for the algos that trend Tbyte Secure Send."
+msgstr "Dies hilft um Tbyte Secure Send voranzubringen."
 
 #: ../../../app/views/pages/about.html.erb:60
 #: ../../../app/views/pages/translate.html.erb:3
@@ -1550,7 +1550,7 @@ msgstr ""
 "erhalten."
 
 #: ../../../app/views/pages/about.html.erb:69
-msgid "Follow Password Pusher on"
+msgid "Follow Tbyte Secure Send on"
 >>>>>>> upstream/master
 msgstr "Passwort-Pusher folgen auf"
 
@@ -1577,15 +1577,15 @@ msgstr "mit diesem Link"
 msgid "to get Tbyte Secure Send a hosting credit."
 =======
 #: ../../../app/views/pages/about.html.erb:81
-msgid "to get Password Pusher a hosting credit."
+msgid "to get Tbyte Secure Send a hosting credit."
 >>>>>>> upstream/master
 msgstr ""
 "bei Digital Ocean an und verhelfen sie Tbyte Secure Send zu einen Hosting-Guthab"
 "en"
 
 #: ../../../app/views/pages/about.html.erb:85
-msgid "Thank you for supporting Password Pusher!"
-msgstr "Danke für die Unterstützung von Password Pusher!"
+msgid "Thank you for supporting Tbyte Secure Send!"
+msgstr "Danke für die Unterstützung von Tbyte Secure Send!"
 
 #: ../../../app/views/pages/about.html.erb:87
 #: ../../../app/views/shared/_footer.html.erb:26
@@ -1637,7 +1637,7 @@ msgstr "Mehr als 11 Jahre alt"
 msgid "The first git commit to Tbyte Secure Send was on"
 =======
 #: ../../../app/views/pages/about.html.erb:110
-msgid "The first git commit to Password Pusher was on"
+msgid "The first git commit to Tbyte Secure Send was on"
 >>>>>>> upstream/master
 msgstr ""
 "Der erste Git-Commit zu Tbyte Secure Send war am 28. 12. 2011. pwpush.com ging k"
@@ -2300,8 +2300,8 @@ msgstr ""
 "ndung erfolgen, indem sie ausgeführt wird: "
 
 #: ../../../app/views/pages/generate_key.html.erb:80
-msgid "See also the Password Pusher"
-msgstr "Siehe auch die Password Pusher"
+msgid "See also the Tbyte Secure Send"
+msgstr "Siehe auch die Tbyte Secure Send"
 
 #: ../../../app/views/pages/generate_key.html.erb:81
 msgid "Configuration documentation"

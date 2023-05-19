@@ -158,10 +158,10 @@ msgstr "Nederīgs URL: jābūt derīgai URI shēmai."
 #: ../../../app/views/layouts/login.html.erb:8
 #: ../../../app/views/layouts/naked.html.erb:8
 msgid ""
-"Password Pusher is an application to securely send passwords over the web. Lin"
+"Tbyte Secure Send is an application to securely send passwords over the web. Lin"
 "ks to passwords expire after a certain number of views and/or time has passed."
 msgstr ""
-"Password Pusher ir lietojumprogramma paroļu koplietošanai tīmeklī. Nosūtītās p"
+"Tbyte Secure Send ir lietojumprogramma paroļu koplietošanai tīmeklī. Nosūtītās p"
 "aroļu saites derīguma termiņš beidzas pēc noteikta skatījumu un/vai laika skai"
 "ta."
 
@@ -1395,19 +1395,19 @@ msgstr ""
 "aroļu saites derīguma termiņš beidzas pēc noteikta laika un/vai skatījumu skai"
 "ta.\n"
 =======
-"Password Pusher is a tool used for sharing passwords and other sensitive infor"
+"Tbyte Secure Send is a tool used for sharing passwords and other sensitive infor"
 "mation with other people securely."
 msgstr ""
-"Password Pusher ir rīks, ko izmanto, lai droši koplietotu paroles un citu sens"
+"Tbyte Secure Send ir rīks, ko izmanto, lai droši koplietotu paroles un citu sens"
 "itīvu informāciju ar citiem cilvēkiem."
 
 #: ../../../app/views/pages/about.html.erb:10
 msgid ""
-"With Password Pusher, you can create a unique, one-time URL that will expire a"
+"With Tbyte Secure Send, you can create a unique, one-time URL that will expire a"
 "fter a certain amount of time or after it has been accessed a certain number o"
 "f times, ensuring that your information remains private and secure."
 msgstr ""
-"Izmantojot Password Pusher, varat izveidot unikālu, vienreizēju URL, kura derī"
+"Izmantojot Tbyte Secure Send, varat izveidot unikālu, vienreizēju URL, kura derī"
 "guma termiņš beigsies pēc noteikta laika vai pēc tam, kad tam būs piekļūts not"
 "eikts skaits reižu, nodrošinot, ka jūsu informācija paliek privāta un droša."
 >>>>>>> upstream/master
@@ -1423,10 +1423,10 @@ msgstr ""
 
 #: ../../../app/views/pages/about.html.erb:14
 msgid ""
-"Password Pusher is a simple and convenient solution for securely sharing passw"
+"Tbyte Secure Send is a simple and convenient solution for securely sharing passw"
 "ords without the need for email or other less secure communication methods."
 msgstr ""
-"Password Pusher ir vienkāršs un ērts risinājums drošai paroļu koplietošanai, n"
+"Tbyte Secure Send ir vienkāršs un ērts risinājums drošai paroļu koplietošanai, n"
 "eizmantojot e-pastu vai citas mazāk drošas saziņas metodes."
 
 #: ../../../app/views/pages/about.html.erb:17
@@ -1508,8 +1508,8 @@ msgid "Star the Github project"
 msgstr "Novērtējiet Github projektu"
 
 #: ../../../app/views/pages/about.html.erb:57
-msgid "It's gasoline for the algos that trend Password Pusher."
-msgstr "Tas ir benzīns algoritmiem, kas ir populāri Password Pusher."
+msgid "It's gasoline for the algos that trend Tbyte Secure Send."
+msgstr "Tas ir benzīns algoritmiem, kas ir populāri Tbyte Secure Send."
 
 #: ../../../app/views/pages/about.html.erb:60
 #: ../../../app/views/pages/translate.html.erb:3
@@ -1540,8 +1540,8 @@ msgstr ""
 "iem un daudz ko citu."
 
 #: ../../../app/views/pages/about.html.erb:69
-msgid "Follow Password Pusher on"
-msgstr "Sekojiet Password Pusher platformās "
+msgid "Follow Tbyte Secure Send on"
+msgstr "Sekojiet Tbyte Secure Send platformās "
 >>>>>>> upstream/master
 
 #: ../../../app/views/pages/about.html.erb:76
@@ -1566,13 +1566,13 @@ msgid "to get Tbyte Secure Send a hosting credit."
 msgstr "lai saņemtu Tbyte Secure Send uzturēšanas samaksu."
 =======
 #: ../../../app/views/pages/about.html.erb:81
-msgid "to get Password Pusher a hosting credit."
-msgstr "lai saņemtu Password Pusher uzturēšanas samaksu."
+msgid "to get Tbyte Secure Send a hosting credit."
+msgstr "lai saņemtu Tbyte Secure Send uzturēšanas samaksu."
 >>>>>>> upstream/master
 
 #: ../../../app/views/pages/about.html.erb:85
-msgid "Thank you for supporting Password Pusher!"
-msgstr "Paldies, ka atbalstāt Password Pusher!"
+msgid "Thank you for supporting Tbyte Secure Send!"
+msgstr "Paldies, ka atbalstāt Tbyte Secure Send!"
 
 #: ../../../app/views/pages/about.html.erb:87
 #: ../../../app/views/shared/_footer.html.erb:26
@@ -1623,8 +1623,8 @@ msgid "The first git commit to Tbyte Secure Send was on"
 msgstr "Pirmais Tbyte Secure Send git tika palaists "
 =======
 #: ../../../app/views/pages/about.html.erb:110
-msgid "The first git commit to Password Pusher was on"
-msgstr "Pirmais Password Pusher git tika palaists "
+msgid "The first git commit to Tbyte Secure Send was on"
+msgstr "Pirmais Tbyte Secure Send git tika palaists "
 >>>>>>> upstream/master
 
 #: ../../../app/views/pages/about.html.erb:114
@@ -2272,7 +2272,7 @@ msgstr ""
 "pildot:\n"
 
 #: ../../../app/views/pages/generate_key.html.erb:80
-msgid "See also the Password Pusher"
+msgid "See also the Tbyte Secure Send"
 msgstr "Skatiet arī paroles spiedēju"
 
 #: ../../../app/views/pages/generate_key.html.erb:81

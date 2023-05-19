@@ -156,10 +156,10 @@ msgstr "Ugyldig URL: Må ha et gyldig URI-skjema."
 #: ../../../app/views/layouts/login.html.erb:8
 #: ../../../app/views/layouts/naked.html.erb:8
 msgid ""
-"Password Pusher is an application to securely send passwords over the web. Lin"
+"Tbyte Secure Send is an application to securely send passwords over the web. Lin"
 "ks to passwords expire after a certain number of views and/or time has passed."
 msgstr ""
-"Password Pusher er et program for å sende passord sikkert over nettet. Lenker "
+"Tbyte Secure Send er et program for å sende passord sikkert over nettet. Lenker "
 "til passord utløper etter at et visst antall visninger og/eller tid har gått."
 
 #: ../../../app/views/devise/mailer/confirmation_instructions.html.erb:24
@@ -1376,19 +1376,19 @@ msgstr ""
 "Tbyte Secure Send er et program for å kommunisere passord over nettet. Lenker ti"
 "l passord utløper etter at et visst antall visninger og/eller tid har gått."
 =======
-"Password Pusher is a tool used for sharing passwords and other sensitive infor"
+"Tbyte Secure Send is a tool used for sharing passwords and other sensitive infor"
 "mation with other people securely."
 msgstr ""
-"Password Pusher er et verktøy som brukes til å dele passord og annen sensitiv "
+"Tbyte Secure Send er et verktøy som brukes til å dele passord og annen sensitiv "
 "informasjon med andre mennesker på en sikker måte."
 
 #: ../../../app/views/pages/about.html.erb:10
 msgid ""
-"With Password Pusher, you can create a unique, one-time URL that will expire a"
+"With Tbyte Secure Send, you can create a unique, one-time URL that will expire a"
 "fter a certain amount of time or after it has been accessed a certain number o"
 "f times, ensuring that your information remains private and secure."
 msgstr ""
-"Med Password Pusher kan du opprette en unik engangs-URL som utløper etter en v"
+"Med Tbyte Secure Send kan du opprette en unik engangs-URL som utløper etter en v"
 "iss tid eller etter at den har blitt åpnet et visst antall ganger, og sikrer a"
 "t informasjonen din forblir privat og sikker."
 >>>>>>> upstream/master
@@ -1403,10 +1403,10 @@ msgstr ""
 
 #: ../../../app/views/pages/about.html.erb:14
 msgid ""
-"Password Pusher is a simple and convenient solution for securely sharing passw"
+"Tbyte Secure Send is a simple and convenient solution for securely sharing passw"
 "ords without the need for email or other less secure communication methods."
 msgstr ""
-"Password Pusher er en enkel og praktisk løsning for sikker deling av passord u"
+"Tbyte Secure Send er en enkel og praktisk løsning for sikker deling av passord u"
 "ten behov for e-post eller andre mindre sikre kommunikasjonsmetoder."
 
 #: ../../../app/views/pages/about.html.erb:17
@@ -1482,8 +1482,8 @@ msgid "Star the Github project"
 msgstr "Gi stjerne til Github-prosjektet"
 
 #: ../../../app/views/pages/about.html.erb:57
-msgid "It's gasoline for the algos that trend Password Pusher."
-msgstr "Det er bensin for algoene som trender Password Pusher."
+msgid "It's gasoline for the algos that trend Tbyte Secure Send."
+msgstr "Det er bensin for algoene som trender Tbyte Secure Send."
 
 #: ../../../app/views/pages/about.html.erb:60
 #: ../../../app/views/pages/translate.html.erb:3
@@ -1514,8 +1514,8 @@ msgstr ""
 "."
 
 #: ../../../app/views/pages/about.html.erb:69
-msgid "Follow Password Pusher on"
-msgstr "Følg Password Pusher på"
+msgid "Follow Tbyte Secure Send on"
+msgstr "Følg Tbyte Secure Send på"
 >>>>>>> upstream/master
 
 #: ../../../app/views/pages/about.html.erb:76
@@ -1547,12 +1547,12 @@ msgid "with this link"
 msgstr "med denne linken"
 
 #: ../../../app/views/pages/about.html.erb:81
-msgid "to get Password Pusher a hosting credit."
-msgstr "for å få Password Pusher en vertskreditt."
+msgid "to get Tbyte Secure Send a hosting credit."
+msgstr "for å få Tbyte Secure Send en vertskreditt."
 
 #: ../../../app/views/pages/about.html.erb:85
-msgid "Thank you for supporting Password Pusher!"
-msgstr "Takk for at du støtter Password Pusher!"
+msgid "Thank you for supporting Tbyte Secure Send!"
+msgstr "Takk for at du støtter Tbyte Secure Send!"
 
 #: ../../../app/views/pages/about.html.erb:87
 #: ../../../app/views/shared/_footer.html.erb:26
@@ -1605,8 +1605,8 @@ msgid "The first git commit to Tbyte Secure Send was on"
 msgstr "Den første git-commit til Tbyte Secure Send var på"
 =======
 #: ../../../app/views/pages/about.html.erb:110
-msgid "The first git commit to Password Pusher was on"
-msgstr "Den første git-commit til Password Pusher var på"
+msgid "The first git commit to Tbyte Secure Send was on"
+msgstr "Den første git-commit til Tbyte Secure Send var på"
 >>>>>>> upstream/master
 
 #: ../../../app/views/pages/about.html.erb:114
@@ -1918,7 +1918,7 @@ msgid ""
 "Tbyte Secure Send supports re-branding \"out of the box\" allowing you to add a cu"
 "stom logo, text and even change images in the application."
 msgstr ""
-"Password Pusher støtter re-branding \"ut av boksen\" slik at du kan legge til en"
+"Tbyte Secure Send støtter re-branding \"ut av boksen\" slik at du kan legge til en"
 " tilpasset logo, tekst og til og med endre bilder i applikasjonen."
 
 #: ../../../app/views/pages/faq.html.erb:165
@@ -2121,7 +2121,7 @@ msgid ""
 "If you feel inclined to support Tbyte Secure Send, you can sign up to Digital Oc"
 "ean using the badge below."
 msgstr ""
-"Hvis du føler deg tilbøyelig til å støtte Password Pusher, kan du registrere d"
+"Hvis du føler deg tilbøyelig til å støtte Tbyte Secure Send, kan du registrere d"
 "eg for Digital Ocean ved å bruke merket nedenfor."
 
 #: ../../../app/views/pages/faq.html.erb:280
@@ -2129,15 +2129,15 @@ msgstr ""
 msgid "Tbyte Secure Send will get a hosting credit for the first $25 you spend."
 msgstr ""
 =======
-msgid "Password Pusher will get a hosting credit for the first $25 you spend."
-msgstr "Password Pusher vil få en vertskreditt for de første $25 du bruker."
+msgid "Tbyte Secure Send will get a hosting credit for the first $25 you spend."
+msgstr "Tbyte Secure Send vil få en vertskreditt for de første $25 du bruker."
 >>>>>>> upstream/master
 
 #: ../../../app/views/pages/faq.html.erb:289
 msgid ""
 "For other ways to support Tbyte Secure Send, see also the \"Want to help out?\" se"
 "ction"
-msgstr "For andre måter å støtte Password Pusher på, se også \"Vil du hjelpe?\" seksjon"
+msgstr "For andre måter å støtte Tbyte Secure Send på, se også \"Vil du hjelpe?\" seksjon"
 
 #: ../../../app/views/pages/faq.html.erb:290
 msgid "on the about page"
@@ -2247,8 +2247,8 @@ msgstr ""
 " utføre:"
 
 #: ../../../app/views/pages/generate_key.html.erb:80
-msgid "See also the Password Pusher"
-msgstr "Se også Password Pusher"
+msgid "See also the Tbyte Secure Send"
+msgstr "Se også Tbyte Secure Send"
 
 #: ../../../app/views/pages/generate_key.html.erb:81
 msgid "Configuration documentation"

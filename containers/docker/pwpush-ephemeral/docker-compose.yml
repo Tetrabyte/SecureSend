@@ -8,10 +8,10 @@ services:
     # You can set environment variables here, or in a .env file.  See:
     # https://docs.docker.com/compose/environment-variables/
     #
-    # Password Pusher provides an example Docker environment file:
+    # Tbyte Secure Send provides an example Docker environment file:
     # https://github.com/pglombardo/PasswordPusher/tree/master/containers/docker/pwpush-docker-env-file
     #
-    # See also the Password Pusher Configuration documentation
+    # See also the Tbyte Secure Send Configuration documentation
     # https://github.com/pglombardo/PasswordPusher/blob/master/Configuration.md
     #
     # Uncomment the following lines to set environment variables and add your own.
