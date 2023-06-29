@@ -25,17 +25,22 @@ Hosted at [pwpush.com](https://pwpush.com) but you can also easily run your own 
 
 * __Easy-to-install:__ Host your own via Docker, a cloud service or just use [pwpush.com](https://pwpush.com)
 * __Opensource:__ No blackbox code.  Only trusted, tested and reviewed opensource code.
+* __Versatile:__ Push passwords, text, files or URLs that autoexpire and self delete.
 * __Audit logging:__ Track and control what you've shared and see who has viewed it.
-* __Encrypted storage:__ All sensitive data is stored encrypted and is deleted once expired.
+* __Encrypted storage:__ All sensitive data is stored encrypted and deleted entirely once expired.
 * __Host your own:__ Database backed or ephemeral, easily run your own instance isolated from the world.
 * __JSON API:__ Raw JSON API available for 3rd party tools or command line via `curl` or `wget`.
 * __Command line interface:__ Automate your password distribution with CLI tools or custom scripts.
-* __Internationalized:__ 17 language translations are bundled in.  Easily selectable via UI or URL
+* __Logins__: Invite your colleagues and track what is pushed and who retrieved it.
+* __Internationalized:__ 23 language translations are bundled in.  Easily selectable via UI or URL
+* __Themes:__ [26 themes](./Themes.md) bundled in courtesy of Bootswatch.  Select with a simple environment variable.
 * __Unbranded delivery page:__ No logos, superfluous text or unrelated links to confuse end users.
 * __Customizable:__ Change text and default options via environment variables.
-* __Light & dark themes:__  Via CSS @media integration, the site theme follows your local preferences
+* __Light & dark themes:__  Via CSS @media integration, the default site theme follows your local preferences.
 * __Rebrandable:__ Customize the site name, tagline and logo to fit your environment.
-* __10 Years Old:__ Tbyte Secure Send has securely delivered millions and millions of passwords in it's 10 year history.
+* __Custom CSS:__ Bundle in your own custom CSS to add your own design.
+* __10 Years Old:__ Password Pusher has securely delivered millions and millions of passwords in its 10 year history.
+* __Actively Maintained:__ I happily work for the good karma of the great IT/Security community.
 * __Honest Software:__  Opensource written and maintained by [me](https://github.com/pglombardo) with the help of some great contributors.  No organizations, corporations or evil agendas.
 
 💌 --> Sign up for [the newsletter](https://buttondown.email/pwpush?tag=github) to get updates on big releases, security issues, new features, integrations, tips and more.
@@ -110,6 +115,10 @@ _Note: The `latest` Docker container tag builds nightly off of the latest code c
 Instructions and explanation of a Kubernetes setup [can be found
 here](https://github.com/pglombardo/PasswordPusher/tree/master/containers/kubernetes).
 
+## On Kubernetes with Helm
+
+A basic helm chart with instructions [can be found here](containers/helm/).
+
 ## On Microsoft Azure
 
 _There used to be a 3rd party blog post with instructions but it's been deleted.  If anyone has instructions they would like to contribute, it would be greatly appreciated._
@@ -124,22 +133,75 @@ One click deploy to [Heroku Cloud](https://www.heroku.com) without having to set
 
 _This option will deploy a production Tbyte Secure Send instance backed by a postgres database to Heroku.  Heroku used to offer free dynos but that is [no longer the case](https://blog.heroku.com/next-chapter) from November 28, 2022.  Hosting charges will be incurred._
 
+## On PikaPods
+
+One click deploy to [PikaPods](https://www.pikapods.com/) from $1/month. Start free with $5 welcome credit.
+
+[![Run on PikaPods](https://www.pikapods.com/static/run-button.svg)](https://www.pikapods.com/pods?run=pwpush)
+
+## With Nginx
+
+See the prebuilt [Docker Compose example here](https://github.com/pglombardo/PasswordPusher/tree/master/containers/examples/pwpush-and-nginx).
+
 ## From Source
 
-Make sure you have git and Ruby installed and then:
+I generally don't suggest building this application from source code for casual use.  The is due to the complexities in the toolset across platforms.  Running from source code is best when you plan to develop the application.
+
+For quick and easy, use the Docker containers instead.
+
+But if you're resolute & brave, continue on!
+
+### Dependencies
+
+* Ruby 3.0 or greater (2.7 may work)
+* Recent Node.js stable & Yarn
+* Compiler tools: gcc g++ make
+* Other: git
+
+### SQLite3 backend
+
+* Make sure to install sqlite3 development libraries: `apt install libsqlite3-dev sqlite3`
 
 ```sh
 git clone git@github.com:pglombardo/PasswordPusher.git
 cd PasswordPusher
 gem install bundler
-bundle config set with 'sqlite' # Or 'postgres' or 'mysql'
-bundle install --without development production test --deployment
-bundle exec rake assets:precompile
-RAILS_ENV=private ./bin/rake db:setup
+
+export RAILS_ENV=private
+
+bundle config set with 'sqlite'
+bundle config set --local deployment 'true'
+bundle install --without development production test
+./bin/rails assets:precompile
+./bin/rails db:setup
 ./bin/rails server --environment=private
 ```
 
 Then view the site @ [http://localhost:5100/](http://localhost:5100/).
+
+### Postgres, MySQL or Mariadb backend
+
+* Make sure to install related database driver development libraries: e.g. postgres-dev or libmariadb-dev
+
+```sh
+git clone git@github.com:pglombardo/PasswordPusher.git
+cd PasswordPusher
+gem install bundler
+
+export RAILS_ENV=production
+
+# Update the following line to point to your Postgres (or MySQL/Mariadb) instance
+DATABASE_URL=postgresql://passwordpusher_user:passwordpusher_passwd@postgres:5432/passwordpusher_db
+
+bundle config set with 'postgres' # or 'mysql'
+bundle install --without development private test
+./bin/rails assets:precompile
+./bin/rails db:setup
+./bin/rails server --environment=production
+```
+
+Then view the site @ [http://localhost:5100/](http://localhost:5100/).
+
 
 # 🔨 3rd Party Tools
 
@@ -147,7 +209,7 @@ Then view the site @ [http://localhost:5100/](http://localhost:5100/).
 
 * The almost official [pwpush-cli](https://github.com/pglombardo/pwpush-cli) (in pre-beta): CLI for Tbyte Secure Send with authentication support
 
-* [thekamilpro/kppwpush](https://github.com/thekamilpro/kppwpush): A PowerShell Module available in the [PowerShell Gallery](https://www.powershellgallery.com/packages/KpPwpush/0.0.1).  See the livestream of it's creation on [The Kamil Pro's channel](https://www.youtube.com/watch?v=f8_PZOx_KBY&feature=youtu.be).
+* [thekamilpro/kppwpush](https://github.com/thekamilpro/kppwpush): A PowerShell Module available in the [PowerShell Gallery](https://www.powershellgallery.com/packages/KpPwpush/0.0.1).  See the livestream of its creation on [The Kamil Pro's channel](https://www.youtube.com/watch?v=f8_PZOx_KBY&feature=youtu.be).
 
 * [pgarm/pwposh](https://github.com/pgarm/pwposh): a PowerShell module available in the [PowerShell Gallery](https://www.powershellgallery.com/packages/PwPoSh/)
 
@@ -227,6 +289,7 @@ If you would like to volunteer and assist in translating, see [this page](https:
 | [Oyale](https://github.com/oyale) |[Spanish](https://pwpush.com/pt-br/p/novo) | |
 | johan323 |[Swedish](https://pwpush.com/sv/p/ny) | |
 | Fredrik Arvas|[Swedish](https://pwpush.com/sv/p/ny) | |
+| Pedro Marques | [European Portuguese](https://pwpush.com/pt-pt/p/novo) | |
 
 Also thanks to [translation.io](https://translation.io) for their great service in managing translations.  It's also generously free for opensource projects.
 
@@ -238,7 +301,7 @@ Thanks to:
 
 * [@sfarosu](https://github.com/sfarosu) for [contributing](https://github.com/pglombardo/PasswordPusher/pull/82) the Docker, Kubernetes & OpenShift container support.
 
-* [*sirux88](https://github.com/sirux88) for cleaning up the Docker files and adding multistage builds.
+* [sirux88](https://github.com/sirux88) for cleaning up the Docker files and adding multistage builds.
 
 ## Other
 
@@ -256,7 +319,7 @@ Thanks to:
 
 [![License](https://img.shields.io/github/license/pglombardo/PasswordPusher)](https://github.com/pglombardo/PasswordPusher/blob/main/LICENSE)
 
-This project is licensed under the terms of the `GNU General Public License v3.0` license. See [LICENSE](https://github.com/pglombardo/PasswordPusher/blob/main/LICENSE) for more details.
+This project is licensed under the terms of the `Apache License 2.0` license. See [LICENSE](https://github.com/pglombardo/PasswordPusher/blob/main/LICENSE) for more details.
 
 # 📃 Citation
 

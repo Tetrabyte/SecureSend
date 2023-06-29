@@ -60,6 +60,11 @@
             <%= _('Improve an existing language or add a new one') %>
           </li>
           <li class="list-group-item">
+            <%= _("Sign up for the") %>
+            <a href="https://buttondown.email/pwpush" target="_blank"><%= _('newsletter') %></a>
+            <%= _("to get updates on important releases, security issues, tips and more.") %>
+          </li>
+          <li class="list-group-item">
             <%= _('Follow Tbyte Secure Send on') %>
             <a href="https://www.facebook.com/pwpush" target="_blank">Facebook</a>,
             <a href="https://twitter.com/pwpush" target="_blank">Twitter</a>
@@ -67,7 +72,7 @@
             <a href="https://github.com/pglombardo" target="_blank">Github</a>.
           </li>
           <li class="list-group-item">
-            <%= _('Fix an issue, add a feature or write some documentation.') %> <a href="https://github.com/pglombardo/PasswordPusher/issues" target="_blank"><%= _('See the Github project.') %></a>.
+            <%= _('Fix an issue, add a feature or write some documentation.') %> <a href="https://github.com/pglombardo/PasswordPusher/issues" target="_blank"><%= _('See the Github project.') %></a>
           </li>
           <li class="list-group-item">
             <%= _('Sign up to Digital Ocean') %>
@@ -75,10 +80,20 @@
             <%= _('to get Tbyte Secure Send a hosting credit.') %>
           </li>
         </ol>
+        
+        <p class='mt-3'><%= _('Thank you for supporting Tbyte Secure Send!') %></p>
+        
+        <h5 class='border-bottom my-3 py-3'><%= _('Resources') %></h5>
 
         <p class='mt-3'>
             <%= _('If you are giving a presentation, authoring a blog post or video about Tbyte Secure Send, feel free to contact me for any questions.') %>
         </p>
+        <p class='mt-3'>
+            <%= _('We have media resources and a full explanation of features available in') %>
+            <%= link_to _('Windows Powerpoint'), 'https://pwpush.fra1.cdn.digitaloceanspaces.com/resources/Password%20Pusher%20Media%20Resources.pptx' %>
+            <%= _('and') %>
+            <%= link_to _('Mac Keynote'), 'https://pwpush.fra1.cdn.digitaloceanspaces.com/resources/Password%20Pusher%20Media%20Resources.key' %>
+            <%= _('formats.') %>
 
         <p class='mt-3'><%= _('Thank you for supporting Tbyte Secure Send!') %></p>
 
@@ -90,12 +105,11 @@
         <div class="card mb-3">
             <h5 class="card-header"><em class="bi bi-stars"></em> <%= _('Birthday') %></h5>
             <div class="card-body">
-                <h5 class="card-title"><%= _('More Than 10 Years Old') %></h5>
+                <h5 class="card-title"><%= _('More Than 11 Years Old') %></h5>
                 <p class="card-text">
                     <%= _('The first git commit to Tbyte Secure Send was on') %>
                     <strong>
-                    <% bday = Date.new(2011, 12, 28) %>
-                    <%= bday.strftime(I18n.t('date.formats.long')) %>.
+                    <%= l Date.new(2011, 12, 28), format: :long %>.
                     </strong>
                     <%= _('pwpush.com went live shortly thereafter.') %></p>
             </div>
@@ -109,9 +123,11 @@
         </div>
         <p class='text-end'><%= _('Follow for news, changes & updates.') %></p>
         <div class="d-grid gap-2 d-md-block text-end mb-3">
-            <a href="https://www.facebook.com/pwpush/" target="_blank"><button class="btn btn-primary" type="button"><em class="bi bi-facebook"></em></button></a>
-            <a href="https://github.com/pglombardo/PasswordPusher" target="_blank"><button class="btn btn-primary" type="button"><em class="bi bi-github"></em></button></a>
-            <a href="https://twitter.com/pwpush" target="_blank"><button class="btn btn-primary" type="button"><em class="bi bi-twitter"></em></button></a>
+            <a href="https://www.facebook.com/pwpush/" target="_blank"><button class="btn btn-info" type="button"><em class="bi bi-facebook"></em></button></a>
+            <a href="https://github.com/pglombardo/PasswordPusher" target="_blank"><button class="btn btn-info" type="button"><em class="bi bi-github"></em></button></a>
+            <a href="https://twitter.com/pwpush" target="_blank"><button class="btn btn-info" type="button"><em class="bi bi-twitter"></em></button></a>
+            <a href="https://reddit.com/r/pwpush" target="_blank"><button class="btn btn-info" type="button"><em class="bi bi-reddit"></em></button></a>
+            <a href="https://buttondown.email/pwpush" target="_blank"><button class="btn btn-info" type="button"><em class="bi bi-newspaper"></em></button></a>
         </div>
     </div>
 </div>
