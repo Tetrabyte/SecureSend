@@ -2,15 +2,31 @@ name: Docker Container Builds
 
 on:
   push:
-    branches:
-      - master
-      - main
-      - dev
-      - develop
+    tags:
+      - "v*.*.*"
+      - "release"
 
+  workflow_dispatch:
+    inputs:
+      dockerTagName:
+        description: 'What Docker tag to create?'
+        required: true
+        default: 'development-0xdeadbeef'
+      dockerPush:
+        description: 'Push image to docker hub?'
+        required: true
+        type: boolean
+        default: false
+  schedule:
+    # * is a special character in YAML so you have to quote this string
+    # Run every day at 5:24 UTC - build 'latest' docker containers
+    - cron:  '24 17 * * *'
+env:
+  DOCKER_PUSH: true
+  DOCKER_TAG:
 
 jobs:
-  docker:
+  build:
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
@@ -38,24 +54,35 @@ jobs:
         if: ${{ github.ref == 'refs/heads/master' }}
         run: echo "DOCKER_TAG=latest" >> $GITHUB_ENV
 
+      - name: Should docker tag be release?
+        if: ${{ github.ref == 'refs/tags/release' }}
+        run: echo "DOCKER_TAG=release" >> $GITHUB_ENV
+
       - name: Manually configured docker tag
         if: ${{ github.event_name == 'workflow_dispatch' }}
-        run: echo "DOCKER_TAG={{ github.event.inputs.dockerTagName }}" >> $GITHUB_ENV
+        run: |
+             echo "DOCKER_TAG=${{ github.event.inputs.dockerTagName }}" >> $GITHUB_ENV
+             echo "DOCKER_PUSH=${{ github.event.inputs.dockerPush }}" >> $GITHUB_ENV
 
       - name: Show us the DOCKER_TAG
         run: echo "${{ env.DOCKER_TAG}}"
 
-      - name: Build and push Tbyte Docker images
-        uses: docker/build-push-action@v3.3.0
+      - name: Show us the DOCKER_PUSH
+        run: echo "${{ env.DOCKER_PUSH}}"
+
+      - name: Login to DockerHub
+        uses: docker/login-action@v2
+        if: ${{env.DOCKER_PUSH == 'true'}}
         with:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
 
-      - name: Build and push pwpush-${{ matrix.dbType }} Docker images
+      - name: Build and push Tbyte-${{ matrix.dbType }} Docker images
         uses: docker/build-push-action@v4.1.1
         with:
           file: ./containers/docker/pwpush-${{ matrix.dbType }}/Dockerfile
           platforms: linux/amd64,linux/arm64
           provenance: false
-          push: true
-          tags: tetrabyteit/securesend:${{ env.DOCKER_TAG }}
+          push: ${{env.DOCKER_PUSH == 'true'}}
+          tags: tetrabyteit/securesend-${{ matrix.dbType }}:${{ env.DOCKER_TAG }}
+
