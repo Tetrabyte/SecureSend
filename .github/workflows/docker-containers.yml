@@ -48,6 +48,12 @@ jobs:
       - name: Build and push Tbyte Docker images
         uses: docker/build-push-action@v3.3.0
         with:
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
+
+      - name: Build and push pwpush-${{ matrix.dbType }} Docker images
+        uses: docker/build-push-action@v4.1.1
+        with:
           file: ./containers/docker/pwpush-${{ matrix.dbType }}/Dockerfile
           platforms: linux/amd64,linux/arm64
           provenance: false
