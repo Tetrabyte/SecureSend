@@ -4,12 +4,9 @@
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 
   <title><%= content_for?(:html_title) ? yield(:html_title) : Settings.brand.title %></title>
-<% else %>
-  <title><%= content_for?(:html_title) ? yield(:html_title) : _('Tbyte Secure Send') %></title>
-<% end %>
 
-<meta content="<%= _('Tbyte Secure Send is an application to securely send passwords over the web. Links to passwords expire after a certain number of views and/or time has passed.') %>" name='description'>
-<meta content='width=device-width, initial-scale=1' name='viewport'>
+  <meta content="<%= _('Tbyte Secure Send is an application to securely send passwords over the web. Links to passwords expire after a certain number of views and/or time has passed.') %>" name='description'>
+  <meta content='width=device-width, initial-scale=1' name='viewport'>
 
   <%= render partial: "shared/layout_icons" %>
 
