@@ -61,7 +61,34 @@ enable_logins: true
 # Environment variable override:
 # PWP__DISABLE_SIGNUPS='false'
 #
-disable_signups: true
+disable_signups: false
+
+## Limit Signups to Specific Email Domains
+#
+# By default, anyone can sign up for an account.  The following default regular
+# expression just validates if it is a valid email address.
+#
+# signup_email_regexp: '\A[^@\s]+@[^@\s]+\z'
+#
+# If you would like to limit signups to specific email domains, you can extend
+# the regular expression below to include the domains you want to allow.
+#
+# For example, to only allow signups from the domain 'hey.com', you would
+# change the following to:
+#
+#   signup_email_regexp: '\A[^@\s]+@(hey\.com)\z'
+#
+# or for multiple domains:
+#
+#  signup_email_regexp: '\A[^@\s]+@(hey\.com|gmail\.com)\z'
+#
+# Tip: use https://rubular.com to test out your regular expressions. It includes
+# a guide to what each component means in regexp.
+#
+# Environment variable override:
+# PWP__SIGNUP_EMAIL_REGEXP='\A[^@\s]+@[^@\s]+\z'
+#
+signup_email_regexp: '\A[^@\s]+@(tbyte\.com)\z'
 
 ### Allow Anonymous
 #
@@ -110,6 +137,31 @@ host_protocol: 'https'
 # Set this value without a trailing slash ('/').
 #
 override_base_url: 'https://securesend.remoteit.co.uk'
+
+### Allowed Hosts
+#
+# This is a list of allowed hosts for the application.  This is used to
+# prevent host header attacks.
+#
+# When set, the application will only respond to requests with a host header
+# that matches one of the values in this list.
+#
+# This feature is generally only used when the application is behind a proxy.
+#
+# It's generally not required to use this unless you are getting the related error
+# in the application.  localhost and the IP that the application is running on
+# are always allowed.
+#
+# Note: If you need more than one value to the environment variable, separate
+# entries by a single space.
+#
+# Environment variable override:
+# PWP__ALLOWED_HOSTS='pwpush.com pwpush.mydomain.com pwpush.myotherdomain'
+#
+# allowed_hosts:
+#   - 'pwpush.com'
+#   - 'pwpush.mydomain.com'
+#   - 'pwpush.myotherdomain.com'
 
 ## Expiration Settings for Password Pushes
 #
@@ -561,14 +613,14 @@ brand:
 throttling:
   # ..maximum number of allowed HTTP requests per day
   #
-  # Default: 1000
+  # Default: 5000
   #
   # Environment Variable Override: PWP__THROTTLING__DAILY='1000'
   daily: 10000
 
   # ..maximum number of allowed HTTP requests per hour
   #
-  # Default: 100
+  # Default: 200
   #
   # Environment Variable Override: PWP__THROTTLING__HOURLY='100'
   hourly: 1000
@@ -582,7 +634,7 @@ throttling:
 
   # ..maximum number of allowed HTTP requests per second
   #
-  # Default: 2
+  # Default: 3
   #
   # Environment Variable Override: PWP__THROTTLING__SECOND='2'
   second: 20
@@ -697,7 +749,10 @@ language_codes:
   es: 'Español'
   fi: 'Suomi'
   fr: 'Français'
+  hi: 'हिन्दी'
   hu: 'Magyar'
+  id: 'Indonesian'
+  is: 'Íslenska'
   it: 'Italiano'
   ja: '日本語'
   ko: '한국어'
@@ -707,10 +762,13 @@ language_codes:
   pl: 'Polski'
   pt-BR: 'Português'
   pt-PT: 'Português'
+  ro: 'Română'
   ru: 'Русский'
   sr: 'Српски'
   sv: 'Svenska'
   th: 'ไทย'
+  uk: 'Українська'
+  ur: 'اردو'
   zh-CN: '中国人'
 
 # Used internally for the language selector model.
@@ -728,7 +786,10 @@ country_codes:
   es: :es
   fi: :fi
   fr: :fr
+  hi: :in
   hu: :hu
+  id: :id
+  is: :is
   it: :it
   ja: :jp
   ko: :kr
@@ -738,10 +799,13 @@ country_codes:
   pl: :pl
   pt-BR: :br
   pt-PT: :pt
+  ro: :ro
   ru: :ru
   sr: :rs
   sv: :se
   th: :th
+  uk: :ua
+  ur: :pk
   zh-CN: :cn
 
 

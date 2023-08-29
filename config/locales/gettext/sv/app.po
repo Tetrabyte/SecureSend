@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PasswordPusher 1.0\n"
 "Report-Msgid-Bugs-To: contact@translation.io\n"
-"POT-Creation-Date: 2023-05-19 16:33+0200\n"
-"PO-Revision-Date: 2023-05-19 16:33+0200\n"
+"POT-Creation-Date: 2023-08-03 12:10+0200\n"
+"PO-Revision-Date: 2023-08-03 12:10+0200\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Swedish\n"
 "Language: sv\n"
@@ -22,7 +22,7 @@ msgstr ""
 msgid "Not Found"
 msgstr "Hittades inte"
 
-#: ../../../app/controllers/feedbacks_controller.rb:10
+#: ../../../app/controllers/feedbacks_controller.rb:12
 msgid ""
 "Our apologies but you failed the spam check.  You could try contacting us on G"
 "ithub instead."
@@ -30,11 +30,11 @@ msgstr ""
 "Vi ber om ursäkt, men du gick inte igenom spamkontrollen. Du kan försöka konta"
 "kta oss på Github istället."
 
-#: ../../../app/controllers/feedbacks_controller.rb:15
-msgid "Feedback sent!"
-msgstr "Feedback skickad!"
-
 #: ../../../app/controllers/feedbacks_controller.rb:17
+msgid "Feedback sent!  We will get back to you as soon as possible."
+msgstr "Feedback har skickats! Vi återkommer till dig så snart som möjligt."
+
+#: ../../../app/controllers/feedbacks_controller.rb:19
 msgid ""
 "Could not send feedback.  Did you pass the Humanity Test?  Valid email?  Try a"
 "gain?"
@@ -164,6 +164,10 @@ msgstr ""
 "kar till lösenord upphör att gälla efter att ett visst antal visningar och/ell"
 "er en viss tid har gått."
 
+#: ../../../app/views/devise/mailer/confirmation_instructions.html.erb:23
+msgid "Confirm your new account"
+msgstr "Bekräfta ditt nya konto"
+
 #: ../../../app/views/devise/mailer/confirmation_instructions.html.erb:24
 msgid ""
 "Your account has been created but you must confirm that you own this email add"
@@ -188,6 +192,10 @@ msgstr "eller genom att kopiera och klistra in följande URL i din webbläsare:"
 msgid "If you didn't create an account, no action is required."
 msgstr "Om du inte skapade ett konto krävs ingen åtgärd."
 
+#: ../../../app/views/devise/mailer/email_changed.html.erb:24
+msgid "Your email is being changed"
+msgstr "Din e-postadress håller på att ändras"
+
 #: ../../../app/views/devise/mailer/email_changed.html.erb:26
 msgid "We're contacting you to notify you that your email at"
 msgstr "Vi kontaktar dig för att meddela dig att din e-postadress på"
@@ -200,6 +208,10 @@ msgstr "ändras till %s"
 msgid "has been changed to %s"
 msgstr "har ändrats till %s"
 
+#: ../../../app/views/devise/mailer/password_change.html.erb:23
+msgid "Password Change"
+msgstr "Lösenordsändring"
+
 #: ../../../app/views/devise/mailer/password_change.html.erb:25
 msgid "We're contacting you to notify you that your password has been changed on"
 msgstr "Vi kontaktar dig för att meddela dig att ditt lösenord har ändrats på"
@@ -211,6 +223,10 @@ msgid ""
 msgstr ""
 "Om du inte initierade detta och det inte var din avsikt, vänligen kontakta oss"
 " så snart som möjligt."
+
+#: ../../../app/views/devise/mailer/reset_password_instructions.html.erb:24
+msgid "Password Change Request"
+msgstr "Begäran om lösenordsändring"
 
 #: ../../../app/views/devise/mailer/reset_password_instructions.html.erb:26
 msgid ""
@@ -233,6 +249,10 @@ msgid ""
 msgstr ""
 "Ditt lösenord kommer inte att ändras förrän du öppnar länken ovan och skapa et"
 "t nytt."
+
+#: ../../../app/views/devise/mailer/unlock_instructions.html.erb:23
+msgid "Unlock Your Account"
+msgstr "Lås upp ditt konto"
 
 #: ../../../app/views/devise/mailer/unlock_instructions.html.erb:26
 msgid ""
@@ -386,10 +406,6 @@ msgstr "Lösenord"
 msgid "Language"
 msgstr "Språk"
 
-#: ../../../app/views/feedbacks/create.html.erb:1
-msgid "Thank you for your feedback!  We'll be in touch soon!"
-msgstr "Tack för din feedback! Vi hör av oss snart!"
-
 #: ../../../app/views/feedbacks/new.html.erb:1
 #: ../../../app/views/feedbacks/new.html.erb:2
 #: ../../../app/views/feedbacks/new.html.erb:42
@@ -410,8 +426,8 @@ msgid "Your Name"
 msgstr "Ditt namn"
 
 #: ../../../app/views/feedbacks/new.html.erb:29
-msgid "Humanity Test: What is 7 plus 2?"
-msgstr "Humanity Test: Vad är 7 plus 2?"
+msgid "What is one hundred minus 5?"
+msgstr "Vad är hundra minus 5?"
 
 #: ../../../app/views/feedbacks/new.html.erb:34
 msgid ""

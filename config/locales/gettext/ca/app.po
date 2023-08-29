@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PasswordPusher 1.0\n"
 "Report-Msgid-Bugs-To: contact@translation.io\n"
-"POT-Creation-Date: 2023-05-19 16:33+0200\n"
-"PO-Revision-Date: 2023-05-19 16:33+0200\n"
+"POT-Creation-Date: 2023-08-03 12:10+0200\n"
+"PO-Revision-Date: 2023-08-03 12:10+0200\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Catalan\n"
 "Language: ca\n"
@@ -22,7 +22,7 @@ msgstr ""
 msgid "Not Found"
 msgstr "No s'ha trobat"
 
-#: ../../../app/controllers/feedbacks_controller.rb:10
+#: ../../../app/controllers/feedbacks_controller.rb:12
 msgid ""
 "Our apologies but you failed the spam check.  You could try contacting us on G"
 "ithub instead."
@@ -30,11 +30,11 @@ msgstr ""
 "Les nostres disculpes, però heu fallat la comprovació de correu brossa. En llo"
 "c d'això, podeu provar de contactar amb nosaltres a Github."
 
-#: ../../../app/controllers/feedbacks_controller.rb:15
-msgid "Feedback sent!"
-msgstr "Comentaris enviats!"
-
 #: ../../../app/controllers/feedbacks_controller.rb:17
+msgid "Feedback sent!  We will get back to you as soon as possible."
+msgstr "Comentaris enviats! Ens posarem en contacte amb vostè el més aviat possible."
+
+#: ../../../app/controllers/feedbacks_controller.rb:19
 msgid ""
 "Could not send feedback.  Did you pass the Humanity Test?  Valid email?  Try a"
 "gain?"
@@ -163,6 +163,10 @@ msgstr ""
 "enllaços a les contrasenyes caduquen després que hagi passat un cert nombre de"
 " vistes i/o temps."
 
+#: ../../../app/views/devise/mailer/confirmation_instructions.html.erb:23
+msgid "Confirm your new account"
+msgstr "Confirmeu el vostre compte nou"
+
 #: ../../../app/views/devise/mailer/confirmation_instructions.html.erb:24
 msgid ""
 "Your account has been created but you must confirm that you own this email add"
@@ -189,6 +193,10 @@ msgstr "o copiant i enganxant l'URL següent al vostre navegador:"
 msgid "If you didn't create an account, no action is required."
 msgstr "Si no heu creat un compte, no cal fer cap acció."
 
+#: ../../../app/views/devise/mailer/email_changed.html.erb:24
+msgid "Your email is being changed"
+msgstr "El teu correu electrònic s'està canviant"
+
 #: ../../../app/views/devise/mailer/email_changed.html.erb:26
 msgid "We're contacting you to notify you that your email at"
 msgstr "Ens posem en contacte amb tu per notificar-te que el teu correu electrònic a"
@@ -200,6 +208,10 @@ msgstr "s'està canviant a %s"
 #: ../../../app/views/devise/mailer/email_changed.html.erb:32
 msgid "has been changed to %s"
 msgstr "s'ha canviat a %s"
+
+#: ../../../app/views/devise/mailer/password_change.html.erb:23
+msgid "Password Change"
+msgstr "Canvi de contrasenya"
 
 #: ../../../app/views/devise/mailer/password_change.html.erb:25
 msgid "We're contacting you to notify you that your password has been changed on"
@@ -214,6 +226,10 @@ msgid ""
 msgstr ""
 "Si no ho vau iniciar i no era la vostra intenció, poseu-vos en contacte amb no"
 "saltres el més aviat possible."
+
+#: ../../../app/views/devise/mailer/reset_password_instructions.html.erb:24
+msgid "Password Change Request"
+msgstr "Sol·licitud de canvi de contrasenya"
 
 #: ../../../app/views/devise/mailer/reset_password_instructions.html.erb:26
 msgid ""
@@ -236,6 +252,10 @@ msgid ""
 msgstr ""
 "La vostra contrasenya no canviarà fins que no accediu a l'enllaç anterior i en"
 " creeu una de nova."
+
+#: ../../../app/views/devise/mailer/unlock_instructions.html.erb:23
+msgid "Unlock Your Account"
+msgstr "Desbloqueja el teu compte"
 
 #: ../../../app/views/devise/mailer/unlock_instructions.html.erb:26
 msgid ""
@@ -395,10 +415,6 @@ msgstr "Contrasenya"
 msgid "Language"
 msgstr "Llengua"
 
-#: ../../../app/views/feedbacks/create.html.erb:1
-msgid "Thank you for your feedback!  We'll be in touch soon!"
-msgstr "Gràcies pels seus comentaris! Ens posarem en contacte aviat!"
-
 #: ../../../app/views/feedbacks/new.html.erb:1
 #: ../../../app/views/feedbacks/new.html.erb:2
 #: ../../../app/views/feedbacks/new.html.erb:42
@@ -419,8 +435,8 @@ msgid "Your Name"
 msgstr "El teu nom"
 
 #: ../../../app/views/feedbacks/new.html.erb:29
-msgid "Humanity Test: What is 7 plus 2?"
-msgstr "Test d'Humanitat: Què és 7 més 2?"
+msgid "What is one hundred minus 5?"
+msgstr "Què són cent menys 5?"
 
 #: ../../../app/views/feedbacks/new.html.erb:34
 msgid ""

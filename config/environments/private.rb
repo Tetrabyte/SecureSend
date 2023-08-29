@@ -70,4 +70,15 @@ Rails.application.configure do
   end
 
   config.active_record.dump_schema_after_migration = false
+
+  # If a user sets the allowed_hosts setting, we need to add the domain(s) to the list of allowed hosts
+  if Settings.allowed_hosts.present?
+    if Settings.allowed_hosts.is_a?(Array)
+      config.hosts.concat(Settings.allowed_hosts)
+    elsif Settings.allowed_hosts.is_a?(String)
+      config.hosts.concat Settings.allowed_hosts.split(" ")
+    else
+      raise "Settings.allowed_hosts (PWP__ALLOWED_HOSTS): Allowed hosts must be an array or string"
+    end
+  end
 end

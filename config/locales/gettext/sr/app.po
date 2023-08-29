@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PasswordPusher 1.0\n"
 "Report-Msgid-Bugs-To: contact@translation.io\n"
-"POT-Creation-Date: 2023-05-19 16:33+0200\n"
-"PO-Revision-Date: 2023-05-19 16:33+0200\n"
+"POT-Creation-Date: 2023-08-03 12:10+0200\n"
+"PO-Revision-Date: 2023-08-03 12:10+0200\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Serbian\n"
 "Language: sr\n"
@@ -23,7 +23,7 @@ msgstr ""
 msgid "Not Found"
 msgstr "Није пронађен"
 
-#: ../../../app/controllers/feedbacks_controller.rb:10
+#: ../../../app/controllers/feedbacks_controller.rb:12
 msgid ""
 "Our apologies but you failed the spam check.  You could try contacting us on G"
 "ithub instead."
@@ -31,11 +31,11 @@ msgstr ""
 "Извињавамо се, али нисте прошли проверу нежељене поште. Уместо тога, можете по"
 "кушати да нас контактирате на Гитхуб-у."
 
-#: ../../../app/controllers/feedbacks_controller.rb:15
-msgid "Feedback sent!"
-msgstr "Повратне информације су послате!"
-
 #: ../../../app/controllers/feedbacks_controller.rb:17
+msgid "Feedback sent!  We will get back to you as soon as possible."
+msgstr "Повратне информације су послате! Јавићемо вам се што је пре могуће."
+
+#: ../../../app/controllers/feedbacks_controller.rb:19
 msgid ""
 "Could not send feedback.  Did you pass the Humanity Test?  Valid email?  Try a"
 "gain?"
@@ -163,6 +163,10 @@ msgstr ""
 "Пассворд Пусхер је апликација за безбедно слање лозинки преко веба. Везе ка ло"
 "зинкама истичу након одређеног броја прегледа и/или времена."
 
+#: ../../../app/views/devise/mailer/confirmation_instructions.html.erb:23
+msgid "Confirm your new account"
+msgstr "Потврдите свој нови налог"
+
 #: ../../../app/views/devise/mailer/confirmation_instructions.html.erb:24
 msgid ""
 "Your account has been created but you must confirm that you own this email add"
@@ -187,6 +191,10 @@ msgstr "или копирањем и лепљењем следеће УРЛ ад
 msgid "If you didn't create an account, no action is required."
 msgstr "Ако нисте отворили налог, не морате ништа да предузимате."
 
+#: ../../../app/views/devise/mailer/email_changed.html.erb:24
+msgid "Your email is being changed"
+msgstr "Ваша е-пошта се мења"
+
 #: ../../../app/views/devise/mailer/email_changed.html.erb:26
 msgid "We're contacting you to notify you that your email at"
 msgstr "Контактирамо вас да бисмо вас обавестили да је ваша е-пошта на"
@@ -199,6 +207,10 @@ msgstr "се мења у %s"
 msgid "has been changed to %s"
 msgstr "је промењено у %s"
 
+#: ../../../app/views/devise/mailer/password_change.html.erb:23
+msgid "Password Change"
+msgstr "Промена лозинке"
+
 #: ../../../app/views/devise/mailer/password_change.html.erb:25
 msgid "We're contacting you to notify you that your password has been changed on"
 msgstr "Контактирамо вас да бисмо вас обавестили да је ваша лозинка промењена"
@@ -210,6 +222,10 @@ msgid ""
 msgstr ""
 "Ако ово нисте иницирали и није вам била намера, контактирајте нас што је пре м"
 "огуће."
+
+#: ../../../app/views/devise/mailer/reset_password_instructions.html.erb:24
+msgid "Password Change Request"
+msgstr "Захтев за промену лозинке"
 
 #: ../../../app/views/devise/mailer/reset_password_instructions.html.erb:26
 msgid ""
@@ -228,6 +244,10 @@ msgid ""
 msgstr ""
 "Ваша лозинка се неће променити док не приступите горњој вези и не направите но"
 "ву."
+
+#: ../../../app/views/devise/mailer/unlock_instructions.html.erb:23
+msgid "Unlock Your Account"
+msgstr "Откључајте свој налог"
 
 #: ../../../app/views/devise/mailer/unlock_instructions.html.erb:26
 msgid ""
@@ -379,10 +399,6 @@ msgstr "Лозинка"
 msgid "Language"
 msgstr "Језик"
 
-#: ../../../app/views/feedbacks/create.html.erb:1
-msgid "Thank you for your feedback!  We'll be in touch soon!"
-msgstr "Хвала на повратним информацијама! Ускоро ћемо се јавити!"
-
 #: ../../../app/views/feedbacks/new.html.erb:1
 #: ../../../app/views/feedbacks/new.html.erb:2
 #: ../../../app/views/feedbacks/new.html.erb:42
@@ -403,8 +419,8 @@ msgid "Your Name"
 msgstr "Твоје име"
 
 #: ../../../app/views/feedbacks/new.html.erb:29
-msgid "Humanity Test: What is 7 plus 2?"
-msgstr "Тест хуманости: Колико је 7 плус 2?"
+msgid "What is one hundred minus 5?"
+msgstr "Колико је сто минус 5?"
 
 #: ../../../app/views/feedbacks/new.html.erb:34
 msgid ""

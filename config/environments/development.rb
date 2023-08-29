@@ -94,4 +94,15 @@ Rails.application.configure do
 
   # Uncomment if you wish to allow Action Cable access from any origin.
   # config.action_cable.disable_request_forgery_protection = true
+
+  # If a user sets the allowed_hosts setting, we need to add the domain(s) to the list of allowed hosts
+  if Settings.allowed_hosts.present?
+    if Settings.allowed_hosts.is_a?(Array)
+      config.hosts.concat(Settings.allowed_hosts)
+    elsif Settings.allowed_hosts.is_a?(String)
+      config.hosts.concat Settings.allowed_hosts.split(" ")
+    else
+      raise "Settings.allowed_hosts (PWP__ALLOWED_HOSTS): Allowed hosts must be an array or string"
+    end
+  end
 end

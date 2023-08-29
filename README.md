@@ -1,6 +1,6 @@
 <div align="center">
 
-![Tbyte Secure Send Front Page](https://pwpush.s3.eu-west-1.amazonaws.com/pwpush-horizontal-logo.png)
+![Tbyte Secure Send Front Page](https://pwpush.fra1.cdn.digitaloceanspaces.com/branding/logos/horizontal-logo-small.png)
 
 __Simple & Secure Password Sharing with Auto-Expiration of Shared Items__
 
@@ -32,7 +32,7 @@ Hosted at [pwpush.com](https://pwpush.com) but you can also easily run your own 
 * __JSON API:__ Raw JSON API available for 3rd party tools or command line via `curl` or `wget`.
 * __Command line interface:__ Automate your password distribution with CLI tools or custom scripts.
 * __Logins__: Invite your colleagues and track what is pushed and who retrieved it.
-* __Internationalized:__ 23 language translations are bundled in.  Easily selectable via UI or URL
+* __Internationalized:__ 28 language translations are bundled in.  Easily selectable via UI or URL
 * __Themes:__ [26 themes](./Themes.md) bundled in courtesy of Bootswatch.  Select with a simple environment variable.
 * __Unbranded delivery page:__ No logos, superfluous text or unrelated links to confuse end users.
 * __Customizable:__ Change text and default options via environment variables.
@@ -153,7 +153,7 @@ But if you're resolute & brave, continue on!
 
 ### Dependencies
 
-* Ruby 3.0 or greater (2.7 may work)
+* Ruby 3.0 or greater
 * Recent Node.js stable & Yarn
 * Compiler tools: gcc g++ make
 * Other: git
@@ -242,7 +242,7 @@ _See also the [Tools Page on pwpush.com](https://pwpush.com/en/pages/tools)._
 
 # 🇮🇹 Internationalization
 
-Tbyte Secure Send is currently available in **18 languages** with more languages being added often as volunteers apply.
+Tbyte Secure Send is currently available in **23 languages** with more languages being added often as volunteers apply.
 
 From within the application, the language is selectable from a language menu.  Out of the box and before any language menu selection is done, the default language for the application is English.
 

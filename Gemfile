@@ -1,8 +1,8 @@
 source 'https://rubygems.org'
 
-ruby ENV['CUSTOM_RUBY_VERSION'] || '>=2.7.0'
+ruby ENV['CUSTOM_RUBY_VERSION'] || '>=3.1.4'
 
-gem 'rails', '~> 7.0.5'
+gem 'rails', '~> 7.0.7'
 
 group :development do
   gem 'listen'
@@ -10,6 +10,8 @@ group :development do
   # Visual Studio Additions
   gem 'rubocop'
   gem 'ruby-debug-ide'
+
+  gem 'pry-rails'
 
   # Access an interactive console on exception pages or by
   # calling 'console' anywhere in the code.
@@ -22,8 +24,8 @@ group :test do
   gem 'minitest'
   gem 'minitest-reporters'
   gem 'minitest-rails', '>= 6.1.0'
-  gem 'selenium-webdriver', '4.9.0'
-  gem 'webdrivers', '~> 5.0', require: false
+  gem 'selenium-webdriver'
+  gem 'webdrivers', '~> 5.3', require: false
 end
 
 group :development, :test do
@@ -59,9 +61,9 @@ gem 'sass-rails', '~> 6.0', '>= 6.0.0'
 gem "terser", "~> 1.1"
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'json', '~> 2.0' # Legacy carry-over
-gem 'will_paginate', '~> 3.3.0'
+gem 'will_paginate', '~> 4.0.0'
 gem 'will_paginate-bootstrap-style'
-gem 'bootstrap', '~> 5.2', '>= 5.2.3'
+gem 'bootstrap', '5.2.3'
 
 # Hotwire's SPA-like page accelerator [https://turbo.hotwired.dev]
 gem "turbo-rails"
@@ -88,7 +90,7 @@ gem 'rollbar'
 
 gem 'route_translator', '>= 13.0.0'
 gem 'translation'
-gem 'rails-i18n', '~> 7.0.7'
+gem 'rails-i18n', '~> 7.0.8'
 gem 'i18n-tasks', '~> 1.0.12'
 gem 'devise-i18n'
 

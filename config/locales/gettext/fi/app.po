@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PasswordPusher 1.0\n"
 "Report-Msgid-Bugs-To: contact@translation.io\n"
-"POT-Creation-Date: 2023-05-19 16:33+0200\n"
-"PO-Revision-Date: 2023-05-19 16:33+0200\n"
+"POT-Creation-Date: 2023-08-03 12:10+0200\n"
+"PO-Revision-Date: 2023-08-03 12:10+0200\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Finnish\n"
 "Language: fi\n"
@@ -22,7 +22,7 @@ msgstr ""
 msgid "Not Found"
 msgstr "Ei löydetty"
 
-#: ../../../app/controllers/feedbacks_controller.rb:10
+#: ../../../app/controllers/feedbacks_controller.rb:12
 msgid ""
 "Our apologies but you failed the spam check.  You could try contacting us on G"
 "ithub instead."
@@ -30,11 +30,11 @@ msgstr ""
 "Pahoittelemme, mutta et läpäissyt roskapostin tarkistusta. Voit sen sijaan yri"
 "ttää ottaa meihin yhteyttä Githubissa."
 
-#: ../../../app/controllers/feedbacks_controller.rb:15
-msgid "Feedback sent!"
-msgstr "Palaute lähetetty!"
-
 #: ../../../app/controllers/feedbacks_controller.rb:17
+msgid "Feedback sent!  We will get back to you as soon as possible."
+msgstr "Palaute lähetetty! Palaamme sinulle mahdollisimman pian."
+
+#: ../../../app/controllers/feedbacks_controller.rb:19
 msgid ""
 "Could not send feedback.  Did you pass the Humanity Test?  Valid email?  Try a"
 "gain?"
@@ -164,6 +164,10 @@ msgstr ""
 "Tbyte Secure Send on sovellus salasanojen välittämiseen verkossa. Linkit salasan"
 "oihin vanhenevat, kun tietty määrä näyttökertoja ja/tai aikaa on kulunut."
 
+#: ../../../app/views/devise/mailer/confirmation_instructions.html.erb:23
+msgid "Confirm your new account"
+msgstr "Vahvista uusi tilisi"
+
 #: ../../../app/views/devise/mailer/confirmation_instructions.html.erb:24
 msgid ""
 "Your account has been created but you must confirm that you own this email add"
@@ -190,6 +194,10 @@ msgstr "tai kopioimalla ja liittämällä seuraava URL-osoite selaimeesi:"
 msgid "If you didn't create an account, no action is required."
 msgstr "Jos et luonut tiliä, sinun ei tarvitse tehdä mitään."
 
+#: ../../../app/views/devise/mailer/email_changed.html.erb:24
+msgid "Your email is being changed"
+msgstr "Sähköpostiosoitettasi muutetaan"
+
 #: ../../../app/views/devise/mailer/email_changed.html.erb:26
 msgid "We're contacting you to notify you that your email at"
 msgstr "Otamme sinuun yhteyttä ilmoittaaksemme, että sähköpostiosoitteesi"
@@ -202,6 +210,10 @@ msgstr "muutetaan muotoon %s"
 msgid "has been changed to %s"
 msgstr "on muutettu muotoon %s"
 
+#: ../../../app/views/devise/mailer/password_change.html.erb:23
+msgid "Password Change"
+msgstr "Salasanan vaihto"
+
 #: ../../../app/views/devise/mailer/password_change.html.erb:25
 msgid "We're contacting you to notify you that your password has been changed on"
 msgstr "Otamme sinuun yhteyttä ilmoittaaksemme, että salasanasi on vaihdettu"
@@ -213,6 +225,10 @@ msgid ""
 msgstr ""
 "Jos et ole aloittanut tätä etkä ollut tarkoituksesi, ota meihin yhteyttä mahdo"
 "llisimman pian."
+
+#: ../../../app/views/devise/mailer/reset_password_instructions.html.erb:24
+msgid "Password Change Request"
+msgstr "Salasanan vaihtopyyntö"
 
 #: ../../../app/views/devise/mailer/reset_password_instructions.html.erb:26
 msgid ""
@@ -231,6 +247,10 @@ msgid ""
 "Your password won't change until you access the link above and create a new on"
 "e."
 msgstr "Salasanasi ei muutu, ennen kuin käytät yllä olevaa linkkiä ja luot uuden."
+
+#: ../../../app/views/devise/mailer/unlock_instructions.html.erb:23
+msgid "Unlock Your Account"
+msgstr "Avaa tilisi"
 
 #: ../../../app/views/devise/mailer/unlock_instructions.html.erb:26
 msgid ""
@@ -384,10 +404,6 @@ msgstr "salasana"
 msgid "Language"
 msgstr "Kieli"
 
-#: ../../../app/views/feedbacks/create.html.erb:1
-msgid "Thank you for your feedback!  We'll be in touch soon!"
-msgstr "Kiitos palautteesta! Olemme pian yhteydessä!"
-
 #: ../../../app/views/feedbacks/new.html.erb:1
 #: ../../../app/views/feedbacks/new.html.erb:2
 #: ../../../app/views/feedbacks/new.html.erb:42
@@ -408,8 +424,8 @@ msgid "Your Name"
 msgstr "Nimesi"
 
 #: ../../../app/views/feedbacks/new.html.erb:29
-msgid "Humanity Test: What is 7 plus 2?"
-msgstr "Ihmisyystesti: Mikä on 7 plus 2?"
+msgid "What is one hundred minus 5?"
+msgstr "Mikä on sata miinus 5?"
 
 #: ../../../app/views/feedbacks/new.html.erb:34
 msgid ""
