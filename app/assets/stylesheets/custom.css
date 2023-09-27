@@ -12,3 +12,7 @@
     background-color: #1acaca;
 }
 */
+
+.form-text {
+    color: var(--bs-info-rgb) !important;
+  }
