@@ -61,7 +61,7 @@ enable_logins: false
 # Environment variable override:
 # PWP__DISABLE_SIGNUPS='false'
 #
-disable_signups: false
+disable_signups: true
 
 ## Limit Signups to Specific Email Domains
 #
@@ -136,7 +136,7 @@ host_protocol: 'https'
 #
 # Set this value without a trailing slash ('/').
 #
-# override_base_url: 'https://pwpush.mydomain.com'
+override_base_url: 'https://securesend-dev.remoteit.co.uk'
 
 ### Allowed Hosts
 #
@@ -175,7 +175,7 @@ pw:
   # PWP__PW__EXPIRE_AFTER_DAYS_MIN=1
   # PWP__PW__EXPIRE_AFTER_DAYS_MAX=90
   #
-  expire_after_days_default: 7
+  expire_after_days_default: 14
   expire_after_days_min: 1
   expire_after_days_max: 90
 
@@ -188,7 +188,7 @@ pw:
   # PWP__PW__EXPIRE_AFTER_VIEWS_MIN=1
   # PWP__PW__EXPIRE_AFTER_VIEWS_MAX=100
   #
-  expire_after_views_default: 5
+  expire_after_views_default: 20
   expire_after_views_min: 1
   expire_after_views_max: 100
 
@@ -212,7 +212,7 @@ pw:
   # Environment variable override:
   # PWP__PW__RETRIEVAL_STEP_DEFAULT='true'
   #
-  retrieval_step_default: false
+  retrieval_step_default: true
 
   # Deletable Password Pushes
   #
@@ -535,7 +535,7 @@ brand:
   #
   # Environment variable override: PWP__BRAND__TITLE='Acme Corp.'
   #
-  title: 'Password Pusher'
+  title: 'Tbyte Secure Send - DEV'
 
   ### Site Tagline
   #
@@ -547,7 +547,7 @@ brand:
   #
   # Environment variable override: PWP__BRAND__SHOW_FOOTER_MENU='true'
   #
-  show_footer_menu: true
+  show_footer_menu: false
 
   ### Site logo
   #
@@ -719,7 +719,7 @@ feedback:
   # Feedback form.
   #
   # Environment Variable Override: PWP__FEEDBACK__EMAIL='my@email.com'
-  email: 'feedback@pwpush.com'
+  email: 'support@tbyte.com'
 
 ### Docker Precompilation
 #
