@@ -2112,7 +2112,7 @@ progress {
 .form-text {
   margin-top: 0.25rem;
   font-size: 0.875em;
-  color: var(--bs-secondary-color);
+  color: var(--bs-info-rgb);
 }
 
 .form-control {
@@ -8570,7 +8570,7 @@ textarea.form-control-lg {
 
 .text-muted {
   --bs-text-opacity: 1;
-  color: var(--bs-secondary-color) !important;
+  color: var(--bs-info-rgb) !important;
 }
 
 .text-black-50 {
