@@ -280,7 +280,7 @@ pw:
   # Environment variable override:
   # PWP__PW__BLUR='false'
   #
-  enable_blur: true
+  enable_blur: false
 
 ## Expiration Settings for URL Pushes
 #
