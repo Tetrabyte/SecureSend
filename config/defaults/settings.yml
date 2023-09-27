@@ -280,7 +280,7 @@ pw:
   # Environment variable override:
   # PWP__PW__BLUR='false'
   #
-  enable_blur: true
+  enable_blur: false
 
 ## Expiration Settings for URL Pushes
 #
@@ -564,7 +564,7 @@ brand:
   #
   # Environment variable override: PWP__BRAND__TITLE='Acme Corp.'
   #
-  title: 'Tbyte Secure Send - DEV'
+  title: 'Tbyte Secure Send'
 
   ### Site Tagline
   #
