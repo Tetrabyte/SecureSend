@@ -535,7 +535,7 @@ brand:
   #
   # Environment variable override: PWP__BRAND__TITLE='Acme Corp.'
   #
-  title: 'Tbyte Secure Send - DEV'
+  title: 'Tbyte Secure Send'
 
   ### Site Tagline
   #
