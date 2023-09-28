@@ -20,5 +20,5 @@
     color: var(--bs-info-rgb) !important;
 }
 .input-group-text {
-    background-color: var(--bs-body-bg) !important;
+    background-color: #e9ecef !important;
 }
