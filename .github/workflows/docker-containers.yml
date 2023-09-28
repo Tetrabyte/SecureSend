@@ -2,16 +2,16 @@
   
   on:
     push:
+      branches:
+        - master
+        - dev
+        - dev-tbyte
       tags:
         - "release"
         - "v*.*.*"
   
     workflow_dispatch:
       inputs:
-        dockerTagName:
-          description: 'What Docker tag to create?'
-          required: true
-          default: 'dev'
         dockerPush:
           description: 'Push image to docker hub?'
           required: true
@@ -23,7 +23,6 @@
      # - cron:  '24 17 * * *'
   env:
     DOCKER_PUSH: true
-    DOCKER_TAG:
   
   jobs:
     build:
