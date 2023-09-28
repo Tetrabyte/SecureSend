@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 ruby ENV['CUSTOM_RUBY_VERSION'] || '>=3.1.4'
 
-gem 'rails', '~> 7.0.8'
+gem 'rails', '~> 7.0.7'
 
 group :development do
   gem 'listen'
@@ -63,7 +63,7 @@ gem "terser", "~> 1.1"
 gem 'json', '~> 2.0' # Legacy carry-over
 gem 'will_paginate', '~> 4.0.0'
 gem 'will_paginate-bootstrap-style'
-gem 'bootstrap', '5.3.1'
+gem 'bootstrap', '5.2.3'
 
 # Hotwire's SPA-like page accelerator [https://turbo.hotwired.dev]
 gem "turbo-rails"

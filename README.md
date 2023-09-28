@@ -1,6 +1,6 @@
 <div align="center">
 
-![Password Pusher Front Page](https://pwpush.fra1.cdn.digitaloceanspaces.com/branding/logos/horizontal-logo-small.png)
+![Tbyte Secure Send Front Page](https://pwpush.fra1.cdn.digitaloceanspaces.com/branding/logos/horizontal-logo-small.png)
 
 __Simple & Secure Password Sharing with Auto-Expiration of Shared Items__
 
@@ -19,9 +19,7 @@ __Simple & Secure Password Sharing with Auto-Expiration of Shared Items__
 
 ------
 
-Give your users the tools to be secure by default.
-
-Password Pusher is an opensource application to communicate passwords over the web. Links to passwords expire after a certain number of views and/or time has passed.
+Tbyte Secure Send is an opensource application to communicate passwords over the web. Links to passwords expire after a certain number of views and/or time has passed.
 
 Hosted at [pwpush.com](https://pwpush.com) but you can also easily run your own private instance with just a few steps.
 
@@ -47,7 +45,7 @@ Hosted at [pwpush.com](https://pwpush.com) but you can also easily run your own 
 
 💌 --> Sign up for [the newsletter](https://buttondown.email/pwpush?tag=github) to get updates on big releases, security issues, new features, integrations, tips and more.
 
-Password Pusher is also on [on Twitter](https://twitter.com/pwpush), [Gettr](https://gettr.com/user/pwpush) and [on Facebook](https://www.facebook.com/pwpush)
+Tbyte Secure Send is also on [on Twitter](https://twitter.com/pwpush), [Gettr](https://gettr.com/user/pwpush) and [on Facebook](https://www.facebook.com/pwpush)
 
 -----
 
@@ -69,15 +67,15 @@ _or_
 
 _or_
 
-→ Use one of the [3rd party tools](#3rd-party-tools) that interface with Password Pusher.
+→ Use one of the [3rd party tools](#3rd-party-tools) that interface with Tbyte Secure Send.
 
 # 💾 Run Your Own Instance
 
-_Note: Password Pusher can be largely configured by environment variables so after you pick your deployment method below, make sure to read [the configuration page](Configuration.md).  Take particular attention in setting your own custom encryption key which isn't required but provides the best security for your instance._
+_Note: Tbyte Secure Send can be largely configured by environment variables so after you pick your deployment method below, make sure to read [the configuration page](Configuration.md).  Take particular attention in setting your own custom encryption key which isn't required but provides the best security for your instance._
 
 ## On Docker
 
-Docker images of Password Pusher are available on [Docker hub](https://hub.docker.com/u/pglombardo).
+Docker images of Tbyte Secure Send are available on [Docker hub](https://hub.docker.com/u/pglombardo).
 
 **➜ ephemeral**
 _Temporary database that is wiped on container restart._
@@ -104,11 +102,11 @@ _Note: The `latest` Docker container tag builds nightly off of the latest code c
 
 ## With Docker Compose
 
-**➜ One-liner Password Pusher with a Postgres Database**
+**➜ One-liner Tbyte Secure Send with a Postgres Database**
 
     curl -s -o docker-compose.yml https://raw.githubusercontent.com/pglombardo/PasswordPusher/master/containers/docker/pwpush-postgres/docker-compose.yml && docker compose up -d
 
-**➜ One-liner Password Pusher with a MariaDB (MySQL) Database**
+**➜ One-liner Tbyte Secure Send with a MariaDB (MySQL) Database**
 
     curl -s -o docker-compose.yml https://raw.githubusercontent.com/pglombardo/PasswordPusher/master/containers/docker/pwpush-mysql/docker-compose.yml && docker compose up -d
 
@@ -133,7 +131,7 @@ One click deploy to [Heroku Cloud](https://www.heroku.com) without having to set
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/pglombardo/PasswordPusher)
 
-_This option will deploy a production Password Pusher instance backed by a postgres database to Heroku.  Heroku used to offer free dynos but that is [no longer the case](https://blog.heroku.com/next-chapter) from November 28, 2022.  Hosting charges will be incurred._
+_This option will deploy a production Tbyte Secure Send instance backed by a postgres database to Heroku.  Heroku used to offer free dynos but that is [no longer the case](https://blog.heroku.com/next-chapter) from November 28, 2022.  Hosting charges will be incurred._
 
 ## On PikaPods
 
@@ -209,7 +207,7 @@ Then view the site @ [http://localhost:5100/](http://localhost:5100/).
 
 ## Command Line Utilities
 
-* The almost official [pwpush-cli](https://github.com/pglombardo/pwpush-cli) (in pre-beta): CLI for Password Pusher with authentication support
+* The almost official [pwpush-cli](https://github.com/pglombardo/pwpush-cli) (in pre-beta): CLI for Tbyte Secure Send with authentication support
 
 * [thekamilpro/kppwpush](https://github.com/thekamilpro/kppwpush): A PowerShell Module available in the [PowerShell Gallery](https://www.powershellgallery.com/packages/KpPwpush/0.0.1).  See the livestream of its creation on [The Kamil Pro's channel](https://www.youtube.com/watch?v=f8_PZOx_KBY&feature=youtu.be).
 
@@ -221,7 +219,7 @@ Then view the site @ [http://localhost:5100/](http://localhost:5100/).
 
 ## Libraries & APIs
 
-* [oyale/PwPush-PHP](https://github.com/oyale/PwPush-PHP): a PHP library wrapper to easily push passwords to any Password Pusher instance
+* [oyale/PwPush-PHP](https://github.com/oyale/PwPush-PHP): a PHP library wrapper to easily push passwords to any Tbyte Secure Send instance
 
 ## Android Apps
 
@@ -237,14 +235,14 @@ Then view the site @ [http://localhost:5100/](http://localhost:5100/).
 
 _See also the [Tools Page on pwpush.com](https://pwpush.com/en/pages/tools)._
 
-# 📡 The Password Pusher API
+# 📡 The Tbyte Secure Send API
 
 * [JSON API Documentation](https://pwpush.com/api)
 * [Walkthrough & Examples](https://github.com/pglombardo/PasswordPusher/wiki/Password-API)
 
 # 🇮🇹 Internationalization
 
-Password Pusher is currently available in **28 languages** with more languages being added often as volunteers apply.
+Tbyte Secure Send is currently available in **23 languages** with more languages being added often as volunteers apply.
 
 From within the application, the language is selectable from a language menu.  Out of the box and before any language menu selection is done, the default language for the application is English.
 
@@ -260,9 +258,9 @@ For more details, a list of supported language codes and further explanation, se
 
 [pwpush.com](https://pwpush.com) is hosted on Digital Ocean and is happily paid out of pocket by myself for more than 10 years.
 
-__But you could help out greatly__ by signing up to Digital Ocean with [this link](https://m.do.co/c/f4ea6ef24c13) (and get $200 credit).  In return, Password Pusher gets a helpful hosting credit.
+__But you could help out greatly__ by signing up to Digital Ocean with [this link](https://m.do.co/c/f4ea6ef24c13) (and get $200 credit).  In return, Tbyte Secure Send gets a helpful hosting credit.
 
-**tldr;** Sign up to Digital Ocean [with this link](https://m.do.co/c/f4ea6ef24c13), **get a $200 credit for free** and help Password Pusher out.
+**tldr;** Sign up to Digital Ocean [with this link](https://m.do.co/c/f4ea6ef24c13), **get a $200 credit for free** and help Tbyte Secure Send out.
 
 [![DigitalOcean Referral Badge](https://web-platforms.sfo2.cdn.digitaloceanspaces.com/WWW/Badge%201.svg)](https://www.digitalocean.com/?refcode=f4ea6ef24c13&utm_campaign=Referral_Invite&utm_medium=Referral_Program&utm_source=badge)
 

@@ -6,6 +6,7 @@
       tags:
         - "release"
         - "v*.*.*"
+        - "latest"
   
     workflow_dispatch:
       inputs:

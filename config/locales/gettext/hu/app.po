@@ -104,9 +104,47 @@ msgstr "Ez a push már lejárt."
 msgid "The push content has been deleted and the secret URL expired."
 msgstr "A küldés tartalmát törölték, és a titkos URL lejárt."
 
+<<<<<<< HEAD
+#: ../../../app/controllers/urls_controller.rb:110
+msgid "Invalid URL: Must be a valid URL and start with http:// or https://"
+msgstr ""
+
+#: ../../../app/helpers/application_helper.rb:7
+#: ../../../app/views/devise/mailer/email_changed.html.erb:8
+#: ../../../app/views/devise/mailer/password_change.html.erb:8
+#: ../../../app/views/layouts/application.html.erb:9
+#: ../../../app/views/layouts/bare.html.erb:9
+#: ../../../app/views/layouts/login.html.erb:9
+#: ../../../app/views/layouts/naked.html.erb:9
+#: ../../../app/views/shared/_email_footer.html.erb:8
+#: ../../../app/views/shared/_header.html.erb:21
+msgid "Tbyte Secure Send"
+msgstr "Tbyte Secure Send"
+
+#: ../../../app/models/feedback.rb:22
+msgid "Tbyte Secure Send Feedback"
+msgstr "Tbyte Secure Send visszajelzés"
+
+#: ../../../app/views/devise/mailer/confirmation_instructions.html.erb:1
+msgid "Welcome!"
+msgstr "Üdvözöljük!"
+
+#: ../../../app/views/devise/mailer/confirmation_instructions.html.erb:3
+msgid "Here is your password: "
+msgstr "Íme a jelszava:"
+
+#: ../../../app/views/devise/mailer/confirmation_instructions.html.erb:6
+msgid "Just kidding!"
+msgstr "Csak viccelek!"
+
+#: ../../../app/views/devise/mailer/confirmation_instructions.html.erb:6
+msgid "Never have to do anything like that ever again with Tbyte Secure Send."
+msgstr "Soha többé nem kell ilyesmit csinálnia a Tbyte Secure Sendrel."
+=======
 #: ../../../app/controllers/urls_controller.rb:201
 msgid "Invalid URL: Must have a valid URI scheme."
 msgstr "Érvénytelen URL: Érvényes URI-sémával kell rendelkeznie."
+>>>>>>> upstream/master
 
 #: ../../../app/views/devise/mailer/confirmation_instructions.html.erb:8
 #: ../../../app/views/devise/mailer/email_changed.html.erb:8
@@ -118,10 +156,10 @@ msgstr "Érvénytelen URL: Érvényes URI-sémával kell rendelkeznie."
 #: ../../../app/views/layouts/login.html.erb:8
 #: ../../../app/views/layouts/naked.html.erb:8
 msgid ""
-"Password Pusher is an application to securely send passwords over the web. Lin"
+"Tbyte Secure Send is an application to securely send passwords over the web. Lin"
 "ks to passwords expire after a certain number of views and/or time has passed."
 msgstr ""
-"A Password Pusher egy olyan alkalmazás, amellyel biztonságosan küldhet jelszav"
+"A Tbyte Secure Send egy olyan alkalmazás, amellyel biztonságosan küldhet jelszav"
 "akat az interneten keresztül. A jelszavakra mutató hivatkozások bizonyos számú"
 " megtekintés és/vagy idő eltelte után lejárnak."
 
@@ -1309,13 +1347,29 @@ msgstr ""
 "Ha szükséges, lépjen kapcsolatba azzal a személlyel vagy szervezettel, aki meg"
 "adta ezt a titkos URL-t."
 
+<<<<<<< HEAD
+#: ../../../app/views/layouts/application.html.erb:12
+#: ../../../app/views/layouts/bare.html.erb:12
+#: ../../../app/views/layouts/login.html.erb:12
+#: ../../../app/views/layouts/naked.html.erb:12
+msgid ""
+"Tbyte Secure Send is an application to securely send passwords over the web. Lin"
+"ks to passwords expire after a certain number of views and/or time has passed."
+msgstr ""
+"A Tbyte Secure Send egy olyan alkalmazás, amellyel biztonságosan küldhet jelszav"
+"akat az interneten keresztül. A jelszavakra mutató hivatkozások bizonyos számú"
+" megtekintés és/vagy idő eltelte után lejárnak."
+
+#: ../../../app/views/layouts/login.html.erb:42
+=======
 #: ../../../app/views/layouts/login.html.erb:37
+>>>>>>> upstream/master
 #: ../../../app/views/shared/_footer.html.erb:12
 #: ../../../app/views/shared/_footer.html.erb:16
 #: ../../../app/views/shared/_header.html.erb:9
 #: ../../../app/views/shared/_header.html.erb:13
-msgid "Password Pusher Logo"
-msgstr "Password Pusher logo"
+msgid "Tbyte Secure Send Logo"
+msgstr "Tbyte Secure Send logo"
 
 #: ../../../app/views/layouts/login.html.erb:52
 msgid ""
@@ -1334,8 +1388,8 @@ msgid "and we can help out."
 msgstr "és tudunk segíteni."
 
 #: ../../../app/views/pages/about.html.erb:1
-msgid "About Password Pusher"
-msgstr "A Password Pusher-ről"
+msgid "About Tbyte Secure Send"
+msgstr "A Tbyte Secure Send-ről"
 
 #: ../../../app/views/pages/about.html.erb:2
 #: ../../../app/views/shared/_footer.html.erb:49
@@ -1344,21 +1398,31 @@ msgstr "A programról"
 
 #: ../../../app/views/pages/about.html.erb:7
 msgid ""
-"Password Pusher is a tool used for sharing passwords and other sensitive infor"
+<<<<<<< HEAD
+"Tbyte Secure Send is an application to communicate passwords over the web. Links"
+" to passwords\n"
+"            expire after a certain number of views and/or time has passed."
+msgstr ""
+"A Tbyte Secure Send egy olyan alkalmazás, amely jelszavakat kommunikál az intern"
+"eten keresztül. A jelszavakra mutató hivatkozások bizonyos számú megtekintés é"
+"s/vagy idő eltelte után lejárnak."
+=======
+"Tbyte Secure Send is a tool used for sharing passwords and other sensitive infor"
 "mation with other people securely."
 msgstr ""
-"A Password Pusher egy eszköz a jelszavak és más bizalmas információk biztonság"
+"A Tbyte Secure Send egy eszköz a jelszavak és más bizalmas információk biztonság"
 "os megosztására másokkal."
 
 #: ../../../app/views/pages/about.html.erb:10
 msgid ""
-"With Password Pusher, you can create a unique, one-time URL that will expire a"
+"With Tbyte Secure Send, you can create a unique, one-time URL that will expire a"
 "fter a certain amount of time or after it has been accessed a certain number o"
 "f times, ensuring that your information remains private and secure."
 msgstr ""
-"A Password Pusher segítségével egyedi, egyszeri URL-t hozhat létre, amely egy "
+"A Tbyte Secure Send segítségével egyedi, egyszeri URL-t hozhat létre, amely egy "
 "bizonyos idő elteltével vagy bizonyos számú hozzáférés után lejár, így biztosí"
 "tva, hogy adatai privát és biztonságosak maradjanak."
+>>>>>>> upstream/master
 
 #: ../../../app/views/pages/about.html.erb:11
 msgid ""
@@ -1370,10 +1434,10 @@ msgstr ""
 
 #: ../../../app/views/pages/about.html.erb:14
 msgid ""
-"Password Pusher is a simple and convenient solution for securely sharing passw"
+"Tbyte Secure Send is a simple and convenient solution for securely sharing passw"
 "ords without the need for email or other less secure communication methods."
 msgstr ""
-"A Password Pusher egy egyszerű és kényelmes megoldás a jelszavak biztonságos m"
+"A Tbyte Secure Send egy egyszerű és kényelmes megoldás a jelszavak biztonságos m"
 "egosztására anélkül, hogy e-mailre vagy más kevésbé biztonságos kommunikációs "
 "módszerre lenne szükség."
 
@@ -1416,6 +1480,21 @@ msgstr "Frissítésekért megteheti"
 msgid "follow me on Twitter"
 msgstr "Kövess a Twitteren"
 
+<<<<<<< HEAD
+#: ../../../app/views/pages/about.html.erb:38
+msgid "Contributors"
+msgstr "Közreműködők"
+
+#: ../../../app/views/pages/about.html.erb:41
+msgid "Tbyte Secure Send has had a great community of contributors over the years."
+msgstr "A Tbyte Secure Sendnek nagy közreműködő közössége volt az évek során."
+
+#: ../../../app/views/pages/about.html.erb:42
+msgid "Take a look"
+msgstr "Nézd meg"
+
+=======
+>>>>>>> upstream/master
 #: ../../../app/views/pages/about.html.erb:44
 msgid "Want to Help Out?"
 msgstr "Szeretne segíteni?"
@@ -1425,9 +1504,9 @@ msgid "By far the biggest help is to spread the word"
 msgstr "A legnagyobb segítség a hír terjesztése"
 
 #: ../../../app/views/pages/about.html.erb:50
-msgid "Share and suggest Password Pusher to colleagues and friends."
+msgid "Share and suggest Tbyte Secure Send to colleagues and friends."
 msgstr ""
-"Ossza meg és javasolja a Password Pusher alkalmazást kollégáinak és barátainak"
+"Ossza meg és javasolja a Tbyte Secure Send alkalmazást kollégáinak és barátainak"
 "."
 
 #: ../../../app/views/pages/about.html.erb:53
@@ -1439,7 +1518,7 @@ msgid "Star the Github project"
 msgstr "Csillagozza meg a Github projektet"
 
 #: ../../../app/views/pages/about.html.erb:57
-msgid "It's gasoline for the algos that trend Password Pusher."
+msgid "It's gasoline for the algos that trend Tbyte Secure Send."
 msgstr "Benzin az algók számára, amelyek a jelszótoló trendet használják fel."
 
 #: ../../../app/views/pages/about.html.erb:60
@@ -1451,6 +1530,11 @@ msgstr "Segítség a fordításban"
 msgid "Improve an existing language or add a new one"
 msgstr "Javítson egy meglévő nyelvet, vagy adjon hozzá egy újat"
 
+<<<<<<< HEAD
+#: ../../../app/views/pages/about.html.erb:63
+msgid "Follow Tbyte Secure Send on"
+msgstr "Kövesse a Tbyte Secure Send-t"
+=======
 #: ../../../app/views/pages/about.html.erb:64
 msgid "Sign up for the"
 msgstr "Iratkozzon fel a"
@@ -1466,8 +1550,9 @@ msgstr ""
 "és egyebekről."
 
 #: ../../../app/views/pages/about.html.erb:69
-msgid "Follow Password Pusher on"
-msgstr "Kövesse a Password Pusher-t"
+msgid "Follow Tbyte Secure Send on"
+msgstr "Kövesse a Tbyte Secure Send-t"
+>>>>>>> upstream/master
 
 #: ../../../app/views/pages/about.html.erb:76
 msgid "Fix an issue, add a feature or write some documentation."
@@ -1479,19 +1564,31 @@ msgstr "Lásd a Github projektet."
 
 #: ../../../app/views/pages/about.html.erb:79
 msgid "Sign up to Digital Ocean"
+<<<<<<< HEAD
+msgstr ""
+
+#: ../../../app/views/pages/about.html.erb:74
+msgid "with this link"
+msgstr ""
+
+#: ../../../app/views/pages/about.html.erb:75
+msgid "to get Tbyte Secure Send a hosting credit."
+msgstr ""
+=======
 msgstr "Regisztráljon a Digital Ocean szolgáltatásra"
+>>>>>>> upstream/master
 
 #: ../../../app/views/pages/about.html.erb:80
 msgid "with this link"
 msgstr "ezzel a linkkel"
 
 #: ../../../app/views/pages/about.html.erb:81
-msgid "to get Password Pusher a hosting credit."
-msgstr "hogy a Password Pusher tárhely-jóváírást kapjon."
+msgid "to get Tbyte Secure Send a hosting credit."
+msgstr "hogy a Tbyte Secure Send tárhely-jóváírást kapjon."
 
 #: ../../../app/views/pages/about.html.erb:85
-msgid "Thank you for supporting Password Pusher!"
-msgstr "Köszönjük, hogy támogatja a Password Pushert!"
+msgid "Thank you for supporting Tbyte Secure Send!"
+msgstr "Köszönjük, hogy támogatja a Tbyte Secure Sendt!"
 
 #: ../../../app/views/pages/about.html.erb:87
 #: ../../../app/views/shared/_footer.html.erb:26
@@ -1503,12 +1600,18 @@ msgid ""
 "If you are giving a presentation, authoring a blog post or video about Passwor"
 "d Pusher, feel free to contact me for any questions."
 msgstr ""
-"Ha prezentációt tart, blogbejegyzést vagy videót ír a Password Pusherről, bárm"
+"Ha prezentációt tart, blogbejegyzést vagy videót ír a Tbyte Secure Sendről, bárm"
 "ilyen kérdése van, forduljon hozzám bizalommal."
 
+<<<<<<< HEAD
+#: ../../../app/views/pages/about.html.erb:83
+msgid "Thank you for supporting Tbyte Secure Send!"
+msgstr "Köszönjük, hogy támogatja a Tbyte Secure Sendt!"
+=======
 #: ../../../app/views/pages/about.html.erb:93
 msgid "We have media resources and a full explanation of features available in"
 msgstr "Médiaforrásaink és a funkciók teljes körű leírása állnak rendelkezésre itt"
+>>>>>>> upstream/master
 
 #: ../../../app/views/pages/about.html.erb:94
 msgid "Windows Powerpoint"
@@ -1530,9 +1633,15 @@ msgstr "Születésnap"
 msgid "More Than 11 Years Old"
 msgstr "Több mint 11 éves"
 
+<<<<<<< HEAD
+#: ../../../app/views/pages/about.html.erb:95
+msgid "The first git commit to Tbyte Secure Send was on"
+msgstr "Az első git-commit a Tbyte Secure Sendhez:"
+=======
 #: ../../../app/views/pages/about.html.erb:110
-msgid "The first git commit to Password Pusher was on"
-msgstr "Az első git-commit a Password Pusherhez:"
+msgid "The first git commit to Tbyte Secure Send was on"
+msgstr "Az első git-commit a Tbyte Secure Sendhez:"
+>>>>>>> upstream/master
 
 #: ../../../app/views/pages/about.html.erb:114
 msgid "pwpush.com went live shortly thereafter."
@@ -1566,12 +1675,12 @@ msgid "Trust and Security"
 msgstr "Bizalom és biztonság"
 
 #: ../../../app/views/pages/faq.html.erb:11
-msgid "What purpose does Password Pusher serve?"
-msgstr "Milyen célt szolgál a Password Pusher?"
+msgid "What purpose does Tbyte Secure Send serve?"
+msgstr "Milyen célt szolgál a Tbyte Secure Send?"
 
 #: ../../../app/views/pages/faq.html.erb:16
-msgid "Password Pusher exists as a better alternative to emailing passwords."
-msgstr "A Password Pusher a jelszavak e-mailben történő küldésének jobb alternatívája."
+msgid "Tbyte Secure Send exists as a better alternative to emailing passwords."
+msgstr "A Tbyte Secure Send a jelszavak e-mailben történő küldésének jobb alternatívája."
 
 #: ../../../app/views/pages/faq.html.erb:18
 msgid "Emailing passwords is inherently insecure."
@@ -1621,12 +1730,12 @@ msgstr ""
 " az Ön ellenőrzésén kívül maradnak."
 
 #: ../../../app/views/pages/faq.html.erb:29
-msgid "By using Password Pusher, you bypass all of this."
-msgstr "A Password Pusher használatával mindezt megkerüli."
+msgid "By using Tbyte Secure Send, you bypass all of this."
+msgstr "A Tbyte Secure Send használatával mindezt megkerüli."
 
 #: ../../../app/views/pages/faq.html.erb:31
-msgid "For each password posted to Password Pusher, "
-msgstr "A Password Pusher szolgáltatásban elküldött minden egyes jelszó esetében,"
+msgid "For each password posted to Tbyte Secure Send, "
+msgstr "A Tbyte Secure Send szolgáltatásban elküldött minden egyes jelszó esetében,"
 
 #: ../../../app/views/pages/faq.html.erb:32
 msgid "a unique URL is generated that only you will know"
@@ -1655,8 +1764,8 @@ msgstr ""
 "elt kérdéseket."
 
 #: ../../../app/views/pages/faq.html.erb:47
-msgid "Trust is a concern. Why should I use Password Pusher?"
-msgstr "A bizalom aggodalomra ad okot. Miért használjam a Password Pusher-t?"
+msgid "Trust is a concern. Why should I use Tbyte Secure Send?"
+msgstr "A bizalom aggodalomra ad okot. Miért használjam a Tbyte Secure Send-t?"
 
 #: ../../../app/views/pages/faq.html.erb:52
 msgid ""
@@ -1668,17 +1777,17 @@ msgstr ""
 
 #: ../../../app/views/pages/faq.html.erb:55
 msgid ""
-"Password Pusher exists as a better alternative to emailing passwords. It avoid"
+"Tbyte Secure Send exists as a better alternative to emailing passwords. It avoid"
 "s having passwords exist in email archives in perpetuity. It does not exist as"
 " a end-all security solution."
 msgstr ""
-"A Password Pusher a jelszavak e-mailben történő küldésének jobb alternatívája."
+"A Tbyte Secure Send a jelszavak e-mailben történő küldésének jobb alternatívája."
 " Ezzel elkerülhető, hogy a jelszavak örökre jelen legyenek az e-mail archívumo"
 "kban. Nem nyújt teljes körű biztonsági megoldást."
 
 #: ../../../app/views/pages/faq.html.erb:59
-msgid "Password Pusher is opensource"
-msgstr "A Password Pusher nyílt forráskódú"
+msgid "Tbyte Secure Send is opensource"
+msgstr "A Tbyte Secure Send nyílt forráskódú"
 
 #: ../../../app/views/pages/faq.html.erb:60
 msgid ""
@@ -1734,16 +1843,16 @@ msgid "Tools, Utilities and Applications"
 msgstr "Eszközök, segédprogramok és alkalmazások"
 
 #: ../../../app/views/pages/faq.html.erb:89
-msgid "Are there other ways I can access Password Pusher outside of a browser?"
-msgstr "Vannak más módok is a Password Pusher elérésére a böngészőn kívül?"
+msgid "Are there other ways I can access Tbyte Secure Send outside of a browser?"
+msgstr "Vannak más módok is a Tbyte Secure Send elérésére a böngészőn kívül?"
 
 #: ../../../app/views/pages/faq.html.erb:95
 msgid ""
-"Absolutely.  Password Pusher has a number of applications and command line uti"
+"Absolutely.  Tbyte Secure Send has a number of applications and command line uti"
 "lities (CLI) that interface with pwpush.com or privately run instances.  Push "
 "passwords from the CLI, Slack, Alfred App and more."
 msgstr ""
-"Minenképpen! A Password Pusher számos alkalmazást és parancssori segédprogramo"
+"Minenképpen! A Tbyte Secure Send számos alkalmazást és parancssori segédprogramo"
 "t (CLI) tartalmaz, amelyek a pwpush.com webhelyhez vagy privát módon futtatott"
 " példányokhoz kapcsolódnak. Jelszavak küldése a CLI, a Slack, az Alfred alkalm"
 "azásból és egyebekből."
@@ -1767,10 +1876,10 @@ msgstr "Automatizálhatom a jelszavak kiosztását?"
 #: ../../../app/views/pages/faq.html.erb:109
 msgid ""
 "Yes. Using the previously mentioned tools, many users and organizations integr"
-"ate Password Pusher into their security policies and processes."
+"ate Tbyte Secure Send into their security policies and processes."
 msgstr ""
 "Igen. A korábban említett eszközök segítségével sok felhasználó és szervezet i"
-"ntegrálja a Password Pushert biztonsági szabályzataiba és folyamataiba."
+"ntegrálja a Tbyte Secure Sendt biztonsági szabályzataiba és folyamataiba."
 
 #: ../../../app/views/pages/faq.html.erb:110
 msgid "The"
@@ -1790,17 +1899,17 @@ msgstr ""
 "ezésre álló erőforrásokat."
 
 #: ../../../app/views/pages/faq.html.erb:117
-msgid "How many requests can I send to Password Pusher?"
-msgstr "Hány kérelmet küldhetek a Password Pushernek?"
+msgid "How many requests can I send to Tbyte Secure Send?"
+msgstr "Hány kérelmet küldhetek a Tbyte Secure Sendnek?"
 
 #: ../../../app/views/pages/faq.html.erb:122
 msgid ""
 "There are no limits currently and I have no intention of adding any.  To minim"
-"ally assure site stability, Password Pusher is configured with a rate limiter "
+"ally assure site stability, Tbyte Secure Send is configured with a rate limiter "
 "by default."
 msgstr ""
 "Jelenleg nincsenek korlátozások, és nem is áll szándékomban hozzáadni. A webhe"
-"ly stabilitásának minimális biztosítása érdekében a Password Pusher alapértelm"
+"ly stabilitásának minimális biztosítása érdekében a Tbyte Secure Send alapértelm"
 "ezés szerint sebességkorlátozóval van konfigurálva."
 
 #: ../../../app/views/pages/faq.html.erb:128
@@ -1837,10 +1946,10 @@ msgstr "Alkalmazhatok egyéni logót vagy módosíthatom a dizájnt?"
 
 #: ../../../app/views/pages/faq.html.erb:158
 msgid ""
-"Password Pusher supports re-branding \"out of the box\" allowing you to add a cu"
+"Tbyte Secure Send supports re-branding \"out of the box\" allowing you to add a cu"
 "stom logo, text and even change images in the application."
 msgstr ""
-"A Password Pusher támogatja a „dobozból” márkaváltást, lehetővé téve egyéni lo"
+"A Tbyte Secure Send támogatja a „dobozból” márkaváltást, lehetővé téve egyéni lo"
 "gó, szöveg hozzáadását, és akár képek módosítását is az alkalmazásban."
 
 #: ../../../app/views/pages/faq.html.erb:165
@@ -1851,15 +1960,15 @@ msgstr "Vannak-e licencelési korlátozások rám, a cégemre vagy a szervezetem
 msgid ""
 "The source code is released under the GNU General Public License v3.0 and that"
 " pretty much defines any and all limitations. There are quite a few rebranded "
-"and redesigned clone sites of Password Pusher and I welcome them all."
+"and redesigned clone sites of Tbyte Secure Send and I welcome them all."
 msgstr ""
 "A forráskód a GNU General Public License v3.0 alatt jelent meg, és ez nagyjábó"
-"l meghatároz minden korlátozást. A Password Pusher-nek számos újramárkázott és"
+"l meghatároz minden korlátozást. A Tbyte Secure Send-nek számos újramárkázott és"
 " újratervezett másolata van, és üdvözlöm őket."
 
 #: ../../../app/views/pages/faq.html.erb:179
-msgid "Why would I want to run my own private instance of Password Pusher?"
-msgstr "Miért szeretném a Password Pusher saját privát példányát futtatni?"
+msgid "Why would I want to run my own private instance of Tbyte Secure Send?"
+msgstr "Miért szeretném a Tbyte Secure Send saját privát példányát futtatni?"
 
 #: ../../../app/views/pages/faq.html.erb:185
 msgid ""
@@ -1887,11 +1996,11 @@ msgstr "Milyen biztonsági kockázatokkal járhat a saját verzióm belső futta
 
 #: ../../../app/views/pages/faq.html.erb:201
 msgid ""
-"Running an private instance of Password Pusher for your company or organizatio"
+"Running an private instance of Tbyte Secure Send for your company or organizatio"
 "n gives you the peace of mind that you know exactly what code is running.  You"
 " can configure and run it as you like."
 msgstr ""
-"A Password Pusher privát példányának futtatása vállalata vagy szervezete számá"
+"A Tbyte Secure Send privát példányának futtatása vállalata vagy szervezete számá"
 "ra nyugalmat biztosít, hogy pontosan tudja, milyen kód fut. Tetszés szerint ko"
 "nfigurálhatja és futtathatja."
 
@@ -1982,8 +2091,8 @@ msgstr ""
 "t."
 
 #: ../../../app/views/pages/faq.html.erb:241
-msgid "Can I use Password Pusher in my talk/presentation/conference?"
-msgstr "Használhatom a Password Pushert a beszédemben/előadásomban/konferenciámban?"
+msgid "Can I use Tbyte Secure Send in my talk/presentation/conference?"
+msgstr "Használhatom a Tbyte Secure Sendt a beszédemben/előadásomban/konferenciámban?"
 
 #: ../../../app/views/pages/faq.html.erb:246
 msgid ""
@@ -2040,22 +2149,27 @@ msgstr "Ezeket boldogan fizetem a zsebemből több mint 10 éve."
 
 #: ../../../app/views/pages/faq.html.erb:279
 msgid ""
-"If you feel inclined to support Password Pusher, you can sign up to Digital Oc"
+"If you feel inclined to support Tbyte Secure Send, you can sign up to Digital Oc"
 "ean using the badge below."
 msgstr ""
-"Ha úgy érzed, hogy támogasd a Password Pusher szolgáltatást, az alábbi jelvény"
+"Ha úgy érzed, hogy támogasd a Tbyte Secure Send szolgáltatást, az alábbi jelvény"
 " használatával regisztrálhatsz a Digital Ocean szolgáltatásra."
 
 #: ../../../app/views/pages/faq.html.erb:280
-msgid "Password Pusher will get a hosting credit for the first $25 you spend."
-msgstr "A Password Pusher tárhely-jóváírást kap az első elköltött 25 USD után."
+<<<<<<< HEAD
+msgid "Tbyte Secure Send will get a hosting credit for the first $25 you spend."
+msgstr ""
+=======
+msgid "Tbyte Secure Send will get a hosting credit for the first $25 you spend."
+msgstr "A Tbyte Secure Send tárhely-jóváírást kap az első elköltött 25 USD után."
+>>>>>>> upstream/master
 
 #: ../../../app/views/pages/faq.html.erb:289
 msgid ""
-"For other ways to support Password Pusher, see also the \"Want to help out?\" se"
+"For other ways to support Tbyte Secure Send, see also the \"Want to help out?\" se"
 "ction"
 msgstr ""
-"A Password Pusher támogatásának egyéb módjaiért olvassa el a \"Segíteni szeretn"
+"A Tbyte Secure Send támogatásának egyéb módjaiért olvassa el a \"Segíteni szeretn"
 "e?\" szakasz"
 
 #: ../../../app/views/pages/faq.html.erb:290
@@ -2077,17 +2191,17 @@ msgstr "Egy titkosítási kulcs generálása"
 #: ../../../app/views/pages/generate_key.html.erb:6
 msgid ""
 "This page is used as a helper tool to generate a random encryption key for pri"
-"vately hosted instances of Password Pusher."
+"vately hosted instances of Tbyte Secure Send."
 msgstr ""
 "Ez az oldal segédeszközként szolgál véletlenszerű titkosítási kulcs generálásá"
-"hoz a Password Pusher magántulajdonban lévő példányaihoz."
+"hoz a Tbyte Secure Send magántulajdonban lévő példányaihoz."
 
 #: ../../../app/views/pages/generate_key.html.erb:10
 msgid ""
-"Password Pusher encrypts sensitive data in the database.  This requires a rand"
+"Tbyte Secure Send encrypts sensitive data in the database.  This requires a rand"
 "omly generated encryption key for each application instance."
 msgstr ""
-"A Password Pusher titkosítja az adatbázisban lévő érzékeny adatokat. Ehhez min"
+"A Tbyte Secure Send titkosítja az adatbázisban lévő érzékeny adatokat. Ehhez min"
 "den alkalmazáspéldányhoz véletlenszerűen generált titkosítási kulcsra van szük"
 "ség."
 
@@ -2130,10 +2244,10 @@ msgstr ""
 
 #: ../../../app/views/pages/generate_key.html.erb:55
 msgid ""
-"The best security for private instances of Password Pusher is to use your own "
+"The best security for private instances of Tbyte Secure Send is to use your own "
 "custom encryption key although it is not required."
 msgstr ""
-"A Password Pusher privát példányainak legjobb biztonsága a saját egyéni titkos"
+"A Tbyte Secure Send privát példányainak legjobb biztonsága a saját egyéni titkos"
 "ítási kulcs használata, bár ez nem szükséges."
 
 #: ../../../app/views/pages/generate_key.html.erb:58
@@ -2169,7 +2283,7 @@ msgstr ""
 "vetkező végrehajtásával:"
 
 #: ../../../app/views/pages/generate_key.html.erb:80
-msgid "See also the Password Pusher"
+msgid "See also the Tbyte Secure Send"
 msgstr "Lásd még a Jelszótolót"
 
 #: ../../../app/views/pages/generate_key.html.erb:81
@@ -2183,10 +2297,10 @@ msgstr "Eszközök és alkalmazások"
 
 #: ../../../app/views/pages/tools.html.erb:5
 msgid ""
-"Using the JSON API, various tools exist to interface with Password Pusher to a"
+"Using the JSON API, various tools exist to interface with Tbyte Secure Send to a"
 "utomate password distribution."
 msgstr ""
-"A JSON API használatával különféle eszközök kapcsolódhatnak a Password Pusher-"
+"A JSON API használatával különféle eszközök kapcsolódhatnak a Tbyte Secure Send-"
 "hez a jelszóelosztás automatizálása érdekében."
 
 #: ../../../app/views/pages/tools.html.erb:7
@@ -2211,7 +2325,7 @@ msgstr "Alkalmazások"
 
 #: ../../../app/views/pages/tools.html.erb:83
 msgid ""
-"This API allows you to interface with Password Pusher via JSON.  This can be u"
+"This API allows you to interface with Tbyte Secure Send via JSON.  This can be u"
 "tilized by existing utilities such as curl, wget or any programming language. "
 " See the examples below for some ideas."
 msgstr ""
@@ -2234,9 +2348,9 @@ msgstr "Példák"
 #: ../../../app/views/pages/tools.html.erb:99
 msgid ""
 "You can test this in your browser Javascript console by going to the front pag"
-"e of Password Pusher and enter:"
+"e of Tbyte Secure Send and enter:"
 msgstr ""
-"Ezt a böngésző Javascript konzoljában tesztelheti, ha a Password Pusher kezdől"
+"Ezt a böngésző Javascript konzoljában tesztelheti, ha a Tbyte Secure Send kezdől"
 "apjára lép, és írja be:"
 
 #: ../../../app/views/pages/tools.html.erb:107
@@ -2244,8 +2358,8 @@ msgid "See more explanation and examples in our"
 msgstr "További magyarázatot és példákat lásd a cikkünkben"
 
 #: ../../../app/views/pages/translate.html.erb:1
-msgid "Help Translate Password Pusher!"
-msgstr "Segíts a Password Pusher fordításában!"
+msgid "Help Translate Tbyte Secure Send!"
+msgstr "Segíts a Tbyte Secure Send fordításában!"
 
 #: ../../../app/views/pages/translate.html.erb:6
 msgid ""
@@ -2348,8 +2462,8 @@ msgstr ""
 "lt helyettesítő kódok."
 
 #: ../../../app/views/pages/translate.html.erb:61
-msgid "Thanks for helping to translate Password Pusher!"
-msgstr "Köszönjük, hogy segített a Password Pusher fordításában!"
+msgid "Thanks for helping to translate Tbyte Secure Send!"
+msgstr "Köszönjük, hogy segített a Tbyte Secure Send fordításában!"
 
 #: ../../../app/views/passwords/active.html.erb:1
 #: ../../../app/views/passwords/active.html.erb:18

@@ -109,9 +109,13 @@ msgstr "无效的 URL：必须有一个有效的 URI 方案。"
 #: ../../../app/views/layouts/login.html.erb:8
 #: ../../../app/views/layouts/naked.html.erb:8
 msgid ""
-"Password Pusher is an application to securely send passwords over the web. Lin"
+"Tbyte Secure Send is an application to securely send passwords over the web. Lin"
 "ks to passwords expire after a certain number of views and/or time has passed."
-msgstr "Password Pusher 是一款通过网络安全发送密码的应用程序。在经过一定数量的查看和/或特定时间后，指向密码的链接将过期。"
+msgstr "Tbyte Secure Send 是一款通过网络安全发送密码的应用程序。在经过一定数量的查看和/或特定时间后，指向密码的链接将过期。"
+
+#: ../../../app/views/devise/mailer/confirmation_instructions.html.erb:23
+msgid "Confirm your new account"
+msgstr "确认您的新帐户"
 
 #: ../../../app/views/devise/mailer/confirmation_instructions.html.erb:23
 msgid "Confirm your new account"
@@ -1259,8 +1263,8 @@ msgstr "如有需要，请联系向您提供此秘密 URL 的个人或组织。"
 #: ../../../app/views/shared/_footer.html.erb:16
 #: ../../../app/views/shared/_header.html.erb:9
 #: ../../../app/views/shared/_header.html.erb:13
-msgid "Password Pusher Logo"
-msgstr "Password Pusher 图标"
+msgid "Tbyte Secure Send Logo"
+msgstr "Tbyte Secure Send 图标"
 
 #: ../../../app/views/layouts/login.html.erb:52
 msgid ""
@@ -1277,8 +1281,8 @@ msgid "and we can help out."
 msgstr "我们可以提供帮助。"
 
 #: ../../../app/views/pages/about.html.erb:1
-msgid "About Password Pusher"
-msgstr "关于Password Pusher"
+msgid "About Tbyte Secure Send"
+msgstr "关于Tbyte Secure Send"
 
 #: ../../../app/views/pages/about.html.erb:2
 #: ../../../app/views/shared/_footer.html.erb:49
@@ -1287,16 +1291,16 @@ msgstr "关于"
 
 #: ../../../app/views/pages/about.html.erb:7
 msgid ""
-"Password Pusher is a tool used for sharing passwords and other sensitive infor"
+"Tbyte Secure Send is a tool used for sharing passwords and other sensitive infor"
 "mation with other people securely."
-msgstr "Password Pusher 是一种用于与他人安全共享密码和其他敏感信息的工具。"
+msgstr "Tbyte Secure Send 是一种用于与他人安全共享密码和其他敏感信息的工具。"
 
 #: ../../../app/views/pages/about.html.erb:10
 msgid ""
-"With Password Pusher, you can create a unique, one-time URL that will expire a"
+"With Tbyte Secure Send, you can create a unique, one-time URL that will expire a"
 "fter a certain amount of time or after it has been accessed a certain number o"
 "f times, ensuring that your information remains private and secure."
-msgstr "使用 Password Pusher，您可以创建一个唯一的一次性 URL，该 URL 将在一定时间后或访问一定次数后失效，从而确保您的信息保持私密和安全。"
+msgstr "使用 Tbyte Secure Send，您可以创建一个唯一的一次性 URL，该 URL 将在一定时间后或访问一定次数后失效，从而确保您的信息保持私密和安全。"
 
 #: ../../../app/views/pages/about.html.erb:11
 msgid ""
@@ -1306,9 +1310,9 @@ msgstr "它经常被个人和组织用来与同事、客户或合作伙伴共享
 
 #: ../../../app/views/pages/about.html.erb:14
 msgid ""
-"Password Pusher is a simple and convenient solution for securely sharing passw"
+"Tbyte Secure Send is a simple and convenient solution for securely sharing passw"
 "ords without the need for email or other less secure communication methods."
-msgstr "Password Pusher 是一种简单方便的解决方案，无需电子邮件或其他不太安全的通信方式即可安全地共享密码。"
+msgstr "Tbyte Secure Send 是一种简单方便的解决方案，无需电子邮件或其他不太安全的通信方式即可安全地共享密码。"
 
 #: ../../../app/views/pages/about.html.erb:17
 msgid "Hosted at"
@@ -1356,8 +1360,8 @@ msgid "By far the biggest help is to spread the word"
 msgstr "到目前为止，对本项目最大的帮助是向全世界推荐本项目。"
 
 #: ../../../app/views/pages/about.html.erb:50
-msgid "Share and suggest Password Pusher to colleagues and friends."
-msgstr "与同事和朋友分享和推荐 Password Pusher。"
+msgid "Share and suggest Tbyte Secure Send to colleagues and friends."
+msgstr "与同事和朋友分享和推荐 Tbyte Secure Send。"
 
 #: ../../../app/views/pages/about.html.erb:53
 msgid "You can also"
@@ -1368,8 +1372,8 @@ msgid "Star the Github project"
 msgstr "为 Github 项目加注星标"
 
 #: ../../../app/views/pages/about.html.erb:57
-msgid "It's gasoline for the algos that trend Password Pusher."
-msgstr "它是推动 Password Pusher 发展的算法的燃料。"
+msgid "It's gasoline for the algos that trend Tbyte Secure Send."
+msgstr "它是推动 Tbyte Secure Send 发展的算法的燃料。"
 
 #: ../../../app/views/pages/about.html.erb:60
 #: ../../../app/views/pages/translate.html.erb:3
@@ -1393,8 +1397,8 @@ msgid "to get updates on important releases, security issues, tips and more."
 msgstr "获取有关重要版本、安全问题、提示等的更新。"
 
 #: ../../../app/views/pages/about.html.erb:69
-msgid "Follow Password Pusher on"
-msgstr "关注Password Pusher在"
+msgid "Follow Tbyte Secure Send on"
+msgstr "关注Tbyte Secure Send在"
 
 #: ../../../app/views/pages/about.html.erb:76
 msgid "Fix an issue, add a feature or write some documentation."
@@ -1413,12 +1417,12 @@ msgid "with this link"
 msgstr "通过此链接"
 
 #: ../../../app/views/pages/about.html.erb:81
-msgid "to get Password Pusher a hosting credit."
-msgstr "让 Password Pusher 获得托管奖励。"
+msgid "to get Tbyte Secure Send a hosting credit."
+msgstr "让 Tbyte Secure Send 获得托管奖励。"
 
 #: ../../../app/views/pages/about.html.erb:85
-msgid "Thank you for supporting Password Pusher!"
-msgstr "感谢您支持 Password Pusher ！"
+msgid "Thank you for supporting Tbyte Secure Send!"
+msgstr "感谢您支持 Tbyte Secure Send ！"
 
 #: ../../../app/views/pages/about.html.erb:87
 #: ../../../app/views/shared/_footer.html.erb:26
@@ -1429,7 +1433,7 @@ msgstr "资源"
 msgid ""
 "If you are giving a presentation, authoring a blog post or video about Passwor"
 "d Pusher, feel free to contact me for any questions."
-msgstr "如果您要进行演示、撰写有关 Password Pusher 的博客文章或视频，如有任何问题，请随时与我联系。"
+msgstr "如果您要进行演示、撰写有关 Tbyte Secure Send 的博客文章或视频，如有任何问题，请随时与我联系。"
 
 #: ../../../app/views/pages/about.html.erb:93
 msgid "We have media resources and a full explanation of features available in"
@@ -1456,8 +1460,8 @@ msgid "More Than 11 Years Old"
 msgstr "11岁以上"
 
 #: ../../../app/views/pages/about.html.erb:110
-msgid "The first git commit to Password Pusher was on"
-msgstr "Password Pusher 的第一个 git commit 开启于"
+msgid "The first git commit to Tbyte Secure Send was on"
+msgstr "Tbyte Secure Send 的第一个 git commit 开启于"
 
 #: ../../../app/views/pages/about.html.erb:114
 msgid "pwpush.com went live shortly thereafter."
@@ -1491,12 +1495,12 @@ msgid "Trust and Security"
 msgstr "信任与安全"
 
 #: ../../../app/views/pages/faq.html.erb:11
-msgid "What purpose does Password Pusher serve?"
-msgstr "Password Pusher 的目的是什么？"
+msgid "What purpose does Tbyte Secure Send serve?"
+msgstr "Tbyte Secure Send 的目的是什么？"
 
 #: ../../../app/views/pages/faq.html.erb:16
-msgid "Password Pusher exists as a better alternative to emailing passwords."
-msgstr "Password Pusher 作为通过电子邮件发送密码的更好替代方案而存在。"
+msgid "Tbyte Secure Send exists as a better alternative to emailing passwords."
+msgstr "Tbyte Secure Send 作为通过电子邮件发送密码的更好替代方案而存在。"
 
 #: ../../../app/views/pages/faq.html.erb:18
 msgid "Emailing passwords is inherently insecure."
@@ -1535,12 +1539,12 @@ msgid ""
 msgstr "通过 SMS、WhatsApp、Telegram、Chat 等发送密码时，同样的风险仍然存在……数据可以而且通常是永久的，不受您的控制。"
 
 #: ../../../app/views/pages/faq.html.erb:29
-msgid "By using Password Pusher, you bypass all of this."
-msgstr "通过使用 Password Pusher，您可以避免所有这些。"
+msgid "By using Tbyte Secure Send, you bypass all of this."
+msgstr "通过使用 Tbyte Secure Send，您可以避免所有这些。"
 
 #: ../../../app/views/pages/faq.html.erb:31
-msgid "For each password posted to Password Pusher, "
-msgstr "对于发布到 Password Pusher 的每个密码，"
+msgid "For each password posted to Tbyte Secure Send, "
+msgstr "对于发布到 Tbyte Secure Send 的每个密码，"
 
 #: ../../../app/views/pages/faq.html.erb:32
 msgid "a unique URL is generated that only you will know"
@@ -1565,8 +1569,8 @@ msgid ""
 msgstr "如果您觉得这听起来很有趣，请尝试一下或查看下面的其他常见问题。"
 
 #: ../../../app/views/pages/faq.html.erb:47
-msgid "Trust is a concern. Why should I use Password Pusher?"
-msgstr "信任是一个问题。我为什么要使用 Password Pusher？"
+msgid "Trust is a concern. Why should I use Tbyte Secure Send?"
+msgstr "信任是一个问题。我为什么要使用 Tbyte Secure Send？"
 
 #: ../../../app/views/pages/faq.html.erb:52
 msgid ""
@@ -1576,14 +1580,14 @@ msgstr "理所当然的。所有良好的安全性都始于对所有相关组件
 
 #: ../../../app/views/pages/faq.html.erb:55
 msgid ""
-"Password Pusher exists as a better alternative to emailing passwords. It avoid"
+"Tbyte Secure Send exists as a better alternative to emailing passwords. It avoid"
 "s having passwords exist in email archives in perpetuity. It does not exist as"
 " a end-all security solution."
-msgstr "Password Pusher 作为通过电子邮件发送密码的更好替代方案而存在。它避免了密码永久存在于电子邮件档案中。它不作为最终的安全解决方案存在。"
+msgstr "Tbyte Secure Send 作为通过电子邮件发送密码的更好替代方案而存在。它避免了密码永久存在于电子邮件档案中。它不作为最终的安全解决方案存在。"
 
 #: ../../../app/views/pages/faq.html.erb:59
-msgid "Password Pusher is opensource"
-msgstr "Password Pusher 是开源的"
+msgid "Tbyte Secure Send is opensource"
+msgstr "Tbyte Secure Send 是开源的"
 
 #: ../../../app/views/pages/faq.html.erb:60
 msgid ""
@@ -1631,16 +1635,16 @@ msgid "Tools, Utilities and Applications"
 msgstr "工具、实用程序和应用程序"
 
 #: ../../../app/views/pages/faq.html.erb:89
-msgid "Are there other ways I can access Password Pusher outside of a browser?"
-msgstr "我可以通过其他方式在浏览器之外访问 Password Pusher 吗？"
+msgid "Are there other ways I can access Tbyte Secure Send outside of a browser?"
+msgstr "我可以通过其他方式在浏览器之外访问 Tbyte Secure Send 吗？"
 
 #: ../../../app/views/pages/faq.html.erb:95
 msgid ""
-"Absolutely.  Password Pusher has a number of applications and command line uti"
+"Absolutely.  Tbyte Secure Send has a number of applications and command line uti"
 "lities (CLI) that interface with pwpush.com or privately run instances.  Push "
 "passwords from the CLI, Slack, Alfred App and more."
 msgstr ""
-"当然。 Password Pusher 有许多应用程序和命令行实用程序 (CLI)，它们与 pwpush.com 或私有部署的实例进行交互。从 CLI、Sl"
+"当然。 Tbyte Secure Send 有许多应用程序和命令行实用程序 (CLI)，它们与 pwpush.com 或私有部署的实例进行交互。从 CLI、Sl"
 "ack、Alfred App 等推送密码。"
 
 #: ../../../app/views/pages/faq.html.erb:97
@@ -1662,8 +1666,8 @@ msgstr "我可以自动化分发密码吗？"
 #: ../../../app/views/pages/faq.html.erb:109
 msgid ""
 "Yes. Using the previously mentioned tools, many users and organizations integr"
-"ate Password Pusher into their security policies and processes."
-msgstr "是的。使用前面提到的工具，许多用户和组织将 Password Pusher 集成到他们的安全策略和流程中。"
+"ate Tbyte Secure Send into their security policies and processes."
+msgstr "是的。使用前面提到的工具，许多用户和组织将 Tbyte Secure Send 集成到他们的安全策略和流程中。"
 
 #: ../../../app/views/pages/faq.html.erb:110
 msgid "The"
@@ -1681,15 +1685,15 @@ msgid ""
 msgstr "页面概述了可用于自动化密码安全分发的资源。"
 
 #: ../../../app/views/pages/faq.html.erb:117
-msgid "How many requests can I send to Password Pusher?"
-msgstr "我可以向 Password Pusher 发送多少个请求？"
+msgid "How many requests can I send to Tbyte Secure Send?"
+msgstr "我可以向 Tbyte Secure Send 发送多少个请求？"
 
 #: ../../../app/views/pages/faq.html.erb:122
 msgid ""
 "There are no limits currently and I have no intention of adding any.  To minim"
-"ally assure site stability, Password Pusher is configured with a rate limiter "
+"ally assure site stability, Tbyte Secure Send is configured with a rate limiter "
 "by default."
-msgstr "目前没有限制，我也无意添加任何限制。为了最低限度地确保站点稳定性，Password Pusher 默认配置了速率限制器。"
+msgstr "目前没有限制，我也无意添加任何限制。为了最低限度地确保站点稳定性，Tbyte Secure Send 默认配置了速率限制器。"
 
 #: ../../../app/views/pages/faq.html.erb:128
 msgid "Running Your Own Private Instance"
@@ -1725,9 +1729,9 @@ msgstr "我可以自定义徽标或更改设计吗？"
 
 #: ../../../app/views/pages/faq.html.erb:158
 msgid ""
-"Password Pusher supports re-branding \"out of the box\" allowing you to add a cu"
+"Tbyte Secure Send supports re-branding \"out of the box\" allowing you to add a cu"
 "stom logo, text and even change images in the application."
-msgstr "Password Pusher 支持“开箱即用”的品牌重塑，允许您在应用程序中添加自定义徽标、文本甚至更改图像。"
+msgstr "Tbyte Secure Send 支持“开箱即用”的品牌重塑，允许您在应用程序中添加自定义徽标、文本甚至更改图像。"
 
 #: ../../../app/views/pages/faq.html.erb:165
 msgid "Are there any licensing restrictions for me, my company or my organization?"
@@ -1737,14 +1741,14 @@ msgstr "对我、我的公司或我的组织有任何许可限制吗？"
 msgid ""
 "The source code is released under the GNU General Public License v3.0 and that"
 " pretty much defines any and all limitations. There are quite a few rebranded "
-"and redesigned clone sites of Password Pusher and I welcome them all."
+"and redesigned clone sites of Tbyte Secure Send and I welcome them all."
 msgstr ""
-"源代码是根据 GNU 通用公共许可证 v3.0 发布的，它几乎定义了所有限制。 Password Pusher 有很多重新命名和重新设计的克隆站点，我欢迎它"
+"源代码是根据 GNU 通用公共许可证 v3.0 发布的，它几乎定义了所有限制。 Tbyte Secure Send 有很多重新命名和重新设计的克隆站点，我欢迎它"
 "们。"
 
 #: ../../../app/views/pages/faq.html.erb:179
-msgid "Why would I want to run my own private instance of Password Pusher?"
-msgstr "为什么我要运行我自己的 Password Pusher 私有实例？"
+msgid "Why would I want to run my own private instance of Tbyte Secure Send?"
+msgstr "为什么我要运行我自己的 Tbyte Secure Send 私有实例？"
 
 #: ../../../app/views/pages/faq.html.erb:185
 msgid ""
@@ -1766,10 +1770,10 @@ msgstr "在内部运行我自己的版本有哪些潜在的安全风险？"
 
 #: ../../../app/views/pages/faq.html.erb:201
 msgid ""
-"Running an private instance of Password Pusher for your company or organizatio"
+"Running an private instance of Tbyte Secure Send for your company or organizatio"
 "n gives you the peace of mind that you know exactly what code is running.  You"
 " can configure and run it as you like."
-msgstr "为您的公司或组织运行 Password Pusher 的私有实例让您高枕无忧，因为您确切知道正在运行的代码。您可以根据需要配置和运行它。"
+msgstr "为您的公司或组织运行 Tbyte Secure Send 的私有实例让您高枕无忧，因为您确切知道正在运行的代码。您可以根据需要配置和运行它。"
 
 #: ../../../app/views/pages/faq.html.erb:202
 msgid ""
@@ -1833,8 +1837,8 @@ msgid "This audit log can reveal by who and when the push was viewed."
 msgstr "此审核日志可以显示查看推送的人员和时间。"
 
 #: ../../../app/views/pages/faq.html.erb:241
-msgid "Can I use Password Pusher in my talk/presentation/conference?"
-msgstr "我可以在演讲/演示/会议中使用 Password Pusher 吗？"
+msgid "Can I use Tbyte Secure Send in my talk/presentation/conference?"
+msgstr "我可以在演讲/演示/会议中使用 Tbyte Secure Send 吗？"
 
 #: ../../../app/views/pages/faq.html.erb:246
 msgid ""
@@ -1882,19 +1886,19 @@ msgstr "10多年来，这些都是我自己愉快地自掏腰包支付的。"
 
 #: ../../../app/views/pages/faq.html.erb:279
 msgid ""
-"If you feel inclined to support Password Pusher, you can sign up to Digital Oc"
+"If you feel inclined to support Tbyte Secure Send, you can sign up to Digital Oc"
 "ean using the badge below."
-msgstr "如果您愿意支持 Password Pusher，您可以使用下面的徽章注册 Digital Ocean。"
+msgstr "如果您愿意支持 Tbyte Secure Send，您可以使用下面的徽章注册 Digital Ocean。"
 
 #: ../../../app/views/pages/faq.html.erb:280
-msgid "Password Pusher will get a hosting credit for the first $25 you spend."
-msgstr "Password Pusher 将在您消费第一个 25 美元后获得用于托管服务的奖励。"
+msgid "Tbyte Secure Send will get a hosting credit for the first $25 you spend."
+msgstr "Tbyte Secure Send 将在您消费第一个 25 美元后获得用于托管服务的奖励。"
 
 #: ../../../app/views/pages/faq.html.erb:289
 msgid ""
-"For other ways to support Password Pusher, see also the \"Want to help out?\" se"
+"For other ways to support Tbyte Secure Send, see also the \"Want to help out?\" se"
 "ction"
-msgstr "有关支持 Password Pusher 的其他方式，另请参阅“想要帮忙吗？”章节"
+msgstr "有关支持 Tbyte Secure Send 的其他方式，另请参阅“想要帮忙吗？”章节"
 
 #: ../../../app/views/pages/faq.html.erb:290
 msgid "on the about page"
@@ -1915,20 +1919,20 @@ msgstr "生成加密密钥"
 #: ../../../app/views/pages/generate_key.html.erb:6
 msgid ""
 "This page is used as a helper tool to generate a random encryption key for pri"
-"vately hosted instances of Password Pusher."
-msgstr "此页面用作提供一个帮助工具，为私人托管的 Password Pusher 实例生成随机加密密钥。"
+"vately hosted instances of Tbyte Secure Send."
+msgstr "此页面用作提供一个帮助工具，为私人托管的 Tbyte Secure Send 实例生成随机加密密钥。"
 
 #: ../../../app/views/pages/generate_key.html.erb:10
 msgid ""
-"Password Pusher encrypts sensitive data in the database.  This requires a rand"
+"Tbyte Secure Send encrypts sensitive data in the database.  This requires a rand"
 "omly generated encryption key for each application instance."
-msgstr "Password Pusher 加密数据库中的敏感数据。这需要为每个应用程序实例随机生成加密密钥。"
+msgstr "Tbyte Secure Send 加密数据库中的敏感数据。这需要为每个应用程序实例随机生成加密密钥。"
 
 #: ../../../app/views/pages/generate_key.html.erb:14
 msgid ""
 "You can use the randomly generated code below to configure your Password Pushe"
 "r instance."
-msgstr "您可以使用下面随机生成的代码来配置您的 Password Pusher 实例。"
+msgstr "您可以使用下面随机生成的代码来配置您的 Tbyte Secure Send 实例。"
 
 #: ../../../app/views/pages/generate_key.html.erb:22
 msgid "Generated Encryption Key"
@@ -1959,9 +1963,9 @@ msgstr "如果未提供加密密钥，将使用默认密钥。"
 
 #: ../../../app/views/pages/generate_key.html.erb:55
 msgid ""
-"The best security for private instances of Password Pusher is to use your own "
+"The best security for private instances of Tbyte Secure Send is to use your own "
 "custom encryption key although it is not required."
-msgstr "Password Pusher 私有实例的最佳安全措施是使用您自己的自定义加密密钥，尽管这不是必需的。"
+msgstr "Tbyte Secure Send 私有实例的最佳安全措施是使用您自己的自定义加密密钥，尽管这不是必需的。"
 
 #: ../../../app/views/pages/generate_key.html.erb:58
 msgid ""
@@ -1988,7 +1992,7 @@ msgid ""
 msgstr "密钥生成也可以通过执行以下命令从应用程序源中的命令行完成："
 
 #: ../../../app/views/pages/generate_key.html.erb:80
-msgid "See also the Password Pusher"
+msgid "See also the Tbyte Secure Send"
 msgstr "另见密码推送器"
 
 #: ../../../app/views/pages/generate_key.html.erb:81
@@ -2002,9 +2006,9 @@ msgstr "工具与应用程序"
 
 #: ../../../app/views/pages/tools.html.erb:5
 msgid ""
-"Using the JSON API, various tools exist to interface with Password Pusher to a"
+"Using the JSON API, various tools exist to interface with Tbyte Secure Send to a"
 "utomate password distribution."
-msgstr "使用 JSON API，可以使用各种工具与 Password Pusher 交互以自动分发密码。"
+msgstr "使用 JSON API，可以使用各种工具与 Tbyte Secure Send 交互以自动分发密码。"
 
 #: ../../../app/views/pages/tools.html.erb:7
 msgid ""
@@ -2026,7 +2030,7 @@ msgstr "应用"
 
 #: ../../../app/views/pages/tools.html.erb:83
 msgid ""
-"This API allows you to interface with Password Pusher via JSON.  This can be u"
+"This API allows you to interface with Tbyte Secure Send via JSON.  This can be u"
 "tilized by existing utilities such as curl, wget or any programming language. "
 " See the examples below for some ideas."
 msgstr "此 API 允许您通过 JSON 与密码推送器交互。这可以被现有的实用程序使用，例如 curl、wget 或任何编程语言。请参阅下面的示例以了解一些想法。"
@@ -2046,16 +2050,16 @@ msgstr "例子"
 #: ../../../app/views/pages/tools.html.erb:99
 msgid ""
 "You can test this in your browser Javascript console by going to the front pag"
-"e of Password Pusher and enter:"
-msgstr "您可以在浏览器 Javascript 控制台中对此进行测试，转到 Password Pusher 的首页并输入以下内容："
+"e of Tbyte Secure Send and enter:"
+msgstr "您可以在浏览器 Javascript 控制台中对此进行测试，转到 Tbyte Secure Send 的首页并输入以下内容："
 
 #: ../../../app/views/pages/tools.html.erb:107
 msgid "See more explanation and examples in our"
 msgstr "在我们的网站上查看更多解释和示例"
 
 #: ../../../app/views/pages/translate.html.erb:1
-msgid "Help Translate Password Pusher!"
-msgstr "帮助翻译Password Pusher！"
+msgid "Help Translate Tbyte Secure Send!"
+msgstr "帮助翻译Tbyte Secure Send！"
 
 #: ../../../app/views/pages/translate.html.erb:6
 msgid ""
@@ -2141,8 +2145,8 @@ msgid ""
 msgstr "如果您看到诸如“%s”、{%file} 或类似内容的嵌入代码，请在译文中完整保留这些代码。这些是应用程序中使用的替换代码。"
 
 #: ../../../app/views/pages/translate.html.erb:61
-msgid "Thanks for helping to translate Password Pusher!"
-msgstr "感谢您帮助翻译 Password Pusher！"
+msgid "Thanks for helping to translate Tbyte Secure Send!"
+msgstr "感谢您帮助翻译 Tbyte Secure Send！"
 
 #: ../../../app/views/passwords/active.html.erb:1
 #: ../../../app/views/passwords/active.html.erb:18

@@ -104,9 +104,47 @@ msgstr "Platnost tohoto podnětu již vypršela."
 msgid "The push content has been deleted and the secret URL expired."
 msgstr "Push obsah byl smazán a platnost tajné adresy URL vypršela."
 
+<<<<<<< HEAD
+#: ../../../app/controllers/urls_controller.rb:110
+msgid "Invalid URL: Must be a valid URL and start with http:// or https://"
+msgstr ""
+
+#: ../../../app/helpers/application_helper.rb:7
+#: ../../../app/views/devise/mailer/email_changed.html.erb:8
+#: ../../../app/views/devise/mailer/password_change.html.erb:8
+#: ../../../app/views/layouts/application.html.erb:9
+#: ../../../app/views/layouts/bare.html.erb:9
+#: ../../../app/views/layouts/login.html.erb:9
+#: ../../../app/views/layouts/naked.html.erb:9
+#: ../../../app/views/shared/_email_footer.html.erb:8
+#: ../../../app/views/shared/_header.html.erb:21
+msgid "Tbyte Secure Send"
+msgstr "Posunovač hesel"
+
+#: ../../../app/models/feedback.rb:22
+msgid "Tbyte Secure Send Feedback"
+msgstr "Zpětná vazba zasílače hesel"
+
+#: ../../../app/views/devise/mailer/confirmation_instructions.html.erb:1
+msgid "Welcome!"
+msgstr "Vítejte!"
+
+#: ../../../app/views/devise/mailer/confirmation_instructions.html.erb:3
+msgid "Here is your password: "
+msgstr "Zde je vaše heslo:"
+
+#: ../../../app/views/devise/mailer/confirmation_instructions.html.erb:6
+msgid "Just kidding!"
+msgstr ""
+
+#: ../../../app/views/devise/mailer/confirmation_instructions.html.erb:6
+msgid "Never have to do anything like that ever again with Tbyte Secure Send."
+msgstr ""
+=======
 #: ../../../app/controllers/urls_controller.rb:201
 msgid "Invalid URL: Must have a valid URI scheme."
 msgstr "Neplatná adresa URL: Musí mít platné schéma URI."
+>>>>>>> upstream/master
 
 #: ../../../app/views/devise/mailer/confirmation_instructions.html.erb:8
 #: ../../../app/views/devise/mailer/email_changed.html.erb:8
@@ -118,10 +156,10 @@ msgstr "Neplatná adresa URL: Musí mít platné schéma URI."
 #: ../../../app/views/layouts/login.html.erb:8
 #: ../../../app/views/layouts/naked.html.erb:8
 msgid ""
-"Password Pusher is an application to securely send passwords over the web. Lin"
+"Tbyte Secure Send is an application to securely send passwords over the web. Lin"
 "ks to passwords expire after a certain number of views and/or time has passed."
 msgstr ""
-"Password Pusher je aplikace pro bezpečné odesílání hesel přes web. Platnost od"
+"Tbyte Secure Send je aplikace pro bezpečné odesílání hesel přes web. Platnost od"
 "kazů na hesla vyprší po určitém počtu zobrazení a/nebo uplynutí určitého času."
 
 #: ../../../app/views/devise/mailer/confirmation_instructions.html.erb:23
@@ -1303,12 +1341,25 @@ msgstr ""
 "V případě potřeby kontaktujte osobu nebo organizaci, která vám tuto tajnou adr"
 "esu URL poskytla."
 
+<<<<<<< HEAD
+#: ../../../app/views/layouts/application.html.erb:12
+#: ../../../app/views/layouts/bare.html.erb:12
+#: ../../../app/views/layouts/login.html.erb:12
+#: ../../../app/views/layouts/naked.html.erb:12
+msgid ""
+"Tbyte Secure Send is an application to securely send passwords over the web. Lin"
+"ks to passwords expire after a certain number of views and/or time has passed."
+msgstr ""
+
+#: ../../../app/views/layouts/login.html.erb:42
+=======
 #: ../../../app/views/layouts/login.html.erb:37
+>>>>>>> upstream/master
 #: ../../../app/views/shared/_footer.html.erb:12
 #: ../../../app/views/shared/_footer.html.erb:16
 #: ../../../app/views/shared/_header.html.erb:9
 #: ../../../app/views/shared/_header.html.erb:13
-msgid "Password Pusher Logo"
+msgid "Tbyte Secure Send Logo"
 msgstr "Logo pro posunování hesel"
 
 #: ../../../app/views/layouts/login.html.erb:52
@@ -1328,8 +1379,8 @@ msgid "and we can help out."
 msgstr "a můžeme pomoci."
 
 #: ../../../app/views/pages/about.html.erb:1
-msgid "About Password Pusher"
-msgstr "O Password Pusheru"
+msgid "About Tbyte Secure Send"
+msgstr "O Tbyte Secure Sendu"
 
 #: ../../../app/views/pages/about.html.erb:2
 #: ../../../app/views/shared/_footer.html.erb:49
@@ -1338,19 +1389,25 @@ msgstr "O aplikaci"
 
 #: ../../../app/views/pages/about.html.erb:7
 msgid ""
-"Password Pusher is a tool used for sharing passwords and other sensitive infor"
+<<<<<<< HEAD
+"Tbyte Secure Send is an application to communicate passwords over the web. Links"
+" to passwords\n"
+"            expire after a certain number of views and/or time has passed."
+=======
+"Tbyte Secure Send is a tool used for sharing passwords and other sensitive infor"
 "mation with other people securely."
+>>>>>>> upstream/master
 msgstr ""
-"Password Pusher je nástroj používaný pro bezpečné sdílení hesel a dalších citl"
+"Tbyte Secure Send je nástroj používaný pro bezpečné sdílení hesel a dalších citl"
 "ivých informací s ostatními lidmi."
 
 #: ../../../app/views/pages/about.html.erb:10
 msgid ""
-"With Password Pusher, you can create a unique, one-time URL that will expire a"
+"With Tbyte Secure Send, you can create a unique, one-time URL that will expire a"
 "fter a certain amount of time or after it has been accessed a certain number o"
 "f times, ensuring that your information remains private and secure."
 msgstr ""
-"Pomocí Password Pusher můžete vytvořit jedinečnou, jednorázovou adresu URL, je"
+"Pomocí Tbyte Secure Send můžete vytvořit jedinečnou, jednorázovou adresu URL, je"
 "jíž platnost vyprší po určité době nebo po určitém počtu přístupů, což zajistí"
 ", že vaše informace zůstanou soukromé a bezpečné."
 
@@ -1364,10 +1421,10 @@ msgstr ""
 
 #: ../../../app/views/pages/about.html.erb:14
 msgid ""
-"Password Pusher is a simple and convenient solution for securely sharing passw"
+"Tbyte Secure Send is a simple and convenient solution for securely sharing passw"
 "ords without the need for email or other less secure communication methods."
 msgstr ""
-"Password Pusher je jednoduché a pohodlné řešení pro bezpečné sdílení hesel bez"
+"Tbyte Secure Send je jednoduché a pohodlné řešení pro bezpečné sdílení hesel bez"
 " potřeby e-mailu nebo jiných méně bezpečných komunikačních metod."
 
 #: ../../../app/views/pages/about.html.erb:17
@@ -1407,7 +1464,23 @@ msgstr "U aktualizací můžete"
 
 #: ../../../app/views/pages/about.html.erb:39
 msgid "follow me on Twitter"
+<<<<<<< HEAD
+msgstr ""
+
+#: ../../../app/views/pages/about.html.erb:38
+msgid "Contributors"
+msgstr "Přispěvatelé"
+
+#: ../../../app/views/pages/about.html.erb:41
+msgid "Tbyte Secure Send has had a great community of contributors over the years."
+msgstr ""
+
+#: ../../../app/views/pages/about.html.erb:42
+msgid "Take a look"
+msgstr ""
+=======
 msgstr "Sleduj mě na Twitteru"
+>>>>>>> upstream/master
 
 #: ../../../app/views/pages/about.html.erb:44
 msgid "Want to Help Out?"
@@ -1418,8 +1491,8 @@ msgid "By far the biggest help is to spread the word"
 msgstr "Jednoznačně nejlepší způsob jak pomoci je doporučit ostatní"
 
 #: ../../../app/views/pages/about.html.erb:50
-msgid "Share and suggest Password Pusher to colleagues and friends."
-msgstr "Sdílejte a navrhujte Password Pusher kolegům a přátelům."
+msgid "Share and suggest Tbyte Secure Send to colleagues and friends."
+msgstr "Sdílejte a navrhujte Tbyte Secure Send kolegům a přátelům."
 
 #: ../../../app/views/pages/about.html.erb:53
 msgid "You can also"
@@ -1430,14 +1503,19 @@ msgid "Star the Github project"
 msgstr "Spusťte projekt Github"
 
 #: ../../../app/views/pages/about.html.erb:57
-msgid "It's gasoline for the algos that trend Password Pusher."
-msgstr "Je to benzín pro algy, které jsou trendem Password Pusher."
+msgid "It's gasoline for the algos that trend Tbyte Secure Send."
+msgstr "Je to benzín pro algy, které jsou trendem Tbyte Secure Send."
 
 #: ../../../app/views/pages/about.html.erb:60
 #: ../../../app/views/pages/translate.html.erb:3
 msgid "Help Translate"
 msgstr "Pomozte Přeložit"
 
+<<<<<<< HEAD
+#: ../../../app/views/pages/about.html.erb:63
+msgid "Follow Tbyte Secure Send on"
+msgstr "Postupujte podle Tbyte Secure Send na"
+=======
 #: ../../../app/views/pages/about.html.erb:61
 msgid "Improve an existing language or add a new one"
 msgstr "Vylepšete stávající jazyk nebo přidejte nový"
@@ -1455,8 +1533,9 @@ msgid "to get updates on important releases, security issues, tips and more."
 msgstr "získat aktualizace důležitých vydání, bezpečnostní problémy, tipy a další."
 
 #: ../../../app/views/pages/about.html.erb:69
-msgid "Follow Password Pusher on"
-msgstr "Postupujte podle Password Pusher na"
+msgid "Follow Tbyte Secure Send on"
+msgstr "Postupujte podle Tbyte Secure Send na"
+>>>>>>> upstream/master
 
 #: ../../../app/views/pages/about.html.erb:76
 msgid "Fix an issue, add a feature or write some documentation."
@@ -1474,13 +1553,18 @@ msgstr "Zaregistrujte se do Digital Ocean"
 msgid "with this link"
 msgstr "s tímto odkazem"
 
+<<<<<<< HEAD
+#: ../../../app/views/pages/about.html.erb:75
+msgid "to get Tbyte Secure Send a hosting credit."
+=======
 #: ../../../app/views/pages/about.html.erb:81
-msgid "to get Password Pusher a hosting credit."
+msgid "to get Tbyte Secure Send a hosting credit."
+>>>>>>> upstream/master
 msgstr "získat Password Puher hostovací kredit."
 
 #: ../../../app/views/pages/about.html.erb:85
-msgid "Thank you for supporting Password Pusher!"
-msgstr "Děkujeme za podporu Password Pusher!"
+msgid "Thank you for supporting Tbyte Secure Send!"
+msgstr "Děkujeme za podporu Tbyte Secure Send!"
 
 #: ../../../app/views/pages/about.html.erb:87
 #: ../../../app/views/shared/_footer.html.erb:26
@@ -1495,9 +1579,15 @@ msgstr ""
 "Pokud pořádáte prezentaci, vytváříte blogový příspěvek nebo video o Password P"
 "usher, neváhejte mě kontaktovat s případnými dotazy."
 
+<<<<<<< HEAD
+#: ../../../app/views/pages/about.html.erb:83
+msgid "Thank you for supporting Tbyte Secure Send!"
+msgstr "Děkujeme za podporu Tbyte Secure Send!"
+=======
 #: ../../../app/views/pages/about.html.erb:93
 msgid "We have media resources and a full explanation of features available in"
 msgstr "Máme mediální zdroje a úplné vysvětlení funkcí dostupných v"
+>>>>>>> upstream/master
 
 #: ../../../app/views/pages/about.html.erb:94
 msgid "Windows Powerpoint"
@@ -1519,9 +1609,15 @@ msgstr "Narozeniny"
 msgid "More Than 11 Years Old"
 msgstr "Více než 11 let"
 
+<<<<<<< HEAD
+#: ../../../app/views/pages/about.html.erb:95
+msgid "The first git commit to Tbyte Secure Send was on"
+msgstr "Bylo zapnuto první potvrzení git do Tbyte Secure Send"
+=======
 #: ../../../app/views/pages/about.html.erb:110
-msgid "The first git commit to Password Pusher was on"
-msgstr "Bylo zapnuto první potvrzení git do Password Pusher"
+msgid "The first git commit to Tbyte Secure Send was on"
+msgstr "Bylo zapnuto první potvrzení git do Tbyte Secure Send"
+>>>>>>> upstream/master
 
 #: ../../../app/views/pages/about.html.erb:114
 msgid "pwpush.com went live shortly thereafter."
@@ -1555,12 +1651,12 @@ msgid "Trust and Security"
 msgstr "Důvěra a bezpečnost"
 
 #: ../../../app/views/pages/faq.html.erb:11
-msgid "What purpose does Password Pusher serve?"
+msgid "What purpose does Tbyte Secure Send serve?"
 msgstr "K čemu slouží Password Puher?"
 
 #: ../../../app/views/pages/faq.html.erb:16
-msgid "Password Pusher exists as a better alternative to emailing passwords."
-msgstr "Password Pusher existuje jako lepší alternativa k zasílání hesel e-mailem."
+msgid "Tbyte Secure Send exists as a better alternative to emailing passwords."
+msgstr "Tbyte Secure Send existuje jako lepší alternativa k zasílání hesel e-mailem."
 
 #: ../../../app/views/pages/faq.html.erb:18
 msgid "Emailing passwords is inherently insecure."
@@ -1607,12 +1703,12 @@ msgstr ""
 "at atd. Data mohou a jsou často věčná a mimo vaši kontrolu."
 
 #: ../../../app/views/pages/faq.html.erb:29
-msgid "By using Password Pusher, you bypass all of this."
-msgstr "Použitím Password Pusheru se tomu všemu vyhnete."
+msgid "By using Tbyte Secure Send, you bypass all of this."
+msgstr "Použitím Tbyte Secure Sendu se tomu všemu vyhnete."
 
 #: ../../../app/views/pages/faq.html.erb:31
-msgid "For each password posted to Password Pusher, "
-msgstr "Pro každé heslo zaslané do Password Pusher,"
+msgid "For each password posted to Tbyte Secure Send, "
+msgstr "Pro každé heslo zaslané do Tbyte Secure Send,"
 
 #: ../../../app/views/pages/faq.html.erb:32
 msgid "a unique URL is generated that only you will know"
@@ -1641,8 +1737,13 @@ msgstr ""
 "kladené otázky níže."
 
 #: ../../../app/views/pages/faq.html.erb:47
-msgid "Trust is a concern. Why should I use Password Pusher?"
-msgstr "Důvěra je starost. Proč bych měl používat Password Pusher?"
+<<<<<<< HEAD
+msgid "Trust is a concern. Why should I use Tbyte Secure Send?"
+msgstr ""
+=======
+msgid "Trust is a concern. Why should I use Tbyte Secure Send?"
+msgstr "Důvěra je starost. Proč bych měl používat Tbyte Secure Send?"
+>>>>>>> upstream/master
 
 #: ../../../app/views/pages/faq.html.erb:52
 msgid ""
@@ -1654,17 +1755,22 @@ msgstr ""
 
 #: ../../../app/views/pages/faq.html.erb:55
 msgid ""
-"Password Pusher exists as a better alternative to emailing passwords. It avoid"
+"Tbyte Secure Send exists as a better alternative to emailing passwords. It avoid"
 "s having passwords exist in email archives in perpetuity. It does not exist as"
 " a end-all security solution."
 msgstr ""
-"Password Pusher existuje jako lepší alternativa k zasílání hesel e-mailem. Zab"
+"Tbyte Secure Send existuje jako lepší alternativa k zasílání hesel e-mailem. Zab"
 "raňuje tomu, aby hesla existovala v e-mailových archivech navěky. Neexistuje j"
 "ako komplexní bezpečnostní řešení."
 
 #: ../../../app/views/pages/faq.html.erb:59
-msgid "Password Pusher is opensource"
-msgstr "Password Pusher je opensource"
+<<<<<<< HEAD
+msgid "Tbyte Secure Send is opensource"
+msgstr ""
+=======
+msgid "Tbyte Secure Send is opensource"
+msgstr "Tbyte Secure Send je opensource"
+>>>>>>> upstream/master
 
 #: ../../../app/views/pages/faq.html.erb:60
 msgid ""
@@ -1720,16 +1826,16 @@ msgid "Tools, Utilities and Applications"
 msgstr "Nástroje, utility a aplikace"
 
 #: ../../../app/views/pages/faq.html.erb:89
-msgid "Are there other ways I can access Password Pusher outside of a browser?"
-msgstr "Jsou zde, kromě prohlížeče, další cesty jak přistupovat k Password Pusheru?"
+msgid "Are there other ways I can access Tbyte Secure Send outside of a browser?"
+msgstr "Jsou zde, kromě prohlížeče, další cesty jak přistupovat k Tbyte Secure Sendu?"
 
 #: ../../../app/views/pages/faq.html.erb:95
 msgid ""
-"Absolutely.  Password Pusher has a number of applications and command line uti"
+"Absolutely.  Tbyte Secure Send has a number of applications and command line uti"
 "lities (CLI) that interface with pwpush.com or privately run instances.  Push "
 "passwords from the CLI, Slack, Alfred App and more."
 msgstr ""
-"Určitě. Password Pusher má množství aplikací a nástrojů pro příkazovou řádku ("
+"Určitě. Tbyte Secure Send má množství aplikací a nástrojů pro příkazovou řádku ("
 "CLI), které spolupracují s pwpush.com nebo privátními instancemi. Posílejte he"
 "sla z CLI, Slacku, Alfreda a dalších."
 
@@ -1752,7 +1858,7 @@ msgstr "Můžu nějak automatizovat distribuci hesel?"
 #: ../../../app/views/pages/faq.html.erb:109
 msgid ""
 "Yes. Using the previously mentioned tools, many users and organizations integr"
-"ate Password Pusher into their security policies and processes."
+"ate Tbyte Secure Send into their security policies and processes."
 msgstr ""
 "Ano. Pomocí výše zmíněných nástrojů mnoho uživatelů a organizací integruje Pas"
 "sword Pusher do svých bezpečnostních politik a procesů."
@@ -1775,17 +1881,17 @@ msgstr ""
 "el."
 
 #: ../../../app/views/pages/faq.html.erb:117
-msgid "How many requests can I send to Password Pusher?"
-msgstr "Kolik požadavků mohu odeslat do Password Pusher?"
+msgid "How many requests can I send to Tbyte Secure Send?"
+msgstr "Kolik požadavků mohu odeslat do Tbyte Secure Send?"
 
 #: ../../../app/views/pages/faq.html.erb:122
 msgid ""
 "There are no limits currently and I have no intention of adding any.  To minim"
-"ally assure site stability, Password Pusher is configured with a rate limiter "
+"ally assure site stability, Tbyte Secure Send is configured with a rate limiter "
 "by default."
 msgstr ""
 "V současné době neexistují žádné limity a nemám v úmyslu je přidávat. Aby byla"
-" zajištěna minimální stabilita webu, je Password Pusher ve výchozím nastavení "
+" zajištěna minimální stabilita webu, je Tbyte Secure Send ve výchozím nastavení "
 "nakonfigurován s omezovačem rychlosti."
 
 #: ../../../app/views/pages/faq.html.erb:128
@@ -1822,10 +1928,10 @@ msgstr "Mohu použít vlastní logo nebo změnit design?"
 
 #: ../../../app/views/pages/faq.html.erb:158
 msgid ""
-"Password Pusher supports re-branding \"out of the box\" allowing you to add a cu"
+"Tbyte Secure Send supports re-branding \"out of the box\" allowing you to add a cu"
 "stom logo, text and even change images in the application."
 msgstr ""
-"Password Pusher podporuje rebranding „out of the box“, což vám umožní přidat v"
+"Tbyte Secure Send podporuje rebranding „out of the box“, což vám umožní přidat v"
 "lastní logo, text a dokonce změnit obrázky v aplikaci."
 
 #: ../../../app/views/pages/faq.html.erb:165
@@ -1836,16 +1942,16 @@ msgstr "Jsou zde nějaká licenční omezení pro mě, mou společnost nebo orga
 msgid ""
 "The source code is released under the GNU General Public License v3.0 and that"
 " pretty much defines any and all limitations. There are quite a few rebranded "
-"and redesigned clone sites of Password Pusher and I welcome them all."
+"and redesigned clone sites of Tbyte Secure Send and I welcome them all."
 msgstr ""
 "Zdrojový kód je vydán pod GNU General Public License v3.0 a to do značné míry "
 "definuje všechna omezení. Existuje poměrně málo přeznačených a předělaných klo"
-"nových stránek Password Pusher a já je všechny vítám."
+"nových stránek Tbyte Secure Send a já je všechny vítám."
 
 #: ../../../app/views/pages/faq.html.erb:179
-msgid "Why would I want to run my own private instance of Password Pusher?"
+msgid "Why would I want to run my own private instance of Tbyte Secure Send?"
 msgstr ""
-"Proč bych měl chtít provozovat svou vlastní soukromou instanci Password Pusher"
+"Proč bych měl chtít provozovat svou vlastní soukromou instanci Tbyte Secure Send"
 "?"
 
 #: ../../../app/views/pages/faq.html.erb:185
@@ -1874,11 +1980,11 @@ msgstr "Jaká jsou potenciální bezpečnostní rizika interního spuštění m�
 
 #: ../../../app/views/pages/faq.html.erb:201
 msgid ""
-"Running an private instance of Password Pusher for your company or organizatio"
+"Running an private instance of Tbyte Secure Send for your company or organizatio"
 "n gives you the peace of mind that you know exactly what code is running.  You"
 " can configure and run it as you like."
 msgstr ""
-"Spuštění soukromé instance Password Pusher pro vaši společnost nebo organizaci"
+"Spuštění soukromé instance Tbyte Secure Send pro vaši společnost nebo organizaci"
 " vám dává jistotu, že přesně víte, jaký kód běží. Můžete jej nakonfigurovat a "
 "spustit, jak chcete."
 
@@ -1965,8 +2071,8 @@ msgid "This audit log can reveal by who and when the push was viewed."
 msgstr "Tento protokol auditu může odhalit, kdo a kdy byl push zobrazen."
 
 #: ../../../app/views/pages/faq.html.erb:241
-msgid "Can I use Password Pusher in my talk/presentation/conference?"
-msgstr "Můžu použít Password Pusher v mé přednášce/prezentaci/konferenci?"
+msgid "Can I use Tbyte Secure Send in my talk/presentation/conference?"
+msgstr "Můžu použít Tbyte Secure Send v mé přednášce/prezentaci/konferenci?"
 
 #: ../../../app/views/pages/faq.html.erb:246
 msgid ""
@@ -2022,22 +2128,27 @@ msgstr "Ty si už více než 10 let vesele platím z vlastní kapsy."
 
 #: ../../../app/views/pages/faq.html.erb:279
 msgid ""
-"If you feel inclined to support Password Pusher, you can sign up to Digital Oc"
+"If you feel inclined to support Tbyte Secure Send, you can sign up to Digital Oc"
 "ean using the badge below."
 msgstr ""
-"Pokud máte chuť podporovat Password Pusher, můžete se přihlásit do Digital Oce"
+"Pokud máte chuť podporovat Tbyte Secure Send, můžete se přihlásit do Digital Oce"
 "an pomocí níže uvedeného odznaku."
 
 #: ../../../app/views/pages/faq.html.erb:280
-msgid "Password Pusher will get a hosting credit for the first $25 you spend."
-msgstr "Password Pusher získá hostovací kredit za prvních 25 $, které utratíte."
+<<<<<<< HEAD
+msgid "Tbyte Secure Send will get a hosting credit for the first $25 you spend."
+msgstr ""
+=======
+msgid "Tbyte Secure Send will get a hosting credit for the first $25 you spend."
+msgstr "Tbyte Secure Send získá hostovací kredit za prvních 25 $, které utratíte."
+>>>>>>> upstream/master
 
 #: ../../../app/views/pages/faq.html.erb:289
 msgid ""
-"For other ways to support Password Pusher, see also the \"Want to help out?\" se"
+"For other ways to support Tbyte Secure Send, see also the \"Want to help out?\" se"
 "ction"
 msgstr ""
-"Další způsoby podpory Password Pusher naleznete také v části \"Chcete pomoci?\" "
+"Další způsoby podpory Tbyte Secure Send naleznete také v části \"Chcete pomoci?\" "
 "sekce"
 
 #: ../../../app/views/pages/faq.html.erb:290
@@ -2059,17 +2170,17 @@ msgstr "Vygenerujte šifrovací klíč"
 #: ../../../app/views/pages/generate_key.html.erb:6
 msgid ""
 "This page is used as a helper tool to generate a random encryption key for pri"
-"vately hosted instances of Password Pusher."
+"vately hosted instances of Tbyte Secure Send."
 msgstr ""
 "Tato stránka se používá jako pomocný nástroj ke generování náhodného šifrovací"
-"ho klíče pro soukromě hostované instance Password Pusher."
+"ho klíče pro soukromě hostované instance Tbyte Secure Send."
 
 #: ../../../app/views/pages/generate_key.html.erb:10
 msgid ""
-"Password Pusher encrypts sensitive data in the database.  This requires a rand"
+"Tbyte Secure Send encrypts sensitive data in the database.  This requires a rand"
 "omly generated encryption key for each application instance."
 msgstr ""
-"Password Pusher šifruje citlivá data v databázi. To vyžaduje náhodně vygenerov"
+"Tbyte Secure Send šifruje citlivá data v databázi. To vyžaduje náhodně vygenerov"
 "aný šifrovací klíč pro každou instanci aplikace."
 
 #: ../../../app/views/pages/generate_key.html.erb:14
@@ -2109,10 +2220,10 @@ msgstr "Pokud není zadán šifrovací klíč, použije se výchozí klíč."
 
 #: ../../../app/views/pages/generate_key.html.erb:55
 msgid ""
-"The best security for private instances of Password Pusher is to use your own "
+"The best security for private instances of Tbyte Secure Send is to use your own "
 "custom encryption key although it is not required."
 msgstr ""
-"Nejlepším zabezpečením pro soukromé instance Password Pusher je použití vlastn"
+"Nejlepším zabezpečením pro soukromé instance Tbyte Secure Send je použití vlastn"
 "ího šifrovacího klíče, i když to není vyžadováno."
 
 #: ../../../app/views/pages/generate_key.html.erb:58
@@ -2148,7 +2259,7 @@ msgstr ""
 "dením:"
 
 #: ../../../app/views/pages/generate_key.html.erb:80
-msgid "See also the Password Pusher"
+msgid "See also the Tbyte Secure Send"
 msgstr "Viz také Password Puher"
 
 #: ../../../app/views/pages/generate_key.html.erb:81
@@ -2162,10 +2273,10 @@ msgstr "Nástroje a aplikace"
 
 #: ../../../app/views/pages/tools.html.erb:5
 msgid ""
-"Using the JSON API, various tools exist to interface with Password Pusher to a"
+"Using the JSON API, various tools exist to interface with Tbyte Secure Send to a"
 "utomate password distribution."
 msgstr ""
-"Pomocí JSON API existují různé nástroje pro propojení s Password Pusher pro au"
+"Pomocí JSON API existují různé nástroje pro propojení s Tbyte Secure Send pro au"
 "tomatizaci distribuce hesel."
 
 #: ../../../app/views/pages/tools.html.erb:7
@@ -2190,11 +2301,11 @@ msgstr "Aplikace"
 
 #: ../../../app/views/pages/tools.html.erb:83
 msgid ""
-"This API allows you to interface with Password Pusher via JSON.  This can be u"
+"This API allows you to interface with Tbyte Secure Send via JSON.  This can be u"
 "tilized by existing utilities such as curl, wget or any programming language. "
 " See the examples below for some ideas."
 msgstr ""
-"Toto rozhraní API vám umožňuje rozhraní s Password Pusher přes JSON. Toho moho"
+"Toto rozhraní API vám umožňuje rozhraní s Tbyte Secure Send přes JSON. Toho moho"
 "u využít stávající nástroje jako curl, wget nebo jakýkoli programovací jazyk. "
 "Některé nápady najdete v příkladech níže."
 
@@ -2213,18 +2324,18 @@ msgstr "Příklady"
 #: ../../../app/views/pages/tools.html.erb:99
 msgid ""
 "You can test this in your browser Javascript console by going to the front pag"
-"e of Password Pusher and enter:"
+"e of Tbyte Secure Send and enter:"
 msgstr ""
 "Můžete to otestovat v konzole JavaScriptu svého prohlížeče tak, že přejdete na"
-" úvodní stránku Password Pusher a zadáte:"
+" úvodní stránku Tbyte Secure Send a zadáte:"
 
 #: ../../../app/views/pages/tools.html.erb:107
 msgid "See more explanation and examples in our"
 msgstr "Další vysvětlení a příklady naleznete v našem článku"
 
 #: ../../../app/views/pages/translate.html.erb:1
-msgid "Help Translate Password Pusher!"
-msgstr "Pomozte přeložit Password pusher!"
+msgid "Help Translate Tbyte Secure Send!"
+msgstr "Pomozte přeložit Tbyte Secure Send!"
 
 #: ../../../app/views/pages/translate.html.erb:6
 msgid ""
@@ -2323,8 +2434,8 @@ msgstr ""
 "ém překladu zcela nedotčené. Toto jsou substituční kódy používané v aplikaci."
 
 #: ../../../app/views/pages/translate.html.erb:61
-msgid "Thanks for helping to translate Password Pusher!"
-msgstr "Děkujeme za pomoc s překladem Password Pusher!"
+msgid "Thanks for helping to translate Tbyte Secure Send!"
+msgstr "Děkujeme za pomoc s překladem Tbyte Secure Send!"
 
 #: ../../../app/views/passwords/active.html.erb:1
 #: ../../../app/views/passwords/active.html.erb:18

@@ -232,16 +232,15 @@ pre {
   }
 
   .text-primary {
-    color: var(--bs-yellow) !important;
+    color: var(--bs-gray-dark) !important;
   }
 
   .text-secondary {
-    color: var(--bs-yellow) !important;
+    color: var(--bs-gray-dark) !important;
   }
 
   .display-1 {
     font-family: 'Roboto Slab', 'Roboto', -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
-    color: var(--bs-yellow);
   }
 
   .display-2 {

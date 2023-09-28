@@ -1,7 +1,7 @@
 # pwpush-mysql
 FROM ruby:3.2-alpine AS build-env
 
-LABEL maintainer='pglombardo@hey.com'
+LABEL maintainer='support@tbyte.com'
 
 # Required packages
 RUN apk upgrade --no-cache \
@@ -39,7 +39,7 @@ RUN rm -rf node_modules tmp/cache vendor/assets spec \
 
 FROM ruby:3.2-alpine
 
-LABEL maintainer='pglombardo@hey.com'
+LABEL maintainer='support@tbyte.com'
 
 # install packages
 RUN apk upgrade --no-cache \

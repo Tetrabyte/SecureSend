@@ -5,7 +5,7 @@ Configure everything from defaults, features, branding, languages and more.
 
 # How to Configure the Application
 
-Password Pusher uses a centralized configuration that is stored in [config/settings.yml](https://github.com/pglombardo/PasswordPusher/blob/master/config/settings.yml).  This file contains all of the settings that is configurable for the application.
+Tbyte Secure Send uses a centralized configuration that is stored in [config/settings.yml](https://github.com/pglombardo/PasswordPusher/blob/master/config/settings.yml).  This file contains all of the settings that is configurable for the application.
 
 There are two ways to modify the settings in this file:
 
@@ -37,9 +37,9 @@ _Tip: If you have to set a large number of environment variables for Docker, con
 
 ## Configuring via a Custom `settings.yml` File
 
-If you prefer, you can take the [default settings.yml file](https://github.com/pglombardo/PasswordPusher/blob/master/config/settings.yml), modify it and apply it to the Password Pusher Docker container.
+If you prefer, you can take the [default settings.yml file](https://github.com/pglombardo/PasswordPusher/blob/master/config/settings.yml), modify it and apply it to the Tbyte Secure Send Docker container.
 
-Inside the Password Pusher Docker container:
+Inside the Tbyte Secure Send Docker container:
 * application code exists in the path `/opt/PasswordPusher/`
 * the `settings.yml` file is located at `/opt/PasswordPusher/config/settings.yml`
 
@@ -53,7 +53,7 @@ To replace this file with your own custom version, you can launch the Docker con
 
 # Application Encryption
 
-Password Pusher encrypts sensitive data in the database. This requires a randomly generated encryption key for each application instance.
+Tbyte Secure Send encrypts sensitive data in the database. This requires a randomly generated encryption key for each application instance.
 
 To set a custom encryption key for your application, set the environment variable `PWPUSH_MASTER_KEY`:
 
@@ -72,7 +72,7 @@ Lockbox.generate_key
 Notes:
 
 * If an encryption key isn't provided, a default key will be used.
-* The best security for private instances of Password Pusher is to use your own custom encryption key although it is not required.
+* The best security for private instances of Tbyte Secure Send is to use your own custom encryption key although it is not required.
 * The risk in using the default key is lessened if you keep your instance secure and your push expirations short. e.g. 1 day/1 view versus 100 days/100 views.
 * Once a push expires, all encrypted data is deleted.
 * Changing an encryption key where old pushes already exist will make those older pushes unreadable. In other words, the payloads will be garbled. New pushes going forward will work fine.
@@ -120,9 +120,9 @@ Notes:
 
 # Enabling Logins
 
-To enable logins in your instance of Password Pusher, you must have an SMTP server available to send emails through.  These emails are sent for events such as password reset, unlock, registration etc..
+To enable logins in your instance of Tbyte Secure Send, you must have an SMTP server available to send emails through.  These emails are sent for events such as password reset, unlock, registration etc..
 
-To use logins, you should be running a databased backed version of Password Pusher.  Logins will likely work in ephemeral but aren't suggested since all data is wiped with every restart.
+To use logins, you should be running a databased backed version of Tbyte Secure Send.  Logins will likely work in ephemeral but aren't suggested since all data is wiped with every restart.
 
 _All_ of the following environments need to be set (except SMTP authentication if none) for application logins to function properly.
 
@@ -141,7 +141,7 @@ _All_ of the following environments need to be set (except SMTP authentication i
 | PWP__MAIL__OPEN_TIMEOUT | Number of seconds to wait while attempting to open a connection. | `10` |
 | PWP__MAIL__READ_TIMEOUT | Number of seconds to wait until timing-out a read(2) call. | `10` |
 | PWP__HOST_DOMAIN | Used to build fully qualified URLs in emails.  Where is your instance hosted? | `pwpush.com` |
-| PWP__HOST_PROTOCOL | The protocol to access your Password Pusher instance.  HTTPS advised. | `https` |
+| PWP__HOST_PROTOCOL | The protocol to access your Tbyte Secure Send instance.  HTTPS advised. | `https` |
 | PWP__MAIL__MAILER_SENDER | This is the "From" address in sent emails. | '"Company Name" <user@example.com>' |
 | PWP__DISABLE_SIGNUPS| Once your user accounts are created, you can set this to disable any further user account creation.  Sign up links and related backend functionality is disabled when `true`. | `false` |
 | PWP__SIGNUP_EMAIL_REGEXP | The regular expression used to validate emails for new user signups.  This can be modified to limit new account creation to a subset of domains. e.g. <code>\A[^@\s]+@(hey\.com\|gmail\.com)\z</code>.  _Tip: use https://rubular.com to test out your regular expressions. It includes a guide to what each component means in regexp._ | `\A[^@\s]+@[^@\s]+\z` |
@@ -169,7 +169,7 @@ export PWP__MAIL__MAILER_SENDER='"Spiderman" <thespider@mycompany.org>'
 
 # Enabling File Pushes
 
-To enable file uploads (File Pushes) in your instance of Password Pusher, there are a few requirements:
+To enable file uploads (File Pushes) in your instance of Tbyte Secure Send, there are a few requirements:
 
 1.  you must have logins enabled (see above)
 2.  specify a place to store uploaded files
@@ -350,7 +350,7 @@ Similar to file pushes, URL pushes also require logins to be enabled.
 
 # Rebranding
 
-Password Pusher has the ability to be [re-branded](https://twitter.com/pwpush/status/1557658305325109253) with your own site title, tagline and logo.
+Tbyte Secure Send has the ability to be [re-branded](https://twitter.com/pwpush/status/1557658305325109253) with your own site title, tagline and logo.
 
 ![](https://pwpush.fra1.cdn.digitaloceanspaces.com/branding%2Fpwpush-brand-example.png)
 
@@ -358,7 +358,7 @@ This can be done with the following environment variables:
 
 | Environment Variable | Description | Default Value |
 | --------- | ------------------ | --- |
-| PWP__BRAND__TITLE | Title for the site. | `Password Pusher` |
+| PWP__BRAND__TITLE | Title for the site. | `Tbyte Secure Send` |
 | PWP__BRAND__TAGLINE | Tagline for the site.  | `Go Ahead.  Email Another Password.` |
 | PWP__BRAND__SHOW_FOOTER_MENU | On/Off switch for the footer menu. | `true` |
 | PWP__BRAND__LIGHT_LOGO | Site logo image for the light theme. | `logo-transparent-sm-bare.png` |
@@ -408,7 +408,7 @@ Choose which language you would like to have as the default language, and use th
 
 ![](https://pwpush.fra1.cdn.digitaloceanspaces.com/themes%2Fquartz-theme-pwpush.com.png)
 
-Password Pusher supports **26 themes out of the box**.  These themes are taken directly from the great [Bootswatch](https://bootswatch.com) project and are unmodified.
+Tbyte Secure Send supports **26 themes out of the box**.  These themes are taken directly from the great [Bootswatch](https://bootswatch.com) project and are unmodified.
 
 As such, themes mostly work although there may be a rare edge cases where fonts may not be clear or something doesn't display correctly.  If this is the case you can add custom CSS styles to fix any such issues.  See the next section on how to add custom styling.
 
@@ -418,7 +418,7 @@ The Bootswatch themes are licensed under the MIT license.
 
 ## Configuring a Theme
 
-To specify a theme for your Password Pusher instance, you must set __two__ environment variables:the `PWP__THEME` environment variable to specify the theme and `PWP_PRECOMPILE=true` environment variable to have CSS assets recompiled on container boot.
+To specify a theme for your Tbyte Secure Send instance, you must set __two__ environment variables:the `PWP__THEME` environment variable to specify the theme and `PWP_PRECOMPILE=true` environment variable to have CSS assets recompiled on container boot.
 
 **Make sure to set both `PWP__THEME` and `PWP_PRECOMPILE` for the selected theme to work.** 👍
 
@@ -447,7 +447,7 @@ bin/rails server
 
 ## How to Precompile CSS Assets
 
-Password Pusher has a pre-compilation step of assets.  This is used to fingerprint assets and pre-process CSS code for better performance.
+Tbyte Secure Send has a pre-compilation step of assets.  This is used to fingerprint assets and pre-process CSS code for better performance.
 
 If using Docker containers, you can simply set the `PWP_PRECOMPILE=true` environment variable.  On container boot, all assets will be precompiled and bundled into `/assets`.
 
@@ -461,13 +461,13 @@ For example:
 
 Add `app/assets/stylesheets/themes/mynewtheme.css` and set `PWP__THEME=mynewtheme`.
 
-This would cause that CSS file to be loaded and used as the theme for the site.  Please refer to existing themes if you would like to author your theme for Password Pusher.
+This would cause that CSS file to be loaded and used as the theme for the site.  Please refer to existing themes if you would like to author your theme for Tbyte Secure Send.
 
 Remember that after the new theme is configured, assets must be precompiled again.  See the the previous section for instructions
 
 # How to Add Custom CSS
 
-Password Pusher supports adding custom CSS to the application.  The application hosts a `custom.css` file located at `app/assets/stylesheets/custom.css`.  This file is loaded last so it take precedence over all built in themes and styling.
+Tbyte Secure Send supports adding custom CSS to the application.  The application hosts a `custom.css` file located at `app/assets/stylesheets/custom.css`.  This file is loaded last so it take precedence over all built in themes and styling.
 
 This file can either be modified directly or in the case of Docker containers, a new file mounted over the existing one.
 
@@ -543,11 +543,11 @@ __Note:__ This is a legacy setting and is no longer suggested for use.  If using
 _
 # Proxies
 
-An occasional issue is that when using Password Pusher behind a proxy, the generated secret URLs are incorrect.  They often have the backend URL & port instead of the public fully qualified URL - or use HTTP instead of HTTPS (or all of the preceding).
+An occasional issue is that when using Tbyte Secure Send behind a proxy, the generated secret URLs are incorrect.  They often have the backend URL & port instead of the public fully qualified URL - or use HTTP instead of HTTPS (or all of the preceding).
 
 To resolve this, make sure your proxy properly forwards the `X-Forwarded-Host`, `X-Forwarded-Port` and `X-Forwarded-Proto` headers.
 
-The values in these headers represent the front end request.  When these headers are sent, Password Pusher can then build the correct URLs.
+The values in these headers represent the front end request.  When these headers are sent, Tbyte Secure Send can then build the correct URLs.
 
 If you are unable to have these headers passed to the application for any reason, you could instead force an override of the base URL using the `PWP__OVERRIDE_BASE_URL` environment variable.
 

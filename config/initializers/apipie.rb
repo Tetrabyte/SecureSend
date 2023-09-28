@@ -1,12 +1,12 @@
 Apipie.configure do |config|
-  config.app_name                = "Password Pusher"
-  config.copyright               = "&copy; 2011-Present Peter Giacomo Lombardo"
+  config.app_name                = "Tbyte Secure Send"
+  config.copyright               = "&copy; 2023 Tetrabyte"
   config.api_base_url            = ""
   config.doc_base_url            = "/api"
   config.api_controllers_matcher = "#{Rails.root}/app/controllers/**/*.rb"
   config.validate                = false
   config.app_info                = <<-EOS
-    The Password Pusher JSON API documentation.
+    The Tbyte Secure Send JSON API documentation.
 
 
     This API allows for both anonymous and authenticated access.

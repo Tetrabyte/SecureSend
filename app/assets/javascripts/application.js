@@ -13598,7 +13598,7 @@
   var application = Application.start();
   application.debug = false;
   window.Stimulus = application;
-  console.log("Welcome to Password Pusher! ( \u25D1\u203F\u25D1)\u0254\u250F\u{1F35F}--\u{1F354}\u2511\u0669(^\u25E1^ )");
+  console.log("Welcome to Tbyte Secure Send! ( \u25D1\u203F\u25D1)\u0254\u250F\u{1F35F}--\u{1F354}\u2511\u0669(^\u25E1^ )");
   console.log(" --> \u{1F3DD} May all your pushes be read once, stored securely and expired quickly.");
   var prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
   if (prefersDarkScheme.matches) {
