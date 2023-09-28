@@ -136,7 +136,7 @@ host_protocol: 'https'
 #
 # Set this value without a trailing slash ('/').
 #
-override_base_url: 'https://securesend-dev.remoteit.co.uk'
+override_base_url: 'https://securesend.remoteit.co.uk'
 
 ### Allowed Hosts
 #
