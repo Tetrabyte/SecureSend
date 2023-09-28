@@ -15,4 +15,10 @@
 
 .form-text {
     color: var(--bs-info-rgb) !important;
-  }
+}
+.text-muted {
+    color: var(--bs-info-rgb) !important;
+}
+.input-group-text {
+    background-color: var(--bs-body-bg) !important;
+}
