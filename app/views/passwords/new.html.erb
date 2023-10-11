@@ -100,7 +100,7 @@
                             <label class="list-group-item d-flex gap-2">
                             <%= check_box_tag "password[retrieval_step]", nil, Settings.pw.retrieval_step_default,
                                             { class: 'form-check-input flex-shrink-0',
-                                              "data-knobs-target" => "retrievalStepCheckbox" } %>
+                                                "data-knobs-target" => "retrievalStepCheckbox" } %>
                             <span>
                                 <%= _('Use a 1-click retrieval step') %>
                                 <small class="d-block text-muted"><%= _('Helps to avoid chat systems and URL scanners from eating up views.') %></small>
@@ -111,23 +111,13 @@
                             <label class="list-group-item d-flex gap-2">
                             <%= check_box_tag "password[deletable_by_viewer]", nil, Settings.pw.deletable_pushes_default,
                                             { class: 'form-check-input flex-shrink-0',
-                                              "data-knobs-target" => "deletableByViewerCheckbox" } %>
+                                                "data-knobs-target" => "deletableByViewerCheckbox" } %>
                             <span>
                                 <%= _('Allow immediate deletion') %>
                                 <small class="d-block text-muted"><%= _('Allow users to delete this push once retrieved.') %></small>
                             </span>
                             </label>
                         <% end %>
-                    </div>
-                </div>
-            </div>
-            <div class='row mb-3'>
-                <div class='col'>
-                    <div class="input-group">
-                        <span class="input-group-text"><%= _('Passphrase Lockdown') %></span>
-                        <%= f.text_field(:passphrase, { class: "form-control",
-                                                        autocomplete: "off",
-                                                        placeholder: _('Optional: Require recipients to enter a passphrase to view this push') }) %>
                     </div>
                 </div>
             </div>
