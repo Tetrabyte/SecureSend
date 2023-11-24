@@ -8,7 +8,7 @@ FROM ruby:3.2-alpine AS build-env
 ARG BUNDLE_WITHOUT
 ARG BUNDLE_DEPLOYMENT
 
-LABEL org.opencontainers.image.authors ='pglombardo@hey.com'
+LABEL org.opencontainers.image.authors ='support@tbyte.com'
 
 # Required packages
 RUN apk add --no-cache \
@@ -57,7 +57,7 @@ FROM ruby:3.2-alpine
 ARG BUNDLE_WITHOUT
 ARG BUNDLE_DEPLOYMENT
 
-LABEL maintainer='pglombardo@hey.com'
+LABEL maintainer='support@tbyte.com'
 
 # install packages
 RUN apk add --no-cache \
