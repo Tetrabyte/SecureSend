@@ -1,4 +1,6 @@
-require "active_support/core_ext/integer/time"
+# frozen_string_literal: true
+
+require 'active_support/core_ext/integer/time'
 
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
@@ -6,7 +8,7 @@ Rails.application.configure do
   # In the development environment your application's code is reloaded any time
   # it changes. This slows down response time but is perfect for development
   # since you don't have to restart the web server when you make code changes.
-  config.cache_classes = false
+  config.enable_reloading = true
 
   # Do not eager load code on boot.
   config.eager_load = false
@@ -19,13 +21,13 @@ Rails.application.configure do
 
   # Enable/disable caching. By default caching is disabled.
   # Run rails dev:cache to toggle caching.
-  if Rails.root.join("tmp/caching-dev.txt").exist?
+  if Rails.root.join('tmp/caching-dev.txt').exist?
     config.action_controller.perform_caching = true
     config.action_controller.enable_fragment_cache_logging = true
 
     config.cache_store = :memory_store
     config.public_file_server.headers = {
-      "Cache-Control" => "public, max-age=#{2.days.to_i}"
+      'Cache-Control' => "public, max-age=#{2.days.to_i}"
     }
   else
     config.action_controller.perform_caching = false
@@ -65,7 +67,7 @@ Rails.application.configure do
     config.action_mailer.smtp_settings[:enable_starttls] = Settings.mail.smtp_enable_starttls
   end
 
-  config.logger = Logger.new(STDOUT) if Settings.log_to_stdout
+  config.logger = Logger.new($stdout) if Settings.log_to_stdout
   config.log_level = :debug
 
   # Print deprecation notices to the Rails logger.
@@ -83,6 +85,9 @@ Rails.application.configure do
   # Highlight code that triggered database queries in logs.
   config.active_record.verbose_query_logs = true
 
+  # Highlight code that enqueued background job in logs.
+  config.active_job.verbose_enqueue_logs = true
+
   # Suppress logger output for asset requests.
   config.assets.quiet = true
 
@@ -95,14 +100,17 @@ Rails.application.configure do
   # Uncomment if you wish to allow Action Cable access from any origin.
   # config.action_cable.disable_request_forgery_protection = true
 
+  # Raise error when a before_action's only/except options reference missing actions
+  config.action_controller.raise_on_missing_callback_actions = true
+
   # If a user sets the allowed_hosts setting, we need to add the domain(s) to the list of allowed hosts
   if Settings.allowed_hosts.present?
     if Settings.allowed_hosts.is_a?(Array)
       config.hosts.concat(Settings.allowed_hosts)
     elsif Settings.allowed_hosts.is_a?(String)
-      config.hosts.concat Settings.allowed_hosts.split(" ")
+      config.hosts.concat Settings.allowed_hosts.split
     else
-      raise "Settings.allowed_hosts (PWP__ALLOWED_HOSTS): Allowed hosts must be an array or string"
+      raise 'Settings.allowed_hosts (PWP__ALLOWED_HOSTS): Allowed hosts must be an array or string'
     end
   end
 end

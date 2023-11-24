@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PasswordPusher 1.0\n"
 "Report-Msgid-Bugs-To: contact@translation.io\n"
-"POT-Creation-Date: 2023-08-03 12:10+0200\n"
-"PO-Revision-Date: 2023-08-03 12:10+0200\n"
+"POT-Creation-Date: 2023-11-22 10:52+0100\n"
+"PO-Revision-Date: 2023-11-22 10:52+0100\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Thai\n"
 "Language: th\n"
@@ -18,21 +18,21 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "\n"
 
-#: ../../../app/controllers/application_controller.rb:20
+#: ../../../app/controllers/application_controller.rb:24
 msgid "Not Found"
 msgstr "ไม่พบ"
 
-#: ../../../app/controllers/feedbacks_controller.rb:12
+#: ../../../app/controllers/feedbacks_controller.rb:15
 msgid ""
 "Our apologies but you failed the spam check.  You could try contacting us on G"
 "ithub instead."
 msgstr "เราขออภัย แต่คุณไม่ผ่านการตรวจสอบสแปม คุณสามารถลองติดต่อเราได้ที่ Github แทน"
 
-#: ../../../app/controllers/feedbacks_controller.rb:17
+#: ../../../app/controllers/feedbacks_controller.rb:21
 msgid "Feedback sent!  We will get back to you as soon as possible."
 msgstr "ส่งข้อเสนอแนะแล้ว! เราจะติดต่อกลับโดยเร็วที่สุด"
 
-#: ../../../app/controllers/feedbacks_controller.rb:19
+#: ../../../app/controllers/feedbacks_controller.rb:24
 msgid ""
 "Could not send feedback.  Did you pass the Humanity Test?  Valid email?  Try a"
 "gain?"
@@ -40,9 +40,9 @@ msgstr ""
 "ไม่สามารถส่งข้อเสนอแนะ คุณผ่านการทดสอบความเป็นมนุษย์หรือไม่? อีเมลที่ถูกต้อง? "
 "ลองอีกครั้ง?"
 
-#: ../../../app/controllers/file_pushes_controller.rb:160
-#: ../../../app/controllers/passwords_controller.rb:159
-#: ../../../app/controllers/urls_controller.rb:150
+#: ../../../app/controllers/file_pushes_controller.rb:164
+#: ../../../app/controllers/passwords_controller.rb:163
+#: ../../../app/controllers/urls_controller.rb:155
 msgid ""
 "That passphrase is incorrect.  Please try again or contact the person or organ"
 "ization that sent you this link."
@@ -50,7 +50,7 @@ msgstr ""
 "ข้อความรหัสผ่านนั้นไม่ถูกต้อง โปรดลองอีกครั้งหรือติดต่อบุคคลหรือองค์กรที่ส่งลิ"
 "งก์นี้ให้คุณ"
 
-#: ../../../app/controllers/file_pushes_controller.rb:221
+#: ../../../app/controllers/file_pushes_controller.rb:230
 msgid ""
 "Only 10 active file pushes allowed while in Beta and until things are stable. "
 "If it's an option, you can manually expire existing pushes before creating new"
@@ -59,39 +59,39 @@ msgstr ""
 "อนุญาตการพุชไฟล์ที่ใช้งานอยู่เพียง 10 ไฟล์ในรุ่นเบต้าและจนกว่าทุกอย่างจะเสถียร"
 " หากเป็นตัวเลือก คุณสามารถทำให้ push ที่มีอยู่หมดอายุก่อนที่จะสร้างใหม่ได้"
 
-#: ../../../app/controllers/file_pushes_controller.rb:315
-#: ../../../app/controllers/passwords_controller.rb:297
-#: ../../../app/controllers/urls_controller.rb:290
+#: ../../../app/controllers/file_pushes_controller.rb:325
+#: ../../../app/controllers/passwords_controller.rb:305
+#: ../../../app/controllers/urls_controller.rb:297
 msgid "That push doesn't belong to you."
 msgstr "การผลักดันนั้นไม่ได้เป็นของคุณ"
 
-#: ../../../app/controllers/file_pushes_controller.rb:345
-#: ../../../app/controllers/passwords_controller.rb:327
-#: ../../../app/controllers/urls_controller.rb:320
-#: ../../../app/controllers/urls_controller.rb:324
+#: ../../../app/controllers/file_pushes_controller.rb:356
+#: ../../../app/controllers/passwords_controller.rb:336
+#: ../../../app/controllers/urls_controller.rb:328
+#: ../../../app/controllers/urls_controller.rb:332
 msgid "That push does not belong to you."
 msgstr "การผลักดันนั้นไม่ได้เป็นของคุณ"
 
-#: ../../../app/controllers/file_pushes_controller.rb:350
-#: ../../../app/controllers/passwords_controller.rb:332
+#: ../../../app/controllers/file_pushes_controller.rb:361
+#: ../../../app/controllers/passwords_controller.rb:341
 msgid "That push is not deletable by viewers."
 msgstr "ผู้ชมไม่สามารถลบการพุชนั้นได้"
 
-#: ../../../app/controllers/file_pushes_controller.rb:356
-#: ../../../app/controllers/file_pushes_controller.rb:357
-#: ../../../app/controllers/passwords_controller.rb:338
-#: ../../../app/controllers/passwords_controller.rb:339
-#: ../../../app/controllers/urls_controller.rb:330
-#: ../../../app/controllers/urls_controller.rb:331
+#: ../../../app/controllers/file_pushes_controller.rb:367
+#: ../../../app/controllers/file_pushes_controller.rb:368
+#: ../../../app/controllers/passwords_controller.rb:347
+#: ../../../app/controllers/passwords_controller.rb:348
+#: ../../../app/controllers/urls_controller.rb:338
+#: ../../../app/controllers/urls_controller.rb:339
 msgid "That push is already expired."
 msgstr "การผลักดันนั้นหมดอายุแล้ว"
 
-#: ../../../app/controllers/file_pushes_controller.rb:375
-#: ../../../app/controllers/file_pushes_controller.rb:378
-#: ../../../app/controllers/passwords_controller.rb:356
-#: ../../../app/controllers/passwords_controller.rb:359
-#: ../../../app/controllers/urls_controller.rb:348
-#: ../../../app/controllers/urls_controller.rb:351
+#: ../../../app/controllers/file_pushes_controller.rb:386
+#: ../../../app/controllers/file_pushes_controller.rb:389
+#: ../../../app/controllers/passwords_controller.rb:365
+#: ../../../app/controllers/passwords_controller.rb:368
+#: ../../../app/controllers/urls_controller.rb:356
+#: ../../../app/controllers/urls_controller.rb:359
 #: ../../../app/views/file_pushes/audit.html.erb:97
 #: ../../../app/views/file_pushes/audit.html.erb:254
 #: ../../../app/views/passwords/audit.html.erb:97
@@ -101,7 +101,7 @@ msgstr "การผลักดันนั้นหมดอายุแล้
 msgid "The push content has been deleted and the secret URL expired."
 msgstr "เนื้อหาพุชถูกลบและ URL ลับหมดอายุ"
 
-#: ../../../app/controllers/urls_controller.rb:201
+#: ../../../app/controllers/urls_controller.rb:206
 msgid "Invalid URL: Must have a valid URI scheme."
 msgstr "URL ไม่ถูกต้อง: ต้องมีรูปแบบ URI ที่ถูกต้อง"
 
@@ -354,7 +354,7 @@ msgstr "ภาษา"
 #: ../../../app/views/feedbacks/new.html.erb:1
 #: ../../../app/views/feedbacks/new.html.erb:2
 #: ../../../app/views/feedbacks/new.html.erb:42
-#: ../../../app/views/shared/_footer.html.erb:54
+#: ../../../app/views/shared/_footer.html.erb:53
 msgid "Send Feedback"
 msgstr "ส่งความคิดเห็น"
 
@@ -371,8 +371,8 @@ msgid "Your Name"
 msgstr "ชื่อของคุณ"
 
 #: ../../../app/views/feedbacks/new.html.erb:29
-msgid "What is one hundred minus 5?"
-msgstr "หนึ่งร้อยลบ 5 คืออะไร?"
+msgid "What is one hundred minus 3?"
+msgstr "หนึ่งร้อยลบ 3 คืออะไร?"
 
 #: ../../../app/views/feedbacks/new.html.erb:34
 msgid ""
@@ -1272,8 +1272,8 @@ msgid ""
 msgstr "หากจำเป็น โปรดติดต่อบุคคลหรือองค์กรที่ให้ URL ลับนี้แก่คุณ"
 
 #: ../../../app/views/layouts/login.html.erb:37
-#: ../../../app/views/shared/_footer.html.erb:12
-#: ../../../app/views/shared/_footer.html.erb:16
+#: ../../../app/views/shared/_footer.html.erb:11
+#: ../../../app/views/shared/_footer.html.erb:15
 #: ../../../app/views/shared/_header.html.erb:9
 #: ../../../app/views/shared/_header.html.erb:13
 msgid "Password Pusher Logo"
@@ -1298,7 +1298,7 @@ msgid "About Password Pusher"
 msgstr "เกี่ยวกับตัวดันรหัสผ่าน"
 
 #: ../../../app/views/pages/about.html.erb:2
-#: ../../../app/views/shared/_footer.html.erb:49
+#: ../../../app/views/shared/_footer.html.erb:48
 msgid "About"
 msgstr "เกี่ยวกับ"
 
@@ -1449,7 +1449,7 @@ msgid "Thank you for supporting Password Pusher!"
 msgstr "ขอบคุณที่สนับสนุน Password Pusher!"
 
 #: ../../../app/views/pages/about.html.erb:87
-#: ../../../app/views/shared/_footer.html.erb:26
+#: ../../../app/views/shared/_footer.html.erb:25
 msgid "Resources"
 msgstr "ทรัพยากร"
 
@@ -1508,7 +1508,7 @@ msgid "Follow for news, changes & updates."
 msgstr "ติดตามข่าวสาร การเปลี่ยนแปลง"
 
 #: ../../../app/views/pages/faq.html.erb:1
-#: ../../../app/views/shared/_footer.html.erb:35
+#: ../../../app/views/shared/_footer.html.erb:34
 msgid "FAQ"
 msgstr "คำถามที่พบบ่อย"
 
@@ -1720,7 +1720,7 @@ msgid "The"
 msgstr "เดอะ"
 
 #: ../../../app/views/pages/faq.html.erb:110
-#: ../../../app/views/shared/_footer.html.erb:44
+#: ../../../app/views/shared/_footer.html.erb:43
 msgid "Tools"
 msgstr "เครื่องมือ"
 
@@ -1852,12 +1852,12 @@ msgstr ""
 
 #: ../../../app/views/pages/faq.html.erb:203
 msgid ""
-"In this respect, the public instance at pwpush.com is may be superior that it "
+"In this respect, the public instance at pwpush.com may be superior in that it "
 "contains only passwords without identifying information mixed among users from"
 " around the globe."
 msgstr ""
-"ในแง่นี้ อินสแตนซ์สาธารณะที่ pwpush.com อาจเหนือกว่าตรงที่มีเฉพาะรหัสผ่านโดยไม"
-"่มีข้อมูลระบุตัวตนซึ่งปะปนกันระหว่างผู้ใช้จากทั่วโลก"
+"ในแง่นี้ กรณีสาธารณะที่ pwpush.com อาจเหนือกว่าตรงที่มีเพียงรหัสผ่านโดยไม่มีกา"
+"รระบุข้อมูลปะปนกันระหว่างผู้ใช้จากทั่วโลก"
 
 #: ../../../app/views/pages/faq.html.erb:204
 msgid ""
@@ -2421,35 +2421,35 @@ msgstr "URL"
 msgid "New"
 msgstr "ใหม่"
 
-#: ../../../app/views/shared/_footer.html.erb:5
+#: ../../../app/views/shared/_footer.html.erb:4
 msgid "Peter"
 msgstr "ปีเตอร์"
 
-#: ../../../app/views/shared/_footer.html.erb:23
+#: ../../../app/views/shared/_footer.html.erb:22
 msgid "Front Page"
 msgstr "หน้าแรก"
 
-#: ../../../app/views/shared/_footer.html.erb:31
+#: ../../../app/views/shared/_footer.html.erb:30
 msgid "Docker Containers"
 msgstr "คอนเทนเนอร์นักเทียบท่า"
 
-#: ../../../app/views/shared/_footer.html.erb:36
+#: ../../../app/views/shared/_footer.html.erb:35
 msgid "JSON API"
 msgstr "JSON API"
 
-#: ../../../app/views/shared/_footer.html.erb:37
+#: ../../../app/views/shared/_footer.html.erb:36
 msgid "Key Generator"
 msgstr "เครื่องกำเนิดคีย์"
 
-#: ../../../app/views/shared/_footer.html.erb:40
+#: ../../../app/views/shared/_footer.html.erb:39
 msgid "Source Code"
 msgstr "รหัสแหล่งที่มา"
 
-#: ../../../app/views/shared/_footer.html.erb:52
+#: ../../../app/views/shared/_footer.html.erb:51
 msgid "Overview"
 msgstr "ภาพรวม"
 
-#: ../../../app/views/shared/_footer.html.erb:53
+#: ../../../app/views/shared/_footer.html.erb:52
 msgid "Help Translate!"
 msgstr "ช่วยแปล!"
 

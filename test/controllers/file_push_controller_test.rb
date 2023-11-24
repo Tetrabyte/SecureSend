@@ -1,8 +1,10 @@
+# frozen_string_literal: true
+
 require 'test_helper'
 
 class FilePushControllerTest < ActionDispatch::IntegrationTest
   include Devise::Test::IntegrationHelpers
-   
+
   setup do
     Settings.enable_logins = true
     Settings.enable_file_pushes = true
@@ -64,7 +66,7 @@ class FilePushControllerTest < ActionDispatch::IntegrationTest
 
     get active_file_pushes_path
     assert_response :success
-    assert !response.body.include?('You currently have no active password pushes.')
+    assert_not response.body.include?('You currently have no active password pushes.')
   end
 
   test 'get active dashboard with token' do
@@ -82,5 +84,4 @@ class FilePushControllerTest < ActionDispatch::IntegrationTest
     get expired_file_pushes_path, headers: { 'X-User-Email': @luca.email, 'X-User-Token': @luca.authentication_token }
     assert_response :success
   end
-
 end

@@ -1,15 +1,17 @@
+# frozen_string_literal: true
+
 class Url < ApplicationRecord
   has_many :views, dependent: :destroy
   has_encrypted :payload, :note, :passphrase
-  
-  belongs_to :user, :optional => true
-  
+
+  belongs_to :user, optional: true
+
   def to_param
     url_token.to_s
   end
 
   def days_old
-    (Time.now.to_datetime - created_at.to_datetime).to_i
+    (Time.zone.now.to_datetime - created_at.to_datetime).to_i
   end
 
   def days_remaining
@@ -37,14 +39,14 @@ class Url < ApplicationRecord
     self.expired = true
     self.payload = nil
     self.passphrase = nil
-    self.expired_on = Time.now
+    self.expired_on = Time.zone.now
     save
   end
 
   # Override to_json so that we can add in <days_remaining>, <views_remaining>
   # and show the clear password
   def to_json(*args)
-  # def to_json(owner: false, payload: false)
+    # def to_json(owner: false, payload: false)
     attr_hash = attributes
 
     owner = false

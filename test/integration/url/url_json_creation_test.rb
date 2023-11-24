@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'test_helper'
 
 class UrlJsonCreationTest < ActionDispatch::IntegrationTest
@@ -12,9 +14,6 @@ class UrlJsonCreationTest < ActionDispatch::IntegrationTest
     @luca.confirm
   end
 
-  teardown do
-  end
-
   def test_basic_json_creation
     post urls_path(format: :json), params: { url: { payload: 'https://the0x00.dev' } }, headers: { 'X-User-Email': @luca.email, 'X-User-Token': @luca.authentication_token }
     assert_response :success
@@ -26,7 +25,7 @@ class UrlJsonCreationTest < ActionDispatch::IntegrationTest
     assert_equal false, res['expired']
     assert res.key?('deleted')
     assert_equal false, res['deleted']
-    assert !res.key?('deletable_by_viewer')
+    assert_not res.key?('deletable_by_viewer')
     assert res.key?('days_remaining')
     assert_equal Settings.url.expire_after_days_default, res['days_remaining']
     assert res.key?('views_remaining')
@@ -66,10 +65,11 @@ class UrlJsonCreationTest < ActionDispatch::IntegrationTest
   end
 
   def test_bad_request
-    post urls_path(format: :json), params: {}, headers: { 'X-User-Email': @luca.email, 'X-User-Token': @luca.authentication_token }
+    post urls_path(format: :json), params: {},
+                                   headers: { 'X-User-Email': @luca.email, 'X-User-Token': @luca.authentication_token }
     assert_response :unprocessable_entity
 
     res = JSON.parse(@response.body)
-    assert_equal "No URL or note provided.", res["error"]
+    assert_equal 'No URL or note provided.', res['error']
   end
 end
