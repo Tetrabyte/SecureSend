@@ -10,7 +10,7 @@ ARG BUNDLE_WITH
 ARG BUNDLE_WITHOUT
 ARG BUNDLE_DEPLOYMENT
 
-LABEL org.opencontainers.image.authors ='pglombardo@hey.com'
+LABEL org.opencontainers.image.authors ='support@tbyte.com'
 
 # Required packages
 RUN apk add --no-cache \
@@ -61,7 +61,7 @@ ARG BUNDLE_WITH
 ARG BUNDLE_WITHOUT
 ARG BUNDLE_DEPLOYMENT
 
-LABEL maintainer='pglombardo@hey.com'
+LABEL maintainer='anthony@tbyte.com'
 
 # install packages
 RUN apk add --no-cache \
