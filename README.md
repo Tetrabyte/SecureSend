@@ -7,12 +7,12 @@ __Simple & Secure Password Sharing with Auto-Expiration of Shared Items__
 [![](https://badgen.net/twitter/follow/pwpush)](https://twitter.com/pwpush)
 ![](https://badgen.net/github/stars/pglombardo/PasswordPusher)
 [![](https://badgen.net/uptime-robot/month/m789048867-17b5770ccd78208645662f1f)](https://stats.uptimerobot.com/6xJjNtPr93)
-[![](https://badgen.net/docker/pulls/pglombardo/pwpush-ephemeral)](https://hub.docker.com/repositories)
+[![](https://badgen.net/docker/pulls/pglombardo/pwpush)](https://hub.docker.com/repositories)
 
 [![GitHub Workflow Status (with event)](https://img.shields.io/github/actions/workflow/status/pglombardo/PasswordPusher/ruby-tests.yml)](https://github.com/pglombardo/PasswordPusher/actions/workflows/ruby-tests.yml)
 [![Dependencies Status](https://img.shields.io/badge/dependencies-up%20to%20date-brightgreen.svg)](https://github.com/pglombardo/pwpush-cli/pulls?utf8=%E2%9C%93&q=is%3Apr%20author%3Aapp%2Fdependabot)
 [![Semantic Versions](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--versions-e10079.svg)](https://github.com/pglombardo/pwpush-cli/releases)
-[![License](https://img.shields.io/github/license/pglombardo/PasswordPusher)](https://github.com/pglombardo/pwpush/blob/master/LICENSE)
+[![License](https://img.shields.io/github/license/pglombardo/PasswordPusher)](https://github.com/pglombardo/PasswordPusher/blob/master/LICENSE)
 
 </div>
 
@@ -33,7 +33,7 @@ Hosted at [pwpush.com](https://pwpush.com) but you can also easily run your own 
 * __JSON API:__ Raw JSON API available for 3rd party tools or command line via `curl` or `wget`.
 * __Command line interface:__ Automate your password distribution with CLI tools or custom scripts.
 * __Logins__: Invite your colleagues and track what is pushed and who retrieved it.
-* __Internationalized:__ 28 language translations are bundled in.  Easily selectable via UI or URL
+* __Internationalized:__ 29 language translations are bundled in.  Easily selectable via UI or URL
 * __Themes:__ [26 themes](./Themes.md) bundled in courtesy of Bootswatch.  Select with a simple environment variable.
 * __Unbranded delivery page:__ No logos, superfluous text or unrelated links to confuse end users.
 * __Customizable:__ Change text and default options via environment variables.
@@ -73,9 +73,9 @@ _or_
 # 💾 Run Your Own Instance
 
  🎉 🎉 🎉
- 
+
  __We've recently introduced a single universal container.  Migration for existing users is easy - please refer to [the documentation here](https://github.com/pglombardo/PasswordPusher/wiki/How-to-migrate-to-the-Universal-Container).__
- 
+
  🎉 🎉 🎉
 
 _Note: Password Pusher can be largely configured by environment variables so after you pick your deployment method below, make sure to read [the configuration page](Configuration.md).  Take particular attention in setting your own custom encryption key which isn't required but provides the best security for your instance._
@@ -113,11 +113,11 @@ _Note: The `latest` Docker container tag builds nightly off of the latest code c
 
 **➜ One-liner Password Pusher with a Postgres Database**
 
-    curl -s -o docker-compose.yml https://raw.githubusercontent.com/pglombardo/PasswordPusher/master/containers/docker/pwpush/docker-compose-postgres.yml && docker compose up -d
+    curl -s -o docker-compose.yml https://raw.githubusercontent.com/pglombardo/PasswordPusher/master/containers/docker/docker-compose-postgres.yml && docker compose up -d
 
 **➜ One-liner Password Pusher with a MariaDB (MySQL) Database**
 
-    curl -s -o docker-compose.yml https://raw.githubusercontent.com/pglombardo/PasswordPusher/master/containers/docker/pwpush/docker-compose-mariadb.yml && docker compose up -d
+    curl -s -o docker-compose.yml https://raw.githubusercontent.com/pglombardo/PasswordPusher/master/containers/docker/docker-compose-mariadb.yml && docker compose up -d
 
 ## On Kubernetes
 
@@ -176,13 +176,11 @@ git clone git@github.com:pglombardo/PasswordPusher.git
 cd PasswordPusher
 gem install bundler
 
-export RAILS_ENV=private
-
 bundle config set --local deployment 'true'
 bundle install --without development production test
 ./bin/rails assets:precompile
 ./bin/rails db:setup
-./bin/rails server --environment=private
+./bin/rails server
 ```
 
 Then view the site @ [http://localhost:5100/](http://localhost:5100/).
@@ -201,7 +199,7 @@ export RAILS_ENV=production
 # Update the following line to point to your Postgres (or MySQL/Mariadb) instance
 DATABASE_URL=postgresql://passwordpusher_user:passwordpusher_passwd@postgres:5432/passwordpusher_db
 
-bundle install --without development private test
+bundle install --without development test
 ./bin/rails assets:precompile
 ./bin/rails db:setup
 ./bin/rails server --environment=production
@@ -223,6 +221,10 @@ Then view the site @ [http://localhost:5100/](http://localhost:5100/).
 *  [lnfnunes/pwpush-cli](https://github.com/lnfnunes/pwpush-cli): a Node.js based CLI
 
 * [abkierstein/pwpush](https://github.com/abkierstein/pwpush): a Python based CLI
+
+## GUIs
+
+* [Tachaeon/PWPush-Generator](https://github.com/Tachaeon/PWPush-Generator): A powershell GUI frontend for pwpush.com
 
 ## Libraries & APIs
 
@@ -249,7 +251,7 @@ _See also the [Tools Page on pwpush.com](https://pwpush.com/en/pages/tools)._
 
 # 🇮🇹 Internationalization
 
-Password Pusher is currently available in **28 languages** with more languages being added often as volunteers apply.
+Password Pusher is currently available in **29 languages** with more languages being added often as volunteers apply.
 
 From within the application, the language is selectable from a language menu.  Out of the box and before any language menu selection is done, the default language for the application is English.
 
@@ -334,7 +336,7 @@ This project is licensed under the terms of the `Apache License 2.0` license. Se
 @misc{PasswordPusher,
   author = {Peter Giacomo Lombardo},
   title = {An application to securely communicate passwords over the web. Passwords automatically expire after a certain number of views and/or time has passed.},
-  year = {2022},
+  year = {2024},
   publisher = {GitHub},
   journal = {GitHub repository},
   howpublished = {\url{https://github.com/pglombardo/PasswordPusher}}
