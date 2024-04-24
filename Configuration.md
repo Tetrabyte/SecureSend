@@ -88,6 +88,10 @@ Notes:
 | PWP__RELATIVE_ROOT | Runs the application in a subfolder.  e.g. With a value of `pwp` the front page will then be at `https://url/pwp` | `Not set` |
 | PWP__SHOW_VERSION | Show the version in the footer | `true` |
 | PWP__SHOW_GDPR_CONSENT_BANNER | Optionally enable or disable the GDPR cookie consent banner. | `true` |
+| PWP__TIMEZONE | Set the application wide timezone.  Use a valid timezone string (see note below). | `America/New_York` |
+| SECRET_KEY_BASE | A secret key that is used for various security-related features, including session cookie encryption and other cryptographic operations.  Use `/opt/PasswordPusher/bin/rails secret` to generate a random key string. [See the SECRET_KEY_BASE wiki page.](https://github.com/pglombardo/PasswordPusher/wiki/SECRET_KEY_BASE)| _Randomly Generated on boot_ |
+
+_Note_: The list of valid timezone strings can be found at [https://en.wikipedia.org/wiki/List_of_tz_database_time_zones](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones).
 
 ## Password Push Expiration Settings
 
@@ -188,6 +192,11 @@ This feature can store uploads on local disk (not valid for Docker containers), 
 | PWP__ENABLE_FILE_PUSHES | On/Off switch for File Pushes. | `false` |
 | PWP__FILES__STORAGE | Chooses the storage area for uploaded files. | `local`, `amazon`, `google` or `microsoft` |
 | PWP__FILES__ENABLE_BLUR | Enables or disables the 'blur' effect when showing a text payload to the user. | `true` |
+| PWP__FILES__ENABLE_DELETABLE_PUSHES | Can passwords be deleted by viewers? When true, passwords will have a link to optionally delete the password being viewed | `false` |
+| PWP__FILES__DELETABLE_PUSHES_DEFAULT | When the above is `true`, this sets the default value for the option. | `true` |
+| PWP__FILES__ENABLE_RETRIEVAL_STEP | When `true`, adds an option to have a preliminary step to retrieve passwords.  | `true` |
+| PWP__FILES__RETRIEVAL_STEP_DEFAULT | Sets the default value for the retrieval step for newly created passwords. | `false` |
+| PWP__FILES__MAX_FILE_UPLOADS | Sets the maximum number of files that can be added to a single push. | `10` |
 
 ## File Push Expiration Settings
 
@@ -199,10 +208,6 @@ This feature can store uploads on local disk (not valid for Docker containers), 
 | PWP__FILES__EXPIRE_AFTER_VIEWS_DEFAULT | Controls the "Expire After Views" default value in Password#new | `5` |
 | PWP__FILES__EXPIRE_AFTER_VIEWS_MIN | Controls the "Expire After Views" minimum value in Password#new | `1` |
 | PWP__FILES__EXPIRE_AFTER_VIEWS_MAX | Controls the "Expire After Views" maximum value in Password#new | `100` |
-| PWP__FILES__ENABLE_DELETABLE_PUSHES | Can passwords be deleted by viewers? When true, passwords will have a link to optionally delete the password being viewed | `false` |
-| PWP__FILES__DELETABLE_PUSHES_DEFAULT | When the above is `true`, this sets the default value for the option. | `true` |
-| PWP__FILES__ENABLE_RETRIEVAL_STEP | When `true`, adds an option to have a preliminary step to retrieve passwords.  | `true` |
-| PWP__FILES__RETRIEVAL_STEP_DEFAULT | Sets the default value for the retrieval step for newly created passwords. | `false` |
 
 ## Local Storage
 
@@ -384,13 +389,31 @@ volumes:
   - /var/lib/pwpush/logos:/opt/PasswordPusher/public/logos:r
 ```
 
-See [here](https://github.com/pglombardo/PasswordPusher/blob/master/containers/docker/pwpush/docker-compose-postgres.yml) for a larger Docker Compose explanation.
+See [here](https://github.com/pglombardo/PasswordPusher/blob/master/containers/docker/docker-compose-postgres.yml) for a larger Docker Compose explanation.
 
 With this setup, you can then set your `LOGO` environment variables (or `settings.yml` options) to:
 
 ```
 PWP__BRAND__LIGHT_LOGO=/logos/mylogo.png
 ```
+
+## Favicons
+
+The application favicons can also be changed to your own assets.
+
+These favicons are used in browser tabs, in bookmarks and in browser history.
+
+At a bare minimum, make sure to set at least `icon_57x57` and `icon_96x96`.  Without these two, things are guaranteed
+to not work.
+
+To create favicons you can use an icon generator such as:
+
+https://www.favicongenerator.com
+or
+https://www.favicon-generator.org
+
+See the [Rebranding:Favicon section](https://github.com/pglombardo/PasswordPusher/blob/master/config/settings.yml#L623) of the `settings.yml` file for more specifics.
+
 
 ## See Also
 
