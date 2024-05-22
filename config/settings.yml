@@ -109,6 +109,8 @@ allow_anonymous: true
 # The domain (without protocol) where this instance is hosted
 # Used in generating fully qualified URLs.
 #
+# Make sure to set this for email links to work correctly.
+#
 # Environment variable override:
 # PWP__HOST_DOMAIN='pwpush.com'
 #
@@ -118,6 +120,8 @@ allow_anonymous: true
 #
 # The protocol to reach the domain above
 # Used in generating fully qualified URLs.
+#
+# Make sure to set this for email links to work correctly.
 #
 # Environment variable override:
 # PWP__HOST_PROTOCOL='https'
@@ -140,7 +144,7 @@ override_base_url: 'https://securesend.remoteit.co.uk'
 
 ### Show version on the footer
 #
-# Enable/disable PasswordPusher verison on the footer.
+# Enable/disable PasswordPusher version on the footer.
 #
 # Environment variable override:
 # PWP__SHOW_VERSION=true
@@ -718,6 +722,8 @@ throttling:
 # for ActionMailer is at:
 # https://guides.rubyonrails.org/action_mailer_basics.html#action-mailer-configuration
 #
+# IMPORTANT: Also set host_domain and host_protocol above for email links to work correctly!
+#
 mail:
   # Email delivery errors will be shown in the application
   # Environment Variable Override: PWP__MAIL__RAISE_DELIVERY_ERRORS='false'
@@ -726,14 +732,6 @@ mail:
   # Allows you to use a remote mail server. Just change it from its default "localhost" setting.
   # Environment Variable Override: PWP__MAIL__SMTP_ADDRESS='smtp.example.com'
   # smtp_address: smtp.example.com
-
-  # If your mail server requires authentication, set the username in this setting.
-  # Environment Variable Override: PWP__MAIL__SMTP_USER_NAME='apikey'
-  # smtp_user_name: 'apikey'
-
-  # If your mail server requires authentication, set the password in this setting.
-  # Environment Variable Override: PWP__MAIL__SMTP_PASSWORD='something@&#$'
-  # smtp_password: ''
 
   # If you need to specify a HELO domain, you can do it here.
   # Environment Variable Override: PWP__MAIL__SMTP_DOMAIN='xyz.dev'
@@ -749,8 +747,19 @@ mail:
   # or :cram_md5 (combines a Challenge/Response mechanism to exchange
   # information and a cryptographic Message Digest 5 algorithm to hash
   # important information)
+  #
+  # Important: Comment this out if your server doesn't require authentication.
+  #
   # Environment Variable Override: PWP__MAIL__SMTP_AUTHENTICATION='plain'
   smtp_authentication: 'plain'
+
+  # If your mail server requires authentication, set the username in this setting.
+  # Environment Variable Override: PWP__MAIL__SMTP_USER_NAME='apikey'
+  # smtp_user_name: 'apikey'
+
+  # If your mail server requires authentication, set the password in this setting.
+  # Environment Variable Override: PWP__MAIL__SMTP_PASSWORD='something@&#$'
+  # smtp_password: ''
 
   # Use STARTTLS when connecting to your SMTP server and fail if unsupported.
   # Environment Variable Override: PWP__MAIL__SMTP_STARTTLS='true'
@@ -777,7 +786,7 @@ mail:
   # Configure the e-mail address which will be shown as 'From' in emails
   # See config/initializers/devise.rb where this is used
   # Environment Variable Override: PWP__MAIL__MAILER_SENDER='"Password Pusher" <pglombardo@pwpush.com>'
-  # mailer_sender: '"Password Pusher" <pglombardo@pwpush.com>'
+  # mailer_sender: '"Password Pusher" <oss@pwpush.com>'
 
 ### Feedback Form
 feedback:
@@ -821,13 +830,62 @@ feedback:
 #                 It cannot be set in this config file.
 theme: 'default'
 
+### Site Default Locale
+#
+# The default language for the application.  This must be one of the
+# valid/supported language codes from the list above.
+#
+# Note: This locale _must_ be in the list of enabled_language_codes.
+#
+# Example: default_locale: :es
+#
+# Environment Variable Override: PWP__DEFAULT_LOCALE='es'
+default_locale: :en
+
 ### Language & Internationalization
 #
-# List of supported languages indexed by language code.  This is used
-# to build the in application language menu.
+# List of enabled languages for the application.
 #
 # To remove the availability of languages from the application entirely,
-# comment out the language code(s) from the list below.
+# comment out (or remove) the language code(s) from the `enabled_language_codes`
+# list below.
+#
+enabled_language_codes:
+  - ca # 'Català'
+  - cs # 'Čeština'
+  - da # 'Dansk'
+  - de # 'Deutsch'
+  - en # 'English'
+  - es # 'Español'
+  - eu # 'Euskara'
+  - fi # 'Suomi'
+  - fr # 'Français'
+  - hi # 'हिन्दी'
+  - hu # 'Magyar'
+  - id # 'Indonesian'
+  - is # 'Íslenska'
+  - it # 'Italiano'
+  - ja # '日本語'
+  - ko # '한국어'
+  - lv # 'Latviski'
+  - nl # 'Nederlands'
+  - 'no' # 'Norsk' # _no_ keyword in Ruby evaluates to false  #-(
+  - pl # 'Polski'
+  - pt-BR # 'Português'
+  - pt-PT # 'Português'
+  - ro # 'Română'
+  - ru # 'Русский'
+  - sr # 'Српски'
+  - sv # 'Svenska'
+  - th # 'ไทย'
+  - uk # 'Українська'
+  - ur # 'اردو'
+  - zh-CN # '中文'
+
+### Language & Internationalization
+#
+# Map of language codes to language name.
+# Used internally for the language selector model.
 #
 # <language code>: '<language name>'
 language_codes:
@@ -900,17 +958,6 @@ country_codes:
   ur: :pk
   zh-CN: :cn
 
-
-### Site Default Locale
-#
-# The default language for the application.  This must be one of the
-# valid/supported language codes from the list above.
-#
-# Example: default_locale: :es
-#
-# Environment Variable Override: PWP__DEFAULT_LOCALE='es'
-default_locale: :en
-
 # Configure the logging verbosity of the application.
 #
 # Valid values are: :debug, :info, :warn, :error, :fatal
@@ -920,12 +967,3 @@ log_level: :warn
 # instead of using log files (e.g. log/production.log).
 #
 log_to_stdout: true
-
-### Run in Subfolder
-#
-# To run in a subfolder, specify the path to use.  For example, if `relative_root`
-# is set too 'pwpush_root', then the application is hosted at https://<host>/pwpush_root/
-# (and this is where you will find the front page of the application).
-#
-# Environment variable override: PWP__RELATIVE_ROOT='pwpush'
-# relative_root: 'pwpush'

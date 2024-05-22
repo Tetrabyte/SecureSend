@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PasswordPusher 1.0\n"
 "Report-Msgid-Bugs-To: contact@translation.io\n"
-"POT-Creation-Date: 2024-02-19 17:12+0100\n"
-"PO-Revision-Date: 2024-02-19 17:12+0100\n"
+"POT-Creation-Date: 2024-04-18 17:53+0200\n"
+"PO-Revision-Date: 2024-04-18 17:54+0200\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Thai\n"
 "Language: th\n"
@@ -41,8 +41,8 @@ msgstr ""
 "ลองอีกครั้ง?"
 
 #: ../../../app/controllers/file_pushes_controller.rb:105
-#: ../../../app/controllers/passwords_controller.rb:163
-#: ../../../app/controllers/urls_controller.rb:155
+#: ../../../app/controllers/passwords_controller.rb:104
+#: ../../../app/controllers/urls_controller.rb:96
 msgid ""
 "That passphrase is incorrect.  Please try again or contact the person or organ"
 "ization that sent you this link."
@@ -50,48 +50,39 @@ msgstr ""
 "ข้อความรหัสผ่านนั้นไม่ถูกต้อง โปรดลองอีกครั้งหรือติดต่อบุคคลหรือองค์กรที่ส่งลิ"
 "งก์นี้ให้คุณ"
 
-#: ../../../app/controllers/file_pushes_controller.rb:147
-msgid ""
-"Only 10 active file pushes allowed while in Beta and until things are stable. "
-"If it's an option, you can manually expire existing pushes before creating new"
-" ones."
-msgstr ""
-"อนุญาตการพุชไฟล์ที่ใช้งานอยู่เพียง 10 ไฟล์ในรุ่นเบต้าและจนกว่าทุกอย่างจะเสถียร"
-" หากเป็นตัวเลือก คุณสามารถทำให้ push ที่มีอยู่หมดอายุก่อนที่จะสร้างใหม่ได้"
-
-#: ../../../app/controllers/file_pushes_controller.rb:229
-#: ../../../app/controllers/passwords_controller.rb:305
-#: ../../../app/controllers/urls_controller.rb:297
+#: ../../../app/controllers/file_pushes_controller.rb:228
+#: ../../../app/controllers/passwords_controller.rb:239
+#: ../../../app/controllers/urls_controller.rb:231
 msgid "That push doesn't belong to you."
 msgstr "การผลักดันนั้นไม่ได้เป็นของคุณ"
 
-#: ../../../app/controllers/file_pushes_controller.rb:259
-#: ../../../app/controllers/passwords_controller.rb:336
-#: ../../../app/controllers/urls_controller.rb:328
-#: ../../../app/controllers/urls_controller.rb:332
+#: ../../../app/controllers/file_pushes_controller.rb:258
+#: ../../../app/controllers/passwords_controller.rb:269
+#: ../../../app/controllers/urls_controller.rb:261
+#: ../../../app/controllers/urls_controller.rb:265
 msgid "That push does not belong to you."
 msgstr "การผลักดันนั้นไม่ได้เป็นของคุณ"
 
-#: ../../../app/controllers/file_pushes_controller.rb:264
-#: ../../../app/controllers/passwords_controller.rb:341
+#: ../../../app/controllers/file_pushes_controller.rb:263
+#: ../../../app/controllers/passwords_controller.rb:274
 msgid "That push is not deletable by viewers."
 msgstr "ผู้ชมไม่สามารถลบการพุชนั้นได้"
 
+#: ../../../app/controllers/file_pushes_controller.rb:269
 #: ../../../app/controllers/file_pushes_controller.rb:270
-#: ../../../app/controllers/file_pushes_controller.rb:271
-#: ../../../app/controllers/passwords_controller.rb:347
-#: ../../../app/controllers/passwords_controller.rb:348
-#: ../../../app/controllers/urls_controller.rb:338
-#: ../../../app/controllers/urls_controller.rb:339
+#: ../../../app/controllers/passwords_controller.rb:280
+#: ../../../app/controllers/passwords_controller.rb:281
+#: ../../../app/controllers/urls_controller.rb:271
+#: ../../../app/controllers/urls_controller.rb:272
 msgid "That push is already expired."
 msgstr "การผลักดันนั้นหมดอายุแล้ว"
 
-#: ../../../app/controllers/file_pushes_controller.rb:289
-#: ../../../app/controllers/file_pushes_controller.rb:292
-#: ../../../app/controllers/passwords_controller.rb:365
-#: ../../../app/controllers/passwords_controller.rb:368
-#: ../../../app/controllers/urls_controller.rb:356
-#: ../../../app/controllers/urls_controller.rb:359
+#: ../../../app/controllers/file_pushes_controller.rb:288
+#: ../../../app/controllers/file_pushes_controller.rb:291
+#: ../../../app/controllers/passwords_controller.rb:298
+#: ../../../app/controllers/passwords_controller.rb:301
+#: ../../../app/controllers/urls_controller.rb:289
+#: ../../../app/controllers/urls_controller.rb:292
 #: ../../../app/views/file_pushes/audit.html.erb:97
 #: ../../../app/views/file_pushes/audit.html.erb:254
 #: ../../../app/views/passwords/audit.html.erb:97
@@ -101,7 +92,7 @@ msgstr "การผลักดันนั้นหมดอายุแล้
 msgid "The push content has been deleted and the secret URL expired."
 msgstr "เนื้อหาพุชถูกลบและ URL ลับหมดอายุ"
 
-#: ../../../app/controllers/urls_controller.rb:206
+#: ../../../app/controllers/urls_controller.rb:147
 msgid "Invalid URL: Must have a valid URI scheme."
 msgstr "URL ไม่ถูกต้อง: ต้องมีรูปแบบ URI ที่ถูกต้อง"
 
@@ -940,11 +931,14 @@ msgid "Expire secret link and delete after:"
 msgstr "ลิงค์ลับหมดอายุและลบหลังจาก:"
 
 #: ../../../app/views/file_pushes/new.html.erb:78
-#: ../../../app/views/file_pushes/preview.html.erb:16
+#: ../../../app/views/file_pushes/preview.html.erb:60
+#: ../../../app/views/file_pushes/print_preview.html.erb:16
 #: ../../../app/views/passwords/new.html.erb:86
-#: ../../../app/views/passwords/preview.html.erb:16
+#: ../../../app/views/passwords/preview.html.erb:60
+#: ../../../app/views/passwords/print_preview.html.erb:16
 #: ../../../app/views/urls/new.html.erb:73
-#: ../../../app/views/urls/preview.html.erb:16
+#: ../../../app/views/urls/preview.html.erb:60
+#: ../../../app/views/urls/print_preview.html.erb:16
 msgid "(whichever comes first)"
 msgstr "(แล้วแต่ระยะใดถึงก่อน)"
 
@@ -1072,112 +1066,172 @@ msgstr "สร้างการพุชของคุณแล้ว"
 msgid "Use this secret link to share it:"
 msgstr "ใช้ลิงค์ลับนี้เพื่อแบ่งปัน:"
 
-#: ../../../app/views/file_pushes/preview.html.erb:12
-#: ../../../app/views/urls/preview.html.erb:12
+#: ../../../app/views/file_pushes/preview.html.erb:14
+#: ../../../app/views/passwords/preview.html.erb:14
+#: ../../../app/views/urls/preview.html.erb:14
+msgid "Print & Share"
+msgstr "พิมพ์และแบ่งปัน"
+
+#: ../../../app/views/file_pushes/preview.html.erb:19
+#: ../../../app/views/passwords/preview.html.erb:19
+#: ../../../app/views/urls/preview.html.erb:19
+msgid "Generate a Printable Page for End Users"
+msgstr "สร้างหน้าที่พิมพ์ได้สำหรับผู้ใช้ปลายทาง"
+
+#: ../../../app/views/file_pushes/preview.html.erb:24
+#: ../../../app/views/file_pushes/preview.html.erb:26
+#: ../../../app/views/passwords/preview.html.erb:24
+#: ../../../app/views/passwords/preview.html.erb:26
+#: ../../../app/views/urls/preview.html.erb:24
+#: ../../../app/views/urls/preview.html.erb:26
+msgid "Optional Custom Message"
+msgstr "ข้อความที่กำหนดเองเพิ่มเติม"
+
+#: ../../../app/views/file_pushes/preview.html.erb:35
+#: ../../../app/views/passwords/preview.html.erb:35
+#: ../../../app/views/urls/preview.html.erb:35
+msgid "Show Expiration Details"
+msgstr "แสดงรายละเอียดการหมดอายุ"
+
+#: ../../../app/views/file_pushes/preview.html.erb:42
+#: ../../../app/views/passwords/preview.html.erb:42
+#: ../../../app/views/urls/preview.html.erb:42
+msgid "Include ID"
+msgstr "รวมบัตรประจำตัว"
+
+#: ../../../app/views/file_pushes/preview.html.erb:47
+#: ../../../app/views/passwords/preview.html.erb:47
+#: ../../../app/views/urls/preview.html.erb:47
+msgid "Generate"
+msgstr "สร้าง"
+
+#: ../../../app/views/file_pushes/preview.html.erb:56
+#: ../../../app/views/urls/preview.html.erb:56
 msgid "This push will expire after"
 msgstr "การพุชนี้จะหมดอายุหลังจาก"
 
-#: ../../../app/views/file_pushes/preview.html.erb:13
+#: ../../../app/views/file_pushes/preview.html.erb:57
+#: ../../../app/views/file_pushes/print_preview.html.erb:13
 #: ../../../app/views/file_pushes/show.html.erb:43
-#: ../../../app/views/passwords/preview.html.erb:13
+#: ../../../app/views/passwords/preview.html.erb:57
+#: ../../../app/views/passwords/print_preview.html.erb:13
 #: ../../../app/views/passwords/show.html.erb:24
-#: ../../../app/views/urls/preview.html.erb:13
+#: ../../../app/views/urls/preview.html.erb:57
+#: ../../../app/views/urls/print_preview.html.erb:13
 msgid "day"
 msgid_plural "days"
 msgstr[0] "วัน"
 msgstr[1] ""
 
-#: ../../../app/views/file_pushes/preview.html.erb:14
+#: ../../../app/views/file_pushes/preview.html.erb:58
+#: ../../../app/views/file_pushes/print_preview.html.erb:14
 #: ../../../app/views/file_pushes/show.html.erb:46
 #: ../../../app/views/file_pushes/show.html.erb:49
 #: ../../../app/views/pages/about.html.erb:34
 #: ../../../app/views/pages/about.html.erb:40
-#: ../../../app/views/passwords/preview.html.erb:14
+#: ../../../app/views/passwords/preview.html.erb:58
+#: ../../../app/views/passwords/print_preview.html.erb:14
 #: ../../../app/views/passwords/show.html.erb:27
 #: ../../../app/views/passwords/show.html.erb:30
-#: ../../../app/views/urls/preview.html.erb:14
+#: ../../../app/views/urls/preview.html.erb:58
+#: ../../../app/views/urls/print_preview.html.erb:14
 msgid "or"
 msgstr "หรือ"
 
-#: ../../../app/views/file_pushes/preview.html.erb:15
-#: ../../../app/views/passwords/preview.html.erb:15
-#: ../../../app/views/urls/preview.html.erb:15
+#: ../../../app/views/file_pushes/preview.html.erb:59
+#: ../../../app/views/file_pushes/print_preview.html.erb:15
+#: ../../../app/views/passwords/preview.html.erb:59
+#: ../../../app/views/passwords/print_preview.html.erb:15
+#: ../../../app/views/urls/preview.html.erb:59
+#: ../../../app/views/urls/print_preview.html.erb:15
 msgid "view"
 msgid_plural "views"
 msgstr[0] "มุมมอง"
 msgstr[1] ""
 
-#: ../../../app/views/file_pushes/preview.html.erb:19
-#: ../../../app/views/file_pushes/preview.html.erb:21
+#: ../../../app/views/file_pushes/preview.html.erb:63
+#: ../../../app/views/file_pushes/preview.html.erb:65
 #: ../../../app/views/pages/about.html.erb:72
 #: ../../../app/views/pages/about.html.erb:95
 #: ../../../app/views/pages/faq.html.erb:75
 #: ../../../app/views/pages/faq.html.erb:143
-#: ../../../app/views/passwords/preview.html.erb:19
-#: ../../../app/views/passwords/preview.html.erb:21
+#: ../../../app/views/passwords/preview.html.erb:63
+#: ../../../app/views/passwords/preview.html.erb:65
 msgid "and"
 msgstr "และ"
 
-#: ../../../app/views/file_pushes/preview.html.erb:19
-#: ../../../app/views/passwords/preview.html.erb:19
+#: ../../../app/views/file_pushes/preview.html.erb:63
+#: ../../../app/views/passwords/preview.html.erb:63
 msgid "can be"
 msgstr "เป็นไปได้"
 
-#: ../../../app/views/file_pushes/preview.html.erb:19
-#: ../../../app/views/file_pushes/preview.html.erb:21
-#: ../../../app/views/passwords/preview.html.erb:19
-#: ../../../app/views/passwords/preview.html.erb:21
+#: ../../../app/views/file_pushes/preview.html.erb:63
+#: ../../../app/views/file_pushes/preview.html.erb:65
+#: ../../../app/views/passwords/preview.html.erb:63
+#: ../../../app/views/passwords/preview.html.erb:65
 msgid "deleted by viewers."
 msgstr "ลบโดยผู้ชม"
 
-#: ../../../app/views/file_pushes/preview.html.erb:21
-#: ../../../app/views/passwords/preview.html.erb:21
+#: ../../../app/views/file_pushes/preview.html.erb:65
+#: ../../../app/views/passwords/preview.html.erb:65
 msgid "can NOT be"
 msgstr "ไม่สามารถ"
 
-#: ../../../app/views/file_pushes/preview.html.erb:26
-#: ../../../app/views/passwords/preview.html.erb:26
-#: ../../../app/views/urls/preview.html.erb:20
+#: ../../../app/views/file_pushes/preview.html.erb:70
+#: ../../../app/views/passwords/preview.html.erb:70
+#: ../../../app/views/urls/preview.html.erb:64
 msgid "It also includes a"
 msgstr "นอกจากนี้ยังรวมถึงก"
 
-#: ../../../app/views/file_pushes/preview.html.erb:26
-#: ../../../app/views/passwords/preview.html.erb:26
-#: ../../../app/views/urls/preview.html.erb:20
+#: ../../../app/views/file_pushes/preview.html.erb:70
+#: ../../../app/views/passwords/preview.html.erb:70
+#: ../../../app/views/urls/preview.html.erb:64
 msgid "1-click preliminary retrieval step"
 msgstr "ขั้นตอนการเรียกข้อมูลเบื้องต้น 1 คลิก"
 
-#: ../../../app/views/file_pushes/preview.html.erb:30
-#: ../../../app/views/urls/preview.html.erb:24
+#: ../../../app/views/file_pushes/preview.html.erb:74
+#: ../../../app/views/urls/preview.html.erb:68
 msgid "View This Push Now"
 msgstr "ดูกดนี้เลย"
 
-#: ../../../app/views/file_pushes/preview.html.erb:30
-#: ../../../app/views/passwords/preview.html.erb:30
-#: ../../../app/views/urls/preview.html.erb:24
+#: ../../../app/views/file_pushes/preview.html.erb:74
+#: ../../../app/views/passwords/preview.html.erb:74
+#: ../../../app/views/urls/preview.html.erb:68
 msgid "(will burn a view) or"
 msgstr "(จะเบิร์นวิว) หรือ"
 
-#: ../../../app/views/file_pushes/preview.html.erb:31
-#: ../../../app/views/urls/preview.html.erb:25
+#: ../../../app/views/file_pushes/preview.html.erb:75
+#: ../../../app/views/urls/preview.html.erb:69
 msgid "Push Another"
 msgstr "ดันอีก"
 
-#: ../../../app/views/file_pushes/preview.html.erb:36
-#: ../../../app/views/passwords/preview.html.erb:36
-#: ../../../app/views/urls/preview.html.erb:30
+#: ../../../app/views/file_pushes/preview.html.erb:80
+#: ../../../app/views/passwords/preview.html.erb:80
+#: ../../../app/views/urls/preview.html.erb:74
 msgid "View Audit Log"
 msgstr "ดูบันทึกการตรวจสอบ"
 
-#: ../../../app/views/file_pushes/preview.html.erb:41
-#: ../../../app/views/passwords/preview.html.erb:41
-#: ../../../app/views/urls/preview.html.erb:35
+#: ../../../app/views/file_pushes/preview.html.erb:85
+#: ../../../app/views/passwords/preview.html.erb:85
+#: ../../../app/views/urls/preview.html.erb:79
 msgid ""
 "Tip: Pushing to an international user?  Change the secret link language using "
 "the dropdown menu to the right of the URL."
 msgstr ""
 "เคล็ดลับ: ส่งไปยังผู้ใช้ต่างประเทศหรือไม่ เปลี่ยนภาษาของลิงก์ลับโดยใช้เมนูแบบเ"
 "ลื่อนลงทางด้านขวาของ URL"
+
+#: ../../../app/views/file_pushes/print_preview.html.erb:1
+#: ../../../app/views/passwords/print_preview.html.erb:1
+#: ../../../app/views/urls/print_preview.html.erb:1
+msgid "Your Secret URL"
+msgstr "URL ลับของคุณ"
+
+#: ../../../app/views/file_pushes/print_preview.html.erb:12
+#: ../../../app/views/passwords/print_preview.html.erb:12
+#: ../../../app/views/urls/print_preview.html.erb:12
+msgid "This data contained here will expire after"
+msgstr "ข้อมูลนี้มีอยู่ที่นี่จะหมดอายุหลังจากนั้น"
 
 #: ../../../app/views/file_pushes/show.html.erb:1
 #: ../../../app/views/passwords/show.html.erb:1
@@ -1267,6 +1321,7 @@ msgid ""
 "URL."
 msgstr "หากจำเป็น โปรดติดต่อบุคคลหรือองค์กรที่ให้ URL ลับนี้แก่คุณ"
 
+#: ../../../app/views/layouts/admin/application.html.erb:41
 #: ../../../app/views/layouts/login.html.erb:31
 #: ../../../app/views/shared/_footer.html.erb:11
 #: ../../../app/views/shared/_footer.html.erb:15
@@ -1617,7 +1672,7 @@ msgstr ""
 " end-all"
 
 #: ../../../app/views/pages/faq.html.erb:59
-msgid "Password Pusher is opensource"
+msgid "Password Pusher is open-source"
 msgstr "Password Pusher เป็นโอเพ่นซอร์ส"
 
 #: ../../../app/views/pages/faq.html.erb:60
@@ -1788,13 +1843,13 @@ msgstr "มีข้อจำกัดด้านสิทธิ์การใ
 
 #: ../../../app/views/pages/faq.html.erb:172
 msgid ""
-"The source code is released under the GNU General Public License v3.0 and that"
-" pretty much defines any and all limitations. There are quite a few rebranded "
-"and redesigned clone sites of Password Pusher and I welcome them all."
+"The source code is released under the Apache 2.0 License and that pretty much "
+"defines any and all limitations. There are quite a few rebranded and redesigne"
+"d clone sites of Password Pusher and I welcome them all."
 msgstr ""
-"ซอร์สโค้ดเผยแพร่ภายใต้ GNU General Public License v3.0 และนั่นค่อนข้างจะกำหนดข"
-"้อจำกัดใดๆ และทั้งหมด มีไซต์โคลนของ Password Pusher ที่สร้างแบรนด์ใหม่และออกแบ"
-"บใหม่ค่อนข้างน้อย และฉันยินดีต้อนรับพวกเขาทั้งหมด"
+"ซอร์สโค้ดได้รับการเผยแพร่ภายใต้ลิขสิทธิ์ Apache 2.0 และนั่นค่อนข้างจะกำหนดข้อจ"
+"ำกัดใดๆ และทั้งหมด มีไซต์โคลนของ Password Pusher ที่ได้รับการรีแบรนด์และออกแบบ"
+"ใหม่อยู่จำนวนไม่น้อย และฉันยินดีต้อนรับพวกเขาทั้งหมด"
 
 #: ../../../app/views/pages/faq.html.erb:180
 msgid "Why would I want to run my own private instance of Password Pusher?"
@@ -2129,7 +2184,7 @@ msgstr "ยูทิลิตี้บรรทัดคำสั่ง"
 msgid "Applications"
 msgstr "แอพพลิเคชั่น"
 
-#: ../../../app/views/pages/tools.html.erb:82
+#: ../../../app/views/pages/tools.html.erb:74
 msgid ""
 "This API allows you to interface with Password Pusher via JSON.  This can be u"
 "tilized by existing utilities such as curl, wget or any programming language. "
@@ -2139,19 +2194,19 @@ msgstr ""
 "รรถประโยชน์ที่มีอยู่เช่น curl, wget หรือภาษาการเขียนโปรแกรมใดๆ ดูตัวอย่างด้านล"
 "่างสำหรับแนวคิดบางอย่าง"
 
-#: ../../../app/views/pages/tools.html.erb:85
+#: ../../../app/views/pages/tools.html.erb:77
 msgid "API Endpoint Documentation"
 msgstr "เอกสารปลายทาง API"
 
-#: ../../../app/views/pages/tools.html.erb:86
+#: ../../../app/views/pages/tools.html.erb:78
 msgid "Walkthrough & Examples"
 msgstr "เกมส์และตัวอย่าง"
 
-#: ../../../app/views/pages/tools.html.erb:89
+#: ../../../app/views/pages/tools.html.erb:81
 msgid "Examples"
 msgstr "ตัวอย่าง"
 
-#: ../../../app/views/pages/tools.html.erb:98
+#: ../../../app/views/pages/tools.html.erb:90
 msgid ""
 "You can test this in your browser Javascript console by going to the front pag"
 "e of Password Pusher and enter:"
@@ -2159,7 +2214,7 @@ msgstr ""
 "คุณสามารถทดสอบสิ่งนี้ได้ในคอนโซล Javascript ของเบราว์เซอร์โดยไปที่หน้าแรกของ P"
 "assword Pusher แล้วป้อน:"
 
-#: ../../../app/views/pages/tools.html.erb:106
+#: ../../../app/views/pages/tools.html.erb:112
 msgid "See more explanation and examples in our"
 msgstr "ดูคำอธิบายและตัวอย่างเพิ่มเติมในของเรา"
 
@@ -2369,15 +2424,15 @@ msgstr ""
 msgid "Your Password has been Pushed"
 msgstr "รหัสผ่านของคุณถูกพุช"
 
-#: ../../../app/views/passwords/preview.html.erb:12
+#: ../../../app/views/passwords/preview.html.erb:56
 msgid "This newly pushed password will expire after"
 msgstr "รหัสผ่านที่เพิ่งพุชนี้จะหมดอายุหลังจากนั้น"
 
-#: ../../../app/views/passwords/preview.html.erb:30
+#: ../../../app/views/passwords/preview.html.erb:74
 msgid "View This Password Now"
 msgstr "ดูรหัสผ่านนี้ทันที"
 
-#: ../../../app/views/passwords/preview.html.erb:31
+#: ../../../app/views/passwords/preview.html.erb:75
 msgid "Push Another Password"
 msgstr "กดรหัสผ่านอื่น"
 
