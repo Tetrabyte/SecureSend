@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PasswordPusher 1.0\n"
 "Report-Msgid-Bugs-To: contact@translation.io\n"
-"POT-Creation-Date: 2024-02-19 17:12+0100\n"
-"PO-Revision-Date: 2024-02-19 17:12+0100\n"
+"POT-Creation-Date: 2024-04-18 17:53+0200\n"
+"PO-Revision-Date: 2024-04-18 17:54+0200\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Swedish\n"
 "Language: sv\n"
@@ -43,8 +43,8 @@ msgstr ""
 "ök igen?"
 
 #: ../../../app/controllers/file_pushes_controller.rb:105
-#: ../../../app/controllers/passwords_controller.rb:163
-#: ../../../app/controllers/urls_controller.rb:155
+#: ../../../app/controllers/passwords_controller.rb:104
+#: ../../../app/controllers/urls_controller.rb:96
 msgid ""
 "That passphrase is incorrect.  Please try again or contact the person or organ"
 "ization that sent you this link."
@@ -52,50 +52,40 @@ msgstr ""
 "Den lösenfrasen är felaktig. Försök igen eller kontakta personen eller organis"
 "ationen som skickade den här länken till dig."
 
-#: ../../../app/controllers/file_pushes_controller.rb:147
-msgid ""
-"Only 10 active file pushes allowed while in Beta and until things are stable. "
-"If it's an option, you can manually expire existing pushes before creating new"
-" ones."
-msgstr ""
-"Endast 10 aktiva fil-pushar tillåtna under betaversionen och tills allt är sta"
-"bilt. Om det är ett alternativ kan du manuellt förfalla befintliga push innan "
-"du skapar nya."
-
-#: ../../../app/controllers/file_pushes_controller.rb:229
-#: ../../../app/controllers/passwords_controller.rb:305
-#: ../../../app/controllers/urls_controller.rb:297
+#: ../../../app/controllers/file_pushes_controller.rb:228
+#: ../../../app/controllers/passwords_controller.rb:239
+#: ../../../app/controllers/urls_controller.rb:231
 msgid "That push doesn't belong to you."
 msgstr "Den pushen tillhör inte dig."
 
-#: ../../../app/controllers/file_pushes_controller.rb:259
-#: ../../../app/controllers/passwords_controller.rb:336
-#: ../../../app/controllers/urls_controller.rb:328
-#: ../../../app/controllers/urls_controller.rb:332
+#: ../../../app/controllers/file_pushes_controller.rb:258
+#: ../../../app/controllers/passwords_controller.rb:269
+#: ../../../app/controllers/urls_controller.rb:261
+#: ../../../app/controllers/urls_controller.rb:265
 msgid "That push does not belong to you."
 msgstr "Den pushen tillhör inte dig."
 
-#: ../../../app/controllers/file_pushes_controller.rb:264
-#: ../../../app/controllers/passwords_controller.rb:341
+#: ../../../app/controllers/file_pushes_controller.rb:263
+#: ../../../app/controllers/passwords_controller.rb:274
 msgid "That push is not deletable by viewers."
 msgstr ""
 "Det här värdet kan inte raderas av personer med läsbehörighet.\n"
 
+#: ../../../app/controllers/file_pushes_controller.rb:269
 #: ../../../app/controllers/file_pushes_controller.rb:270
-#: ../../../app/controllers/file_pushes_controller.rb:271
-#: ../../../app/controllers/passwords_controller.rb:347
-#: ../../../app/controllers/passwords_controller.rb:348
-#: ../../../app/controllers/urls_controller.rb:338
-#: ../../../app/controllers/urls_controller.rb:339
+#: ../../../app/controllers/passwords_controller.rb:280
+#: ../../../app/controllers/passwords_controller.rb:281
+#: ../../../app/controllers/urls_controller.rb:271
+#: ../../../app/controllers/urls_controller.rb:272
 msgid "That push is already expired."
 msgstr "Den pushen har redan gått ut."
 
-#: ../../../app/controllers/file_pushes_controller.rb:289
-#: ../../../app/controllers/file_pushes_controller.rb:292
-#: ../../../app/controllers/passwords_controller.rb:365
-#: ../../../app/controllers/passwords_controller.rb:368
-#: ../../../app/controllers/urls_controller.rb:356
-#: ../../../app/controllers/urls_controller.rb:359
+#: ../../../app/controllers/file_pushes_controller.rb:288
+#: ../../../app/controllers/file_pushes_controller.rb:291
+#: ../../../app/controllers/passwords_controller.rb:298
+#: ../../../app/controllers/passwords_controller.rb:301
+#: ../../../app/controllers/urls_controller.rb:289
+#: ../../../app/controllers/urls_controller.rb:292
 #: ../../../app/views/file_pushes/audit.html.erb:97
 #: ../../../app/views/file_pushes/audit.html.erb:254
 #: ../../../app/views/passwords/audit.html.erb:97
@@ -105,7 +95,7 @@ msgstr "Den pushen har redan gått ut."
 msgid "The push content has been deleted and the secret URL expired."
 msgstr "Det pushade innehållet har tagits bort och den hemliga URLen har löpt ut."
 
-#: ../../../app/controllers/urls_controller.rb:206
+#: ../../../app/controllers/urls_controller.rb:147
 msgid "Invalid URL: Must have a valid URI scheme."
 msgstr "Ogiltig URL: Måste ha ett giltigt URI-schema."
 
@@ -967,11 +957,14 @@ msgid "Expire secret link and delete after:"
 msgstr "Låt länken förfalla vid och ta bort efter:"
 
 #: ../../../app/views/file_pushes/new.html.erb:78
-#: ../../../app/views/file_pushes/preview.html.erb:16
+#: ../../../app/views/file_pushes/preview.html.erb:60
+#: ../../../app/views/file_pushes/print_preview.html.erb:16
 #: ../../../app/views/passwords/new.html.erb:86
-#: ../../../app/views/passwords/preview.html.erb:16
+#: ../../../app/views/passwords/preview.html.erb:60
+#: ../../../app/views/passwords/print_preview.html.erb:16
 #: ../../../app/views/urls/new.html.erb:73
-#: ../../../app/views/urls/preview.html.erb:16
+#: ../../../app/views/urls/preview.html.erb:60
+#: ../../../app/views/urls/print_preview.html.erb:16
 msgid "(whichever comes first)"
 msgstr "(det som kommer först)"
 
@@ -1101,112 +1094,172 @@ msgstr "Din push har skapats."
 msgid "Use this secret link to share it:"
 msgstr "Använd den här hemliga länken för att dela den:"
 
-#: ../../../app/views/file_pushes/preview.html.erb:12
-#: ../../../app/views/urls/preview.html.erb:12
+#: ../../../app/views/file_pushes/preview.html.erb:14
+#: ../../../app/views/passwords/preview.html.erb:14
+#: ../../../app/views/urls/preview.html.erb:14
+msgid "Print & Share"
+msgstr "Skriv ut och dela"
+
+#: ../../../app/views/file_pushes/preview.html.erb:19
+#: ../../../app/views/passwords/preview.html.erb:19
+#: ../../../app/views/urls/preview.html.erb:19
+msgid "Generate a Printable Page for End Users"
+msgstr "Skapa en utskrivbar sida för slutanvändare"
+
+#: ../../../app/views/file_pushes/preview.html.erb:24
+#: ../../../app/views/file_pushes/preview.html.erb:26
+#: ../../../app/views/passwords/preview.html.erb:24
+#: ../../../app/views/passwords/preview.html.erb:26
+#: ../../../app/views/urls/preview.html.erb:24
+#: ../../../app/views/urls/preview.html.erb:26
+msgid "Optional Custom Message"
+msgstr "Valfritt anpassat meddelande"
+
+#: ../../../app/views/file_pushes/preview.html.erb:35
+#: ../../../app/views/passwords/preview.html.erb:35
+#: ../../../app/views/urls/preview.html.erb:35
+msgid "Show Expiration Details"
+msgstr "Visa utgångsinformation"
+
+#: ../../../app/views/file_pushes/preview.html.erb:42
+#: ../../../app/views/passwords/preview.html.erb:42
+#: ../../../app/views/urls/preview.html.erb:42
+msgid "Include ID"
+msgstr "Inkludera ID"
+
+#: ../../../app/views/file_pushes/preview.html.erb:47
+#: ../../../app/views/passwords/preview.html.erb:47
+#: ../../../app/views/urls/preview.html.erb:47
+msgid "Generate"
+msgstr "Generera"
+
+#: ../../../app/views/file_pushes/preview.html.erb:56
+#: ../../../app/views/urls/preview.html.erb:56
 msgid "This push will expire after"
 msgstr "Denna push kommer att upphöra efter"
 
-#: ../../../app/views/file_pushes/preview.html.erb:13
+#: ../../../app/views/file_pushes/preview.html.erb:57
+#: ../../../app/views/file_pushes/print_preview.html.erb:13
 #: ../../../app/views/file_pushes/show.html.erb:43
-#: ../../../app/views/passwords/preview.html.erb:13
+#: ../../../app/views/passwords/preview.html.erb:57
+#: ../../../app/views/passwords/print_preview.html.erb:13
 #: ../../../app/views/passwords/show.html.erb:24
-#: ../../../app/views/urls/preview.html.erb:13
+#: ../../../app/views/urls/preview.html.erb:57
+#: ../../../app/views/urls/print_preview.html.erb:13
 msgid "day"
 msgid_plural "days"
 msgstr[0] "dag"
 msgstr[1] "dagar"
 
-#: ../../../app/views/file_pushes/preview.html.erb:14
+#: ../../../app/views/file_pushes/preview.html.erb:58
+#: ../../../app/views/file_pushes/print_preview.html.erb:14
 #: ../../../app/views/file_pushes/show.html.erb:46
 #: ../../../app/views/file_pushes/show.html.erb:49
 #: ../../../app/views/pages/about.html.erb:34
 #: ../../../app/views/pages/about.html.erb:40
-#: ../../../app/views/passwords/preview.html.erb:14
+#: ../../../app/views/passwords/preview.html.erb:58
+#: ../../../app/views/passwords/print_preview.html.erb:14
 #: ../../../app/views/passwords/show.html.erb:27
 #: ../../../app/views/passwords/show.html.erb:30
-#: ../../../app/views/urls/preview.html.erb:14
+#: ../../../app/views/urls/preview.html.erb:58
+#: ../../../app/views/urls/print_preview.html.erb:14
 msgid "or"
 msgstr "eller"
 
-#: ../../../app/views/file_pushes/preview.html.erb:15
-#: ../../../app/views/passwords/preview.html.erb:15
-#: ../../../app/views/urls/preview.html.erb:15
+#: ../../../app/views/file_pushes/preview.html.erb:59
+#: ../../../app/views/file_pushes/print_preview.html.erb:15
+#: ../../../app/views/passwords/preview.html.erb:59
+#: ../../../app/views/passwords/print_preview.html.erb:15
+#: ../../../app/views/urls/preview.html.erb:59
+#: ../../../app/views/urls/print_preview.html.erb:15
 msgid "view"
 msgid_plural "views"
 msgstr[0] "visning"
 msgstr[1] "visningar"
 
-#: ../../../app/views/file_pushes/preview.html.erb:19
-#: ../../../app/views/file_pushes/preview.html.erb:21
+#: ../../../app/views/file_pushes/preview.html.erb:63
+#: ../../../app/views/file_pushes/preview.html.erb:65
 #: ../../../app/views/pages/about.html.erb:72
 #: ../../../app/views/pages/about.html.erb:95
 #: ../../../app/views/pages/faq.html.erb:75
 #: ../../../app/views/pages/faq.html.erb:143
-#: ../../../app/views/passwords/preview.html.erb:19
-#: ../../../app/views/passwords/preview.html.erb:21
+#: ../../../app/views/passwords/preview.html.erb:63
+#: ../../../app/views/passwords/preview.html.erb:65
 msgid "and"
 msgstr "och"
 
-#: ../../../app/views/file_pushes/preview.html.erb:19
-#: ../../../app/views/passwords/preview.html.erb:19
+#: ../../../app/views/file_pushes/preview.html.erb:63
+#: ../../../app/views/passwords/preview.html.erb:63
 msgid "can be"
 msgstr "kan vara"
 
-#: ../../../app/views/file_pushes/preview.html.erb:19
-#: ../../../app/views/file_pushes/preview.html.erb:21
-#: ../../../app/views/passwords/preview.html.erb:19
-#: ../../../app/views/passwords/preview.html.erb:21
+#: ../../../app/views/file_pushes/preview.html.erb:63
+#: ../../../app/views/file_pushes/preview.html.erb:65
+#: ../../../app/views/passwords/preview.html.erb:63
+#: ../../../app/views/passwords/preview.html.erb:65
 msgid "deleted by viewers."
 msgstr "raderas av tittarna."
 
-#: ../../../app/views/file_pushes/preview.html.erb:21
-#: ../../../app/views/passwords/preview.html.erb:21
+#: ../../../app/views/file_pushes/preview.html.erb:65
+#: ../../../app/views/passwords/preview.html.erb:65
 msgid "can NOT be"
 msgstr "kan INTE vara"
 
-#: ../../../app/views/file_pushes/preview.html.erb:26
-#: ../../../app/views/passwords/preview.html.erb:26
-#: ../../../app/views/urls/preview.html.erb:20
+#: ../../../app/views/file_pushes/preview.html.erb:70
+#: ../../../app/views/passwords/preview.html.erb:70
+#: ../../../app/views/urls/preview.html.erb:64
 msgid "It also includes a"
 msgstr "Den innehåller också en"
 
-#: ../../../app/views/file_pushes/preview.html.erb:26
-#: ../../../app/views/passwords/preview.html.erb:26
-#: ../../../app/views/urls/preview.html.erb:20
+#: ../../../app/views/file_pushes/preview.html.erb:70
+#: ../../../app/views/passwords/preview.html.erb:70
+#: ../../../app/views/urls/preview.html.erb:64
 msgid "1-click preliminary retrieval step"
 msgstr "Preliminär 1-klickhämtning"
 
-#: ../../../app/views/file_pushes/preview.html.erb:30
-#: ../../../app/views/urls/preview.html.erb:24
+#: ../../../app/views/file_pushes/preview.html.erb:74
+#: ../../../app/views/urls/preview.html.erb:68
 msgid "View This Push Now"
 msgstr "Se denna push nu"
 
-#: ../../../app/views/file_pushes/preview.html.erb:30
-#: ../../../app/views/passwords/preview.html.erb:30
-#: ../../../app/views/urls/preview.html.erb:24
+#: ../../../app/views/file_pushes/preview.html.erb:74
+#: ../../../app/views/passwords/preview.html.erb:74
+#: ../../../app/views/urls/preview.html.erb:68
 msgid "(will burn a view) or"
 msgstr "(kommer att bränna en visning) eller"
 
-#: ../../../app/views/file_pushes/preview.html.erb:31
-#: ../../../app/views/urls/preview.html.erb:25
+#: ../../../app/views/file_pushes/preview.html.erb:75
+#: ../../../app/views/urls/preview.html.erb:69
 msgid "Push Another"
 msgstr "Tryck på en annan"
 
-#: ../../../app/views/file_pushes/preview.html.erb:36
-#: ../../../app/views/passwords/preview.html.erb:36
-#: ../../../app/views/urls/preview.html.erb:30
+#: ../../../app/views/file_pushes/preview.html.erb:80
+#: ../../../app/views/passwords/preview.html.erb:80
+#: ../../../app/views/urls/preview.html.erb:74
 msgid "View Audit Log"
 msgstr "Visa granskningslogg"
 
-#: ../../../app/views/file_pushes/preview.html.erb:41
-#: ../../../app/views/passwords/preview.html.erb:41
-#: ../../../app/views/urls/preview.html.erb:35
+#: ../../../app/views/file_pushes/preview.html.erb:85
+#: ../../../app/views/passwords/preview.html.erb:85
+#: ../../../app/views/urls/preview.html.erb:79
 msgid ""
 "Tip: Pushing to an international user?  Change the secret link language using "
 "the dropdown menu to the right of the URL."
 msgstr ""
 "Tips: Skickar du till en internationell användare? Ändra det hemliga länkspråk"
 "et med rullgardinsmenyn till höger om URLen."
+
+#: ../../../app/views/file_pushes/print_preview.html.erb:1
+#: ../../../app/views/passwords/print_preview.html.erb:1
+#: ../../../app/views/urls/print_preview.html.erb:1
+msgid "Your Secret URL"
+msgstr "Din hemliga URL"
+
+#: ../../../app/views/file_pushes/print_preview.html.erb:12
+#: ../../../app/views/passwords/print_preview.html.erb:12
+#: ../../../app/views/urls/print_preview.html.erb:12
+msgid "This data contained here will expire after"
+msgstr "Denna information som finns här kommer att upphöra att gälla efter"
 
 #: ../../../app/views/file_pushes/show.html.erb:1
 #: ../../../app/views/passwords/show.html.erb:1
@@ -1298,6 +1351,7 @@ msgstr ""
 "Om det behövs kontaktar du personen eller organisationen som gav dig denna hem"
 "liga URL."
 
+#: ../../../app/views/layouts/admin/application.html.erb:41
 #: ../../../app/views/layouts/login.html.erb:31
 #: ../../../app/views/shared/_footer.html.erb:11
 #: ../../../app/views/shared/_footer.html.erb:15
@@ -1662,8 +1716,8 @@ msgstr ""
 "n slutgiltig säkerhetslösning."
 
 #: ../../../app/views/pages/faq.html.erb:59
-msgid "Password Pusher is opensource"
-msgstr "Password Pusher är open source"
+msgid "Password Pusher is open-source"
+msgstr "Password Pusher är öppen källkod"
 
 #: ../../../app/views/pages/faq.html.erb:60
 msgid ""
@@ -1836,13 +1890,13 @@ msgstr ""
 
 #: ../../../app/views/pages/faq.html.erb:172
 msgid ""
-"The source code is released under the GNU General Public License v3.0 and that"
-" pretty much defines any and all limitations. There are quite a few rebranded "
-"and redesigned clone sites of Password Pusher and I welcome them all."
+"The source code is released under the Apache 2.0 License and that pretty much "
+"defines any and all limitations. There are quite a few rebranded and redesigne"
+"d clone sites of Password Pusher and I welcome them all."
 msgstr ""
-"Källkoden är släppt under GNU General Public License v3.0 och den definierar i"
-" stort sett alla begränsningar. Det finns en hel del ommärkta och omdesignade "
-"klonsidor för Password Pusher och jag välkomnar dem alla."
+"Källkoden släpps under Apache 2.0-licensen och det definierar i stort sett all"
+"a begränsningar. Det finns en hel del ommärkta och omdesignade klonsidor av Pa"
+"ssword Pusher och jag välkomnar dem alla."
 
 #: ../../../app/views/pages/faq.html.erb:180
 msgid "Why would I want to run my own private instance of Password Pusher?"
@@ -2188,7 +2242,7 @@ msgstr "Kommandoradsverktyg"
 msgid "Applications"
 msgstr "Applikationer"
 
-#: ../../../app/views/pages/tools.html.erb:82
+#: ../../../app/views/pages/tools.html.erb:74
 msgid ""
 "This API allows you to interface with Password Pusher via JSON.  This can be u"
 "tilized by existing utilities such as curl, wget or any programming language. "
@@ -2198,19 +2252,19 @@ msgstr ""
 "av befintliga verktyg som curl, wget eller något programmeringsspråk. Se exemp"
 "len nedan för några idéer."
 
-#: ../../../app/views/pages/tools.html.erb:85
+#: ../../../app/views/pages/tools.html.erb:77
 msgid "API Endpoint Documentation"
 msgstr "API Endpoint Documentation"
 
-#: ../../../app/views/pages/tools.html.erb:86
+#: ../../../app/views/pages/tools.html.erb:78
 msgid "Walkthrough & Examples"
 msgstr "Genomgång & exempel"
 
-#: ../../../app/views/pages/tools.html.erb:89
+#: ../../../app/views/pages/tools.html.erb:81
 msgid "Examples"
 msgstr "Exempel"
 
-#: ../../../app/views/pages/tools.html.erb:98
+#: ../../../app/views/pages/tools.html.erb:90
 msgid ""
 "You can test this in your browser Javascript console by going to the front pag"
 "e of Password Pusher and enter:"
@@ -2218,7 +2272,7 @@ msgstr ""
 "Du kan testa detta i din webbläsares Javascript-konsol genom att gå till först"
 "asidan av Password Pusher och ange:"
 
-#: ../../../app/views/pages/tools.html.erb:106
+#: ../../../app/views/pages/tools.html.erb:112
 msgid "See more explanation and examples in our"
 msgstr "Se mer förklaringar och exempel i vår"
 
@@ -2433,15 +2487,15 @@ msgstr ""
 msgid "Your Password has been Pushed"
 msgstr "Ditt lösenord har pushats"
 
-#: ../../../app/views/passwords/preview.html.erb:12
+#: ../../../app/views/passwords/preview.html.erb:56
 msgid "This newly pushed password will expire after"
 msgstr "Det här nya lösenordet löper ut efter"
 
-#: ../../../app/views/passwords/preview.html.erb:30
+#: ../../../app/views/passwords/preview.html.erb:74
 msgid "View This Password Now"
 msgstr "Se det här lösenordet nu"
 
-#: ../../../app/views/passwords/preview.html.erb:31
+#: ../../../app/views/passwords/preview.html.erb:75
 msgid "Push Another Password"
 msgstr "Pusha ett nytt lösenord"
 

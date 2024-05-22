@@ -20,29 +20,30 @@ __Simple & Secure Password Sharing with Auto-Expiration of Shared Items__
 
 Give your users the tools to be secure by default.
 
-Password Pusher is an opensource application to communicate passwords over the web. Links to passwords expire after a certain number of views and/or time has passed.
+Password Pusher is an open source application to communicate passwords over the web. Links to passwords expire after a certain number of views and/or time has passed.
 
 Hosted at [pwpush.com](https://pwpush.com) but you can also easily run your own private instance with just a few steps.
 
 * __Easy-to-install:__ Host your own via Docker, a cloud service or just use [pwpush.com](https://pwpush.com)
-* __Opensource:__ No blackbox code.  Only trusted, tested and reviewed opensource code.
-* __Versatile:__ Push passwords, text, files or URLs that autoexpire and self delete.
+* __Open Source:__ No blackbox code.  Only trusted, tested and reviewed open source code.
+* __Versatile:__ Push passwords, text, files or URLs that auto-expire and self delete.
 * __Audit logging:__ Track and control what you've shared and see who has viewed it.
 * __Encrypted storage:__ All sensitive data is stored encrypted and deleted entirely once expired.
 * __Host your own:__ Database backed or ephemeral, easily run your own instance isolated from the world.
 * __JSON API:__ Raw JSON API available for 3rd party tools or command line via `curl` or `wget`.
 * __Command line interface:__ Automate your password distribution with CLI tools or custom scripts.
 * __Logins__: Invite your colleagues and track what is pushed and who retrieved it.
+* __Admin Dashboard:__ Manage your self-hosted instance with a built in admin dashboard.
 * __Internationalized:__ 29 language translations are bundled in.  Easily selectable via UI or URL
 * __Themes:__ [26 themes](./Themes.md) bundled in courtesy of Bootswatch.  Select with a simple environment variable.
 * __Unbranded delivery page:__ No logos, superfluous text or unrelated links to confuse end users.
 * __Customizable:__ Change text and default options via environment variables.
 * __Light & dark themes:__  Via CSS @media integration, the default site theme follows your local preferences.
-* __Rebrandable:__ Customize the site name, tagline and logo to fit your environment.
+* __Re-Brandable:__ Customize the site name, tagline and logo to fit your environment.
 * __Custom CSS:__ Bundle in your own custom CSS to add your own design.
 * __10 Years Old:__ Password Pusher has securely delivered millions and millions of passwords in its 10 year history.
 * __Actively Maintained:__ I happily work for the good karma of the great IT/Security community.
-* __Honest Software:__  Opensource written and maintained by [me](https://github.com/pglombardo) with the help of some great contributors.  No organizations, corporations or evil agendas.
+* __Honest Software:__  Open source written and maintained by [me](https://github.com/pglombardo) with the help of some great contributors.  No organizations, corporations or evil agendas.
 
 💌 --> Sign up for [the newsletter](https://buttondown.email/pwpush?tag=github) to get updates on big releases, security issues, new features, integrations, tips and more.
 
@@ -58,13 +59,13 @@ Password Pusher is also [on Twitter](https://twitter.com/pwpush), [Gettr](https:
 [![](./app/assets/images/features/preliminary-step-thumb.png)](./app/assets/images/features/preliminary-step.gif)
 
 
-# ⚡️ Quickstart
+# ⚡️ Quick Start
 
 → Go to [pwpush.com](https://pwpush.com) and try it out.
 
 _or_
 
-→ Run your own instance with one command: `docker run -d -p "5100:5100" pglombardo/pwpush:release` then go to http://localhost:5100
+→ Run your own instance with one command: `docker run -d -p "5100:5100" pglombardo/pwpush:latest` then go to http://localhost:5100
 
 _or_
 
@@ -87,27 +88,41 @@ Docker images of Password Pusher are available on [Docker hub](https://hub.docke
 **➜ ephemeral**
 _Temporary database that is wiped on container restart._
 
-    docker run -d -p "5100:5100" pglombardo/pwpush:release
+    docker run -d -p "5100:5100" pglombardo/pwpush:latest
 
 [Learn more](https://github.com/pglombardo/PasswordPusher/tree/master/containers/docker#ephemeral)
 
 **➜ using an External Postgres Database**
 _Postgres database backed instance._
 
-    docker run -d -p "5100:5100" pglombardo/pwpush:release -e DATABASE_URL=postgres://pwpush_user:pwpush_passwd@postgres:5432/pwpush_db
+    docker run -d -p "5100:5100" pglombardo/pwpush:latest -e DATABASE_URL=postgres://pwpush_user:pwpush_passwd@postgres:5432/pwpush_db
 
 [Learn more](https://github.com/pglombardo/PasswordPusher/tree/master/containers/docker#postgres)
 
 **➜ using an External MariaDB (MySQL) Database**
 _Mariadb database backed instance._
 
-    docker run -d -p "5100:5100" pglombardo/pwpush:release -e DATABASE_URL=mysql2://pwpush_user:pwpush_passwd@mysql:3306/pwpush_db
+    docker run -d -p "5100:5100" pglombardo/pwpush:latest -e DATABASE_URL=mysql2://pwpush_user:pwpush_passwd@mysql:3306/pwpush_db
 
 [Learn more](https://github.com/pglombardo/PasswordPusher/tree/master/containers/docker#mysql)
 
-_Note: The `latest` Docker container tag builds nightly off of the latest code changes and can occasionally be unstable.  Always use the ['release' or version'd tags](https://hub.docker.com/r/pglombardo/pwpush/tags?page=1&ordering=last_updated) if you prefer more stability in releases._
+_Note: Putting passwords in a command line is bad practice.  See the related Database pages for alternative options._
 
 **See Also:** [Guide to DATABASE_URL](https://github.com/pglombardo/PasswordPusher/wiki/Guide-to-DATABASE_URL)
+
+### Docker Tags Reference
+
+| Tag    | Purpose          |
+|--------|------------------|
+| `vX.X.X` | Versioned tags |
+| `stable` | The most stable tag for proven releases |
+| `latest` | The latest (most recent) released vX.X.X  |
+| `nightly` | The nightly development build  |
+
+If in doubt, use `latest` or the `stable` tag.
+
+_The previously used `release` tag is no longer used and won't be updated again.  Instead use the `stable` tag._
+
 
 ## With Docker Compose
 
@@ -154,7 +169,7 @@ See the prebuilt [Docker Compose example here](https://github.com/pglombardo/Pas
 
 ## From Source
 
-I generally don't suggest building this application from source code for casual use.  The is due to the complexities in the toolset across platforms.  Running from source code is best when you plan to develop the application.
+I generally don't suggest building this application from source code for casual use.  The is due to the complexities in the tool set across platforms.  Running from source code is best when you plan to develop the application.
 
 For quick and easy, use the Docker containers instead.
 
@@ -300,7 +315,7 @@ If you would like to volunteer and assist in translating, see [this page](https:
 | Fredrik Arvas|[Swedish](https://pwpush.com/sv/p/ny) | |
 | Pedro Marques | [European Portuguese](https://pwpush.com/pt-pt/p/novo) | |
 
-Also thanks to [translation.io](https://translation.io) for their great service in managing translations.  It's also generously free for opensource projects.
+Also thanks to [translation.io](https://translation.io) for their great service in managing translations.  It's also generously free for open source projects.
 
 ## Containers
 

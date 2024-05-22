@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PasswordPusher 1.0\n"
 "Report-Msgid-Bugs-To: contact@translation.io\n"
-"POT-Creation-Date: 2024-02-19 17:12+0100\n"
-"PO-Revision-Date: 2024-02-19 17:12+0100\n"
+"POT-Creation-Date: 2024-04-18 17:53+0200\n"
+"PO-Revision-Date: 2024-04-18 17:54+0200\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Korean\n"
 "Language: ko\n"
@@ -39,55 +39,46 @@ msgid ""
 msgstr "피드백을 보낼 수 없습니다. 인성 테스트를 통과했습니까? 유효한 이메일? 다시 시도하십시오?"
 
 #: ../../../app/controllers/file_pushes_controller.rb:105
-#: ../../../app/controllers/passwords_controller.rb:163
-#: ../../../app/controllers/urls_controller.rb:155
+#: ../../../app/controllers/passwords_controller.rb:104
+#: ../../../app/controllers/urls_controller.rb:96
 msgid ""
 "That passphrase is incorrect.  Please try again or contact the person or organ"
 "ization that sent you this link."
 msgstr "해당 암호가 올바르지 않습니다. 다시 시도하거나 이 링크를 보낸 사람 또는 조직에 문의하십시오."
 
-#: ../../../app/controllers/file_pushes_controller.rb:147
-msgid ""
-"Only 10 active file pushes allowed while in Beta and until things are stable. "
-"If it's an option, you can manually expire existing pushes before creating new"
-" ones."
-msgstr ""
-"베타 상태에서 상황이 안정될 때까지 10개의 활성 파일 푸시만 허용됩니다. 옵션인 경우 새 푸시를 생성하기 전에 기존 푸시를 수동으로 만료할"
-" 수 있습니다."
-
-#: ../../../app/controllers/file_pushes_controller.rb:229
-#: ../../../app/controllers/passwords_controller.rb:305
-#: ../../../app/controllers/urls_controller.rb:297
+#: ../../../app/controllers/file_pushes_controller.rb:228
+#: ../../../app/controllers/passwords_controller.rb:239
+#: ../../../app/controllers/urls_controller.rb:231
 msgid "That push doesn't belong to you."
 msgstr "그 푸시는 당신의 것이 아닙니다."
 
-#: ../../../app/controllers/file_pushes_controller.rb:259
-#: ../../../app/controllers/passwords_controller.rb:336
-#: ../../../app/controllers/urls_controller.rb:328
-#: ../../../app/controllers/urls_controller.rb:332
+#: ../../../app/controllers/file_pushes_controller.rb:258
+#: ../../../app/controllers/passwords_controller.rb:269
+#: ../../../app/controllers/urls_controller.rb:261
+#: ../../../app/controllers/urls_controller.rb:265
 msgid "That push does not belong to you."
 msgstr "그 푸시는 당신의 것이 아닙니다."
 
-#: ../../../app/controllers/file_pushes_controller.rb:264
-#: ../../../app/controllers/passwords_controller.rb:341
+#: ../../../app/controllers/file_pushes_controller.rb:263
+#: ../../../app/controllers/passwords_controller.rb:274
 msgid "That push is not deletable by viewers."
 msgstr "그 푸시는 시청자가 삭제할 수 없습니다."
 
+#: ../../../app/controllers/file_pushes_controller.rb:269
 #: ../../../app/controllers/file_pushes_controller.rb:270
-#: ../../../app/controllers/file_pushes_controller.rb:271
-#: ../../../app/controllers/passwords_controller.rb:347
-#: ../../../app/controllers/passwords_controller.rb:348
-#: ../../../app/controllers/urls_controller.rb:338
-#: ../../../app/controllers/urls_controller.rb:339
+#: ../../../app/controllers/passwords_controller.rb:280
+#: ../../../app/controllers/passwords_controller.rb:281
+#: ../../../app/controllers/urls_controller.rb:271
+#: ../../../app/controllers/urls_controller.rb:272
 msgid "That push is already expired."
 msgstr "해당 푸시는 이미 만료되었습니다."
 
-#: ../../../app/controllers/file_pushes_controller.rb:289
-#: ../../../app/controllers/file_pushes_controller.rb:292
-#: ../../../app/controllers/passwords_controller.rb:365
-#: ../../../app/controllers/passwords_controller.rb:368
-#: ../../../app/controllers/urls_controller.rb:356
-#: ../../../app/controllers/urls_controller.rb:359
+#: ../../../app/controllers/file_pushes_controller.rb:288
+#: ../../../app/controllers/file_pushes_controller.rb:291
+#: ../../../app/controllers/passwords_controller.rb:298
+#: ../../../app/controllers/passwords_controller.rb:301
+#: ../../../app/controllers/urls_controller.rb:289
+#: ../../../app/controllers/urls_controller.rb:292
 #: ../../../app/views/file_pushes/audit.html.erb:97
 #: ../../../app/views/file_pushes/audit.html.erb:254
 #: ../../../app/views/passwords/audit.html.erb:97
@@ -97,7 +88,7 @@ msgstr "해당 푸시는 이미 만료되었습니다."
 msgid "The push content has been deleted and the secret URL expired."
 msgstr "푸시 콘텐츠가 삭제되었으며 비밀 URL이 만료되었습니다."
 
-#: ../../../app/controllers/urls_controller.rb:206
+#: ../../../app/controllers/urls_controller.rb:147
 msgid "Invalid URL: Must have a valid URI scheme."
 msgstr "잘못된 URL: 유효한 URI 스키마가 있어야 합니다."
 
@@ -928,11 +919,14 @@ msgid "Expire secret link and delete after:"
 msgstr "비밀 링크 만료 및 다음 이후 삭제:"
 
 #: ../../../app/views/file_pushes/new.html.erb:78
-#: ../../../app/views/file_pushes/preview.html.erb:16
+#: ../../../app/views/file_pushes/preview.html.erb:60
+#: ../../../app/views/file_pushes/print_preview.html.erb:16
 #: ../../../app/views/passwords/new.html.erb:86
-#: ../../../app/views/passwords/preview.html.erb:16
+#: ../../../app/views/passwords/preview.html.erb:60
+#: ../../../app/views/passwords/print_preview.html.erb:16
 #: ../../../app/views/urls/new.html.erb:73
-#: ../../../app/views/urls/preview.html.erb:16
+#: ../../../app/views/urls/preview.html.erb:60
+#: ../../../app/views/urls/print_preview.html.erb:16
 msgid "(whichever comes first)"
 msgstr "(뭐든지 가장 먼저 온것)"
 
@@ -1060,110 +1054,170 @@ msgstr "푸시가 생성되었습니다."
 msgid "Use this secret link to share it:"
 msgstr "이 비밀 링크를 사용하여 공유하십시오."
 
-#: ../../../app/views/file_pushes/preview.html.erb:12
-#: ../../../app/views/urls/preview.html.erb:12
+#: ../../../app/views/file_pushes/preview.html.erb:14
+#: ../../../app/views/passwords/preview.html.erb:14
+#: ../../../app/views/urls/preview.html.erb:14
+msgid "Print & Share"
+msgstr "인쇄 및 공유"
+
+#: ../../../app/views/file_pushes/preview.html.erb:19
+#: ../../../app/views/passwords/preview.html.erb:19
+#: ../../../app/views/urls/preview.html.erb:19
+msgid "Generate a Printable Page for End Users"
+msgstr "최종 사용자를 위한 인쇄 가능한 페이지 생성"
+
+#: ../../../app/views/file_pushes/preview.html.erb:24
+#: ../../../app/views/file_pushes/preview.html.erb:26
+#: ../../../app/views/passwords/preview.html.erb:24
+#: ../../../app/views/passwords/preview.html.erb:26
+#: ../../../app/views/urls/preview.html.erb:24
+#: ../../../app/views/urls/preview.html.erb:26
+msgid "Optional Custom Message"
+msgstr "선택적 맞춤 메시지"
+
+#: ../../../app/views/file_pushes/preview.html.erb:35
+#: ../../../app/views/passwords/preview.html.erb:35
+#: ../../../app/views/urls/preview.html.erb:35
+msgid "Show Expiration Details"
+msgstr "만료 세부정보 표시"
+
+#: ../../../app/views/file_pushes/preview.html.erb:42
+#: ../../../app/views/passwords/preview.html.erb:42
+#: ../../../app/views/urls/preview.html.erb:42
+msgid "Include ID"
+msgstr "ID 포함"
+
+#: ../../../app/views/file_pushes/preview.html.erb:47
+#: ../../../app/views/passwords/preview.html.erb:47
+#: ../../../app/views/urls/preview.html.erb:47
+msgid "Generate"
+msgstr "생성하다"
+
+#: ../../../app/views/file_pushes/preview.html.erb:56
+#: ../../../app/views/urls/preview.html.erb:56
 msgid "This push will expire after"
 msgstr "이 푸시는 다음 날짜 이후에 만료됩니다."
 
-#: ../../../app/views/file_pushes/preview.html.erb:13
+#: ../../../app/views/file_pushes/preview.html.erb:57
+#: ../../../app/views/file_pushes/print_preview.html.erb:13
 #: ../../../app/views/file_pushes/show.html.erb:43
-#: ../../../app/views/passwords/preview.html.erb:13
+#: ../../../app/views/passwords/preview.html.erb:57
+#: ../../../app/views/passwords/print_preview.html.erb:13
 #: ../../../app/views/passwords/show.html.erb:24
-#: ../../../app/views/urls/preview.html.erb:13
+#: ../../../app/views/urls/preview.html.erb:57
+#: ../../../app/views/urls/print_preview.html.erb:13
 msgid "day"
 msgid_plural "days"
 msgstr[0] "날"
 msgstr[1] ""
 
-#: ../../../app/views/file_pushes/preview.html.erb:14
+#: ../../../app/views/file_pushes/preview.html.erb:58
+#: ../../../app/views/file_pushes/print_preview.html.erb:14
 #: ../../../app/views/file_pushes/show.html.erb:46
 #: ../../../app/views/file_pushes/show.html.erb:49
 #: ../../../app/views/pages/about.html.erb:34
 #: ../../../app/views/pages/about.html.erb:40
-#: ../../../app/views/passwords/preview.html.erb:14
+#: ../../../app/views/passwords/preview.html.erb:58
+#: ../../../app/views/passwords/print_preview.html.erb:14
 #: ../../../app/views/passwords/show.html.erb:27
 #: ../../../app/views/passwords/show.html.erb:30
-#: ../../../app/views/urls/preview.html.erb:14
+#: ../../../app/views/urls/preview.html.erb:58
+#: ../../../app/views/urls/print_preview.html.erb:14
 msgid "or"
 msgstr "또는"
 
-#: ../../../app/views/file_pushes/preview.html.erb:15
-#: ../../../app/views/passwords/preview.html.erb:15
-#: ../../../app/views/urls/preview.html.erb:15
+#: ../../../app/views/file_pushes/preview.html.erb:59
+#: ../../../app/views/file_pushes/print_preview.html.erb:15
+#: ../../../app/views/passwords/preview.html.erb:59
+#: ../../../app/views/passwords/print_preview.html.erb:15
+#: ../../../app/views/urls/preview.html.erb:59
+#: ../../../app/views/urls/print_preview.html.erb:15
 msgid "view"
 msgid_plural "views"
 msgstr[0] "견해"
 msgstr[1] ""
 
-#: ../../../app/views/file_pushes/preview.html.erb:19
-#: ../../../app/views/file_pushes/preview.html.erb:21
+#: ../../../app/views/file_pushes/preview.html.erb:63
+#: ../../../app/views/file_pushes/preview.html.erb:65
 #: ../../../app/views/pages/about.html.erb:72
 #: ../../../app/views/pages/about.html.erb:95
 #: ../../../app/views/pages/faq.html.erb:75
 #: ../../../app/views/pages/faq.html.erb:143
-#: ../../../app/views/passwords/preview.html.erb:19
-#: ../../../app/views/passwords/preview.html.erb:21
+#: ../../../app/views/passwords/preview.html.erb:63
+#: ../../../app/views/passwords/preview.html.erb:65
 msgid "and"
 msgstr "그리고"
 
-#: ../../../app/views/file_pushes/preview.html.erb:19
-#: ../../../app/views/passwords/preview.html.erb:19
+#: ../../../app/views/file_pushes/preview.html.erb:63
+#: ../../../app/views/passwords/preview.html.erb:63
 msgid "can be"
 msgstr "될 수 있다"
 
-#: ../../../app/views/file_pushes/preview.html.erb:19
-#: ../../../app/views/file_pushes/preview.html.erb:21
-#: ../../../app/views/passwords/preview.html.erb:19
-#: ../../../app/views/passwords/preview.html.erb:21
+#: ../../../app/views/file_pushes/preview.html.erb:63
+#: ../../../app/views/file_pushes/preview.html.erb:65
+#: ../../../app/views/passwords/preview.html.erb:63
+#: ../../../app/views/passwords/preview.html.erb:65
 msgid "deleted by viewers."
 msgstr "시청자에 의해 삭제되었습니다."
 
-#: ../../../app/views/file_pushes/preview.html.erb:21
-#: ../../../app/views/passwords/preview.html.erb:21
+#: ../../../app/views/file_pushes/preview.html.erb:65
+#: ../../../app/views/passwords/preview.html.erb:65
 msgid "can NOT be"
 msgstr "수 없습니다"
 
-#: ../../../app/views/file_pushes/preview.html.erb:26
-#: ../../../app/views/passwords/preview.html.erb:26
-#: ../../../app/views/urls/preview.html.erb:20
+#: ../../../app/views/file_pushes/preview.html.erb:70
+#: ../../../app/views/passwords/preview.html.erb:70
+#: ../../../app/views/urls/preview.html.erb:64
 msgid "It also includes a"
 msgstr "또한"
 
-#: ../../../app/views/file_pushes/preview.html.erb:26
-#: ../../../app/views/passwords/preview.html.erb:26
-#: ../../../app/views/urls/preview.html.erb:20
+#: ../../../app/views/file_pushes/preview.html.erb:70
+#: ../../../app/views/passwords/preview.html.erb:70
+#: ../../../app/views/urls/preview.html.erb:64
 msgid "1-click preliminary retrieval step"
 msgstr "1-click 예비 검색 단계"
 
-#: ../../../app/views/file_pushes/preview.html.erb:30
-#: ../../../app/views/urls/preview.html.erb:24
+#: ../../../app/views/file_pushes/preview.html.erb:74
+#: ../../../app/views/urls/preview.html.erb:68
 msgid "View This Push Now"
 msgstr "지금 이 푸시 보기"
 
-#: ../../../app/views/file_pushes/preview.html.erb:30
-#: ../../../app/views/passwords/preview.html.erb:30
-#: ../../../app/views/urls/preview.html.erb:24
+#: ../../../app/views/file_pushes/preview.html.erb:74
+#: ../../../app/views/passwords/preview.html.erb:74
+#: ../../../app/views/urls/preview.html.erb:68
 msgid "(will burn a view) or"
 msgstr "(보기를 구울 것입니다) 또는"
 
-#: ../../../app/views/file_pushes/preview.html.erb:31
-#: ../../../app/views/urls/preview.html.erb:25
+#: ../../../app/views/file_pushes/preview.html.erb:75
+#: ../../../app/views/urls/preview.html.erb:69
 msgid "Push Another"
 msgstr "다른 사람을 밀어"
 
-#: ../../../app/views/file_pushes/preview.html.erb:36
-#: ../../../app/views/passwords/preview.html.erb:36
-#: ../../../app/views/urls/preview.html.erb:30
+#: ../../../app/views/file_pushes/preview.html.erb:80
+#: ../../../app/views/passwords/preview.html.erb:80
+#: ../../../app/views/urls/preview.html.erb:74
 msgid "View Audit Log"
 msgstr "감사 로그 보기"
 
-#: ../../../app/views/file_pushes/preview.html.erb:41
-#: ../../../app/views/passwords/preview.html.erb:41
-#: ../../../app/views/urls/preview.html.erb:35
+#: ../../../app/views/file_pushes/preview.html.erb:85
+#: ../../../app/views/passwords/preview.html.erb:85
+#: ../../../app/views/urls/preview.html.erb:79
 msgid ""
 "Tip: Pushing to an international user?  Change the secret link language using "
 "the dropdown menu to the right of the URL."
 msgstr "팁: 해외 사용자에게 푸시하시겠습니까? URL 오른쪽에 있는 드롭다운 메뉴를 사용하여 비밀 링크 언어를 변경합니다."
+
+#: ../../../app/views/file_pushes/print_preview.html.erb:1
+#: ../../../app/views/passwords/print_preview.html.erb:1
+#: ../../../app/views/urls/print_preview.html.erb:1
+msgid "Your Secret URL"
+msgstr "귀하의 비밀 URL"
+
+#: ../../../app/views/file_pushes/print_preview.html.erb:12
+#: ../../../app/views/passwords/print_preview.html.erb:12
+#: ../../../app/views/urls/print_preview.html.erb:12
+msgid "This data contained here will expire after"
+msgstr "여기에 포함된 이 데이터는 다음 이후에 만료됩니다."
 
 #: ../../../app/views/file_pushes/show.html.erb:1
 #: ../../../app/views/passwords/show.html.erb:1
@@ -1253,6 +1307,7 @@ msgid ""
 "URL."
 msgstr "필요한 경우 이 비밀 URL을 제공한 사람이나 조직에 문의하십시오."
 
+#: ../../../app/views/layouts/admin/application.html.erb:41
 #: ../../../app/views/layouts/login.html.erb:31
 #: ../../../app/views/shared/_footer.html.erb:11
 #: ../../../app/views/shared/_footer.html.erb:15
@@ -1591,8 +1646,8 @@ msgstr ""
 "는 것을 방지합니다. 모든 보안 솔루션으로 존재하지 않습니다."
 
 #: ../../../app/views/pages/faq.html.erb:59
-msgid "Password Pusher is opensource"
-msgstr "Password Pusher는 오픈소스입니다."
+msgid "Password Pusher is open-source"
+msgstr "비밀번호 푸셔는 오픈 소스입니다."
 
 #: ../../../app/views/pages/faq.html.erb:60
 msgid ""
@@ -1750,12 +1805,12 @@ msgstr "나, 내 회사 또는 내 조직에 대한 라이선스 제한이 있�
 
 #: ../../../app/views/pages/faq.html.erb:172
 msgid ""
-"The source code is released under the GNU General Public License v3.0 and that"
-" pretty much defines any and all limitations. There are quite a few rebranded "
-"and redesigned clone sites of Password Pusher and I welcome them all."
+"The source code is released under the Apache 2.0 License and that pretty much "
+"defines any and all limitations. There are quite a few rebranded and redesigne"
+"d clone sites of Password Pusher and I welcome them all."
 msgstr ""
-"소스 코드는 GNU General Public License v3.0에 따라 공개되며 거의 모든 제한 사항을 정의합니다. Password P"
-"usher의 브랜드가 변경되고 재설계된 복제 사이트가 상당히 많이 있으며 모두 환영합니다."
+"소스 코드는 Apache 2.0 라이센스에 따라 릴리스되며 이는 거의 모든 제한 사항을 정의합니다. Password Pusher에는 브랜드가"
+" 변경되고 재설계된 복제 사이트가 꽤 많이 있으며 모두 환영합니다."
 
 #: ../../../app/views/pages/faq.html.erb:180
 msgid "Why would I want to run my own private instance of Password Pusher?"
@@ -2053,7 +2108,7 @@ msgstr "명령줄 유틸리티"
 msgid "Applications"
 msgstr "애플리케이션"
 
-#: ../../../app/views/pages/tools.html.erb:82
+#: ../../../app/views/pages/tools.html.erb:74
 msgid ""
 "This API allows you to interface with Password Pusher via JSON.  This can be u"
 "tilized by existing utilities such as curl, wget or any programming language. "
@@ -2062,25 +2117,25 @@ msgstr ""
 "이 API를 사용하면 JSON을 통해 Password Pusher와 인터페이스할 수 있습니다. 이것은 curl, wget 또는 모든 프로그래"
 "밍 언어와 같은 기존 유틸리티에서 활용할 수 있습니다. 몇 가지 아이디어는 아래 예를 참조하십시오."
 
-#: ../../../app/views/pages/tools.html.erb:85
+#: ../../../app/views/pages/tools.html.erb:77
 msgid "API Endpoint Documentation"
 msgstr "API 끝점 설명서"
 
-#: ../../../app/views/pages/tools.html.erb:86
+#: ../../../app/views/pages/tools.html.erb:78
 msgid "Walkthrough & Examples"
 msgstr "연습 및 예"
 
-#: ../../../app/views/pages/tools.html.erb:89
+#: ../../../app/views/pages/tools.html.erb:81
 msgid "Examples"
 msgstr "예"
 
-#: ../../../app/views/pages/tools.html.erb:98
+#: ../../../app/views/pages/tools.html.erb:90
 msgid ""
 "You can test this in your browser Javascript console by going to the front pag"
 "e of Password Pusher and enter:"
 msgstr "Password Pusher의 첫 페이지로 이동하고 다음을 입력하여 브라우저 Javascript 콘솔에서 이를 테스트할 수 있습니다."
 
-#: ../../../app/views/pages/tools.html.erb:106
+#: ../../../app/views/pages/tools.html.erb:112
 msgid "See more explanation and examples in our"
 msgstr "더 많은 설명과 예를 참조하십시오."
 
@@ -2280,15 +2335,15 @@ msgstr ""
 msgid "Your Password has been Pushed"
 msgstr "귀하의 비밀번호가 푸시되었습니다"
 
-#: ../../../app/views/passwords/preview.html.erb:12
+#: ../../../app/views/passwords/preview.html.erb:56
 msgid "This newly pushed password will expire after"
 msgstr "이 새로 푸시된 비밀번호는 다음 날짜 이후에 만료됩니다."
 
-#: ../../../app/views/passwords/preview.html.erb:30
+#: ../../../app/views/passwords/preview.html.erb:74
 msgid "View This Password Now"
 msgstr "지금 이 비밀번호 보기"
 
-#: ../../../app/views/passwords/preview.html.erb:31
+#: ../../../app/views/passwords/preview.html.erb:75
 msgid "Push Another Password"
 msgstr "다른 비밀번호 누르기"
 

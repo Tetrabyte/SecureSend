@@ -10,10 +10,7 @@ def load_legacy_environment_variables
   legacy_options.each do |option|
     next if Settings.send(option).nil?
 
-    Rails.logger.warn("The setting (#{option}) has been moved to the 'pw' section of the settings.yml file.\n" \
-                      "Please update your settings.yml file or if using environment variables, change the\n" \
-                      "variable name 'PWP__#{option.to_s.upcase}' to 'PWP__PW__#{option.to_s.upcase}'.\n")
-    Settings.pw.__send__(:"#{option}=", Settings.send(option))
+    Rails.logger.warn("The setting (#{option}) has been DEPRECATED and will be removed in a future version.")
     deprecations_detected = true
   end
 
