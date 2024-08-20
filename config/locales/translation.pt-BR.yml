@@ -372,6 +372,8 @@ pt-BR:
           atual para confirmar suas mudanças
       new:
         sign_up: Inscrever-se
+        account_or_team_name: Nome da conta ou equipe
+      preferred_language: língua preferida
     unlocks:
       send_instructions: Dentro de minutos, você receberá um e-mail com instruções
         de desbloqueio da sua conta.
@@ -445,6 +447,7 @@ pt-BR:
         sunset_at: Pôr do sol às
         info: Informações
     returns: devoluções
+    blank_allowed: em branco permitido
   i18n_tasks:
     add_missing:
       added:
@@ -461,11 +464,9 @@ pt-BR:
           data_format: 'Formato de dados: %{valid_text}.'
           keep_order: Mantenha a ordem das teclas
           key_pattern: Filtre por padrão de chave (por exemplo, 'common.*')
-          key_pattern_to_rename: Chave completa (padrão) para renomear. Obrigatório
           locale_to_translate_from: Local de onde traduzir
           locales_filter: 'Local(is) a processar. Especial: básico'
           missing_types: 'Filtrar por tipos: %{valid}'
-          new_key_name: Novo nome, interpola o nome original como %{key}. Obrigatório
           nostdin: Não leia de stdin
           out_format: 'Formato de saída: %{valid_text}'
           pattern_router: 'Usar roteador padrão: chaves movidas por configuração data.write'
@@ -508,6 +509,7 @@ pt-BR:
         tree_subtract: árvore A menos as chaves na árvore B
         tree_translate: Google Translate uma árvore para localidades raiz
         unused: mostrar traduções não utilizadas
+        cp: copie as chaves nos dados de localidade que correspondem ao padrão fornecido
       encourage:
       - Bom trabalho!
       - Bom trabalho!
@@ -748,6 +750,7 @@ pt-BR:
       pwgen_max_syllable_length_help: O comprimento máximo de uma sílaba na senha
         gerada.
       pwgen_syllables_count: Contagem de sílabas
+      switch: Trocar
     show:
       edit_policy: Editar política push
       policy: Política de equipe
@@ -771,6 +774,8 @@ pt-BR:
       newsletter: Boletim de Notícias
       password_generator: Gerador de senhas
       tools: Ferramentas, API e CLI
+      api_docs: Documentação da API
+      features: Características
     pw_generator_modal:
       cancel: Cancelar
       configure: Configurar geração de senha
@@ -791,6 +796,9 @@ pt-BR:
       vowels: Vogais
     navbar:
       edit_policy: Política
+    secret_url_bar:
+      secret_link_lang: Idioma do link secreto
+      autodetect: Detecção automática
   audit_logs:
     audit_log:
       created: Criado
@@ -806,6 +814,7 @@ pt-BR:
       log_viewed: Visualização bem-sucedida do endereço IP %{ip} em %{date} por %{user}
       unknown: Desconhecido
       viewed_by: Visto por %{user}
+      log_failed_passphrase: Falha na tentativa de senha em %{date} por %{user}
   dashboard:
     show:
       detail: Detalhe
@@ -827,10 +836,10 @@ pt-BR:
     create:
       feedback_sent: Feedback enviado! Nós entraremos em contato com você o mais breve
         possível.
-    failed_spam_test: Nossas desculpas, mas você falhou na verificação de spam. Você
-      pode tentar entrar em contato conosco no Github.
-    failed_to_send: Falha ao enviar comentários. Algo estava errado. Tente novamente
-      ou entre em contato conosco no Github.
+      failed_spam_test: Nossas desculpas, mas você falhou na verificação de spam.
+        Você pode tentar entrar em contato conosco no Github.
+      failed_to_send: Falha ao enviar comentários. Algo estava errado. Tente novamente
+        ou entre em contato conosco no Github.
     new:
       email: E-mail
       have_idea: Tem alguma ideia ou sugestão? Algo que você não gostou? Quer ajudar?
@@ -933,6 +942,7 @@ pt-BR:
       title: Registro de auditoria push
       visible_to: Visível apenas para você
       when: Quando
+      preview: Compartilhe este impulso
     copy_to_clipboard: Copiar para área de transferência
     day:
       one: 1 dia
@@ -943,6 +953,7 @@ pt-BR:
     expire:
       expired: O conteúdo do push foi deletado e a URL secreta expirou.
       not_deletable: Esse envio não pode ser excluído pelos visualizadores.
+      already_expired: Esse impulso já expirou.
     form:
       12_hours: 12 horas
       15_minutes: 15 minutos
@@ -998,6 +1009,8 @@ pt-BR:
       views: Visualizações
       week: Semana
       weeks: Semanas
+      payload_url_placeholder: Digite a URL para redirecionar para...
+      url_push_tip: O push criado será redirecionado para o URL fornecido.
     hour:
       one: 1 hora
       other: "%{count} horas"
@@ -1018,6 +1031,8 @@ pt-BR:
       views_remaining: Visualizações restantes
       active: Ativo
       expired: Expirado
+      all: Todos
+      remaining: Restante
     minute:
       one: 1 minuto
       other: "%{count} minutos"
@@ -1060,6 +1075,8 @@ pt-BR:
       print_and_share: Imprimir e compartilhar
       print_and_share_tip: Gere uma página imprimível para usuários finais
       show_expiration: Mostrar detalhes de expiração
+      link_lang_auto: Alternativamente, a detecção automática selecionará um idioma
+        com base nas configurações do navegador do usuário final.
     provide_text_or_file: Para criar um push, você deve fornecer texto, anexar um
       arquivo ou ambos.
     push:
@@ -1071,7 +1088,7 @@ pt-BR:
       push_controls: Controles de envio
       title: Novo impulso
       unknown: Desconhecido
-    secret_link_lang: Idioma do link secreto
+      share: Compartilhar
     settings: Configurações
     show:
       blurred: Sua senha está borrada. Clique abaixo para revelá-la.
@@ -1091,6 +1108,7 @@ pt-BR:
         %{time_unit}%{b_tag} ou %{b_tag}%{view_count} mais %{view_unit}%{b_tag} (o
         que ocorrer primeiro).
       your_link: Seu link secreto
+      intro: O seguinte conteúdo foi enviado para você.
     show_expired:
       expired_help: Caso necessário, por gentileza contate a pessoa ou organização
         que passou essa URL secreta.
@@ -1102,6 +1120,9 @@ pt-BR:
     view_audit_log: Ver registro de auditoria
     whichever: "(o que ocorrer primeiro)"
     'yes': Sim
+    payload_too_large: A carga útil é muito grande. Você só pode enviar até %{count}
+      bytes.
+    too_many_files: Você só pode anexar até %{count} arquivos por push.
   static:
     about:
       about_1: Password Pusher é uma ferramenta usada para compartilhar senhas e outras
@@ -1146,175 +1167,6 @@ pt-BR:
       section_help: Quer ajudar?
       title: Sobre o Password Pusher
       twitter: Twitter
-    faq:
-      answer_access_1: Com a API JSON do Password Pusher, há vários aplicativos e
-        utilitários de linha de comando (CLI) que fazem interface com pwpush.com ou
-        sua instância auto-hospedada. Envie senhas da CLI, Slack, Alfred App e muito
-        mais.
-      answer_access_2: Consulte a página %{tools} para obter mais informações.
-      answer_add_feature_1: Muito provavelmente. Adoro ouvir todas as ideias e comentários
-        e manter uma lista para decidir o que adicionar a seguir. Se você tiver algum,
-        envie-o para a página %{feedback_link} ou em %{github_link}.
-      answer_already_expired_1: Alguns sistemas, como e-mail, firewalls e sistemas
-        de bate-papo, geralmente possuem scanners de links que podem consumir visualizações.
-        Isso geralmente é feito para segurança corporativa ou simplesmente para gerar
-        uma “visualização” dos aplicativos.
-      answer_already_expired_2: Para evitar isso, use a opção de etapa de recuperação
-        com 1 clique ao enviar senhas. Isso exige que os usuários cliquem em uma página
-        preliminar para proteger as visualizações desses scanners.
-      answer_already_expired_3: Como medida preventiva adicional, quando conectado,
-        um log de auditoria é fornecido para cada push criado. Este log de auditoria
-        revela quem e quando o push foi visualizado.
-      answer_automation_1: Sim. A API JSON do Password Pusher permite a automação
-        do envio de senha. Isso pode ser feito com uma variedade de linguagens e ferramentas
-        de programação.
-      answer_automation_2: Consulte a página %{tools} para obter mais informações.
-      answer_conference_1: Absolutamente. Temos recursos de mídia e uma explicação
-        completa dos recursos disponíveis nos formatos %{windows_link} e %{mac_link}.
-      answer_conference_2: Se você tiver alguma dúvida ou precisar de ajuda, sinta-se
-        à vontade para entrar em contato comigo a qualquer momento.
-      answer_how_many_1: Não há limites atualmente e não tenho intenção de adicionar
-        nenhum. Para garantir minimamente a estabilidade do site, o Password Pusher
-        é configurado com um limitador de taxa por padrão. Isso pode ser desabilitado
-        na versão auto-hospedada.
-      answer_licensing_1: A versão de código-fonte aberto é lançada sob a licença
-        Apache 2.0 e isso define praticamente toda e qualquer limitação. Existem alguns
-        sites clones renomeados e redesenhados do Password Pusher e eu dou as boas-vindas
-        a todos eles.
-      answer_licensing_2: A versão premium é lançada sob licença comercial. Não é
-        de código aberto e não é gratuito. Em sua essência, contém o projeto de código
-        aberto, mas oferece um superconjunto de recursos e tem como objetivo acelerar
-        o desenvolvimento e ajudar a financiar o projeto.
-      answer_licensing_3: A versão premium não é necessária para executar uma instância
-        privada do Password Pusher. A versão de código aberto é completa e de uso
-        gratuito.
-      answer_licensing_4: Todos os recursos premium acabam na versão de código aberto
-        após um período de tempo dependendo do recurso.
-      answer_private_risks_1: A execução de uma instância privada do Password Pusher
-        para sua empresa ou organização dá a você a tranquilidade de saber exatamente
-        qual código está sendo executado. Você pode configurá-lo e executá-lo como
-        quiser.
-      answer_private_risks_2: Por outro lado, se sua instância for hackeada e a criptografia
-        quebrada, entidades maliciosas agora terão um dicionário direcionado de senhas
-        para contas de força bruta em sua organização. (isso seria limitado a pushes
-        que ainda não expiraram)
-      answer_private_risks_3: Nesse aspecto, a instância pública em pwpush.com pode
-        ser superior, pois contém apenas senhas sem informações de identificação misturadas
-        entre usuários de todo o mundo.
-      answer_private_risks_4: Uma outra consideração seria a manutenção da instância.
-        Você precisa mantê-lo atualizado, seguro e com backup.
-      answer_private_risks_5: O usuário deve pesar cuidadosamente os prós e os contras
-        e decidir qual rota é melhor para ele. Nós apoiamos ambas as estratégias.
-      answer_purpose_1: Password pusher existe como uma melhor alternativa para enviar
-        senhas por e-mail.
-      answer_purpose_10: Além disso, <strong>as senhas expiram depois que um conjunto
-        predefinido de visualizações é atingido ou o tempo passa.</strong>
-      answer_purpose_11: Uma vez expirado, as senhas serão deletadas permanentemente.
-      answer_purpose_12: Caso isso seja interessante, pode tentar, ou veja outras
-        perguntas frequentes abaixo.
-      answer_purpose_2: "<strong>Enviar senhas por e-mail é inerentemente inseguro.</strong>
-        Os maiores riscos incluem:"
-      answer_purpose_3: As senhas enviadas por e-mail geralmente são enviadas com
-        contexto para o que elas vão ou podem ser derivadas do nome de usuário do
-        e-mail, domínio etc.
-      answer_purpose_4: O e-mail é inerentemente inseguro e pode ser interceptado
-        em vários pontos por entidades maliciosas.
-      answer_purpose_5: 'As senhas enviadas por e-mail tem vida eterna (leia-se: para
-        sempre) em mensagens de e-mail.'
-      answer_purpose_6: As senhas no e-mail podem ser recuperadas e usadas posteriormente
-        se uma conta de e-mail for roubada, invadida, etc.
-      answer_purpose_7: Os mesmos riscos existem ao enviar senhas via SMS, WhatsApp,
-        Telegram, Chat etc… Os dados podem e muitas vezes são mantidos perpetuamente
-        e fora do seu controle.
-      answer_purpose_8: Ao usar o Password Pusher, você ignora tudo isso.
-      answer_purpose_9: Para cada senha postada no Password Pusher, <strong>é gerada
-        uma URL exclusiva que só você saberá</strong> .
-      answer_rebranding_1: O Password Pusher oferece suporte a rebranding completo
-        "pronto para uso", permitindo adicionar um logotipo personalizado, imagens,
-        texto e até mesmo alterar o tema do aplicativo.
-      answer_self_host_1: Sim, para a versão de código aberto, fornecemos %{docker_link}
-        e %{install_link} para uma ampla variedade de plataformas e nuvens.
-      answer_self_host_2: Para a versão premium, com o superconjunto de recursos,
-        contêineres auto-hospedados estarão disponíveis em breve.
-      answer_trust_1: E com razão. Toda boa segurança começa com um ceticismo saudável
-        de todos os componentes envolvidos.
-      answer_trust_2: O Password Pusher existe como uma alternativa melhor para enviar
-        senhas por e-mail. Ele evita ter senhas em arquivos de e-mail para sempre.
-        Ele não existe como uma solução de segurança final.
-      answer_trust_3: O Password Pusher começou como um projeto de código aberto no
-        final de 2011. Ele foi mantido e atualizado por mim (Peter Giacomo Lombardo)
-        e por alguns colaboradores excelentes durante todo esse tempo. Em 2024, a
-        versão premium foi introduzida para acelerar o desenvolvimento e ajudar a
-        financiar o projeto. Todos os recursos premium acabam eventualmente na versão
-        de código aberto.
-      answer_trust_4: Por ter uma história tão longa e ser de código aberto, o Password
-        Pusher foi revisado por muitos olhos. Ele tem sido usado e auditado por muitas
-        organizações e indivíduos ao longo dos anos.
-      answer_trust_5: 'A política do Password Pusher é tripla: 1) Criptografia em
-        repouso e em trânsito 2) Retenção mínima de dados 3) Transparência na forma
-        de um log de auditoria.'
-      answer_trust_6: Nesse sentido, as cargas push são inequivocamente excluídas
-        na expiração e o log de auditoria é mantido indefinidamente. Quanto menos
-        dados o Password Pusher contiver, melhor.
-      answer_trust_7: Se você ainda tiver dúvidas em relação à confiança, segurança
-        e proteção, sinta-se à vontade para revisar o código, postar quaisquer dúvidas
-        que possa ter e considerar executá-lo internamente em sua organização.
-      answer_trust_8: Quanto à confiança em mim, tudo o que posso oferecer é minha
-        longa história na construção deste projeto e minha reputação pública em %{github},
-        %{linkedin}, %{twitter} e %{blog}. Sinta-se à vontade para entrar em contato
-        comigo a qualquer momento caso tenha alguma dúvida.
-      answer_why_premium_1: asdf
-      answer_why_private_1: Algumas empresas estão sujeitas a políticas de segurança
-        que proíbem o uso de serviços públicos para informações confidenciais, como
-        senhas. Existem até empresas que exigem que todas as ferramentas estejam em
-        intranets privadas sem acesso ao mundo exterior.
-      answer_why_private_2: Executar sua própria instância privada do Password Pusher
-        permite controlar o ambiente e os dados. Ele também permite adicionar recursos
-        e integrações personalizadas específicas para sua organização.
-      answer_why_private_3: É por esses motivos que provemos a capacidade (e incentivamos)
-        usuários e organizações a executar instâncias privadas quando necessário.
-      feedback_link: Formulário de comentários
-      github_link: GitHub
-      mac_link: Mac Keynote
-      my_blog: meu blog
-      question_access: Existem outras maneiras de acessar o Password Pusher fora de
-        um navegador?
-      question_add_feature: Você poderia adicionar um recurso específico para minha
-        organização?
-      question_already_expired: O URL secreto que enviei já expirou. O que aconteceu?
-      question_automation: Posso automatizar a distribuição da minha senha?
-      question_conference: Posso usar o Password Pusher em minha palestra, vídeo,
-        apresentação ou conferência?
-      question_have_to_pay: Tenho que pagar?
-      question_how_many: Quantas solicitações posso enviar ao Password Pusher?
-      question_licensing: Há alguma restrição de licença para mim, minha empresa ou
-        minha organização?
-      question_premium_diff: Quais são as diferenças entre as versões de código aberto
-        e premium?
-      question_private_risks: Quais são os possíveis riscos de segurança de executar
-        minha própria versão internamente?
-      question_purpose: Qual é o propósito do Password Pusher?
-      question_rebranding: Posso aplicar um logotipo personalizado ou alterar o design?
-      question_self_host: Posso executar minha própria versão para minha organização
-        internamente?
-      question_trust: A confiança é uma preocupação. Porque eu deveria usar o Password
-        Pusher?
-      question_why_premium: O Password Pusher sempre foi de código aberto. Por que
-        existe uma versão premium?
-      question_why_private: Por que eu iria querer executar minha própria instância
-        privada do Password Pusher?
-      question_will_oss: Os recursos premium serão adicionados à versão de código
-        aberto?
-      subtitle: "..todas as coisas que você quer saber sobre o Password Pusher."
-      title: Perguntas frequentes
-      title_other: Outro
-      title_private: Executando sua própria instância privada
-      title_pushes: Empurra
-      title_subscriptions: Versão Premium
-      title_tools: Ferramentas, integrações e aplicativos
-      title_trust: Confiança e Segurança
-      tools_link: Ferramentas e Aplicações
-      windows_link: Windows PowerPoint
     generate_key:
       env_var: Você pode aplicar esta chave ao seu aplicativo definindo a variável
         de ambiente
@@ -1347,6 +1199,7 @@ pt-BR:
       title: Gerar uma chave de criptografia
     password_generator:
       push_it: Envie esta senha
+      pwgen_title: Gerador de senhas
     tools:
       alfred: Aplicativo Alfredo
       api_documentation: Documentação do endpoint da API
@@ -1387,3 +1240,4 @@ pt-BR:
         privacy_policy: política de Privacidade
       terms_of_service:
         terms_of_service: Termos de serviço
+  confirmation_go: Clique aqui para confirmar sua conta

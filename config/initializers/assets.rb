@@ -6,12 +6,6 @@
 Rails.application.config.assets.version = "1.0"
 
 # Add additional assets to the asset load path.
-# Rails.application.config.assets.paths << Emoji.images_path
-# Rails.application.config.assets.paths << Rails.root.join("node_modules/bootstrap-icons/font")
-# Rails.application.config.assets.paths << Rails.root.join("node_modules/flag-icons")
-# Rails.application.config.assets.paths << Rails.root.join("node_modules/flag-icons/flags/1x1")
-# Rails.application.config.assets.paths << Rails.root.join("node_modules/flag-icons/flags/4x3")
-
 Rails.application.config.assets.paths << Rails.root.join("vendor/stylesheets")
 Rails.application.config.assets.paths << Rails.root.join("vendor/stylesheets/@fontsource/roboto/files")
 Rails.application.config.assets.paths << Rails.root.join("vendor/stylesheets/@fontsource/roboto-slab/files")

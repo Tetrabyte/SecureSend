@@ -1,14 +1,14 @@
-# Catalan translations for PasswordPusher package.
-# Copyright (C) 2024 PasswordPusher
-# This file is distributed under the same license as the PasswordPusher package.
+# Catalan translations for pwpush package.
+# Copyright (C) 2024 pwpush
+# This file is distributed under the same license as the pwpush package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: PasswordPusher 1.0\n"
+"Project-Id-Version: pwpush 1.0\n"
 "Report-Msgid-Bugs-To: contact@translation.io\n"
-"POT-Creation-Date: 2024-04-18 17:53+0200\n"
-"PO-Revision-Date: 2024-04-18 17:54+0200\n"
+"POT-Creation-Date: 2024-08-14 12:34+0200\n"
+"PO-Revision-Date: 2024-08-14 12:34+0200\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Catalan\n"
 "Language: ca\n"
@@ -17,10 +17,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n!=1;\n"
 "\n"
-
-#: ../../../app/controllers/application_controller.rb:24
-msgid "Not Found"
-msgstr "No s'ha trobat"
 
 #: ../../../app/controllers/feedbacks_controller.rb:15
 msgid ""
@@ -44,7 +40,7 @@ msgstr ""
 
 #: ../../../app/controllers/file_pushes_controller.rb:105
 #: ../../../app/controllers/passwords_controller.rb:104
-#: ../../../app/controllers/urls_controller.rb:96
+#: ../../../app/controllers/urls_controller.rb:104
 msgid ""
 "That passphrase is incorrect.  Please try again or contact the person or organ"
 "ization that sent you this link."
@@ -52,39 +48,39 @@ msgstr ""
 "Aquesta frase de contrasenya és incorrecta. Torna-ho a provar o contacta amb l"
 "a persona o l'organització que t'ha enviat aquest enllaç."
 
-#: ../../../app/controllers/file_pushes_controller.rb:228
-#: ../../../app/controllers/passwords_controller.rb:239
-#: ../../../app/controllers/urls_controller.rb:231
+#: ../../../app/controllers/file_pushes_controller.rb:241
+#: ../../../app/controllers/passwords_controller.rb:252
+#: ../../../app/controllers/urls_controller.rb:252
 msgid "That push doesn't belong to you."
 msgstr "Aquesta pujada no et pertany."
 
-#: ../../../app/controllers/file_pushes_controller.rb:258
-#: ../../../app/controllers/passwords_controller.rb:269
-#: ../../../app/controllers/urls_controller.rb:261
-#: ../../../app/controllers/urls_controller.rb:265
+#: ../../../app/controllers/file_pushes_controller.rb:271
+#: ../../../app/controllers/passwords_controller.rb:282
+#: ../../../app/controllers/urls_controller.rb:282
+#: ../../../app/controllers/urls_controller.rb:286
 msgid "That push does not belong to you."
 msgstr "Aquesta pujada no et pertany."
 
-#: ../../../app/controllers/file_pushes_controller.rb:263
-#: ../../../app/controllers/passwords_controller.rb:274
+#: ../../../app/controllers/file_pushes_controller.rb:276
+#: ../../../app/controllers/passwords_controller.rb:287
 msgid "That push is not deletable by viewers."
 msgstr "Aquesta pujada no es pot ser esborrada."
 
-#: ../../../app/controllers/file_pushes_controller.rb:269
-#: ../../../app/controllers/file_pushes_controller.rb:270
-#: ../../../app/controllers/passwords_controller.rb:280
-#: ../../../app/controllers/passwords_controller.rb:281
-#: ../../../app/controllers/urls_controller.rb:271
-#: ../../../app/controllers/urls_controller.rb:272
+#: ../../../app/controllers/file_pushes_controller.rb:282
+#: ../../../app/controllers/file_pushes_controller.rb:283
+#: ../../../app/controllers/passwords_controller.rb:293
+#: ../../../app/controllers/passwords_controller.rb:294
+#: ../../../app/controllers/urls_controller.rb:292
+#: ../../../app/controllers/urls_controller.rb:293
 msgid "That push is already expired."
 msgstr "Aquesta empenta ja està caducada."
 
-#: ../../../app/controllers/file_pushes_controller.rb:288
-#: ../../../app/controllers/file_pushes_controller.rb:291
-#: ../../../app/controllers/passwords_controller.rb:298
-#: ../../../app/controllers/passwords_controller.rb:301
-#: ../../../app/controllers/urls_controller.rb:289
-#: ../../../app/controllers/urls_controller.rb:292
+#: ../../../app/controllers/file_pushes_controller.rb:301
+#: ../../../app/controllers/file_pushes_controller.rb:304
+#: ../../../app/controllers/passwords_controller.rb:311
+#: ../../../app/controllers/passwords_controller.rb:314
+#: ../../../app/controllers/urls_controller.rb:310
+#: ../../../app/controllers/urls_controller.rb:313
 #: ../../../app/views/file_pushes/audit.html.erb:97
 #: ../../../app/views/file_pushes/audit.html.erb:254
 #: ../../../app/views/passwords/audit.html.erb:97
@@ -94,7 +90,7 @@ msgstr "Aquesta empenta ja està caducada."
 msgid "The push content has been deleted and the secret URL expired."
 msgstr "El contingut pujat s'ha suprimit i l'URL secret ha caducat."
 
-#: ../../../app/controllers/urls_controller.rb:147
+#: ../../../app/controllers/urls_controller.rb:155
 msgid "Invalid URL: Must have a valid URI scheme."
 msgstr "URL no vàlid: ha de tenir un esquema d'URI vàlid."
 
@@ -245,7 +241,7 @@ msgstr "Es requereix un mínim de %d caràcters, però com més, millor."
 msgid "Change Email"
 msgstr "Canvia l'a/e"
 
-#: ../../../app/views/devise/registrations/edit.html.erb:38
+#: ../../../app/views/devise/registrations/edit.html.erb:46
 msgid "Current Password"
 msgstr "Contrasenya actual"
 
@@ -361,11 +357,6 @@ msgstr "Correu electrònic"
 #: ../../../app/views/devise/sessions/new.html.erb:12
 msgid "Password"
 msgstr "Contrasenya"
-
-#: ../../../app/views/devise/shared/_links.html.erb:39
-#: ../../../app/views/shared/_header.html.erb:65
-msgid "Language"
-msgstr "Llengua"
 
 #: ../../../app/views/feedbacks/new.html.erb:1
 #: ../../../app/views/feedbacks/new.html.erb:2
@@ -1068,19 +1059,19 @@ msgstr "Introduïu la frase de contrasenya secreta"
 
 #: ../../../app/views/file_pushes/passphrase.html.erb:10
 #: ../../../app/views/passwords/passphrase.html.erb:10
-#: ../../../app/views/urls/passphrase.html.erb:10
+#: ../../../app/views/urls/passphrase.html.erb:12
 msgid "Enter the secret passphrase provided with this URL"
 msgstr "Introduïu la contrasenya secreta proporcionada amb aquest URL"
 
 #: ../../../app/views/file_pushes/passphrase.html.erb:10
 #: ../../../app/views/passwords/passphrase.html.erb:10
-#: ../../../app/views/urls/passphrase.html.erb:10
+#: ../../../app/views/urls/passphrase.html.erb:13
 msgid "Enter the secret passphrase"
 msgstr "Introduïu la contrasenya secreta"
 
 #: ../../../app/views/file_pushes/passphrase.html.erb:11
 #: ../../../app/views/passwords/passphrase.html.erb:11
-#: ../../../app/views/urls/passphrase.html.erb:11
+#: ../../../app/views/urls/passphrase.html.erb:17
 msgid "Go"
 msgstr "Vés"
 
@@ -1192,8 +1183,8 @@ msgstr[1] "vistes"
 
 #: ../../../app/views/file_pushes/preview.html.erb:63
 #: ../../../app/views/file_pushes/preview.html.erb:65
-#: ../../../app/views/pages/about.html.erb:72
-#: ../../../app/views/pages/about.html.erb:95
+#: ../../../app/views/pages/about.html.erb:68
+#: ../../../app/views/pages/about.html.erb:91
 #: ../../../app/views/pages/faq.html.erb:75
 #: ../../../app/views/pages/faq.html.erb:143
 #: ../../../app/views/passwords/preview.html.erb:63
@@ -1251,16 +1242,6 @@ msgstr "Empènyer un altre"
 #: ../../../app/views/urls/preview.html.erb:74
 msgid "View Audit Log"
 msgstr "Veure el registre d'auditoria"
-
-#: ../../../app/views/file_pushes/preview.html.erb:85
-#: ../../../app/views/passwords/preview.html.erb:85
-#: ../../../app/views/urls/preview.html.erb:79
-msgid ""
-"Tip: Pushing to an international user?  Change the secret link language using "
-"the dropdown menu to the right of the URL."
-msgstr ""
-"Consell: voleu enviar a un usuari internacional? Canvieu l'idioma de l'enllaç "
-"secret mitjançant el menú desplegable a la dreta de l'URL."
 
 #: ../../../app/views/file_pushes/print_preview.html.erb:1
 #: ../../../app/views/passwords/print_preview.html.erb:1
@@ -1497,62 +1478,53 @@ msgid "It's gasoline for the algos that trend Password Pusher."
 msgstr "És gasolina per als algos que tendeixen a Password Pusher."
 
 #: ../../../app/views/pages/about.html.erb:60
-#: ../../../app/views/pages/translate.html.erb:3
-msgid "Help Translate"
-msgstr "Ajudeu a traduir"
-
-#: ../../../app/views/pages/about.html.erb:61
-msgid "Improve an existing language or add a new one"
-msgstr "Millora un idioma existent o afegeix-ne un de nou"
-
-#: ../../../app/views/pages/about.html.erb:64
 msgid "Sign up for the"
 msgstr "Inscriu-te a la"
 
-#: ../../../app/views/pages/about.html.erb:65
+#: ../../../app/views/pages/about.html.erb:61
 msgid "newsletter"
 msgstr "butlletí"
 
-#: ../../../app/views/pages/about.html.erb:66
+#: ../../../app/views/pages/about.html.erb:62
 msgid "to get updates on important releases, security issues, tips and more."
 msgstr ""
 "per rebre actualitzacions sobre versions importants, problemes de seguretat, c"
 "onsells i molt més."
 
-#: ../../../app/views/pages/about.html.erb:69
+#: ../../../app/views/pages/about.html.erb:65
 msgid "Follow Password Pusher on"
 msgstr "Seguiu Password Pusher a"
 
-#: ../../../app/views/pages/about.html.erb:76
+#: ../../../app/views/pages/about.html.erb:72
 msgid "Fix an issue, add a feature or write some documentation."
 msgstr "Solucioneu un problema, afegiu una funció o escriviu documentació."
 
-#: ../../../app/views/pages/about.html.erb:76
+#: ../../../app/views/pages/about.html.erb:72
 msgid "See the Github project."
 msgstr "Vegeu el projecte Github."
 
-#: ../../../app/views/pages/about.html.erb:79
+#: ../../../app/views/pages/about.html.erb:75
 msgid "Sign up to Digital Ocean"
 msgstr "Registra't a Digital Ocean"
 
-#: ../../../app/views/pages/about.html.erb:80
+#: ../../../app/views/pages/about.html.erb:76
 msgid "with this link"
 msgstr "amb aquest enllaç"
 
-#: ../../../app/views/pages/about.html.erb:81
+#: ../../../app/views/pages/about.html.erb:77
 msgid "to get Password Pusher a hosting credit."
 msgstr "per obtenir Password Pusher un crèdit d'allotjament."
 
-#: ../../../app/views/pages/about.html.erb:85
+#: ../../../app/views/pages/about.html.erb:81
 msgid "Thank you for supporting Password Pusher!"
 msgstr "Gràcies per donar suport a Password Pusher!"
 
-#: ../../../app/views/pages/about.html.erb:87
+#: ../../../app/views/pages/about.html.erb:83
 #: ../../../app/views/shared/_footer.html.erb:25
 msgid "Resources"
 msgstr "Recursos"
 
-#: ../../../app/views/pages/about.html.erb:90
+#: ../../../app/views/pages/about.html.erb:86
 msgid ""
 "If you are giving a presentation, authoring a blog post or video about Passwor"
 "d Pusher, feel free to contact me for any questions."
@@ -1560,45 +1532,45 @@ msgstr ""
 "Si esteu fent una presentació, escrivint una publicació de bloc o un vídeo sob"
 "re Password Pusher, no dubteu a contactar amb mi per a qualsevol pregunta."
 
-#: ../../../app/views/pages/about.html.erb:93
+#: ../../../app/views/pages/about.html.erb:89
 msgid "We have media resources and a full explanation of features available in"
 msgstr ""
 "Tenim recursos multimèdia i una explicació completa de les funcions disponible"
 "s a"
 
-#: ../../../app/views/pages/about.html.erb:94
+#: ../../../app/views/pages/about.html.erb:90
 msgid "Windows Powerpoint"
 msgstr "Windows Powerpoint"
 
-#: ../../../app/views/pages/about.html.erb:96
+#: ../../../app/views/pages/about.html.erb:92
 msgid "Mac Keynote"
 msgstr "Mac Keynote"
 
-#: ../../../app/views/pages/about.html.erb:97
+#: ../../../app/views/pages/about.html.erb:93
 msgid "formats."
 msgstr "formats."
 
-#: ../../../app/views/pages/about.html.erb:106
+#: ../../../app/views/pages/about.html.erb:102
 msgid "Birthday"
 msgstr "Aniversari"
 
-#: ../../../app/views/pages/about.html.erb:108
+#: ../../../app/views/pages/about.html.erb:104
 msgid "More Than 11 Years Old"
 msgstr "Més d'11 anys"
 
-#: ../../../app/views/pages/about.html.erb:110
+#: ../../../app/views/pages/about.html.erb:106
 msgid "The first git commit to Password Pusher was on"
 msgstr "El primer commit de git a Password Pusher va ser"
 
-#: ../../../app/views/pages/about.html.erb:114
+#: ../../../app/views/pages/about.html.erb:110
 msgid "pwpush.com went live shortly thereafter."
 msgstr "pwpush.com es va posar en marxa poc després."
 
-#: ../../../app/views/pages/about.html.erb:120
+#: ../../../app/views/pages/about.html.erb:116
 msgid "The Original Theme"
 msgstr "El tema original"
 
-#: ../../../app/views/pages/about.html.erb:121
+#: ../../../app/views/pages/about.html.erb:117
 msgid ""
 "The original site design consisted of a dark background with a bold yellow fon"
 "t."
@@ -1606,7 +1578,7 @@ msgstr ""
 "El disseny del lloc original consistia en un fons fosc amb una lletra groga en"
 " negreta."
 
-#: ../../../app/views/pages/about.html.erb:124
+#: ../../../app/views/pages/about.html.erb:120
 msgid "Follow for news, changes & updates."
 msgstr "Segueix per a notícies, canvis i actualitzacions."
 
@@ -2171,7 +2143,7 @@ msgstr "Clau de xifratge generada"
 #: ../../../app/views/pages/generate_key.html.erb:26
 #: ../../../app/views/pages/generate_key.html.erb:39
 #: ../../../app/views/shared/_copy_button.html.erb:2
-#: ../../../app/views/shared/_secret_url_bar.html.erb:26
+#: ../../../app/views/shared/_secret_url_bar.html.erb:37
 msgid "Copy to Clipboard"
 msgstr "Copiar al portapapers"
 
@@ -2314,6 +2286,10 @@ msgstr "Vegeu més explicacions i exemples al nostre"
 #: ../../../app/views/pages/translate.html.erb:1
 msgid "Help Translate Password Pusher!"
 msgstr "Ajudeu a traduir Password Pusher!"
+
+#: ../../../app/views/pages/translate.html.erb:3
+msgid "Help Translate"
+msgstr "Ajudeu a traduir"
 
 #: ../../../app/views/pages/translate.html.erb:6
 msgid ""
@@ -2612,8 +2588,8 @@ msgid "Overview"
 msgstr "Visió general"
 
 #: ../../../app/views/shared/_footer.html.erb:52
-msgid "Help Translate!"
-msgstr "Ajuda a traduir"
+msgid "Documentation"
+msgstr "Documentació"
 
 #: ../../../app/views/shared/_header.html.erb:37
 msgid "Account"
@@ -2634,10 +2610,6 @@ msgstr "Inicia sessió"
 #: ../../../app/views/shared/_header.html.erb:57
 msgid "Sign Up"
 msgstr "Registra't"
-
-#: ../../../app/views/shared/_lang_selector_modal.erb:6
-msgid "Select your language"
-msgstr "Seleccioneu el vostre idioma"
 
 #: ../../../app/views/shared/_newsletter_sign_up.html.erb:3
 msgid "Get The Newsletter"
@@ -2711,7 +2683,7 @@ msgstr "Consonants"
 msgid "Reset to Defaults"
 msgstr "Restableix els valors per defecte"
 
-#: ../../../app/views/shared/_secret_url_bar.html.erb:13
+#: ../../../app/views/shared/_secret_url_bar.html.erb:19
 msgid "Secret Link Language"
 msgstr "Llenguatge d'enllaç secret"
 

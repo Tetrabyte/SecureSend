@@ -1,14 +1,14 @@
-# Korean translations for PasswordPusher package.
-# Copyright (C) 2024 PasswordPusher
-# This file is distributed under the same license as the PasswordPusher package.
+# Korean translations for pwpush package.
+# Copyright (C) 2024 pwpush
+# This file is distributed under the same license as the pwpush package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: PasswordPusher 1.0\n"
+"Project-Id-Version: pwpush 1.0\n"
 "Report-Msgid-Bugs-To: contact@translation.io\n"
-"POT-Creation-Date: 2024-04-18 17:53+0200\n"
-"PO-Revision-Date: 2024-04-18 17:54+0200\n"
+"POT-Creation-Date: 2024-08-14 12:34+0200\n"
+"PO-Revision-Date: 2024-08-14 12:34+0200\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Korean\n"
 "Language: ko\n"
@@ -17,10 +17,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "\n"
-
-#: ../../../app/controllers/application_controller.rb:24
-msgid "Not Found"
-msgstr "찾을 수 없음"
 
 #: ../../../app/controllers/feedbacks_controller.rb:15
 msgid ""
@@ -40,45 +36,45 @@ msgstr "피드백을 보낼 수 없습니다. 인성 테스트를 통과했습�
 
 #: ../../../app/controllers/file_pushes_controller.rb:105
 #: ../../../app/controllers/passwords_controller.rb:104
-#: ../../../app/controllers/urls_controller.rb:96
+#: ../../../app/controllers/urls_controller.rb:104
 msgid ""
 "That passphrase is incorrect.  Please try again or contact the person or organ"
 "ization that sent you this link."
 msgstr "해당 암호가 올바르지 않습니다. 다시 시도하거나 이 링크를 보낸 사람 또는 조직에 문의하십시오."
 
-#: ../../../app/controllers/file_pushes_controller.rb:228
-#: ../../../app/controllers/passwords_controller.rb:239
-#: ../../../app/controllers/urls_controller.rb:231
+#: ../../../app/controllers/file_pushes_controller.rb:241
+#: ../../../app/controllers/passwords_controller.rb:252
+#: ../../../app/controllers/urls_controller.rb:252
 msgid "That push doesn't belong to you."
 msgstr "그 푸시는 당신의 것이 아닙니다."
 
-#: ../../../app/controllers/file_pushes_controller.rb:258
-#: ../../../app/controllers/passwords_controller.rb:269
-#: ../../../app/controllers/urls_controller.rb:261
-#: ../../../app/controllers/urls_controller.rb:265
+#: ../../../app/controllers/file_pushes_controller.rb:271
+#: ../../../app/controllers/passwords_controller.rb:282
+#: ../../../app/controllers/urls_controller.rb:282
+#: ../../../app/controllers/urls_controller.rb:286
 msgid "That push does not belong to you."
 msgstr "그 푸시는 당신의 것이 아닙니다."
 
-#: ../../../app/controllers/file_pushes_controller.rb:263
-#: ../../../app/controllers/passwords_controller.rb:274
+#: ../../../app/controllers/file_pushes_controller.rb:276
+#: ../../../app/controllers/passwords_controller.rb:287
 msgid "That push is not deletable by viewers."
 msgstr "그 푸시는 시청자가 삭제할 수 없습니다."
 
-#: ../../../app/controllers/file_pushes_controller.rb:269
-#: ../../../app/controllers/file_pushes_controller.rb:270
-#: ../../../app/controllers/passwords_controller.rb:280
-#: ../../../app/controllers/passwords_controller.rb:281
-#: ../../../app/controllers/urls_controller.rb:271
-#: ../../../app/controllers/urls_controller.rb:272
+#: ../../../app/controllers/file_pushes_controller.rb:282
+#: ../../../app/controllers/file_pushes_controller.rb:283
+#: ../../../app/controllers/passwords_controller.rb:293
+#: ../../../app/controllers/passwords_controller.rb:294
+#: ../../../app/controllers/urls_controller.rb:292
+#: ../../../app/controllers/urls_controller.rb:293
 msgid "That push is already expired."
 msgstr "해당 푸시는 이미 만료되었습니다."
 
-#: ../../../app/controllers/file_pushes_controller.rb:288
-#: ../../../app/controllers/file_pushes_controller.rb:291
-#: ../../../app/controllers/passwords_controller.rb:298
-#: ../../../app/controllers/passwords_controller.rb:301
-#: ../../../app/controllers/urls_controller.rb:289
-#: ../../../app/controllers/urls_controller.rb:292
+#: ../../../app/controllers/file_pushes_controller.rb:301
+#: ../../../app/controllers/file_pushes_controller.rb:304
+#: ../../../app/controllers/passwords_controller.rb:311
+#: ../../../app/controllers/passwords_controller.rb:314
+#: ../../../app/controllers/urls_controller.rb:310
+#: ../../../app/controllers/urls_controller.rb:313
 #: ../../../app/views/file_pushes/audit.html.erb:97
 #: ../../../app/views/file_pushes/audit.html.erb:254
 #: ../../../app/views/passwords/audit.html.erb:97
@@ -88,7 +84,7 @@ msgstr "해당 푸시는 이미 만료되었습니다."
 msgid "The push content has been deleted and the secret URL expired."
 msgstr "푸시 콘텐츠가 삭제되었으며 비밀 URL이 만료되었습니다."
 
-#: ../../../app/controllers/urls_controller.rb:147
+#: ../../../app/controllers/urls_controller.rb:155
 msgid "Invalid URL: Must have a valid URI scheme."
 msgstr "잘못된 URL: 유효한 URI 스키마가 있어야 합니다."
 
@@ -222,7 +218,7 @@ msgstr "최소 %d자가 필요하지만 많을수록 좋습니다."
 msgid "Change Email"
 msgstr "이메일을 바꾸다"
 
-#: ../../../app/views/devise/registrations/edit.html.erb:38
+#: ../../../app/views/devise/registrations/edit.html.erb:46
 msgid "Current Password"
 msgstr "현재 비밀번호"
 
@@ -326,11 +322,6 @@ msgstr "이메일"
 #: ../../../app/views/devise/sessions/new.html.erb:12
 msgid "Password"
 msgstr "비밀번호"
-
-#: ../../../app/views/devise/shared/_links.html.erb:39
-#: ../../../app/views/shared/_header.html.erb:65
-msgid "Language"
-msgstr "언어"
 
 #: ../../../app/views/feedbacks/new.html.erb:1
 #: ../../../app/views/feedbacks/new.html.erb:2
@@ -1015,19 +1006,19 @@ msgstr "비밀 암호를 입력하십시오"
 
 #: ../../../app/views/file_pushes/passphrase.html.erb:10
 #: ../../../app/views/passwords/passphrase.html.erb:10
-#: ../../../app/views/urls/passphrase.html.erb:10
+#: ../../../app/views/urls/passphrase.html.erb:12
 msgid "Enter the secret passphrase provided with this URL"
 msgstr "이 URL과 함께 제공된 비밀 암호를 입력하십시오."
 
 #: ../../../app/views/file_pushes/passphrase.html.erb:10
 #: ../../../app/views/passwords/passphrase.html.erb:10
-#: ../../../app/views/urls/passphrase.html.erb:10
+#: ../../../app/views/urls/passphrase.html.erb:13
 msgid "Enter the secret passphrase"
 msgstr "비밀 암호를 입력하십시오"
 
 #: ../../../app/views/file_pushes/passphrase.html.erb:11
 #: ../../../app/views/passwords/passphrase.html.erb:11
-#: ../../../app/views/urls/passphrase.html.erb:11
+#: ../../../app/views/urls/passphrase.html.erb:17
 msgid "Go"
 msgstr "가다"
 
@@ -1139,8 +1130,8 @@ msgstr[1] ""
 
 #: ../../../app/views/file_pushes/preview.html.erb:63
 #: ../../../app/views/file_pushes/preview.html.erb:65
-#: ../../../app/views/pages/about.html.erb:72
-#: ../../../app/views/pages/about.html.erb:95
+#: ../../../app/views/pages/about.html.erb:68
+#: ../../../app/views/pages/about.html.erb:91
 #: ../../../app/views/pages/faq.html.erb:75
 #: ../../../app/views/pages/faq.html.erb:143
 #: ../../../app/views/passwords/preview.html.erb:63
@@ -1198,14 +1189,6 @@ msgstr "다른 사람을 밀어"
 #: ../../../app/views/urls/preview.html.erb:74
 msgid "View Audit Log"
 msgstr "감사 로그 보기"
-
-#: ../../../app/views/file_pushes/preview.html.erb:85
-#: ../../../app/views/passwords/preview.html.erb:85
-#: ../../../app/views/urls/preview.html.erb:79
-msgid ""
-"Tip: Pushing to an international user?  Change the secret link language using "
-"the dropdown menu to the right of the URL."
-msgstr "팁: 해외 사용자에게 푸시하시겠습니까? URL 오른쪽에 있는 드롭다운 메뉴를 사용하여 비밀 링크 언어를 변경합니다."
 
 #: ../../../app/views/file_pushes/print_preview.html.erb:1
 #: ../../../app/views/passwords/print_preview.html.erb:1
@@ -1428,60 +1411,51 @@ msgid "It's gasoline for the algos that trend Password Pusher."
 msgstr "Password Pusher를 유행시키는 알고리즘을 위한 휘발유입니다."
 
 #: ../../../app/views/pages/about.html.erb:60
-#: ../../../app/views/pages/translate.html.erb:3
-msgid "Help Translate"
-msgstr "번역 도와주세요"
-
-#: ../../../app/views/pages/about.html.erb:61
-msgid "Improve an existing language or add a new one"
-msgstr "기존 언어 개선 또는 새 언어 추가"
-
-#: ../../../app/views/pages/about.html.erb:64
 msgid "Sign up for the"
 msgstr "에 가입"
 
-#: ../../../app/views/pages/about.html.erb:65
+#: ../../../app/views/pages/about.html.erb:61
 msgid "newsletter"
 msgstr "뉴스 레터"
 
-#: ../../../app/views/pages/about.html.erb:66
+#: ../../../app/views/pages/about.html.erb:62
 msgid "to get updates on important releases, security issues, tips and more."
 msgstr "중요한 릴리스, 보안 문제, 팁 등에 대한 업데이트를 받을 수 있습니다."
 
-#: ../../../app/views/pages/about.html.erb:69
+#: ../../../app/views/pages/about.html.erb:65
 msgid "Follow Password Pusher on"
 msgstr "비밀번호 푸셔 팔로우"
 
-#: ../../../app/views/pages/about.html.erb:76
+#: ../../../app/views/pages/about.html.erb:72
 msgid "Fix an issue, add a feature or write some documentation."
 msgstr "문제를 수정하거나 기능을 추가하거나 문서를 작성하세요."
 
-#: ../../../app/views/pages/about.html.erb:76
+#: ../../../app/views/pages/about.html.erb:72
 msgid "See the Github project."
 msgstr "Github 프로젝트를 참조하십시오."
 
-#: ../../../app/views/pages/about.html.erb:79
+#: ../../../app/views/pages/about.html.erb:75
 msgid "Sign up to Digital Ocean"
 msgstr "디지털 오션에 가입"
 
-#: ../../../app/views/pages/about.html.erb:80
+#: ../../../app/views/pages/about.html.erb:76
 msgid "with this link"
 msgstr "이 링크로"
 
-#: ../../../app/views/pages/about.html.erb:81
+#: ../../../app/views/pages/about.html.erb:77
 msgid "to get Password Pusher a hosting credit."
 msgstr "Password Pusher에 호스팅 크레딧을 받으려면."
 
-#: ../../../app/views/pages/about.html.erb:85
+#: ../../../app/views/pages/about.html.erb:81
 msgid "Thank you for supporting Password Pusher!"
 msgstr "Password Pusher를 지원해 주셔서 감사합니다!"
 
-#: ../../../app/views/pages/about.html.erb:87
+#: ../../../app/views/pages/about.html.erb:83
 #: ../../../app/views/shared/_footer.html.erb:25
 msgid "Resources"
 msgstr "자원"
 
-#: ../../../app/views/pages/about.html.erb:90
+#: ../../../app/views/pages/about.html.erb:86
 msgid ""
 "If you are giving a presentation, authoring a blog post or video about Passwor"
 "d Pusher, feel free to contact me for any questions."
@@ -1489,49 +1463,49 @@ msgstr ""
 "프리젠테이션을 하거나 Password Pusher에 대한 블로그 게시물 또는 비디오를 작성하는 경우 질문이 있으면 언제든지 저에게 연락하십시"
 "오."
 
-#: ../../../app/views/pages/about.html.erb:93
+#: ../../../app/views/pages/about.html.erb:89
 msgid "We have media resources and a full explanation of features available in"
 msgstr "우리는 미디어 리소스와 기능에 대한 전체 설명을 제공합니다."
 
-#: ../../../app/views/pages/about.html.erb:94
+#: ../../../app/views/pages/about.html.erb:90
 msgid "Windows Powerpoint"
 msgstr "윈도우 파워포인트"
 
-#: ../../../app/views/pages/about.html.erb:96
+#: ../../../app/views/pages/about.html.erb:92
 msgid "Mac Keynote"
 msgstr "맥 키노트"
 
-#: ../../../app/views/pages/about.html.erb:97
+#: ../../../app/views/pages/about.html.erb:93
 msgid "formats."
 msgstr "형식."
 
-#: ../../../app/views/pages/about.html.erb:106
+#: ../../../app/views/pages/about.html.erb:102
 msgid "Birthday"
 msgstr "생일"
 
-#: ../../../app/views/pages/about.html.erb:108
+#: ../../../app/views/pages/about.html.erb:104
 msgid "More Than 11 Years Old"
 msgstr "11세 이상"
 
-#: ../../../app/views/pages/about.html.erb:110
+#: ../../../app/views/pages/about.html.erb:106
 msgid "The first git commit to Password Pusher was on"
 msgstr "Password Pusher에 대한 첫 번째 git 커밋이 시작되었습니다."
 
-#: ../../../app/views/pages/about.html.erb:114
+#: ../../../app/views/pages/about.html.erb:110
 msgid "pwpush.com went live shortly thereafter."
 msgstr "pwpush.com은 그 직후에 생방송되었습니다."
 
-#: ../../../app/views/pages/about.html.erb:120
+#: ../../../app/views/pages/about.html.erb:116
 msgid "The Original Theme"
 msgstr "오리지널 테마"
 
-#: ../../../app/views/pages/about.html.erb:121
+#: ../../../app/views/pages/about.html.erb:117
 msgid ""
 "The original site design consisted of a dark background with a bold yellow fon"
 "t."
 msgstr "원래 사이트 디자인은 어두운 배경과 굵은 노란색 글꼴로 구성되었습니다."
 
-#: ../../../app/views/pages/about.html.erb:124
+#: ../../../app/views/pages/about.html.erb:120
 msgid "Follow for news, changes & updates."
 msgstr "뉴스, 변경 사항 및 업데이트를 따르십시오."
 
@@ -2017,7 +1991,7 @@ msgstr "생성된 암호화 키"
 #: ../../../app/views/pages/generate_key.html.erb:26
 #: ../../../app/views/pages/generate_key.html.erb:39
 #: ../../../app/views/shared/_copy_button.html.erb:2
-#: ../../../app/views/shared/_secret_url_bar.html.erb:26
+#: ../../../app/views/shared/_secret_url_bar.html.erb:37
 msgid "Copy to Clipboard"
 msgstr "클립 보드에 복사"
 
@@ -2142,6 +2116,10 @@ msgstr "더 많은 설명과 예를 참조하십시오."
 #: ../../../app/views/pages/translate.html.erb:1
 msgid "Help Translate Password Pusher!"
 msgstr "Password Pusher 번역을 도와주세요!"
+
+#: ../../../app/views/pages/translate.html.erb:3
+msgid "Help Translate"
+msgstr "번역 도와주세요"
 
 #: ../../../app/views/pages/translate.html.erb:6
 msgid ""
@@ -2418,8 +2396,8 @@ msgid "Overview"
 msgstr "개요"
 
 #: ../../../app/views/shared/_footer.html.erb:52
-msgid "Help Translate!"
-msgstr "번역을 도와주세요!"
+msgid "Documentation"
+msgstr "선적 서류 비치"
 
 #: ../../../app/views/shared/_header.html.erb:37
 msgid "Account"
@@ -2440,10 +2418,6 @@ msgstr "로그인"
 #: ../../../app/views/shared/_header.html.erb:57
 msgid "Sign Up"
 msgstr "가입하기"
-
-#: ../../../app/views/shared/_lang_selector_modal.erb:6
-msgid "Select your language"
-msgstr "언어를 선택하세요"
 
 #: ../../../app/views/shared/_newsletter_sign_up.html.erb:3
 msgid "Get The Newsletter"
@@ -2515,7 +2489,7 @@ msgstr "자음"
 msgid "Reset to Defaults"
 msgstr "기본값으로 재설정"
 
-#: ../../../app/views/shared/_secret_url_bar.html.erb:13
+#: ../../../app/views/shared/_secret_url_bar.html.erb:19
 msgid "Secret Link Language"
 msgstr "비밀 링크 언어"
 

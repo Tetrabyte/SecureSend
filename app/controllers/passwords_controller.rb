@@ -218,7 +218,20 @@ class PasswordsController < BaseController
   end
 
   def preliminary
-    @secret_url = helpers.raw_secret_url(@push)
+    # This password may have expired since the last view.  Validate the password
+    # expiration before doing anything.
+    @push.validate!
+
+    if @push.expired
+      log_view(@push)
+      respond_to do |format|
+        format.html { render template: "passwords/show_expired", layout: "naked" }
+        format.json { render json: @push.to_json(payload: true) }
+      end
+      return
+    else
+      @secret_url = helpers.secret_url(@push, with_retrieval_step: false)
+    end
 
     respond_to do |format|
       format.html { render action: "preliminary", layout: "naked" }
@@ -293,7 +306,7 @@ class PasswordsController < BaseController
     respond_to do |format|
       if @push.save
         format.html do
-          if is_owner
+          if is_owner && !ENV.key?("PWP_PUBLIC_GATEWAY")
             redirect_to audit_password_path(@push),
               notice: _("The push content has been deleted and the secret URL expired.")
           else
