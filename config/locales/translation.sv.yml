@@ -374,6 +374,8 @@ sv:
           lösenord för att bekräfta dina ändringar
       new:
         sign_up: Registrera dig
+        account_or_team_name: Konto- eller teamnamn
+      preferred_language: Önskat språk
     unlocks:
       send_instructions: Inom några minuter kommer du att få ett e-postmeddelande
         med instruktioner om hur du kan låsa upp ditt konto.
@@ -448,6 +450,7 @@ sv:
         sunset_at: Solnedgång kl
         info: Info
     returns: Returnerar
+    blank_allowed: tomt tillåtet
   i18n_tasks:
     add_missing:
       added:
@@ -464,11 +467,9 @@ sv:
           data_format: 'Dataformat: %{valid_text}.'
           keep_order: Håll ordning på nycklarna
           key_pattern: Filtrera efter nyckelmönster (t.ex. 'common.*')
-          key_pattern_to_rename: Fullständig nyckel (mönster) för att byta namn. Nödvändig
           locale_to_translate_from: Språk att översätta från
           locales_filter: 'Plats(er) att bearbeta. Special: bas'
           missing_types: 'Filtrera efter typer: %{valid}'
-          new_key_name: Nytt namn, interpolerar originalnamnet som %{key}. Nödvändig
           nostdin: Läs inte från stdin
           out_format: 'Utdataformat: %{valid_text}'
           pattern_router: 'Använd mönsterrouter: nycklar flyttade per config data.write'
@@ -508,6 +509,7 @@ sv:
         tree_subtract: träd A minus nycklarna i träd B
         tree_translate: Google Översätt ett träd till root-lokaler
         unused: visa oanvända översättningar
+        cp: kopiera nycklarna i lokaldata som matchar det givna mönstret
       encourage:
       - Bra jobbat!
       - Bra gjort!
@@ -747,6 +749,7 @@ sv:
       pwgen_max_syllable_length_help: Den maximala längden på en stavelse i det genererade
         lösenordet.
       pwgen_syllables_count: Stavelser räknas
+      switch: Växla
     show:
       edit_policy: Redigera push-policy
       policy: Lagpolicy
@@ -770,6 +773,8 @@ sv:
       newsletter: Nyhetsbrev
       password_generator: Lösenordsgenerator
       tools: Verktyg, API & CLI
+      api_docs: API dokumentation
+      features: Funktioner
     pw_generator_modal:
       cancel: Avbryt
       configure: Konfigurera lösenordsgenerering
@@ -790,6 +795,9 @@ sv:
       vowels: Vokaler
     navbar:
       edit_policy: Politik
+    secret_url_bar:
+      secret_link_lang: Hemligt länkspråk
+      autodetect: Automatisk upptäckt
   audit_logs:
     audit_log:
       created: Skapad
@@ -805,6 +813,7 @@ sv:
       log_viewed: Lyckad visning från IP-adress %{ip} på %{date} av %{user}
       unknown: Okänd
       viewed_by: Visat av %{user}
+      log_failed_passphrase: Misslyckat lösenfrasförsök på %{date} av %{user}
   dashboard:
     show:
       detail: Detalj
@@ -825,10 +834,10 @@ sv:
   feedbacks:
     create:
       feedback_sent: Feedback har skickats! Vi återkommer till dig så snart som möjligt.
-    failed_spam_test: Vi ber om ursäkt, men du gick inte igenom spamkontrollen. Du
-      kan försöka kontakta oss på Github istället.
-    failed_to_send: Det gick inte att skicka feedback. Något var fel. Försök igen
-      eller kontakta oss på Github.
+      failed_spam_test: Vi ber om ursäkt, men du gick inte igenom spamkontrollen.
+        Du kan försöka kontakta oss på Github istället.
+      failed_to_send: Det gick inte att skicka feedback. Något var fel. Försök igen
+        eller kontakta oss på Github.
     new:
       email: E-post
       have_idea: Har du en idé eller önskan? Något du inte gillar? Vill du hjälpa
@@ -929,6 +938,7 @@ sv:
       title: Tryck på revisionslogg
       visible_to: Bara synligt för dig
       when: När
+      preview: Dela denna push
     copy_to_clipboard: Kopiera till urklipp
     day:
       one: 1 dag
@@ -941,6 +951,7 @@ sv:
       expired: Det pushade innehållet har tagits bort och den hemliga URLen har löpt
         ut.
       not_deletable: Det här värdet kan inte raderas av personer med läsbehörighet.
+      already_expired: Den pushen har redan gått ut.
     form:
       12_hours: 12 timmar
       15_minutes: 15 minuter
@@ -996,6 +1007,8 @@ sv:
       views: Visningar
       week: Vecka
       weeks: Veckor
+      payload_url_placeholder: Ange webbadressen som du vill omdirigera till...
+      url_push_tip: Den skapade pushen omdirigerar till den angivna URL:en.
     hour:
       one: 1 timme
       other: "%{count} timmar"
@@ -1016,6 +1029,8 @@ sv:
       views_remaining: Återstående vyer
       active: Aktiv
       expired: Utgånget
+      all: Allt
+      remaining: Återstående
     minute:
       one: 1 minut
       other: "%{count} minuter"
@@ -1058,6 +1073,8 @@ sv:
       print_and_share: Skriv ut och dela
       print_and_share_tip: Skapa en utskrivbar sida för slutanvändare
       show_expiration: Visa utgångsinformation
+      link_lang_auto: Alternativt kommer automatisk identifiering att välja ett språk
+        baserat på slutanvändarens webbläsarinställningar.
     provide_text_or_file: För att skapa en push måste du antingen tillhandahålla text,
       bifoga en fil eller båda.
     push:
@@ -1069,7 +1086,7 @@ sv:
       push_controls: Push-kontroller
       title: Ny push
       unknown: Okänd
-    secret_link_lang: Hemligt länkspråk
+      share: Dela med sig
     settings: Inställningar
     show:
       blurred: Ditt lösenord är utsuddat. Klicka nedan för att visa det.
@@ -1089,6 +1106,7 @@ sv:
         i %{b_tag}%{time_count} %{time_unit}%{b_tag} eller %{b_tag}%{view_count} mer
         %{view_unit}%{b_tag} (beroende på vilket som inträffar först).
       your_link: Din hemliga länk
+      intro: Följande innehåll har skickats till dig.
     show_expired:
       expired_help: Om det behövs kontaktar du personen eller organisationen som gav
         dig denna hemliga URL.
@@ -1100,6 +1118,9 @@ sv:
     view_audit_log: Visa granskningslogg
     whichever: "(det som kommer först)"
     'yes': Ja
+    payload_too_large: Nyttolasten är för stor. Du kan bara trycka upp till %{count}
+      byte.
+    too_many_files: Du kan bara bifoga upp till %{count}-filer per tryckning.
   static:
     about:
       about_1: Password Pusher är ett verktyg som används för att dela lösenord och
@@ -1143,165 +1164,6 @@ sv:
       section_help: Vill du hjälpa till?
       title: Om Password Pusher
       twitter: Twitter
-    faq:
-      answer_access_1: Med Password Pusher JSON API finns det ett antal applikationer
-        och kommandoradsverktyg (CLI) som samverkar med pwpush.com eller din egen
-        värd instans. Push lösenord från CLI, Slack, Alfred App och mer.
-      answer_access_2: Se sidan %{tools} för mer information.
-      answer_add_feature_1: Väldigt troligt. Jag älskar att höra alla idéer och feedback
-        och hålla en lista för att bestämma vad jag ska lägga till härnäst. Om du
-        har några, vänligen skicka in dem till sidan %{feedback_link} eller på %{github_link}.
-      answer_already_expired_1: Vissa system som e-post, brandväggar och chattsystem
-        har ofta länkskannrar som kan äta upp vyer. Detta görs vanligtvis för företagssäkerhet
-        eller för att helt enkelt generera en "förhandsgranskning" för applikationer.
-      answer_already_expired_2: För att förhindra detta, använd alternativet för 1-klickshämtning
-        när du skickar lösenord. Detta kräver att användarna klickar sig igenom en
-        preliminär sida för att skydda vyer från sådana skannrar.
-      answer_already_expired_3: Som en ytterligare förebyggande åtgärd, när du är
-        inloggad, tillhandahålls en granskningslogg för varje push som skapas. Denna
-        granskningslogg avslöjar vem och när pushen sågs.
-      answer_automation_1: Ja. Password Pusher JSON API möjliggör automatisering av
-        lösenordspressning. Detta kan göras med en mängd olika programmeringsspråk
-        och verktyg.
-      answer_automation_2: Se sidan %{tools} för mer information.
-      answer_conference_1: Absolut. Vi har medieresurser och en fullständig förklaring
-        av funktioner tillgängliga i formaten %{windows_link} och %{mac_link}.
-      answer_conference_2: Om du har några frågor eller behöver hjälp är du välkommen
-        att kontakta mig när som helst.
-      answer_how_many_1: Det finns inga gränser för närvarande och jag har inte för
-        avsikt att lägga till några. För att minimalt säkerställa webbplatsens stabilitet
-        är Password Pusher konfigurerad med en hastighetsbegränsare som standard.
-        Detta kan inaktiveras i den självvärdade versionen.
-      answer_licensing_1: Källkoden med öppen källkod släpps under Apache 2.0-licensen
-        och det definierar i stort sett alla begränsningar. Det finns en hel del ommärkta
-        och omdesignade klonsidor av Password Pusher och jag välkomnar dem alla.
-      answer_licensing_2: Premiumversionen släpps under en kommersiell licens. Det
-        är inte öppen källkod och är inte gratis. Innehåller i sin kärna open source-projektet
-        men erbjuder en superuppsättning funktioner och är tänkt att påskynda utvecklingen
-        och hjälpa till att finansiera projektet.
-      answer_licensing_3: Premiumversionen krävs inte för att köra en privat instans
-        av Password Pusher. Open source-versionen är fullt utrustad och gratis att
-        använda.
-      answer_licensing_4: Alla premiumfunktioner hamnar i open source-versionen efter
-        en tidsperiod beroende på funktion.
-      answer_private_risks_1: Att köra en privat instans av Password Pusher för ditt
-        företag eller din organisation ger dig tryggheten att du vet exakt vilken
-        kod som körs. Du kan konfigurera och köra den som du vill.
-      answer_private_risks_2: Å andra sidan, om din instans blir hackad och krypteringen
-        bryts, har skadliga enheter nu en riktad ordbok med lösenord för att brute
-        force-konton i din organisation. (detta skulle vara begränsat till push som
-        inte har löpt ut ännu)
-      answer_private_risks_3: I detta avseende kan den offentliga instansen på pwpush.com
-        vara överlägsen genom att den endast innehåller lösenord utan identifierande
-        information blandad bland användare från hela världen.
-      answer_private_risks_4: Ett annat övervägande skulle vara upprätthållandet av
-        instansen. Du måste hålla den uppdaterad, säker och säkerhetskopierad.
-      answer_private_risks_5: Användaren bör noggrant väga fördelar och nackdelar
-        och bestämma vilken väg som är bäst för dem. Vi stöder gärna båda strategierna.
-      answer_purpose_1: Password Pusher finns som ett bättre alternativ till att skicka
-        lösenord via e-post.
-      answer_purpose_10: Dessutom <strong>löper lösenord ut efter att en fördefinierad
-        uppsättning vyer har träffats eller tiden har gått.</strong>
-      answer_purpose_11: När lösenordet har löpt ut raderas det entydigt.
-      answer_purpose_12: Om det låter intressant för dig, prova det eller se de andra
-        vanliga frågorna nedan.
-      answer_purpose_2: "<strong>Att e-posta lösenord är i sig osäkert.</strong> De
-        största riskerna inkluderar:"
-      answer_purpose_3: E-postade lösenord skickas vanligtvis med kontext till vad
-        de går till eller kan eventuellt härledas från e-postnamn, domän osv...
-      answer_purpose_4: E-post är till sin natur osäker och kan fångas upp på flera
-        punkter av skadliga enheter.
-      answer_purpose_5: 'E-postade lösenord lever för evigt (läs: för alltid) i e-postarkiv.'
-      answer_purpose_6: Lösenord i e-post kan hämtas och användas senare om ett e-postkonto
-        blir stulet, hackat osv.
-      answer_purpose_7: Samma risker finns när du skickar lösenord via SMS, WhatsApp,
-        Telegram, Chatt etc... Uppgifterna kan och hålls ofta i evighet och utom din
-        kontroll.
-      answer_purpose_8: Genom att använda Password Pusher kringgår du allt detta.
-      answer_purpose_9: För varje lösenord som skickas till Password Pusher <strong>genereras
-        en unik URL som bara du känner till</strong> .
-      answer_rebranding_1: Password Pusher stöder fullständig ommärkning "out of the
-        box" så att du kan lägga till en anpassad logotyp, bilder, text och till och
-        med ändra programmets tema.
-      answer_self_host_1: Ja, för versionen med öppen källkod tillhandahåller vi %{docker_link}
-        och %{install_link} för en mängd olika plattformar och moln.
-      answer_self_host_2: För premiumversionen, med superuppsättningen funktioner,
-        kommer behållare med egen värd snart.
-      answer_trust_1: Och med rätta. All god säkerhet börjar med en sund skepsis mot
-        alla inblandade komponenter.
-      answer_trust_2: Password Pusher finns som ett bättre alternativ till att skicka
-        lösenord via e-post. Det undviker att lösenord finns i e-postarkiv för alltid.
-        Det är inte en slutgiltig säkerhetslösning.
-      answer_trust_3: Password Pusher startade som ett projekt med öppen källkod i
-        slutet av 2011. Det har underhållits och uppdaterats av mig själv (Peter Giacomo
-        Lombardo) och en handfull utmärkta bidragsgivare under hela den tiden. 2024
-        introducerades premiumversionen för att påskynda utvecklingen och för att
-        hjälpa till att finansiera projektet. Alla premiumfunktioner hamnar så småningom
-        i open source-versionen.
-      answer_trust_4: Genom att ha en så lång historia och vara öppen källkod har
-        Password Pusher granskats av många ögon. Den har använts av och granskats
-        av många organisationer och individer under åren.
-      answer_trust_5: 'Policyn för Password Pusher är trefaldig: 1) Kryptering i vila
-        och under överföring 2) Minimal datalagring 3) Transparens i form av en revisionslogg.'
-      answer_trust_6: På detta sätt raderas push-nyttolaster otvetydigt vid utgången
-        och granskningsloggen bibehålls på obestämd tid. Ju mindre data Password Pusher
-        innehåller, desto bättre.
-      answer_trust_7: Om du fortfarande har funderingar kring förtroende, säkerhet
-        och säkerhet, gå gärna igenom koden, ställ eventuella frågor du kan ha och
-        överväg att köra den internt i din organisation istället.
-      answer_trust_8: När det gäller förtroende för mig, allt jag kan erbjuda är min
-        långa historia att bygga detta projekt och mitt offentliga rykte på %{github},
-        %{linkedin}, %{twitter} och %{blog}. Kontakta mig gärna när som helst med
-        alla frågor du kan ha.
-      answer_why_premium_1: asdf
-      answer_why_private_1: Vissa organisationer är bundna av säkerhetspolicies som
-        förbjuder användning av publika tjänster för känslig information som lösenord.
-        Det finns till och med organisationer som kräver att alla verktyg finns på
-        privata intranät utan tillgång till omvärlden.
-      answer_why_private_2: Genom att köra din egen privata instans av Password Pusher
-        kan du kontrollera miljön och data. Det låter dig också lägga till anpassade
-        funktioner och integrationer som är specifika för din organisation.
-      answer_why_private_3: Det är av dessa skäl som vi tillhandahåller möjligheten
-        (och uppmuntrar) användare och organisationer att köra privata instanser när
-        det behövs.
-      feedback_link: Återkopplingsformulär
-      github_link: GitHub
-      mac_link: Mac Keynote
-      my_blog: min blogg
-      question_access: Finns det andra sätt jag kan komma åt Password Pusher utanför
-        en webbläsare?
-      question_add_feature: Kan du lägga till en specifik funktion för min organisation?
-      question_already_expired: Den hemliga webbadressen jag skickade hade redan upphört
-        att gälla. Vad hände?
-      question_automation: Kan jag automatisera min lösenordsspridning?
-      question_conference: Kan jag använda Password Pusher i mitt föredrag, video,
-        presentation eller konferens?
-      question_have_to_pay: Måste jag betala?
-      question_how_many: Hur många förfrågningar kan jag skicka till Password Pusher?
-      question_licensing: Finns det några licensrestriktioner för mig, mitt företag
-        eller min organisation?
-      question_premium_diff: Vilka är skillnaderna mellan öppen källkod och premiumversioner?
-      question_private_risks: Vilka är de potentiella säkerhetsriskerna med att köra
-        min egna version internt?
-      question_purpose: Vad är syftet med Password Pusher?
-      question_rebranding: Kan jag använda en anpassad logotyp eller ändra designen?
-      question_self_host: Kan jag köra min egen version intern för min organisation?
-      question_trust: Tillit är en oro. Varför ska jag använda Password Pusher?
-      question_why_premium: Password Pusher har alltid varit öppen källkod. Varför
-        finns det en premiumversion?
-      question_why_private: Varför skulle jag vilja köra min egen privata instans
-        av Password Pusher?
-      question_will_oss: Kommer premiumfunktionerna att läggas till i open source-versionen?
-      subtitle: "..alla saker du vill veta om Password Pusher."
-      title: Vanliga frågor
-      title_other: Andra
-      title_private: Kör din egen privata instans
-      title_pushes: Knuffar
-      title_subscriptions: Premiumversion
-      title_tools: Verktyg, integrationer och applikationer
-      title_trust: Förtroende och säkerhet
-      tools_link: Verktyg & Applikationer
-      windows_link: Windows Powerpoint
     generate_key:
       env_var: Du kan använda den här nyckeln i din applikation genom att ange miljövariablen
       generate_key: Skapa nyckel
@@ -1331,6 +1193,7 @@ sv:
       title: Skapa en krypteringsnyckel
     password_generator:
       push_it: Tryck på detta lösenord
+      pwgen_title: Lösenordsgenerator
     tools:
       alfred: Alfred App
       api_documentation: API Endpoint Documentation
@@ -1372,3 +1235,4 @@ sv:
         privacy_policy: Integritetspolicy
       terms_of_service:
         terms_of_service: Användarvillkor
+  confirmation_go: Klicka här för att bekräfta ditt konto

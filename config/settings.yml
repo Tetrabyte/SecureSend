@@ -2,7 +2,7 @@
 #
 # This file uses YAML syntax.  Indentation must be 2 spaces (not tabs).
 #
-# See also https://github.com/pglombardo/PasswordPusher/blob/master/Configuration.md
+# See also https://docs.pwpush.com/docs/config-strategies/
 # for a further explanation of the larger settings available here.
 
 ### Application Defaults
@@ -49,7 +49,7 @@ enable_file_pushes: false
 # Environment variable override:
 # PWP__ENABLE_LOGINS='false'
 #
-enable_logins: false
+enable_logins: true
 
 ## Disable Signups
 #
@@ -294,7 +294,7 @@ pw:
   # in the future by adding a new checkbox and a `blur_default` setting.
   #
   # Environment variable override:
-  # PWP__PW__BLUR='false'
+  # PWP__PW__ENABLE_BLUR='false'
   #
   enable_blur: false
 
@@ -676,39 +676,24 @@ brand:
 # Throttling enforces a minimum time interval
 # between subsequent HTTP requests from a particular client, as
 # well as by defining a maximum number of allowed HTTP requests
-# per a given time period (per second, minute, hourly, or daily).
+# per a given time period (per second or minute)
 #
-# See https://github.com/dryruby/rack-throttle#throttling-strategies
-# for a description of function.
+# See https://github.com/rack/rack-attack
 #
 throttling:
-  # ..maximum number of allowed HTTP requests per day
-  #
-  # Default: 5000
-  #
-  # Environment Variable Override: PWP__THROTTLING__DAILY='5000'
-  daily: 5000
-
-  # ..maximum number of allowed HTTP requests per hour
-  #
-  # Default: 600
-  #
-  # Environment Variable Override: PWP__THROTTLING__HOURLY='600'
-  hourly: 600
-
   # ..maximum number of allowed HTTP requests per minute
   #
-  # Default: 60
+  # Default: 120
   #
   # Environment Variable Override: PWP__THROTTLING__MINUTE='60'
-  minute: 60
+  minute: 120
 
   # ..maximum number of allowed HTTP requests per second
   #
-  # Default: 20
+  # Default: 60
   #
   # Environment Variable Override: PWP__THROTTLING__SECOND='20'
-  second: 20
+  second: 60
 
 
 ### Mail Server Configuration
@@ -751,7 +736,7 @@ mail:
   # Important: Comment this out if your server doesn't require authentication.
   #
   # Environment Variable Override: PWP__MAIL__SMTP_AUTHENTICATION='plain'
-  smtp_authentication: 'plain'
+  # smtp_authentication: 'plain'
 
   # If your mail server requires authentication, set the username in this setting.
   # Environment Variable Override: PWP__MAIL__SMTP_USER_NAME='apikey'
@@ -806,9 +791,6 @@ feedback:
 # Pre-compilation isn't supported in this yaml file.  It is only supported
 # through the environment variable PWP_PRECOMPILE='true'.
 #
-# See the following for more information:
-# https://github.com/pglombardo/PasswordPusher/blob/master/Configuration.md#how-to-precompile-css-assets
-#
 # Environment Variable: PWP_PRECOMPILE='false'
 
 ### Themes
@@ -851,35 +833,37 @@ default_locale: :en
 # list below.
 #
 enabled_language_codes:
-  - ca # 'Català'
-  - cs # 'Čeština'
-  - da # 'Dansk'
-  - de # 'Deutsch'
-  - en # 'English'
-  - es # 'Español'
-  - eu # 'Euskara'
-  - fi # 'Suomi'
-  - fr # 'Français'
-  - hi # 'हिन्दी'
-  - hu # 'Magyar'
-  - id # 'Indonesian'
-  - is # 'Íslenska'
-  - it # 'Italiano'
-  - ja # '日本語'
-  - ko # '한국어'
-  - lv # 'Latviski'
-  - nl # 'Nederlands'
-  - 'no' # 'Norsk' # _no_ keyword in Ruby evaluates to false  #-(
-  - pl # 'Polski'
+  - ca    # 'Català'
+  - cs    # 'Čeština'
+  - da    # 'Dansk'
+  - de    # 'Deutsch'
+  - en    # 'English'
+  - en-GB # 'English (UK)'
+  - es    # 'Español'
+  - eu    # 'Euskara'
+  - fi    # 'Suomi'
+  - fr    # 'Français'
+  - hi    # 'हिन्दी'
+  - hu    # 'Magyar'
+  - id    # 'Indonesian'
+  - is    # 'Íslenska'
+  - it    # 'Italiano'
+  - ja    # '日本語'
+  - ko    # '한국어'
+  - lv    # 'Latviski'
+  - nl    # 'Nederlands'
+  - 'no'  # 'Norsk' # _no_ keyword in Ruby evaluates to false  #-(
+  - pl    # 'Polski'
   - pt-BR # 'Português'
   - pt-PT # 'Português'
-  - ro # 'Română'
-  - ru # 'Русский'
-  - sr # 'Српски'
-  - sv # 'Svenska'
-  - th # 'ไทย'
-  - uk # 'Українська'
-  - ur # 'اردو'
+  - ro    # 'Română'
+  - ru    # 'Русский'
+  - sr    # 'Српски'
+  - sk    # 'Slovenský'
+  - sv    # 'Svenska'
+  - th    # 'ไทย'
+  - uk    # 'Українська'
+  - ur    # 'اردو'
   - zh-CN # '中文'
 
 ### Language & Internationalization
@@ -896,6 +880,7 @@ language_codes:
   en: 'English'
   es: 'Español'
   eu: 'Euskara'
+  en-GB: 'English (UK)'
   fi: 'Suomi'
   fr: 'Français'
   hi: 'हिन्दी'
@@ -913,6 +898,7 @@ language_codes:
   pt-PT: 'Português'
   ro: 'Română'
   ru: 'Русский'
+  sk: 'Slovenský'
   sr: 'Српски'
   sv: 'Svenska'
   th: 'ไทย'
@@ -932,6 +918,7 @@ country_codes:
   da: :dk
   de: :de
   en: :us
+  en-GB: :gb
   es: :es
   eu: :es-pv
   fi: :fi
@@ -951,6 +938,7 @@ country_codes:
   pt-PT: :pt
   ro: :ro
   ru: :ru
+  sk: :sk
   sr: :rs
   sv: :se
   th: :th

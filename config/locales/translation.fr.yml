@@ -136,7 +136,7 @@ fr:
     template:
       body: 'Veuillez vérifier les champs suivants : '
       header:
-        one: 'Impossible d''enregistrer ce(tte) %{model} : 1 erreur'
+        one: 'Impossible d''enregistrer ce(tte) %{model} : %{count} erreur(s)'
         other: 'Impossible d''enregistrer ce(tte) %{model} : %{count} erreurs'
   activerecord:
     errors:
@@ -180,40 +180,40 @@ fr:
     distance_in_words:
       half_a_minute: une demi‑minute
       less_than_x_seconds:
-        one: moins d'une seconde
+        one: moins de %{count} seconde
         other: moins de %{count} secondes
       x_seconds:
-        one: 1 seconde
+        one: "%{count} seconde"
         other: "%{count} secondes"
       less_than_x_minutes:
         one: moins d'une minute
         other: moins de %{count} minutes
       x_minutes:
-        one: 1 minute
+        one: "%{count} minute"
         other: "%{count} minutes"
       about_x_hours:
-        one: environ une heure
+        one: environ %{count} heure
         other: environ %{count} heures
       x_days:
-        one: 1 jour
+        one: "%{count} jour"
         other: "%{count} jours"
       about_x_months:
-        one: environ un mois
+        one: environ %{count} mois
         other: environ %{count} mois
       x_months:
-        one: 1 mois
+        one: "%{count} mois"
         other: "%{count} mois"
       about_x_years:
-        one: environ un an
+        one: environ %{count} an
         other: environ %{count} ans
       over_x_years:
-        one: plus d'un an
+        one: plus de %{count} an
         other: plus de %{count} ans
       almost_x_years:
-        one: presqu'un an
+        one: presque %{count} an
         other: presque %{count} ans
       x_years:
-        one: 1 an
+        one: "%{count} an"
         other: "%{count} ans"
     prompts:
       year: Année
@@ -382,6 +382,8 @@ fr:
           votre mot de passe actuel pour valider ces modifications
       new:
         sign_up: Inscription
+        account_or_team_name: Nom du compte ou de l'équipe
+      preferred_language: langue préférée
     unlocks:
       send_instructions: Vous allez recevoir sous quelques minutes un email comportant
         des instructions pour déverrouiller votre compte.
@@ -458,6 +460,7 @@ fr:
         sunset_at: Coucher de soleil à
         info: Info
     returns: Retour
+    blank_allowed: espace vide autorisé
   i18n_tasks:
     add_missing:
       added:
@@ -474,11 +477,9 @@ fr:
           data_format: 'Format des données : %{valid_text}.'
           keep_order: Gardez l'ordre des clés
           key_pattern: Filtrer par modèle de clé (par exemple 'common.*')
-          key_pattern_to_rename: Clé complète (motif) à renommer. Requis
           locale_to_translate_from: Paramètres régionaux à partir desquels traduire
           locales_filter: 'Paramètres régionaux à traiter. Spécial : base'
           missing_types: 'Filtrer par types : %{valid}'
-          new_key_name: Nouveau nom, interpole le nom d'origine comme %{key}. Requis
           nostdin: Ne pas lire depuis stdin
           out_format: 'Format de sortie : %{valid_text}'
           pattern_router: 'Use pattern router : clés déplacées par config data.write'
@@ -525,6 +526,7 @@ fr:
         tree_subtract: arbre A moins les clés de l'arbre B
         tree_translate: Google traduit un arbre en paramètres régionaux racine
         unused: afficher les traductions inutilisées
+        cp: copier les clés dans les données locales qui correspondent au modèle donné
       encourage:
       - Bon travail!
       - Bien joué!
@@ -687,7 +689,7 @@ fr:
       minutes_tip: 1 jour = 1440 minutes, 7 jours = 10080 minutes, 30 jours = 43200
         minutes
       header_view_expiration: Afficher l'expiration
-      expire_after_views_min: Nombre minimum de vues
+      expire_after_views_min: Nombre minimum de vue
       expire_after_views_min_help: Le nombre minimum de vues avant l'expiration d'un
         push.
       expire_after_views_max: Nombre maximal de vues
@@ -715,32 +717,34 @@ fr:
         par défaut pour tous les membres de l'équipe. Il ne peut pas être modifié
         par les membres de l'équipe.
       hide_retrieval_step: Masquer l'option ?
-      hide_retrieval_step_help: Masque l’option de l’étape de récupération en 1 clic
-        aux membres de l’équipe. Ceci est utile pour forcer l’option par défaut sans
-        la montrer aux membres de l’équipe.
-      header_deletable: Supprimé par le spectateur
+      hide_retrieval_step_help: Masque l’option récupération en 1 clic aux membres
+        de l’équipe. Ceci est utile pour forcer l’option par défaut sans l'afficher
+        aux membres de l’équipe.
+      header_deletable: Supprimable par le Destinataire
       enable_deletable: Activer?
       enable_deletable_help: Activer cette option pour l'équipe ? Si elle est désactivée,
         cette option sera masquée et non utilisée.
       deletable_default: Valeur par défaut
-      deletable_default_help: La valeur par défaut de l'option Supprimable par la
-        visionneuse.
+      deletable_default_help: La valeur par défaut de l'option Supprimable par le
+        destinataire.
       deletable_forced: Forcer la valeur par défaut ?
-      deletable_forced_help: Force l'utilisation de cette option avec la valeur par
-        défaut pour tous les membres de l'équipe. Il ne peut pas être modifié par
-        les membres de l'équipe.
+      deletable_forced_help: 'Force l''utilisation de cette option avec la valeur
+        par défaut pour tous les membres de l''équipe. Elle ne peut pas être modifiée
+        par les membres de l''équipe.
+
+        '
       hide_deletable: Masquer l'option ?
-      hide_deletable_help: Masque l’option Supprimable par la visionneuse aux membres
+      hide_deletable_help: Masque l’option Supprimable par le Destinataire aux membres
         de l’équipe. Ceci est utile pour forcer l’option par défaut sans la montrer
         aux membres de l’équipe.
       hide_passphrase: Masquer l'option ?
-      hide_passphrase_help: Masque l’option Verrouillage par phrase secrète. Utile
-        pour désactiver complètement l’utilisation de cette option.
+      hide_passphrase_help: Masque l’option Verrouillage par Passphrase. Utile pour
+        désactiver complètement l’utilisation de cette option.
       enable_blur: Activer?
-      enable_blur_help: Payload Blurring masque le contenu de la charge utile sur
-        la page de livraison de l'URL secrète. Les destinataires peuvent activer le
-        flou en un clic pour révéler les données originales.
-      header_passphrase: Verrouillage par phrase secrète
+      enable_blur_help: La fonctionnalité de floutage, permet de masquer l'URL originale
+        sur la page de l'URL secrète. Les destinataires peuvent activer ou désactiver
+        le floutage en un clic pour révéler l'URL originale.
+      header_passphrase: Verrouillage par passphrase
       header_blur: Flou de la charge utile
       header_pwgen: Génération de mot de passe
       save: Mettre à jour la politique de l'équipe
@@ -752,7 +756,7 @@ fr:
         de mots de passe ? Si elle est désactivée, l'option sera forcée à la configuration
         ci-dessous et ne pourra pas être modifiée par les membres de l'équipe.
       pwgen_has_numbers: Inclure des chiffres ?
-      pwgen_has_numbers_help: Incluez des chiffres dans le mot de passe généré.
+      pwgen_has_numbers_help: Inclure des chiffres dans le mot de passe généré.
       pwgen_title_cased: Titre caché ?
       pwgen_title_cased_help: Casse du titre les parties du mot de passe générées.
       pwgen_use_separators: Utiliser des séparateurs ?
@@ -770,6 +774,7 @@ fr:
       pwgen_max_syllable_length_help: La longueur maximale d'une syllabe dans le mot
         de passe généré.
       pwgen_syllables_count: Nombre de syllabes
+      switch: Changer
     show:
       edit_policy: Modifier la stratégie push
       policy: Politique d'équipe
@@ -793,6 +798,8 @@ fr:
       newsletter: Bulletin
       password_generator: Générateur de mot de passe
       tools: Outils, API et CLI
+      api_docs: Documentation API
+      features: Caractéristiques
     pw_generator_modal:
       cancel: Annuler
       configure: Paramètres de génération du mot de passe
@@ -813,6 +820,9 @@ fr:
       vowels: Voyelles
     navbar:
       edit_policy: Politique
+    secret_url_bar:
+      secret_link_lang: Langue du lien secret
+      autodetect: Détection automatique
   audit_logs:
     audit_log:
       created: Créé(e) le
@@ -825,9 +835,11 @@ fr:
         IP %{ip}
       log_referrer: 'Référent : %{referrer}'
       log_user_agent: 'Agent utilisateur : %{user_agent}'
-      log_viewed: Affichage réussi de l'adresse IP %{ip} sur %{date} par %{user}
+      log_viewed: Affichage réussi le %{date} par %{user}
       unknown: Inconnu
       viewed_by: Consulté par %{user}
+      log_failed_passphrase: Échec de la tentative de phrase secrète sur %{date} par
+        %{user}
   dashboard:
     show:
       detail: Détail
@@ -848,10 +860,10 @@ fr:
   feedbacks:
     create:
       feedback_sent: Commentaires envoyés ! Nous vous répondrons dès que possible.
-    failed_spam_test: Toutes nos excuses, mais vous avez échoué à la vérification
-      anti-spam. Vous pouvez essayer de nous contacter sur Github à la place.
-    failed_to_send: Échec de l'envoi des commentaires. Quelque chose n’allait pas.
-      Veuillez réessayer ou contactez-nous sur Github.
+      failed_spam_test: Toutes nos excuses, mais vous avez échoué à la vérification
+        anti-spam. Vous pouvez essayer de nous contacter sur Github à la place.
+      failed_to_send: Échec de l'envoi des commentaires. Quelque chose n’allait pas.
+        Veuillez réessayer ou contactez-nous sur Github.
     new:
       email: Email
       have_idea: Une idée ou un souhait ? Quelque chose vous déplaît ? Vous voulez
@@ -955,6 +967,7 @@ fr:
       title: Journal d'audit push
       visible_to: Visible uniquement par vous
       when: Quand
+      preview: Partager ce Push
     copy_to_clipboard: Copier dans le presse-papier
     day:
       one: Un jour
@@ -965,6 +978,7 @@ fr:
     expire:
       expired: Le contenu a été supprimé et l'URL privée n'est plus valable.
       not_deletable: Cette publication ne peut pas être supprimée par l'utilisateur
+      already_expired: Cette poussée a déjà expiré.
     form:
       12_hours: 12 heures
       15_minutes: 15 minutes
@@ -1016,13 +1030,15 @@ fr:
         pour voir cette publication.
       password_tip: 'Astuce : saisissez uniquement un mot de passe dans la case. D''autres
         informations d''identification peuvent compromettre la sécurité.'
-      payload_placeholder: Entrez le mot de passe, le texte ou l'URL pour pousser...
+      payload_placeholder: Entrez le mot de passe, le texte ou l'URL à publier ...
       push_it: Publier !
-      upload_limit: Vous pouvez télécharger jusqu'à 10 fichiers par push.
+      upload_limit: Vous pouvez télécharger jusqu'à %{count} fichiers par push.
       view: Voir
       views: Vues
       week: Semaine
       weeks: Semaines
+      payload_url_placeholder: Entrez l'URL vers laquelle rediriger...
+      url_push_tip: Le push créé sera redirigé vers l'URL fournie.
     hour:
       one: 1 heure
       other: "%{count} heures"
@@ -1043,6 +1059,8 @@ fr:
       views_remaining: Vues restantes
       active: Actif
       expired: Expiré
+      all: Tous
+      remaining: Restant
     minute:
       one: 1 minute
       other: "%{count} minutes"
@@ -1087,6 +1105,8 @@ fr:
       print_and_share: Imprimer et partager
       print_and_share_tip: Générer une page imprimable pour les utilisateurs finaux
       show_expiration: Afficher les détails d'expiration
+      link_lang_auto: Alternativement, la détection automatique sélectionnera une
+        langue en fonction des paramètres du navigateur de l'utilisateur final.
     provide_text_or_file: Pour créer un push, vous devez soit fournir du texte, soit
       joindre un fichier, soit les deux.
     push:
@@ -1098,7 +1118,7 @@ fr:
       push_controls: Commandes de publication
       title: Nouvelle poussée
       unknown: Inconnu
-    secret_link_lang: Langue du lien secret
+      share: Partager
     settings: Paramètres
     show:
       blurred: Le mot de passe est flouté. Cliquez ci-dessous pour le voir.
@@ -1118,6 +1138,7 @@ fr:
         %{time_unit}%{b_tag} ou %{b_tag}%{view_count} plus %{view_unit}%{b_tag} (selon
         la première éventualité).
       your_link: Votre url privée
+      intro: Le contenu suivant vous a été envoyé.
     show_expired:
       expired_help: Au besoin, veuillez contacter la personne ou l'organisation qui
         vous a fourni cette URL privée.
@@ -1129,6 +1150,9 @@ fr:
     view_audit_log: Voir le journal d'audit
     whichever: "(l'une ou l'autre condition survenant en premier)"
     'yes': Oui
+    payload_too_large: La charge utile est trop importante. Vous ne pouvez pousser
+      que jusqu'à %{count} octets.
+    too_many_files: Vous ne pouvez joindre que jusqu'à %{count} fichiers par push.
   static:
     about:
       about_1: Password Pusher est un outil utilisé pour partager des mots de passe
@@ -1175,180 +1199,6 @@ fr:
       section_help: Vous voulez aider ?
       title: À propos de Password Pusher
       twitter: Twitter
-    faq:
-      answer_access_1: Avec l'API JSON Password Pusher, il existe un certain nombre
-        d'applications et d'utilitaires de ligne de commande (CLI) qui s'interfacent
-        avec pwpush.com ou votre instance auto-hébergée. Envoyez les mots de passe
-        depuis la CLI, Slack, l'application Alfred et plus encore.
-      answer_access_2: Voir la page %{tools} pour plus d'informations.
-      answer_add_feature_1: Très probable. J'aime entendre toutes les idées et tous
-        les commentaires et garder une liste pour décider quoi ajouter ensuite. Si
-        vous en avez, veuillez les soumettre sur la page %{feedback_link} ou sur %{github_link}.
-      answer_already_expired_1: Certains systèmes tels que la messagerie électronique,
-        les pare-feu et les systèmes de chat disposent souvent de scanners de liens
-        qui peuvent consommer des vues. Ceci est généralement effectué pour la sécurité
-        de l'entreprise ou simplement pour générer un « aperçu » pour les applications.
-      answer_already_expired_2: Pour éviter cela, utilisez l'option d'étape de récupération
-        en 1 clic lorsque vous transmettez des mots de passe. Cela oblige les utilisateurs
-        à cliquer sur une page préliminaire pour protéger les vues de ces scanners.
-      answer_already_expired_3: À titre de mesure préventive supplémentaire, une fois
-        connecté, un journal d'audit est fourni pour chaque push créé. Ce journal
-        d'audit révèle par qui et quand le push a été consulté.
-      answer_automation_1: Oui. L'API JSON Password Pusher permet l'automatisation
-        de la transmission de mots de passe. Cela peut être fait avec une variété
-        de langages et d’outils de programmation.
-      answer_automation_2: Voir la page %{tools} pour plus d'informations.
-      answer_conference_1: Absolument. Nous disposons de ressources multimédias et
-        d'une explication complète des fonctionnalités disponibles aux formats %{windows_link}
-        et %{mac_link}.
-      answer_conference_2: Si vous avez des questions ou avez besoin d'aide, n'hésitez
-        pas à me contacter à tout moment.
-      answer_how_many_1: Il n’y a actuellement aucune limite et je n’ai pas l’intention
-        d’en ajouter. Pour assurer au minimum la stabilité du site, Password Pusher
-        est configuré par défaut avec un limiteur de débit. Cela peut être désactivé
-        dans la version auto-hébergée.
-      answer_licensing_1: La version open source du code source est publiée sous la
-        licence Apache 2.0 et cela définit à peu près toutes les limitations. Il existe
-        de nombreux sites clones renommés et repensés de Password Pusher et je les
-        accueille tous avec bienvenue.
-      answer_licensing_2: La version premium est publiée sous licence commerciale.
-        Ce n’est pas open source et n’est pas gratuit. À la base, il contient le projet
-        open source mais offre un super ensemble de fonctionnalités et est destiné
-        à accélérer le développement et à aider à financer le projet.
-      answer_licensing_3: La version premium n'est pas requise pour exécuter une instance
-        privée de Password Pusher. La version open source est complète et gratuite.
-      answer_licensing_4: Toutes les fonctionnalités premium se retrouvent dans la
-        version open source après une période de temps en fonction de la fonctionnalité.
-      answer_private_risks_1: Exécuter une instance privée de Password Pusher pour
-        votre entreprise ou organisation vous donne la tranquillité d'esprit de savoir
-        exactement quel code vous faites tourner. Vous pouvez la configurer et l'exécuter
-        comme vous le souhaitez.
-      answer_private_risks_2: D’un autre côté, si votre instance est piratée et que
-        le cryptage est rompu, les entités malveillantes disposent désormais d’un
-        dictionnaire ciblé de mots de passe pour forcer brutalement les comptes de
-        votre organisation. (cela serait limité aux push qui n'ont pas encore expiré)
-      answer_private_risks_3: À cet égard, l'instance publique sur pwpush.com peut
-        être supérieure dans la mesure où elle ne contient que des mots de passe sans
-        informations d'identification mélangées entre utilisateurs du monde entier.
-      answer_private_risks_4: Une autre considération serait la maintenance de l’instance.
-        Vous devez le maintenir à jour, le sécuriser et le sauvegarder.
-      answer_private_risks_5: Pesez le pour et le contre et décidez ce qui est le
-        mieux. Nous supportons les deux options.
-      answer_purpose_1: Password Pusher est une meilleure solution que l'envoi de
-        mots de passe direct par email.
-      answer_purpose_10: De plus, <strong>les mots de passe expirent après qu'un ensemble
-        prédéfini de vues soit atteint ou après un certain temps.</strong>
-      answer_purpose_11: Une fois expirés, les mots de passe sont supprimés définitivement.
-      answer_purpose_12: Si cela vous semble intéressant, essayez-le ou consultez
-        les autres questions de la FAQ, ci-dessous.
-      answer_purpose_2: "<strong>L’envoi de mots de passe par courrier électronique
-        n’est pas intrinsèquement sécurisé.</strong> Les plus grands risques comprennent :"
-      answer_purpose_3: Les mots de passe envoyés par e-mail sont généralement envoyés
-        avec des informations de contexte ou qui peuvent potentiellement être déduites
-        du nom d'utilisateur de l'e-mail, du domaine, etc.
-      answer_purpose_4: L'email est fondamentalement non sécurisé et peut être intercepté
-        à de nombreux endroits par des acteurs malveillants.
-      answer_purpose_5: Les mots de passe envoyés par e-mail restent en permanence
-        stockés dans les archives des e-mails.
-      answer_purpose_6: Les mots de passe présent dans des emails peut être récupérés
-        et réutilisés plus tard si le compte a été volé ou fraudé, etc.
-      answer_purpose_7: Les mêmes risques existent lors de l’envoi de mots de passe
-        via SMS, WhatsApp, Telegram, Chat etc… Les données peuvent et sont souvent
-        conservées à perpétuité et hors de votre contrôle.
-      answer_purpose_8: En utilisant Password Pusher, vous contournez tout cela.
-      answer_purpose_9: Pour chaque mot de passe publié sur Password Pusher, <strong>une
-        URL unique est générée que vous seul connaîtrez</strong> .
-      answer_rebranding_1: Password Pusher prend en charge un changement de marque
-        complet « prêt à l'emploi », vous permettant d'ajouter un logo personnalisé,
-        des images, du texte et même de modifier le thème de l'application.
-      answer_self_host_1: Oui, pour la version open source, nous fournissons %{docker_link}
-        et %{install_link} pour une grande variété de plateformes et de cloud.
-      answer_self_host_2: Pour la version premium, avec le super ensemble de fonctionnalités,
-        des conteneurs auto-hébergés seront bientôt disponibles.
-      answer_trust_1: Bonne question. Toute bonne sécurité comment par un sain scepticisme
-        vis à vis de tous les composants en jeu.
-      answer_trust_2: Password Pusher est une bien meilleure solution que l'envoi
-        de mots de passe direct par email. Il évite la conservation des mots de passe
-        dans les archives des mails. Ce n'est pas non plus une solution de sécurité
-        universelle.
-      answer_trust_3: Password Pusher a démarré en tant que projet open source fin
-        2011. Il a été maintenu et mis à jour par moi-même (Peter Giacomo Lombardo)
-        et une poignée d'excellents contributeurs pendant tout ce temps. En 2024,
-        la version premium a été introduite pour accélérer le développement et aider
-        à financer le projet. Toutes les fonctionnalités premium finissent par se
-        retrouver dans la version open source.
-      answer_trust_4: En ayant une si longue histoire et en étant open source, Password
-        Pusher a été examiné par de nombreux yeux. Il a été utilisé et audité par
-        de nombreuses organisations et individus au fil des ans.
-      answer_trust_5: 'La politique de Password Pusher est triple : 1) Chiffrement
-        au repos et en transit 2) Rétention minimale des données 3) Transparence sous
-        la forme d''un journal d''audit.'
-      answer_trust_6: Dans cette optique, les charges utiles push sont supprimées
-        sans équivoque à l’expiration et le journal d’audit est conservé indéfiniment.
-        Moins Password Pusher contient de données, mieux c’est.
-      answer_trust_7: Si vous avez encore des inquiétudes concernant la confiance,
-        la sûreté et la sécurité, n'hésitez pas à consulter le code, à poster toutes
-        vos questions et à envisager de l'exécuter en interne dans votre organisation.
-      answer_trust_8: Quant à la confiance en moi, tout ce que je peux offrir, c'est
-        ma longue histoire dans la construction de ce projet et ma réputation publique
-        sur %{github}, %{linkedin}, %{twitter} et %{blog}. N'hésitez pas à me contacter
-        à tout moment pour toute question que vous pourriez avoir.
-      answer_why_premium_1: asdf
-      answer_why_private_1: Certaines organisations sont contraintes par des politiques
-        de sécurité qui interdisent l'utilisation de services cloud pour des informations
-        sensibles telles que les mots de passe. Il en existe même qui exigent que
-        l'ensemble de leurs outils soient hébergées en intranet.
-      answer_why_private_2: L'exécution de votre propre instance privée de Password
-        Pusher vous permet de contrôler l'environnement et les données. Il vous permet
-        également d'ajouter des fonctionnalités et des intégrations personnalisées
-        spécifiques à votre organisation.
-      answer_why_private_3: Ces pour ces raisons que nous donnons la possibilité aux
-        utilisateurs et organisations d'avoir leur propre instance privée si besoin
-        (et nous l'encourageons).
-      feedback_link: Formulaire de commentaires
-      github_link: GitHub
-      mac_link: Keynote Mac
-      my_blog: mon blog
-      question_access: Existe-t-il d'autres moyens d'utiliser Password Pusher que
-        par un navigateur ?
-      question_add_feature: Pourriez-vous ajouter une nouvelle fonctionnalité pour
-        mon organisation ?
-      question_already_expired: L'URL secrète que j'ai envoyée était déjà expirée.
-        Ce qui s'est passé?
-      question_automation: Est-ce que je peux automatiser la distribution de mot de
-        passe ?
-      question_conference: Puis-je utiliser Password Pusher dans mon discours, vidéo,
-        présentation ou conférence ?
-      question_have_to_pay: Dois-je payer?
-      question_how_many: Combien de requêtes puis-je envoyer à Password Pusher ?
-      question_licensing: Est-ce qu'il y a des contraintes de licence pour moi, mon
-        entreprise ou mon organisation ?
-      question_premium_diff: Quelles sont les différences entre les versions open
-        source et premium ?
-      question_private_risks: Quels sont les risques de sécurité possibles liés à
-        l'exécution de ma propre instance en interne ?
-      question_purpose: Quel est le but de Password Pusher ?
-      question_rebranding: Puis-je mettre un logo personnalisé ou modifier le design
-        ?
-      question_self_host: Puis-je avoir ma propre instance pour mon organisation en
-        interne ?
-      question_trust: Pourquoi faire confiance à Password Pusher et l'utiliser ?
-      question_why_premium: Password Pusher a toujours été open source. Pourquoi y
-        a-t-il une version premium ?
-      question_why_private: Pourquoi voudrais-je exécuter ma propre instance de Password
-        Pusher ?
-      question_will_oss: Les fonctionnalités premium seront-elles ajoutées à la version
-        open source ?
-      subtitle: "..toutes les choses que vous voulez savoir sur Password Pusher."
-      title: Foire aux questions
-      title_other: Autre
-      title_private: Mettre en oeuvre votre propre installation
-      title_pushes: Pousse
-      title_subscriptions: Version Premium
-      title_tools: Outils, intégrations et applications
-      title_trust: Confiance et sécurité
-      tools_link: Outils et applications
-      windows_link: PowerPoint Windows
     generate_key:
       env_var: Vous pouvez appliquer cette clé à votre application en définissant
         la variable d'environnement
@@ -1382,6 +1232,7 @@ fr:
       title: Générer une clé de chiffrement
     password_generator:
       push_it: Poussez ce mot de passe
+      pwgen_title: Générateur de mot de passe
     tools:
       alfred: Application Alfred
       api_documentation: Documentation sur les points de terminaison d'API
@@ -1424,3 +1275,4 @@ fr:
         privacy_policy: politique de confidentialité
       terms_of_service:
         terms_of_service: Conditions d'utilisation
+  confirmation_go: Cliquez ici pour confirmer votre compte
