@@ -49,7 +49,7 @@ enable_file_pushes: false
 # Environment variable override:
 # PWP__ENABLE_LOGINS='false'
 #
-enable_logins: false
+enable_logins: true
 
 ## Disable Signups
 #
