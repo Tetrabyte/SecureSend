@@ -229,7 +229,7 @@ class UrlsController < BaseController
       end
       return
     else
-      @secret_url = helpers.secret_url(@push, with_retrieval_step: false)
+      @secret_url = helpers.secret_url(@push, with_retrieval_step: false, locale: params[:locale])
     end
 
     respond_to do |format|
@@ -272,24 +272,18 @@ class UrlsController < BaseController
   description "Expires a push immediately.  Must be authenticated & owner of the push _or_ the " \
               "push must have been created with _deleteable_by_viewer_."
   def destroy
-    is_owner = false
-
-    if user_signed_in?
-      # Check if logged in user owns the url to be expired
-      if @push.user_id == current_user.id
-        is_owner = true
-      else
-        redirect_to :root, notice: _("That push does not belong to you.")
-        return
+    # Check ownership
+    if @push.user_id != current_user&.id
+      respond_to do |format|
+        format.html { redirect_to :root, notice: _("That push does not belong to you.") }
+        format.json { render json: {error: _("That push does not belong to you.")}, status: :unprocessable_entity }
       end
-    else
-      redirect_to :root, notice: _("That push does not belong to you.")
       return
     end
 
     if @push.expired
       respond_to do |format|
-        format.html { redirect_to :root, notice: _("That push is already expired.") }
+        format.html { redirect_to @push }
         format.json { render json: {error: _("That push is already expired.")}, status: :unprocessable_entity }
       end
       return
@@ -305,13 +299,7 @@ class UrlsController < BaseController
     respond_to do |format|
       if @push.save
         format.html do
-          if is_owner && !ENV.key?("PWP_PUBLIC_GATEWAY")
-            redirect_to audit_url_path(@push),
-              notice: _("The push content has been deleted and the secret URL expired.")
-          else
-            redirect_to @push,
-              notice: _("The push content has been deleted and the secret URL expired.")
-          end
+          redirect_to @push, notice: _("The push content has been deleted and the secret URL expired.")
         end
         format.json { render json: @push, status: :ok }
       else
@@ -449,7 +437,7 @@ class UrlsController < BaseController
   end
 
   def url_params
-    params.require(:url).permit(:payload, :expire_after_days, :expire_after_views, :retrieval_step, :note)
+    params.require(:url).permit(:payload, :expire_after_days, :expire_after_views, :retrieval_step, :note, :passphrase)
   end
 
   def print_preview_params

@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pwpush 1.0\n"
 "Report-Msgid-Bugs-To: contact@translation.io\n"
-"POT-Creation-Date: 2024-08-14 12:34+0200\n"
-"PO-Revision-Date: 2024-08-14 12:34+0200\n"
+"POT-Creation-Date: 2024-11-13 23:27+0100\n"
+"PO-Revision-Date: 2024-11-13 23:27+0100\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Serbian\n"
 "Language: sr\n"
@@ -18,26 +18,6 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n%10==1&&n%100!=11)?0:((n%10>=2&&n%10<=4&&(n"
 "%100<12||n%100>14))?1:2);\n"
 "\n"
-
-#: ../../../app/controllers/feedbacks_controller.rb:15
-msgid ""
-"Our apologies but you failed the spam check.  You could try contacting us on G"
-"ithub instead."
-msgstr ""
-"Извињавамо се, али нисте прошли проверу нежељене поште. Уместо тога, можете по"
-"кушати да нас контактирате на Гитхуб-у."
-
-#: ../../../app/controllers/feedbacks_controller.rb:21
-msgid "Feedback sent!  We will get back to you as soon as possible."
-msgstr "Повратне информације су послате! Јавићемо вам се што је пре могуће."
-
-#: ../../../app/controllers/feedbacks_controller.rb:24
-msgid ""
-"Could not send feedback.  Did you pass the Humanity Test?  Valid email?  Try a"
-"gain?"
-msgstr ""
-"Није могуће послати повратне информације. Да ли сте положили тест хуманости? В"
-"ажећа имејл адреса? Покушајте поново?"
 
 #: ../../../app/controllers/file_pushes_controller.rb:105
 #: ../../../app/controllers/passwords_controller.rb:104
@@ -49,39 +29,28 @@ msgstr ""
 "Та приступна фраза је нетачна. Покушајте поново или контактирајте особу или ор"
 "ганизацију која вам је послала ову везу."
 
-#: ../../../app/controllers/file_pushes_controller.rb:241
+#: ../../../app/controllers/file_pushes_controller.rb:242
 #: ../../../app/controllers/passwords_controller.rb:252
 #: ../../../app/controllers/urls_controller.rb:252
 msgid "That push doesn't belong to you."
 msgstr "То гурање не припада теби."
 
-#: ../../../app/controllers/file_pushes_controller.rb:271
+#: ../../../app/controllers/file_pushes_controller.rb:269
+#: ../../../app/controllers/file_pushes_controller.rb:272
+#: ../../../app/controllers/passwords_controller.rb:279
 #: ../../../app/controllers/passwords_controller.rb:282
-#: ../../../app/controllers/urls_controller.rb:282
-#: ../../../app/controllers/urls_controller.rb:286
-msgid "That push does not belong to you."
-msgstr "То гурање не припада теби."
+msgid "That push is not deletable by viewers and does not belong to you."
+msgstr "Гледаоци не бришу тај притисак и не припада вама."
 
-#: ../../../app/controllers/file_pushes_controller.rb:276
-#: ../../../app/controllers/passwords_controller.rb:287
-msgid "That push is not deletable by viewers."
-msgstr "Гледаоци не могу брисати тај притисак."
-
-#: ../../../app/controllers/file_pushes_controller.rb:282
-#: ../../../app/controllers/file_pushes_controller.rb:283
-#: ../../../app/controllers/passwords_controller.rb:293
-#: ../../../app/controllers/passwords_controller.rb:294
-#: ../../../app/controllers/urls_controller.rb:292
-#: ../../../app/controllers/urls_controller.rb:293
+#: ../../../app/controllers/file_pushes_controller.rb:281
+#: ../../../app/controllers/passwords_controller.rb:291
+#: ../../../app/controllers/urls_controller.rb:287
 msgid "That push is already expired."
 msgstr "Тај притисак је већ истекао."
 
-#: ../../../app/controllers/file_pushes_controller.rb:301
-#: ../../../app/controllers/file_pushes_controller.rb:304
-#: ../../../app/controllers/passwords_controller.rb:311
-#: ../../../app/controllers/passwords_controller.rb:314
-#: ../../../app/controllers/urls_controller.rb:310
-#: ../../../app/controllers/urls_controller.rb:313
+#: ../../../app/controllers/file_pushes_controller.rb:297
+#: ../../../app/controllers/passwords_controller.rb:306
+#: ../../../app/controllers/urls_controller.rb:302
 #: ../../../app/views/file_pushes/audit.html.erb:97
 #: ../../../app/views/file_pushes/audit.html.erb:254
 #: ../../../app/views/passwords/audit.html.erb:97
@@ -94,6 +63,22 @@ msgstr "Пусх садржај је избрисан, а тајни УРЛ је
 #: ../../../app/controllers/urls_controller.rb:155
 msgid "Invalid URL: Must have a valid URI scheme."
 msgstr "Неважећи УРЛ: Мора да има важећу УРИ шему."
+
+#: ../../../app/controllers/urls_controller.rb:278
+#: ../../../app/controllers/urls_controller.rb:279
+msgid "That push does not belong to you."
+msgstr "То гурање не припада теби."
+
+#: ../../../app/views/application/_secret_url_bar.html.erb:17
+msgid "Secret Link Language"
+msgstr "Језик тајне везе"
+
+#: ../../../app/views/application/_secret_url_bar.html.erb:35
+#: ../../../app/views/pages/generate_key.html.erb:26
+#: ../../../app/views/pages/generate_key.html.erb:39
+#: ../../../app/views/shared/_copy_button.html.erb:2
+msgid "Copy to Clipboard"
+msgstr "Копирај у међуспремник"
 
 #: ../../../app/views/devise/mailer/confirmation_instructions.html.erb:8
 #: ../../../app/views/devise/mailer/email_changed.html.erb:8
@@ -236,7 +221,7 @@ msgid "Current Password"
 msgstr "Тренутна лозинка"
 
 #: ../../../app/views/devise/registrations/token.html.erb:2
-#: ../../../app/views/shared/_header.html.erb:44
+#: ../../../app/views/shared/_header.html.erb:49
 msgid "API Token"
 msgstr "АПИ токен"
 
@@ -334,48 +319,12 @@ msgid "Processing..."
 msgstr "Обрада..."
 
 #: ../../../app/views/devise/sessions/new.html.erb:7
-#: ../../../app/views/feedbacks/new.html.erb:20
 msgid "Email"
 msgstr "Емаил"
 
 #: ../../../app/views/devise/sessions/new.html.erb:12
 msgid "Password"
 msgstr "Лозинка"
-
-#: ../../../app/views/feedbacks/new.html.erb:1
-#: ../../../app/views/feedbacks/new.html.erb:2
-#: ../../../app/views/feedbacks/new.html.erb:42
-#: ../../../app/views/shared/_footer.html.erb:53
-msgid "Send Feedback"
-msgstr "Пошаљи повратне информације"
-
-#: ../../../app/views/feedbacks/new.html.erb:8
-msgid ""
-"Have an idea or wish?  Something you don't like?  Want to help out?  We want t"
-"o hear it!"
-msgstr ""
-"Имате идеју или жељу? Нешто што ти се не свиђа? Желите да помогнете? Желимо да"
-" чујемо!"
-
-#: ../../../app/views/feedbacks/new.html.erb:15
-msgid "Your Name"
-msgstr "Твоје име"
-
-#: ../../../app/views/feedbacks/new.html.erb:29
-msgid "What is one hundred minus 3?"
-msgstr "Колико је сто минус 3?"
-
-#: ../../../app/views/feedbacks/new.html.erb:34
-msgid ""
-"Tip: Copy your message to the clipboard in the unlikely chance submission fail"
-"s."
-msgstr ""
-"Савет: Копирајте своју поруку у међуспремник у случају да је мало вероватно да"
-" подношење не успе."
-
-#: ../../../app/views/feedbacks/new.html.erb:39
-msgid "Leave this field blank!"
-msgstr "Оставите ово поље празним!"
 
 #: ../../../app/views/file_pushes/active.html.erb:1
 #: ../../../app/views/file_pushes/active.html.erb:18
@@ -1165,8 +1114,6 @@ msgstr[2] "погледа"
 #: ../../../app/views/file_pushes/preview.html.erb:65
 #: ../../../app/views/pages/about.html.erb:68
 #: ../../../app/views/pages/about.html.erb:91
-#: ../../../app/views/pages/faq.html.erb:75
-#: ../../../app/views/pages/faq.html.erb:143
 #: ../../../app/views/passwords/preview.html.erb:63
 #: ../../../app/views/passwords/preview.html.erb:65
 msgid "and"
@@ -1334,22 +1281,6 @@ msgstr ""
 #: ../../../app/views/shared/_header.html.erb:13
 msgid "Password Pusher Logo"
 msgstr "Лого Пусхер лозинке"
-
-#: ../../../app/views/layouts/login.html.erb:50
-msgid ""
-"Some domains may inadvertently block emails.  If you are having trouble receiv"
-"ing emails, "
-msgstr ""
-"Неки домени могу нехотице блокирати е-пошту. Ако имате проблема са примањем е-"
-"порука,"
-
-#: ../../../app/views/layouts/login.html.erb:51
-msgid "send a message"
-msgstr "Пошаљи поруку"
-
-#: ../../../app/views/layouts/login.html.erb:52
-msgid "and we can help out."
-msgstr "и ми можемо помоћи."
 
 #: ../../../app/views/pages/about.html.erb:1
 msgid "About Password Pusher"
@@ -1526,27 +1457,27 @@ msgstr "Мац Кеиноте"
 msgid "formats."
 msgstr "формати."
 
-#: ../../../app/views/pages/about.html.erb:102
+#: ../../../app/views/pages/about.html.erb:99
 msgid "Birthday"
 msgstr "Рођендан"
 
-#: ../../../app/views/pages/about.html.erb:104
+#: ../../../app/views/pages/about.html.erb:101
 msgid "More Than 11 Years Old"
 msgstr "Више од 11 година"
 
-#: ../../../app/views/pages/about.html.erb:106
+#: ../../../app/views/pages/about.html.erb:103
 msgid "The first git commit to Password Pusher was on"
 msgstr "Прво гит урезивање на Пассворд Пусхер је било укључено"
 
-#: ../../../app/views/pages/about.html.erb:110
+#: ../../../app/views/pages/about.html.erb:107
 msgid "pwpush.com went live shortly thereafter."
 msgstr "pwpush.com је убрзо након тога почео са радом."
 
-#: ../../../app/views/pages/about.html.erb:116
+#: ../../../app/views/pages/about.html.erb:113
 msgid "The Original Theme"
 msgstr "Оригинална тема"
 
-#: ../../../app/views/pages/about.html.erb:117
+#: ../../../app/views/pages/about.html.erb:114
 msgid ""
 "The original site design consisted of a dark background with a bold yellow fon"
 "t."
@@ -1554,518 +1485,9 @@ msgstr ""
 "Оригинални дизајн сајта састојао се од тамне позадине са подебљаним жутим фонт"
 "ом."
 
-#: ../../../app/views/pages/about.html.erb:120
+#: ../../../app/views/pages/about.html.erb:117
 msgid "Follow for news, changes & updates."
 msgstr "Пратите вести, промене и ажурирања."
-
-#: ../../../app/views/pages/faq.html.erb:1
-#: ../../../app/views/shared/_footer.html.erb:34
-msgid "FAQ"
-msgstr "ФАК"
-
-#: ../../../app/views/pages/faq.html.erb:3
-msgid "Frequently Asked Questions"
-msgstr "Често постављана питања"
-
-#: ../../../app/views/pages/faq.html.erb:5
-msgid "Trust and Security"
-msgstr "Поверење и сигурност"
-
-#: ../../../app/views/pages/faq.html.erb:11
-msgid "What purpose does Password Pusher serve?"
-msgstr "Чему служи Пассворд Пусхер?"
-
-#: ../../../app/views/pages/faq.html.erb:16
-msgid "Password Pusher exists as a better alternative to emailing passwords."
-msgstr "Пассворд Пусхер постоји као боља алтернатива слању лозинки е-поштом."
-
-#: ../../../app/views/pages/faq.html.erb:18
-msgid "Emailing passwords is inherently insecure."
-msgstr "Слање лозинки е-поштом је инхерентно несигурно."
-
-#: ../../../app/views/pages/faq.html.erb:18
-msgid "The greatest risks include"
-msgstr "Највећи ризици укључују"
-
-#: ../../../app/views/pages/faq.html.erb:21
-msgid ""
-"Emailed passwords are usually sent with context to what they go to or can pote"
-"ntially be derived from email username, domain etc…"
-msgstr ""
-"Лозинке послате е-поштом се обично шаљу са контекстом на шта иду или потенција"
-"лно могу бити изведене из корисничког имена е-поште, домена итд…"
-
-#: ../../../app/views/pages/faq.html.erb:22
-msgid ""
-"Email is inherently insecure and can be intercepted at multiple points by mali"
-"cious entities."
-msgstr ""
-"Е-пошта је сама по себи несигурна и злонамерни ентитети могу да је пресретну н"
-"а више тачака."
-
-#: ../../../app/views/pages/faq.html.erb:23
-msgid "Emailed passwords live in perpetuity (read: forever) in email archives."
-msgstr "Лозинке послате е-поштом живе заувек (читај: заувек) у архивама е-поште."
-
-#: ../../../app/views/pages/faq.html.erb:24
-msgid ""
-"Passwords in email can be retrieved and used later on if an email account is s"
-"tolen, cracked etc.."
-msgstr ""
-"Лозинке у е-пошти се могу преузети и касније користити ако је налог е-поште ук"
-"раден, крекован итд."
-
-#: ../../../app/views/pages/faq.html.erb:27
-msgid ""
-"The same risks persist when sending passwords via SMS, WhatsApp, Telegram, Cha"
-"t etc…  The data can and is often perpetual and out of your control."
-msgstr ""
-"Исти ризици постоје и при слању лозинки путем СМС-а, ВхатсАпп-а, Телеграма, ћа"
-"скања итд... Подаци могу и често су трајни и ван ваше контроле."
-
-#: ../../../app/views/pages/faq.html.erb:29
-msgid "By using Password Pusher, you bypass all of this."
-msgstr "Коришћењем Пассворд Пусхер-а заобилазите све ово."
-
-#: ../../../app/views/pages/faq.html.erb:31
-msgid "For each password posted to Password Pusher, "
-msgstr "За сваку лозинку постављену на Пассворд Пусхер,"
-
-#: ../../../app/views/pages/faq.html.erb:32
-msgid "a unique URL is generated that only you will know"
-msgstr "генерише се јединствени УРЛ који ћете само ви знати"
-
-#: ../../../app/views/pages/faq.html.erb:33
-msgid "Additionally, "
-msgstr "Поред тога,"
-
-#: ../../../app/views/pages/faq.html.erb:35
-msgid "passwords expire after a predefined set of views are hit or time passed."
-msgstr ""
-"лозинке истичу након што се унапред дефинисани скуп прегледа погоди или време "
-"протекне."
-
-#: ../../../app/views/pages/faq.html.erb:37
-msgid "Once expired, passwords are unequivocally deleted."
-msgstr "Када истеку, лозинке се недвосмислено бришу."
-
-#: ../../../app/views/pages/faq.html.erb:40
-msgid ""
-"If that sounds interesting to you, try it out or see the other frequently aske"
-"d questions below."
-msgstr ""
-"Ако вам то звучи занимљиво, испробајте или погледајте друга често постављана п"
-"итања у наставку."
-
-#: ../../../app/views/pages/faq.html.erb:47
-msgid "Trust is a concern. Why should I use Password Pusher?"
-msgstr "Поверење је брига. Зашто да користим Пассворд Пусхер?"
-
-#: ../../../app/views/pages/faq.html.erb:52
-msgid ""
-"And rightfully so. All good security begins with healthy skepticism of all inv"
-"olved components."
-msgstr ""
-"И то с правом. Сва добра сигурност почиње здравим скептицизмом према свим укљу"
-"ченим компонентама."
-
-#: ../../../app/views/pages/faq.html.erb:55
-msgid ""
-"Password Pusher exists as a better alternative to emailing passwords. It avoid"
-"s having passwords exist in email archives in perpetuity. It does not exist as"
-" a end-all security solution."
-msgstr ""
-"Пассворд Пусхер постоји као боља алтернатива слању лозинки е-поштом. Тиме се и"
-"збегава да лозинке стално постоје у архивама е-поште. Не постоји као потпуно с"
-"игурносно решење."
-
-#: ../../../app/views/pages/faq.html.erb:59
-msgid "Password Pusher is open-source"
-msgstr "Пассворд Пусхер је отвореног кода"
-
-#: ../../../app/views/pages/faq.html.erb:60
-msgid ""
-"so the source can be publicly reviewed and can alternatively be run internally"
-" in your organization."
-msgstr ""
-"тако да извор може бити јавно прегледан и може се алтернативно покренути интер"
-"но у вашој организацији."
-
-#: ../../../app/views/pages/faq.html.erb:64
-msgid "Passwords are unequivocally deleted from the database once they expire."
-msgstr "Лозинке се недвосмислено бришу из базе података када истеку."
-
-#: ../../../app/views/pages/faq.html.erb:65
-msgid ""
-"Additionally, random URL tokens are generated on the fly and passwords are pos"
-"ted without context for their use."
-msgstr ""
-"Поред тога, насумични УРЛ токени се генеришу у ходу и лозинке се објављују без"
-" контекста за њихову употребу."
-
-#: ../../../app/views/pages/faq.html.erb:69
-msgid "A note for those with an interest in extreme security:"
-msgstr "Напомена за оне који су заинтересовани за екстремну безбедност:"
-
-#: ../../../app/views/pages/faq.html.erb:70
-msgid ""
-"there is no way I can reliably prove that the opensource code is the same that"
-" runs on pwpush.com (this is true for all sites in reality)."
-msgstr ""
-"не постоји начин на који могу поуздано доказати да је опенсоурце код исти који"
-" ради на пвпусх.цом (ово у стварности важи за све сајтове)."
-
-#: ../../../app/views/pages/faq.html.erb:71
-msgid "The only thing I can provide in this respect is my public reputation on"
-msgstr "Једино што могу да обезбедим у том погледу је мој јавни углед"
-
-#: ../../../app/views/pages/faq.html.erb:76
-msgid "my blog"
-msgstr "мој блог"
-
-#: ../../../app/views/pages/faq.html.erb:77
-msgid ""
-"If this is a concern for you, feel free to review the code, post any questions"
-" that you may have and consider running it internally at your organization ins"
-"tead."
-msgstr ""
-"Ако вас ово брине, слободно прегледајте код, поставите сва питања која имате и"
-" размислите о томе да га интерно покренете у својој организацији."
-
-#: ../../../app/views/pages/faq.html.erb:84
-msgid "Tools, Utilities and Applications"
-msgstr "Алати, услужни програми и апликације"
-
-#: ../../../app/views/pages/faq.html.erb:90
-msgid "Are there other ways I can access Password Pusher outside of a browser?"
-msgstr ""
-"Постоје ли други начини на које могу да приступим Пассворд Пусхер-у ван прегле"
-"дача?"
-
-#: ../../../app/views/pages/faq.html.erb:96
-msgid ""
-"Absolutely.  Password Pusher has a number of applications and command line uti"
-"lities (CLI) that interface with pwpush.com or privately run instances.  Push "
-"passwords from the CLI, Slack, Alfred App and more."
-msgstr ""
-"Апсолутно. Пассворд Пусхер има бројне апликације и услужне програме командне л"
-"иније (ЦЛИ) који се повезују са пвпусх.цом или приватно покренутим инстанцама."
-" Гурните лозинке из ЦЛИ, Слацк, Алфред апликације и још много тога."
-
-#: ../../../app/views/pages/faq.html.erb:98
-msgid "See our"
-msgstr "Погледајте наше"
-
-#: ../../../app/views/pages/faq.html.erb:98
-msgid "Tools and Applications"
-msgstr "Алати и апликације"
-
-#: ../../../app/views/pages/faq.html.erb:98
-msgid "page for more details."
-msgstr "страницу за више детаља."
-
-#: ../../../app/views/pages/faq.html.erb:105
-msgid "Can I automate my password distribution?"
-msgstr "Могу ли да аутоматизујем дистрибуцију лозинке?"
-
-#: ../../../app/views/pages/faq.html.erb:110
-msgid ""
-"Yes. Using the previously mentioned tools, many users and organizations integr"
-"ate Password Pusher into their security policies and processes."
-msgstr ""
-"Да. Користећи претходно поменуте алате, многи корисници и организације интегри"
-"шу Пассворд Пусхер у своје безбедносне политике и процесе."
-
-#: ../../../app/views/pages/faq.html.erb:111
-msgid "The"
-msgstr "Тхе"
-
-#: ../../../app/views/pages/faq.html.erb:111
-#: ../../../app/views/shared/_footer.html.erb:43
-msgid "Tools"
-msgstr "Алати"
-
-#: ../../../app/views/pages/faq.html.erb:111
-msgid ""
-"page outlines the resources available to automate the secure distribution of p"
-"asswords."
-msgstr ""
-"страница приказује доступне ресурсе за аутоматизацију безбедне дистрибуције ло"
-"зинки."
-
-#: ../../../app/views/pages/faq.html.erb:118
-msgid "How many requests can I send to Password Pusher?"
-msgstr "Колико захтева могу да пошаљем Пассворд Пусхер-у?"
-
-#: ../../../app/views/pages/faq.html.erb:123
-msgid ""
-"There are no limits currently and I have no intention of adding any.  To minim"
-"ally assure site stability, Password Pusher is configured with a rate limiter "
-"by default."
-msgstr ""
-"Тренутно нема ограничења и немам намеру да их додајем. Да би се минимално обез"
-"бедила стабилност сајта, Пассворд Пусхер је подразумевано конфигурисан са лими"
-"тером брзине."
-
-#: ../../../app/views/pages/faq.html.erb:129
-msgid "Running Your Own Private Instance"
-msgstr "Покретање сопствене приватне инстанце"
-
-#: ../../../app/views/pages/faq.html.erb:135
-msgid "Can I run my own version for my organization internally?"
-msgstr "Могу ли интерно да покренем сопствену верзију за своју организацију?"
-
-#: ../../../app/views/pages/faq.html.erb:141
-msgid "Yes.  We provide"
-msgstr "Да. Нудимо"
-
-#: ../../../app/views/pages/faq.html.erb:142
-msgid "Docker containers"
-msgstr "Доцкер контејнери"
-
-#: ../../../app/views/pages/faq.html.erb:144
-msgid "installation instructions"
-msgstr "упутства за инсталацију"
-
-#: ../../../app/views/pages/faq.html.erb:145
-msgid "for a wide variety of platforms and services."
-msgstr "за широк спектар платформи и услуга."
-
-#: ../../../app/views/pages/faq.html.erb:147
-msgid "tldr;"
-msgstr "tldr;"
-
-#: ../../../app/views/pages/faq.html.erb:154
-msgid "Can I apply a custom logo or change the design?"
-msgstr "Могу ли да применим прилагођени логотип или променим дизајн?"
-
-#: ../../../app/views/pages/faq.html.erb:159
-msgid ""
-"Password Pusher supports re-branding \"out of the box\" allowing you to add a cu"
-"stom logo, text and even change images in the application."
-msgstr ""
-"Пассворд Пусхер подржава ре-брендирање \"из кутије\" омогућавајући вам да додате"
-" прилагођени логотип, текст, па чак и да промените слике у апликацији."
-
-#: ../../../app/views/pages/faq.html.erb:166
-msgid "Are there any licensing restrictions for me, my company or my organization?"
-msgstr ""
-"Да ли постоје ограничења за лиценцирање за мене, моју компанију или моју орган"
-"изацију?"
-
-#: ../../../app/views/pages/faq.html.erb:172
-msgid ""
-"The source code is released under the Apache 2.0 License and that pretty much "
-"defines any and all limitations. There are quite a few rebranded and redesigne"
-"d clone sites of Password Pusher and I welcome them all."
-msgstr ""
-"Изворни код је објављен под Апацхе 2.0 лиценцом и то прилично дефинише сва огр"
-"аничења. Постоји доста ребрендираних и редизајнираних клонираних сајтова Пассв"
-"орд Пусхер-а и поздрављам их све."
-
-#: ../../../app/views/pages/faq.html.erb:180
-msgid "Why would I want to run my own private instance of Password Pusher?"
-msgstr "Зашто бих желео да покренем сопствену приватну инстанцу Пассворд Пусхер-а?"
-
-#: ../../../app/views/pages/faq.html.erb:186
-msgid ""
-"Some organizations are bound by security policies that prohibit the use of pub"
-"lic services for sensitive information such as passwords.  There are even orga"
-"nizations that require all tools to be on private intranets without access to "
-"the outside world."
-msgstr ""
-"Неке организације су обавезне безбедносним политикама које забрањују коришћење"
-" јавних услуга за осетљиве информације као што су лозинке. Постоје чак и орган"
-"изације које захтевају да сви алати буду на приватним интранетима без приступа"
-" спољашњем свету."
-
-#: ../../../app/views/pages/faq.html.erb:189
-msgid ""
-"It's for these reasons that we provide the ability (and encourage) users and o"
-"rganizations to run private instances when needed."
-msgstr ""
-"Управо из ових разлога пружамо могућност (и подстичемо) кориснике и организаци"
-"је да покрећу приватне инстанце када је то потребно."
-
-#: ../../../app/views/pages/faq.html.erb:197
-msgid "What are the potential security risks of running my own version internally?"
-msgstr "Који су потенцијални безбедносни ризици интерног покретања сопствене верзије?"
-
-#: ../../../app/views/pages/faq.html.erb:202
-msgid ""
-"Running an private instance of Password Pusher for your company or organizatio"
-"n gives you the peace of mind that you know exactly what code is running.  You"
-" can configure and run it as you like."
-msgstr ""
-"Покретање приватне инстанце Пассворд Пусхер-а за вашу компанију или организаци"
-"ју даје вам безбрижност да знате тачно који код се покреће. Можете га конфигур"
-"исати и покренути како желите."
-
-#: ../../../app/views/pages/faq.html.erb:203
-msgid ""
-"On the other hand, if your instance gets hacked and the encryption broken, mal"
-"icious entities now have a targeted dictionary of passwords to brute force acc"
-"ounts in your organization.  Note that this would be limited to pushes which h"
-"aven't yet hit their expiration limits."
-msgstr ""
-"С друге стране, ако ваша инстанца буде хакована и шифровање покварено, злонаме"
-"рни ентитети сада имају циљани речник лозинки за брушење налога у вашој органи"
-"зацији. Имајте на уму да би ово било ограничено на гурања која још нису достиг"
-"ла своје границе истека."
-
-#: ../../../app/views/pages/faq.html.erb:204
-msgid ""
-"In this respect, the public instance at pwpush.com may be superior in that it "
-"contains only passwords without identifying information mixed among users from"
-" around the globe."
-msgstr ""
-"У том погледу, јавна инстанца на пвпусх.цом може бити супериорнија по томе што"
-" садржи само лозинке без идентификационих информација измешаних међу корисници"
-"ма из целог света."
-
-#: ../../../app/views/pages/faq.html.erb:205
-msgid ""
-"The user should carefully weigh the pros and cons and decide which route is be"
-"st for them.  We happily support both strategies."
-msgstr ""
-"Корисник треба пажљиво да одмери предности и недостатке и одлучи која је рута "
-"најбоља за њега. Са задовољством подржавамо обе стратегије."
-
-#: ../../../app/views/pages/faq.html.erb:211
-msgid "Other"
-msgstr "Остало"
-
-#: ../../../app/views/pages/faq.html.erb:217
-msgid ""
-"The URL I sent link seems to have not worked by the time it was received.  Doe"
-"s this happen occasionally and is there a way to prevent this?"
-msgstr ""
-"Изгледа да УРЛ који сам послао није функционисао до тренутка када је примљен. "
-"Да ли се ово дешава повремено и постоји ли начин да се то спречи?"
-
-#: ../../../app/views/pages/faq.html.erb:223
-msgid ""
-"Some systems such as email, firewalls and chat systems often have link scanner"
-"s that can eat up views."
-msgstr ""
-"Неки системи као што су е-пошта, заштитни зидови и системи за ћаскање често им"
-"ају скенере линкова који могу да поједу прегледе."
-
-#: ../../../app/views/pages/faq.html.erb:224
-msgid "This is done for security or to simply generate a \"preview\" for chat systems."
-msgstr ""
-"Ово се ради ради безбедности или да се једноставно генерише „преглед“ за систе"
-"ме за ћаскање."
-
-#: ../../../app/views/pages/faq.html.erb:227
-msgid "To prevent this, use the 1-click retrieval step option when pushing passwords."
-msgstr ""
-"Да бисте то спречили, користите опцију корака преузимања 1-кликом када уносите"
-" лозинке."
-
-#: ../../../app/views/pages/faq.html.erb:228
-msgid ""
-"This requires the users to click through a preliminary page to protect views f"
-"rom such scanners."
-msgstr ""
-"Ово захтева од корисника да кликну на прелиминарну страницу како би заштитили "
-"погледе од таквих скенера."
-
-#: ../../../app/views/pages/faq.html.erb:232
-msgid ""
-"As an additional preventative measure, if you create an account, an audit log "
-"is provided for every push created."
-msgstr ""
-"Као додатна превентивна мера, ако креирате налог, обезбеђује се евиденција рев"
-"изије за сваки направљени притисак."
-
-#: ../../../app/views/pages/faq.html.erb:233
-msgid "This audit log can reveal by who and when the push was viewed."
-msgstr "Овај дневник ревизије може открити ко је и када прегледао пусх."
-
-#: ../../../app/views/pages/faq.html.erb:242
-msgid "Can I use Password Pusher in my talk/presentation/conference?"
-msgstr "Могу ли да користим Пассворд Пусхер у свом говору/презентацији/конференцији?"
-
-#: ../../../app/views/pages/faq.html.erb:247
-msgid ""
-"Absolutely.  If you need any resources such as statistics, graphics or anythin"
-"g else, don't hesitate to contact me: pglombardo at pwpush.com."
-msgstr ""
-"Апсолутно. Ако су вам потребни ресурси као што су статистика, графика или било"
-" шта друго, не устручавајте се да ме контактирате: пгломбардо на пвпусх.цом."
-
-#: ../../../app/views/pages/faq.html.erb:254
-msgid "Could you add a specific feature for my organization?"
-msgstr "Можете ли да додате одређену функцију за моју организацију?"
-
-#: ../../../app/views/pages/faq.html.erb:259
-msgid ""
-"Very likely.  I love to hear all ideas and feedback. If you have any, please s"
-"ubmit them to the "
-msgstr ""
-"Врло могуће. Волим да чујем све идеје и повратне информације. Ако их имате, по"
-"шаљите их на"
-
-#: ../../../app/views/pages/faq.html.erb:260
-msgid "Github repository"
-msgstr "Гитхуб спремиште"
-
-#: ../../../app/views/pages/faq.html.erb:260
-msgid "and I will respond as soon as possible."
-msgstr "а ја ћу одговорити у најкраћем могућем року."
-
-#: ../../../app/views/pages/faq.html.erb:267
-msgid "How do you make money?"
-msgstr "Како зарађујете новац?"
-
-#: ../../../app/views/pages/faq.html.erb:272
-msgid ""
-"This is an opensource project made out of love for technology and a desire to "
-"improve the security (and daily lives) of the tech community."
-msgstr ""
-"Ово је пројекат отвореног кода направљен из љубави према технологији и жеље да"
-" се побољша безбедност (и свакодневни живот) технолошке заједнице."
-
-#: ../../../app/views/pages/faq.html.erb:275
-msgid ""
-"It doesn't make any money but it does incur hosting that are about $50/month f"
-"or pwpush.com."
-msgstr ""
-"Не зарађује, али подразумева хостовање који кошта око 50 УСД месечно за пвпусх"
-".цом."
-
-#: ../../../app/views/pages/faq.html.erb:276
-msgid "These are happily paid out of pocket by myself for more than 10 years."
-msgstr "Ово сам срећно плаћао из џепа више од 10 година."
-
-#: ../../../app/views/pages/faq.html.erb:280
-msgid ""
-"If you feel inclined to support Password Pusher, you can sign up to Digital Oc"
-"ean using the badge below."
-msgstr ""
-"Ако осећате да сте склони да подржите Пассворд Пусхер, можете се пријавити за "
-"Дигитал Оцеан користећи значку испод."
-
-#: ../../../app/views/pages/faq.html.erb:281
-msgid "Password Pusher will get a hosting credit for the first $25 you spend."
-msgstr "Пассворд Пусхер ће добити кредит за хостинг за првих 25 долара које потрошите."
-
-#: ../../../app/views/pages/faq.html.erb:290
-msgid ""
-"For other ways to support Password Pusher, see also the \"Want to help out?\" se"
-"ction"
-msgstr ""
-"За друге начине подршке Пассворд Пусхер-у погледајте и „Желите да помогнете?“ "
-"одељак"
-
-#: ../../../app/views/pages/faq.html.erb:291
-msgid "on the about page"
-msgstr "на страници о"
-
-#: ../../../app/views/pages/faq.html.erb:292
-msgid "Thank you!"
-msgstr "Хвала вам!"
 
 #: ../../../app/views/pages/generate_key.html.erb:1
 msgid "Generate Key"
@@ -2102,13 +1524,6 @@ msgstr ""
 #: ../../../app/views/pages/generate_key.html.erb:22
 msgid "Generated Encryption Key"
 msgstr "Генерисани кључ за шифровање"
-
-#: ../../../app/views/pages/generate_key.html.erb:26
-#: ../../../app/views/pages/generate_key.html.erb:39
-#: ../../../app/views/shared/_copy_button.html.erb:2
-#: ../../../app/views/shared/_secret_url_bar.html.erb:37
-msgid "Copy to Clipboard"
-msgstr "Копирај у међуспремник"
 
 #: ../../../app/views/pages/generate_key.html.erb:32
 msgid "You can apply this key to your application by setting the environment variable"
@@ -2174,182 +1589,6 @@ msgstr "Видите и Пассворд Пусхер"
 #: ../../../app/views/pages/generate_key.html.erb:80
 msgid "Configuration documentation"
 msgstr "Конфигурациона документација"
-
-#: ../../../app/views/pages/tools.html.erb:1
-#: ../../../app/views/pages/tools.html.erb:3
-msgid "Tools & Applications"
-msgstr "Алати и апликације"
-
-#: ../../../app/views/pages/tools.html.erb:5
-msgid ""
-"Using the JSON API, various tools exist to interface with Password Pusher to a"
-"utomate password distribution."
-msgstr ""
-"Користећи ЈСОН АПИ, постоје различити алати за повезивање са Пассворд Пусхер-о"
-"м за аутоматизацију дистрибуције лозинки."
-
-#: ../../../app/views/pages/tools.html.erb:7
-msgid ""
-"We have no limits on how many passwords you can push (and have no intentions o"
-"f adding limits) but we do have a rate limiter so the site doesn’t get taken d"
-"own by bad scripts or bad actors.  Limit your tools to maximum 1 password ever"
-"y few seconds and you should be fine."
-msgstr ""
-"Немамо ограничења колико лозинки можете да унесете (и немамо намеру да додајем"
-"о ограничења), али имамо лимитатор брзине како лоши скрипти или лоши актери не"
-" би уклонили сајт. Ограничите своје алате на највише 1 лозинку сваких неколико"
-" секунди и требало би да будете добро."
-
-#: ../../../app/views/pages/tools.html.erb:11
-msgid "Command Line Utilities"
-msgstr "Услужни програми командне линије"
-
-#: ../../../app/views/pages/tools.html.erb:49
-msgid "Applications"
-msgstr "Апликације"
-
-#: ../../../app/views/pages/tools.html.erb:74
-msgid ""
-"This API allows you to interface with Password Pusher via JSON.  This can be u"
-"tilized by existing utilities such as curl, wget or any programming language. "
-" See the examples below for some ideas."
-msgstr ""
-"Овај АПИ вам омогућава да се повежете са Пассворд Пусхер-ом преко ЈСОН-а. Ово "
-"могу да користе постојећи услужни програми као што су цурл, вгет или било који"
-" програмски језик. Погледајте примере у наставку за неке идеје."
-
-#: ../../../app/views/pages/tools.html.erb:77
-msgid "API Endpoint Documentation"
-msgstr "АПИ крајња документација"
-
-#: ../../../app/views/pages/tools.html.erb:78
-msgid "Walkthrough & Examples"
-msgstr "Корак и примери"
-
-#: ../../../app/views/pages/tools.html.erb:81
-msgid "Examples"
-msgstr "Примери"
-
-#: ../../../app/views/pages/tools.html.erb:90
-msgid ""
-"You can test this in your browser Javascript console by going to the front pag"
-"e of Password Pusher and enter:"
-msgstr ""
-"Ово можете тестирати у Јавасцрипт конзоли вашег претраживача тако што ћете оти"
-"ћи на насловну страницу Пассворд Пусхер-а и унети:"
-
-#: ../../../app/views/pages/tools.html.erb:112
-msgid "See more explanation and examples in our"
-msgstr "Погледајте више објашњења и примера у нашој"
-
-#: ../../../app/views/pages/translate.html.erb:1
-msgid "Help Translate Password Pusher!"
-msgstr "Хелп Транслате Пассворд Пусхер!"
-
-#: ../../../app/views/pages/translate.html.erb:3
-msgid "Help Translate"
-msgstr "Хелп Транслате"
-
-#: ../../../app/views/pages/translate.html.erb:6
-msgid ""
-"We would love to add as many languages as possible but we need help from fluen"
-"t speakers in creating and verifying translations."
-msgstr ""
-"Волели бисмо да додамо што више језика, али нам је потребна помоћ говорника ко"
-"ји течно говоре у креирању и верификацији превода."
-
-#: ../../../app/views/pages/translate.html.erb:9
-msgid "How it Works"
-msgstr "Како то ради"
-
-#: ../../../app/views/pages/translate.html.erb:12
-msgid "We use"
-msgstr "Користимо"
-
-#: ../../../app/views/pages/translate.html.erb:14
-msgid "to manage our translation effort.  It has a simple to use interface."
-msgstr ""
-"да управљамо нашим преводилачким напорима. Има једноставан за коришћење интерф"
-"ејс."
-
-#: ../../../app/views/pages/translate.html.erb:18
-msgid ""
-"Translations are done initially by machine using Google Translate.  It's the t"
-"ranslators job to select the correct translation\n"
-"and add any fixes as needed."
-msgstr ""
-"Преводи се у почетку обављају машински помоћу Гоогле преводиоца. Посао преводи"
-"лаца је да изаберу тачан превод и додају све исправке по потреби."
-
-#: ../../../app/views/pages/translate.html.erb:23
-msgid ""
-"Translations for an entirely new language can be done in less than an hour for"
-" native speakers."
-msgstr ""
-"Преводи за потпуно нови језик могу се обавити за мање од сат времена за изворн"
-"е говорнике."
-
-#: ../../../app/views/pages/translate.html.erb:27
-msgid "Read more: "
-msgstr "Опширније:"
-
-#: ../../../app/views/pages/translate.html.erb:28
-msgid "How to use our translation interface?"
-msgstr "Како користити наш интерфејс за превод?"
-
-#: ../../../app/views/pages/translate.html.erb:31
-msgid "How to Join"
-msgstr "Како се придружити"
-
-#: ../../../app/views/pages/translate.html.erb:34
-msgid "To join the translation effort:"
-msgstr "Да бисте се придружили преводитељским напорима:"
-
-#: ../../../app/views/pages/translate.html.erb:39
-msgid "Register for a free account on"
-msgstr "Региструјте се за бесплатан налог на"
-
-#: ../../../app/views/pages/translate.html.erb:43
-msgid "Send me a message"
-msgstr "Пошаљите ми поруку"
-
-#: ../../../app/views/pages/translate.html.erb:44
-msgid ""
-"with your translation.io username and which language you would like to work on"
-"."
-msgstr "са вашим корисничким именом за превод.ио и на ком језику желите да радите."
-
-#: ../../../app/views/pages/translate.html.erb:49
-msgid "...and I'll add you to our translation project."
-msgstr "...и ја ћу вас додати у наш преводилачки пројекат."
-
-#: ../../../app/views/pages/translate.html.erb:52
-msgid "Translation Tips"
-msgstr "Савети за превођење"
-
-#: ../../../app/views/pages/translate.html.erb:54
-msgid ""
-"If the source text is capitalized, try to maintain similar capitalization in t"
-"he translated text as well (assuming it's permitted syntactically in the targe"
-"t language)."
-msgstr ""
-"Ако је изворни текст написан великим словима, покушајте да задржите слична вел"
-"ика слова иу преведеном тексту (под претпоставком да је то синтаксички дозвоље"
-"но на циљном језику)."
-
-#: ../../../app/views/pages/translate.html.erb:55
-msgid ""
-"If you see embedded codes such as \"%s\", {%file} or similar, leave those fully "
-"intact in the target translation.  These are substitution codes used in the ap"
-"plication."
-msgstr ""
-"Ако видите уграђене кодове као што су „%с“, {%филе} или слично, оставите их по"
-"тпуно нетакнуте у циљном преводу. Ово су заменски кодови који се користе у апл"
-"икацији."
-
-#: ../../../app/views/pages/translate.html.erb:59
-msgid "Thanks for helping to translate Password Pusher!"
-msgstr "Хвала вам што сте помогли да преведете Пассворд Пусхер!"
 
 #: ../../../app/views/passwords/active.html.erb:1
 #: ../../../app/views/passwords/active.html.erb:18
@@ -2526,6 +1765,10 @@ msgstr "Насловна страна"
 msgid "Docker Containers"
 msgstr "Доцкер контејнери"
 
+#: ../../../app/views/shared/_footer.html.erb:34
+msgid "FAQ"
+msgstr "ФАК"
+
 #: ../../../app/views/shared/_footer.html.erb:35
 msgid "JSON API"
 msgstr "ЈСОН АПИ"
@@ -2537,6 +1780,10 @@ msgstr "Кеи Генератор"
 #: ../../../app/views/shared/_footer.html.erb:39
 msgid "Source Code"
 msgstr "Изворни код"
+
+#: ../../../app/views/shared/_footer.html.erb:43
+msgid "Tools"
+msgstr "Алати"
 
 #: ../../../app/views/shared/_footer.html.erb:51
 msgid "Overview"
@@ -2550,41 +1797,25 @@ msgstr "Документација"
 msgid "Account"
 msgstr "Рачун"
 
-#: ../../../app/views/shared/_header.html.erb:41
+#: ../../../app/views/shared/_header.html.erb:42
+msgid "Admin Dashboard"
+msgstr "Админ Дасхбоард"
+
+#: ../../../app/views/shared/_header.html.erb:46
 msgid "Edit Login Details"
 msgstr "Уредите детаље за пријаву"
 
-#: ../../../app/views/shared/_header.html.erb:47
+#: ../../../app/views/shared/_header.html.erb:52
 msgid "Log Out"
 msgstr "Одјавити се"
 
-#: ../../../app/views/shared/_header.html.erb:53
+#: ../../../app/views/shared/_header.html.erb:58
 msgid "Log In"
 msgstr "Пријавите се"
 
-#: ../../../app/views/shared/_header.html.erb:57
+#: ../../../app/views/shared/_header.html.erb:62
 msgid "Sign Up"
 msgstr "Пријави се"
-
-#: ../../../app/views/shared/_newsletter_sign_up.html.erb:3
-msgid "Get The Newsletter"
-msgstr "Набавите билтен"
-
-#: ../../../app/views/shared/_newsletter_sign_up.html.erb:5
-msgid ""
-"Updates on big releases, security issues, features, integrations, tips and mor"
-"e."
-msgstr ""
-"Ажурирања о великим издањима, безбедносним проблемима, функцијама, интеграција"
-"ма, саветима и још много тога."
-
-#: ../../../app/views/shared/_newsletter_sign_up.html.erb:13
-msgid "Enter your email..."
-msgstr "Унесите емаил..."
-
-#: ../../../app/views/shared/_newsletter_sign_up.html.erb:14
-msgid "Subscribe"
-msgstr "претплатити се"
 
 #: ../../../app/views/shared/_pw_generator_modal.html.erb:5
 msgid "Configure Password Generation"
@@ -2637,10 +1868,6 @@ msgstr "Сугласници"
 #: ../../../app/views/shared/_pw_generator_modal.html.erb:71
 msgid "Reset to Defaults"
 msgstr "Ресетуј до почетног"
-
-#: ../../../app/views/shared/_secret_url_bar.html.erb:19
-msgid "Secret Link Language"
-msgstr "Језик тајне везе"
 
 #: ../../../app/views/urls/active.html.erb:1
 #: ../../../app/views/urls/active.html.erb:18

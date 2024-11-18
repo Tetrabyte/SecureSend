@@ -1,0 +1,6 @@
+FROM tetrabyteit/securesend:dev-tbyte
+
+ENV PWP_WORKER=true
+
+USER pwpusher
+ENTRYPOINT ["containers/docker/worker-entrypoint.sh"]

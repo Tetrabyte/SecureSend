@@ -368,9 +368,18 @@ hu:
         update: Módosítás
         we_need_your_current_password_to_confirm_your_changes: a változtatás végrehajtásához
           szükséges a jelenlegi jelszó
+        cancel_my_account_confirm_description_html: Ezzel véglegesen törli a fiókjához
+          kapcsolódó összes adatot. Ez a művelet nem vonható vissza.<br/><br/> Az
+          ellenőrzéshez írja be e-mail címét a megerősítéshez és a fiók törléséhez.
+        cancel_my_account_description: Ezzel véglegesen törli a fiókjához kapcsolódó
+          összes adatot. Ez a művelet nem vonható vissza.
+        saving: Megtakarítás...
       new:
         sign_up: Regisztráció
         account_or_team_name: fiók vagy csapat neve
+        login_html: Vagy %{link}
+        submitting: Beküldés...
+        terms_html: Elfogadom az %{terms} és %{privacy}
       preferred_language: Preferált nyelv
     unlocks:
       send_instructions: Néhány percen belül kapni fog egy utasításokat tartalmazó
@@ -394,6 +403,10 @@ hu:
     sessions:
       new:
         sign_in: Belépés
+        sign_up_html: Vagy %{link}
+      already_signed_out: A kijelentkezés már megtörtént.
+      signed_in: Sikeres bejelentkezés.
+      signed_out: A kijelentkezés sikeres.
     shared:
       links:
         back: Vissza
@@ -403,6 +416,7 @@ hu:
         sign_in: Belépés
         sign_in_with_provider: "%{provider} belépés"
         sign_up: Regisztráció
+        redirecting: Átirányítás...
       minimum_password_length:
         one: "(minimum %{count} karakter)"
         other: "(minimum %{count} karakter)"
@@ -590,27 +604,6 @@ hu:
           változóval vagy a translation.openai_api_key-vel a config/i18n-tasks.yml
           fájlban. Szerezze meg a kulcsot a https://openai.com/ oldalon.
         no_results: Az OpenAI nem adott eredményt.
-  routes:
-    users: felhasználókat
-    passwords: jelszavakat
-    files: fájlokat
-    urls: URL-ek
-    sessions: üléseken
-    registrations: regisztrációk
-    unlocks: kinyit
-    feedbacks: visszajelzéseket
-    pages: oldalakat
-    new: új
-    edit: szerkeszteni
-    update: frissítés
-    destroy: elpusztítani
-    create: teremt
-    expired: lejárt
-    active: aktív
-    audit: könyvvizsgálat
-    access: hozzáférés
-    passphrase: jelmondat
-    preview: előnézet
   views:
     pagination:
       first: "&laquo; Első"
@@ -643,6 +636,7 @@ hu:
       errors: "%{pluralized_errors} megtiltotta az %{resource_name} mentését:"
     navigation:
       back_to_app: Vissza az alkalmazáshoz
+      worker: Háttér állások
     search:
       clear: Keresés törlése
       label: Keresés %{resource}
@@ -658,7 +652,6 @@ hu:
   accounts:
     policy:
       pwgen_syllables_count_help: A generált jelszó szótagjainak száma.
-      back: Vissza a csapathoz
       edit: Szabályzat szerkesztése
       team_policy_help: A csapatszabályzat olyan szabályok összessége, amelyek a csapat
         tagjai által végrehajtott összes lökésre vonatkoznak.
@@ -674,7 +667,6 @@ hu:
       expire_after_duration_default: Alapértelmezett időtartam
       expire_after_duration_default_help: Az alapértelmezett időtartam a push lejárta
         előtt.
-      minutes_tip: 1 nap = 1440 perc, 7 nap = 10080 perc, 30 nap = 43200 perc
       header_view_expiration: Lejárat megtekintése
       expire_after_views_min: Minimális megtekintések száma
       expire_after_views_min_help: A megtekintések minimális száma a leküldés lejárta
@@ -755,17 +747,105 @@ hu:
       pwgen_max_syllable_length: Maximális szótaghossz
       pwgen_max_syllable_length_help: Egy szótag maximális hossza a generált jelszóban.
       pwgen_syllables_count: Szótagszám
-      switch: Kapcsoló
-    show:
-      edit_policy: Leküldéses házirend szerkesztése
-      policy: Csapatszabályzat
+      policy: Irányelv
+    account_invitations:
+      max_users: Elérte csapata maximális felhasználói számát. Kérjük, lépjen kapcsolatba
+        velünk a frissítéshez és további felhasználók hozzáadásához.
+    brand:
+      delivery_blur_tip: 'Tipp: A hasznos teher elmosását a Csapatházirend beállításai
+        között kapcsolhatja be.'
+      delivery_description: A kézbesítési oldal az az oldal, amelyet a végfelhasználók
+        láthatnak, amikor megtekintik a push tartalmát.
+      delivery_preview: Az alábbiakban egy előnézet látható, hogy a végfelhasználók
+        mikor látják a <em>push tartalmat</em> .
+      expired_description: A lejárt oldal az az oldal, amelyet a végfelhasználók láthatnak,
+        amikor a leküldés lejárt.
+      expired_preview: Az alábbiakban megtekintheti, hogy a végfelhasználók mit fognak
+        látni, ha a <em>leküldés lejárt</em> .
+      form:
+        logo_info: A következő embléma használható a végfelhasználók számára látható
+          push oldalak személyre szabására és márkajelzésére.
+        no_logo: között még nincs logó feltöltve. A kezdéshez töltsön fel egy logót.
+        show_expiration: Megjeleníti a hátralévő időtartam és megtekintések üzenetét?
+        show_logo: Megjeleníteni a logót?
+      navbar:
+        brand: Logó
+        delivery: Szállítás
+        edit_brand: Márka szerkesztése
+        edit_delivery: Kézbesítés szerkesztése
+        edit_expired: Szerkesztés Lejárt
+        edit_passphrase: Jelszó szerkesztése
+        edit_preliminary: Szerkesztés 1-kattintásos visszakeresés
+        expired: Lejárt
+        passphrase: Jelszó zárolása
+        preliminary: 1-Kattintson a Letöltés elemre
+        edit_request_: Kérelem szerkesztése kész
+        edit_request_delivery: Kézbesítési kérelem szerkesztése
+        edit_request_ready: Kérelem szerkesztése kész
+        request_delivery: Kérjen kézbesítést
+        request_ready: Kérés kész
+      passphrase_description: A jelmondat-oldal a Passphrase Lockdown funkció részeként
+        használatos. A leküldést kapó felhasználóknak meg kell adniuk egy jelszót
+        a tartalom eléréséhez.
+      passphrase_preview: Az alábbiakban megtekintheti, hogy a végfelhasználók mit
+        fognak látni, amikor <em>összetett jelszót kérnek</em> .
+      preliminary_description: Az 1 kattintással elérhető visszakereső oldal segít
+        elkerülni, hogy a botok, chatrendszerek és szkennerek felfalják a nézeteket.
+        A leküldést kapó felhasználóknak át kell kattintaniuk erre az előzetes oldalra,
+        hogy hozzáférjenek a tartalomhoz.
+      preliminary_preview: Az alábbiakban megtekintheti, hogy a végfelhasználók mit
+        fognak látni az <em>egykattintásos visszakeresési lépésnél</em> .
+      preview:
+        payload: Ez egy példa egy hasznos teherre, amely megjelenik a végfelhasználó
+          számára.
+        request_payload: Ez egy példa egy olyan kérésre, amely megjelenik a végfelhasználó
+          számára.
+      save: Mentse
+      tip_custom_domain: "<strong>Tipp Pro előfizetőknek</strong> : Egyéni tartományt
+        konfigurálhat az %{link}-ben."
+      tip_team_page: Csapat konfigurációs oldal
+      header_lead: Itt testreszabhatja a felhasználóknak küldött leküldések és kérések
+        megjelenését.
+      header_sublead: Testreszabhatja az emblémát, üzenetküldést, linkeket adhat hozzá,
+        az elemek láthatóságát válthatja és így tovább.
+      request_delivery_description: A kézbesítési oldal az az oldal, amelyet a végfelhasználók
+        látnak, amikor kérést kapnak.
+      request_delivery_preview: Az alábbiakban egy kérés előnézete látható.
+      request_ready_description: A kész oldal akkor jelenik meg, ha egy kérésre már
+        válasz érkezett.
+      request_ready_preview: Az alábbiakban a végfelhasználók kérésére kész oldal
+        előnézete látható.
+      title: Push & Request Branding
+    brands:
+      form:
+        documentation: dokumentáció
+        domain_documentation: Az egyéni tartomány konfigurálásával kapcsolatos további
+          információkért tekintse meg az %{link} részt.
+        domain_note_1: "<strong>Írja be a domain nevet</strong> a protokoll vagy elérési
+          út nélkül, például <code>pwp.example.com</code> ."
+        domain_note_2: "<strong>A DNS-beállítások konfigurálása</strong> : Hozzon
+          létre egy ALIAS rekordot, amely <code>domain.pwpush.com</code> címre mutat."
+        domain_note_3: Akár 24 órát is igénybe vehet, amíg a DNS-beállítások elterjednek.
+        domain_note_4: Miután konfigurálta a DNS-beállításokat, <strong>tesztelheti
+          a tartományt az</strong> %{link} oldal meglátogatásával a böngészőben. Látnia
+          kell egy zöld képernyőt, amely jelzi a sikert.
+        domain_placeholder: 'Pro előfizetők: Használja a Password Pusher-t a leküldések
+          küldéséhez a vállalati domainnel.'
+    edit_policy:
+      edit_policy: Szabályzat szerkesztése
+    form:
+      custom_domain_notes: Egyedi domain megjegyzések
+    form_brand:
+      branding: Márkaépítés
   tag_line: Menj tovább. Másik jelszó elküldése e-mailben.
-  about: A programról
   app_name: Jelszótoló
   application:
     card_newsletter:
       enter_email: Írd be az email címed...
       subscribe: Iratkozz fel
+      get_the_newsletter: Szerezze meg a Hírlevelet
+      updates_on: Frissítések a nagy kiadásokról, biztonsági problémákról, funkciókról,
+        integrációkról, tippekről és egyebekről.
     cookie_consent:
       notice: A böngésző cookie-jai segítenek ennek az eszköznek a működésében. Használatával
         Ön elfogadja ezen sütik használatát.
@@ -778,9 +858,11 @@ hu:
       key_generator: Kulcsgenerátor
       newsletter: Hírlevél
       password_generator: Jelszógenerátor
-      tools: Eszközök, API és CLI-k
       api_docs: API dokumentáció
       features: Jellemzők
+      languages: Nyelvek
+      pricing: Árképzés
+      support: Támogatás
     pw_generator_modal:
       cancel: Mégsem
       configure: Jelszógenerálás konfigurálása
@@ -801,25 +883,35 @@ hu:
       vowels: Magánhangzók
     navbar:
       edit_policy: Irányelv
+      branding: Márkaépítés
     secret_url_bar:
       secret_link_lang: Titkos hivatkozási nyelv
       autodetect: Auto felismerés
+    left_nav:
+      pushes: Tolja
+      pulls: Kérések ᴮᴱᵀᴬ
+    right_nav:
+      features: Jellemzők
+    push_expiration:
+      will_expire_in: 'A fenti fájlletöltési linkek a következő napon lejárnak:'
+      you_can_refresh: Frissítheti az oldalt az új letöltési hivatkozások újragenerálásához,
+        ha a nézetek megmaradnak.
   audit_logs:
     audit_log:
-      created: Létrehozva
-      created_by: 'Készítette: %{user}'
       log_created: Push létrehozta %{date} oldalon, %{user}
       log_expired: A kézi leküldés lejárt %{date} időpontban, %{user}
       log_failed_view: Sikertelen megtekintési kísérlet az %{ip} IP-címről a %{date}
         oldalon, %{user}
-      log_manual_expiration: Push manuálisan lejárt %{date}-n %{user} által az %{ip}
-        IP-címen
-      log_referrer: 'Hivatkozó: %{referrer}'
-      log_user_agent: 'Felhasználói ügynök: %{user_agent}'
       log_viewed: Sikeres megtekintés az %{ip} IP-címről az %{date} oldalon, %{user}
       unknown: Ismeretlen
-      viewed_by: 'Megnézte: %{user}'
       log_failed_passphrase: Sikertelen jelmondat-kísérlet az %{date} oldalon, %{user}
+      ip_address: 'IP cím:'
+      referrer: 'Hivatkozó:'
+      user_agent: 'Felhasználói ügynök:'
+      automatic: Automatikus
+      log_close: Az %{user} által bezárt %{date}. A válasz törölve.
+      log_response: A címzett válasza érkezett %{date} napon, %{user}
+      log_retrieve: Az %{user} által az %{date} oldalon megtekintett oldal lekérése
   dashboard:
     show:
       detail: Részlet
@@ -848,7 +940,6 @@ hu:
       email: Email
       have_idea: Van ötlete vagy kívánsága? Valami nem tetszik? Szeretnél segíteni?
         Szeretnénk hallani!
-      leave_blank: Hagyja üresen ezt a mezőt!
       math_question: Mennyi a száz mínusz 3?
       send_feedback: Visszajelzés küldése
       tip: 'Tipp: Másolja az üzenetet a vágólapra, mert pici esélye azért van, hogy
@@ -886,19 +977,14 @@ hu:
         URL-szkennerek elhasználják a megtekintéseket.
       active: Aktív
       attached_files: Csatolt fájlok
-      attached_files_help: Csatoltak fájlokat ehhez a push-hoz?
       audit_log_for: 'Audit napló a következőhöz: %{push_id}'
       contains_text: Szöveget tartalmaz
       contains_text_help: Hozzá lett adva szöveges terhelés ehhez a push-hoz?
-      created: Létrehozva
-      created_by: 'Készítette: %{user}'
       current_status: Jelenlegi állapot
       deletable_by_viewers: A nézők törölhetik
       deletable_by_viewers_help: Ez lehetővé teszi a végfelhasználók számára, hogy
         a visszakeresés után töröljék a tartalmat.
-      detail: Részlet
       end_audit_log: Ellenőrzési napló vége
-      event: Esemény
       event_log: Ellenőrzési napló
       expire_after: 'Lejárat után:'
       expire_after_time_help: A leküldés a létrehozástól számított ennyi idő elteltével
@@ -909,7 +995,6 @@ hu:
         kapcsolódó tartalmat az adatbázisból. Az ellenőrzési napló (beleértve a jövőbeli
         megkísérelt nézeteket is) a jövőben is megmarad. biztos vagy ebben?
       expired: Lejárt
-      failed_view: Sikertelen megtekintési kísérlet
       failed_view_attempts: Sikertelen megtekintési kísérletek
       failed_view_attempts_help: Azon kísérletek száma, amelyek megtekintették ezt
         a leküldést a lejárat után.
@@ -917,7 +1002,6 @@ hu:
       files_deleted: Minden korábban csatolt fájl törölve lett, vagy nem volt csatolva."
       log_note: Amint a leküldés tevékenységet kap, mindegyikről egy napló jelenik
         meg az azonosító adatokkal.
-      manual_expiration: Kézi lejárat
       message_length: Üzenet hossza
       message_length_help: A csatolt szöveges adattartalom hossza.
       none: Egyik sem
@@ -926,29 +1010,24 @@ hu:
       passphrase_lock: Jelszózárolás
       passphrase_lock_help: A leküldés megtekintéséhez a címzettektől meg kell adnia
         egy jelszót.
-      payload: Hasznos teher
       push_date: Megnyomva %{date}
       reference_note: Referencia jegyzet
       secret_url: A küldés titkos URL-je
       size: 'Méret: %{size}'
       start_audit_log: Ellenőrzési napló eleje
-      start_log: Ellenőrzési napló eleje
       state: Állapot
       state_help_active: Aktív és még megtekinthető.
       state_help_expired: A küldés tartalmát törölték, és a titkos URL lejárt.
-      successful_view: Sikeres nézet
       successful_views: Sikeres megtekintések
       successful_views_help: A leküldés sikeres megtekintéseinek száma.
       time_remaining: Hátralevő idő
       time_remaining_help: A leküldés lejártáig hátralévő idő.
       title: Push Audit Log
       visible_to: Csak Önnek látható
-      when: Amikor
       preview: Oszd meg ezt a Push-t
+      not_owner: Ez a küldés nem önhöz tartozik.
+      push_creation: Létrehozta %{date}, %{name}
     copy_to_clipboard: Másolja a vágólapra
-    day:
-      one: 1 nap
-      other: "%{count} napja"
     deleted: Törölve
     expiration_html: Ez a titkos link és az összes tartalom törlődik <strong>%{duration}</strong>
       vagy <strong>%{count} további nézetekben</strong> , attól függően, hogy melyik
@@ -979,11 +1058,8 @@ hu:
       5_days: 5 nap
       6_days: 6 nap
       6_hours: 6 óra
-      add_files: Fájlok hozzáadása...
       audit_tip: Ha bejelentkezik, a tevékenységről naplót vezetünk, amely korlátlan
         ideig elérhető.
-      day: nap
-      days: nap
       deletable: Azonnali törlés engedélyezése
       deletable_tip: Lehetővé teszi a felhasználóknak, hogy töröljék ezt a leküldést,
         miután lekérték.
@@ -992,17 +1068,9 @@ hu:
       expiration_label: 'Lejárta ezt a leküldést és törölni a következő után:'
       expiration_tip: A lejárat után a push összes tartalma és fájlja azonnal és teljesen
         törlődik.
-      generator_tip: Használja a fenti gombot egy véletlenszerű jelszó generálásához.
-      hour: óra
-      hours: Órák
-      login_to_upload: Fájlok feltöltéséhez és csatolásához jelentkezzen be...
-      minutes: Percek
-      month: hónap
-      months: Hónapok
       note_label: Referencia jegyzet
       note_placeholder: Egy privát megjegyzés, amely segít emlékezni arra, hogy kinek
         vagy mire való ez a push.
-      passphrase_label: Jelszó zárolása
       passphrase_placeholder: A leküldés megtekintéséhez a címzettektől meg kell adnia
         egy jelszót.
       password_tip: 'Tipp: Csak jelszót írjon be a mezőbe. Egyéb azonosító adatok
@@ -1012,38 +1080,28 @@ hu:
       upload_limit: Letöltésenként legfeljebb 10 fájlt tölthet fel.
       view: Kilátás
       views: megtekintés
-      week: Hét
-      weeks: Hetek
       payload_url_placeholder: Adja meg az URL-t az átirányításhoz...
       url_push_tip: A létrehozott push a megadott URL-re irányít át.
-    hour:
-      one: 1 óra
-      other: "%{count} óra"
+      account_policy: Fiókszabályzat
+      passphrase_lockdown: Jelszózárolás
+      policy_tip: 'Tipp: Az %{link}-ban beállíthat alapértelmezett értékeket és még
+        sok mást.'
+      short_expiration_tip: A rövid lejárati idők és a megtekintések száma csökkenti
+        az expozíció kockázatát.
     index:
       actions: Akciók
       clear_filters: Szűrők törlése
       created: Létrehozva
-      created_by: Által
-      expires: Lejár
       file_count: Fájlok
       note: jegyzet
       nothing_here: Itt még nincs semmi.
       push_id: Push ID
       pushes: Tolja
-      remaining_time: Hátralevő idő
-      status: Állapot
-      views: megtekintés
-      views_remaining: Hátralévő nézetek
       active: Aktív
       expired: Lejárt
       all: Minden
       remaining: Többi
-    minute:
-      one: 1 perc
-      other: "%{count} perce"
-    more_view:
-      one: 1 további megtekintés
-      other: "%{count} további megtekintések"
+      team_pushes: Csapat lökések
     'no': Nem
     none: Egyik sem
     passphrase:
@@ -1054,23 +1112,16 @@ hu:
     payload: Hasznos teher
     preliminary:
       click_proceed: Kattintson ide a folytatáshoz
+      title: Kattintson a Folytatáshoz
     preview:
-      and: és
-      can_be: lehet
-      can_not_be: nem lehet
-      deleted_by_viewers: törölte a megtekintő
       link_lang_tip: 'Tipp: Egy nemzetközi felhasználónak küldi? Módosítsa a titkos
         link nyelvét az URL-től jobbra található legördülő menü segítségével.'
       or: vagy
-      or_after: vagy utána
       push_another: Nyomj egy másikat
       push_created: A push létrejött.
       use_link_to_share: 'Használja ezt a titkos linket a megosztáshoz:'
       view_push_now: Tekintse meg ezt a Push-ot most
       will_burn_view: "(kiéget egy nézetet)"
-      will_expire_after: Ez a push lejár
-      with_preliminary_step: Tartalmaz egy %{strong_start}1 kattintásos előzetes visszakeresési
-        lépést is %{strong_end}.
       example: Példa
       generate: generál
       include_id: Tartalmazza az azonosítót
@@ -1086,33 +1137,21 @@ hu:
     provide_text_or_file: Push létrehozásához vagy szöveget kell megadnia, vagy csatolnia
       kell egy fájlt, vagy mindkettőt.
     push:
-      active: Aktív
-      audit: Ellenőrzés
       expired: Lejárt
       none: Egyik sem
-      preview: Előnézet
-      push_controls: Push Controls
       title: Új Push
       unknown: Ismeretlen
-      share: Ossza meg
     settings: Beállítások
     show:
-      blurred: A jelszava el van homályosítva. Kattintson az alábbiakra, hogy felfedje.
       click_to_reveal: A tartalom elmosódott. Kattintson az alábbiakra, hogy felfedje.
       delete_now: Törölje ezt a titkos linket most
       delete_now_confirm: Ezzel lejár ez a titkos hivatkozás, és örökre töröl minden
         kapcsolódó tartalmat az adatbázisból. biztos vagy ebben?
       download_file: Fájl letöltése
-      files_sent: A következő fájlokat küldtük el Önnek.
-      last_view: Ez az utolsó nézet.
       obtain: Biztonságosan letöltheti és tárolhatja ezt a tartalmat jelszókezelő
         és/vagy titkosított tárhely használatával. Ne felejtsen el azonnal törölni
         minden olyan adatot, amelyre már nincs szükség.
       open_file: Fájl megnyitása
-      please_download: Kérjük, töltse le és tárolja biztonságos helyen.
-      will_be_deleted: Ez a titkos link és az összes tartalom törlődik az %{b_tag}%{time_count}
-        %{time_unit}%{b_tag} vagy %{b_tag}%{view_count} további %{view_unit}%{b_tag}
-        mappában (amelyik előbb következik be).
       your_link: Titkos linkje
       intro: A következő tartalmat küldtük el Önnek.
     show_expired:
@@ -1129,6 +1168,16 @@ hu:
     payload_too_large: A hasznos teher túl nagy. Legfeljebb %{count} bájtot küldhet
       le.
     too_many_files: Leküldésenként legfeljebb %{count} fájlt csatolhat.
+    navbar:
+      files: Fájlok
+      text: Jelszavak és szöveg
+      url: URL-ek
+    new:
+      title: Biztonságosan küldjön jelszót, szöveget vagy fájlt
+    create:
+      premium_required: A fájlok csatolásához elő kell fizetni.
+    update:
+      successful: A Push frissítése sikeresen megtörtént.
   static:
     about:
       about_1: A Password Pusher egy eszköz a jelszavak és más bizalmas információk
@@ -1152,28 +1201,15 @@ hu:
         vagy %{blog} oldalon.
       author_2: A frissítésekért kövesse a Password Pusher funkciót az %{twitter}-on
         (vagy az %{twitter_personal}-en), vagy iratkozzon fel az %{newsletter}-re.
-      facebook: Facebook
       github: Github
-      help_1: A legnagyobb segítség a hír terjesztése. Ossza meg a Password Pushert
-        barátaival, kollégáival és szervezeteivel.
-      help_2: 'Te is:'
-      help_3: Csillagozza meg az %{github} projektet. Ez benzin az algok számára,
-        amelyek a jelszótolót népszerűsítik.
-      help_4: Súgó %{translate}. Javítson egy meglévő nyelvet, vagy adjon hozzá egy
-        újat.
-      help_5: Iratkozzon fel az %{newsletter} oldalra, hogy értesüljön a fontos kiadásokról,
-        biztonsági problémákról, tippekről és egyebekről.
-      help_6: Kövesse a Password Pusher funkciót az %{facebook}, %{twitter} és %{github}
-        oldalon.
-      help_translate: Segítség a fordításban
-      newsletter: Hírlevél
       pwpush_domain: pwpush.com
       section_about: A programról
       section_author: A szerző
-      section_follow: Hol követhető a Password Pusher
-      section_help: Szeretne segíteni?
       title: A Password Pusher-ről
-      twitter: Twitter
+      birthday: Születésnap
+      original_theme: Az eredeti téma
+      original_theme_body: Az eredeti webhely dizájn sötét háttérből, vastag sárga
+        betűtípusból állt.
     generate_key:
       env_var: Ezt a kulcsot a környezeti változó beállításával alkalmazhatja az alkalmazásra
       generate_key: Kulcs generálása
@@ -1203,43 +1239,30 @@ hu:
       notes: 'Megjegyzések:'
       reload: Új kulcs generálásához töltse be újra ezt az oldalt.
       title: Egy titkosítási kulcs generálása
+      explanation: Magyarázat
     password_generator:
       push_it: Nyomja meg ezt a jelszót
       pwgen_title: Jelszógenerátor
-    tools:
-      alfred: Alfred App
-      api_documentation: API végpont dokumentációja
-      applications: Alkalmazások
-      cli: Parancssori interfész
-      clu: Parancssori segédprogramok
-      examples: Példák
-      github: Github
-      intro: A Password Pusher JSON API-val számos olyan alkalmazás és parancssori
-        segédprogram (CLI) létezik, amelyek a pwpush.com webhelyhez vagy a saját üzemeltetésű
-        példányához kapcsolódnak. Jelszavak leküldése a CLI, a Slack, az Alfred alkalmazásból
-        és egyebekből.
-      intro_2: A JSON API egy hatékony eszköz, amely lehetővé teszi a jelszóküldés
-        automatizálását. Ez különféle programozási nyelvekkel és eszközökkel megtehető.
-      intro_3: További információkért lásd az %{github} oldalt.
-      more: Több
-      slack: Laza
-      subtitle: A Password Pusher több, mint egy webes alkalmazás. JSON API-val rendelkezik,
-        amely sokféle integrációt és alkalmazást tesz lehetővé.
-      title: Eszközök, API-k, integrációk és alkalmazások
-      tools_1: A JSON API használatával különféle eszközök kapcsolódhatnak a Password
-        Pusher-hez a jelszóelosztás automatizálása érdekében.
-      tools_2: Nincs korlátozás arra vonatkozóan, hogy hány jelszót tolhat ki (és
-        nem áll szándékunkban korlátokat hozzáadni), de van sebességkorlátozónk, hogy
-        a webhelyet ne rontsák el a rossz programok vagy a rossz alakok. Korlátozza
-        eszközeit legfeljebb 1 jelszóra néhány másodpercenként, és minden rendben
-        lesz.
-      tools_3: 'Ezt a böngésző Javascript konzoljában tesztelheti, ha a Password Pusher
-        kezdőlapjára lép, és írja be:'
-      tools_4: Ez az API lehetővé teszi, hogy JSON-on keresztül csatlakozzon a Password
-        Pusherhez. Ezt a meglévő segédprogramok, például curl, wget vagy bármilyen
-        programozási nyelv használhatják. Nézze meg az alábbi példákat néhány ötletért.
-      tools_5: További magyarázatok és példák az %{github} Wikiben.
-      walkthrough: Útmutató és példák
+    features:
+      intro_4: 'A Password Pusher négy különböző változata áll rendelkezésre az Ön
+        igényeinek megfelelően: <strong>nyílt forráskódú</strong> , <strong>prémium</strong>
+        , <strong>Pro</strong> és <strong>Self-Hosted</strong> .'
+      intro_5: Az alábbiakban egy jellemzőmátrix található, amely felvázolja az egyes
+        ízek legfontosabb jellemzőit.
+      title: Jellemzők
+    languages:
+      lang_description: Az alábbiakban felsoroljuk azokat a nyelveket, amelyeket a
+        Password Pusher támogat. 30 támogatott nyelv létezik. Saját üzemeltetéskor
+        engedélyezheti vagy letilthatja a nyelveket a példányához.
+      languages: Nyelvek
+      pwp_languages: Jelszótoló nyelvek
+    pricing:
+      coming_soon: Hamarosan megjelenik a Pro funkciók saját üzemeltetésű terve.
+      custom_subhead: Nyílt forráskód támogatása. Szerezzen prémium szolgáltatásokat.
+      feature_pipeline: A prémium funkciók rendszeresen átkerülnek a nyílt forráskódú
+        kiadásba.
+      footer_note: Az előfizetések a pwpush.com oldalra vonatkoznak, és a nyílt forráskódú
+        kiadás fejlesztését finanszírozzák.
   zero_minutes: 0 perc
   users:
     agreements:
@@ -1248,3 +1271,455 @@ hu:
       terms_of_service:
         terms_of_service: Szolgáltatás feltételei
   confirmation_go: Kattintson ide fiókja megerősítéséhez
+  admin:
+    config:
+      menu_item: Konfiguráció
+      overview:
+        description: Az ebben a szakaszban található beállítások az alkalmazás globális
+          konfigurálására szolgálnak. Ha módosításokat hajt végre, az alkalmazás újraindulhat
+          az új beállítások alkalmazásához.
+        subtitle: Itt testreszabhatja a Password Pusher beállításait.
+        title: Alkalmazás konfigurációja
+      reset: Állítsa vissza az alapértelmezett értékeket
+      reset_confirm: Biztosan vissza szeretné állítani az ezen az oldalon található
+        konfigurációt az alapértelmezett értékekre? Ez nem befolyásolja a többi oldal
+        beállításait.
+      save: Mentse
+  models:
+    pwp_config:
+      app_config: Alkalmazás konfigurációja
+      as_container_hint: A fájlok tárolására használt tároló.
+      as_container_label: AS konténer
+      as_storage_access_key_hint: Az AS-kiszolgálóval történő hitelesítéshez használandó
+        tároló-hozzáférési kulcs.
+      as_storage_access_key_label: AS Storage Access Key
+      as_storage_account_name_hint: A fájlok tárolására használandó tárfiók neve.
+      as_storage_account_name_label: AS Storage Account Name
+      config_encryption_key_hint: A konfigurációs adatok titkosításához és visszafejtéséhez
+        használt titkosítási kulcs.
+      config_encryption_key_label: Config titkosítási kulcs
+      dark_logo_hint: A sötét témához használható logó. Először ellenőrizze, hogy
+        a fájltároló megfelelően van-e konfigurálva.
+      dark_logo_label: Sötét téma webhely logója
+      default_locale_hint: Az alkalmazáshoz használt alapértelmezett nyelv.
+      default_locale_label: Alapértelmezett nyelv
+      email_raise_delivery_errors_hint: Meghatározza, hogy jelezzen-e hibát, ha az
+        e-mailek kézbesítését nem lehet befejezni. Alapértelmezés szerint igaz.
+      email_raise_delivery_errors_label: Szállítási hibák emelése
+      email_subtitle: Itt testreszabhatja, hogy a Password Pusher hogyan küldjön e-maileket.
+      email_title: E-mail konfiguráció
+      enabled_languages_hint: Az alábbi kiválasztott nyelvek minden felhasználó számára
+        elérhetők lesznek.
+      enabled_languages_label: Engedélyezett nyelvek
+      encryption_subtitle: Itt testreszabhatja a Password Pusher titkosítási beállításait.
+      encryption_title: Titkosítási konfiguráció
+      file_subtitle: Itt testreszabhatja, hogy a Password Pusher hogyan tárolja a
+        feltöltött fájlokat.
+      file_title: Fájltárolás beállítása
+      from_address_hint: Az e-mail feladójaként használandó e-mail cím.
+      from_address_label: Címből
+      gcs_bucket_hint: A fájlok tárolására használható vödör.
+      gcs_bucket_label: GCS vödör
+      gcs_credentials_hint: A GCS-kiszolgálóval történő hitelesítéshez használandó
+        hitelesítő adatok.
+      gcs_credentials_label: GCS hitelesítő adatok
+      gcs_gsa_email_hint: A GSA-szerverrel történő hitelesítéshez használandó GSA-e-mail.
+      gcs_gsa_email_label: GCS GSA e-mail
+      gcs_iam_hint: A GCS-kiszolgálóval történő hitelesítéshez használt IAM.
+      gcs_iam_label: GCS IAM
+      gcs_project_hint: A fájlok tárolására használt projekt.
+      gcs_project_label: GCS projekt
+      language_subtitle: Itt testreszabhatja a Password Pusher által támogatott nyelveket.
+      language_title: Nyelvi konfiguráció
+      light_logo_hint: A Light téma logója. Először ellenőrizze, hogy a fájltároló
+        megfelelően van-e konfigurálva.
+      light_logo_label: Könnyű téma webhely logója
+      login_subtitle: Itt testreszabhatja, hogy a Password Pusher hogyan kezelje a
+        bejelentkezéseket.
+      login_tip: Tipp
+      login_tip_body: 'Ezzel az eszközzel tesztelheti e-mail-mintáit:'
+      login_title: Bejelentkezési konfiguráció
+      override_base_url_hint: A generált titkos URL-ek alap URL-jének kényszerítésére
+        szolgál.
+      override_base_url_label: Alap URL felülírása
+      push_encryption_key_hint: A leküldések titkosításához és visszafejtéséhez használt
+        titkosítási kulcs.
+      push_encryption_key_label: Nyomja meg a titkosítási kulcsot
+      s3_access_key_id_hint: Az S3 szerverrel történő hitelesítéshez használandó hozzáférési
+        kulcs azonosítója.
+      s3_access_key_id_label: S3 hozzáférési kulcs azonosítója
+      s3_bucket_hint: A fájlok tárolására használható vödör.
+      s3_bucket_label: S3 Vödör
+      s3_endpoint_hint: Az S3 szerver végpontja a fájlok tárolására.
+      s3_endpoint_label: S3 végpont
+      s3_region_hint: Az S3 szerver fájlok tárolására használt régiója.
+      s3_region_label: S3 régió
+      s3_secret_access_key_hint: Az S3 szerverrel történő hitelesítéshez használt
+        titkos hozzáférési kulcs.
+      s3_secret_access_key_label: S3 titkos hozzáférési kulcs
+      signup_email_regexp_hint: A mintának nem megfelelő e-maileket a rendszer elutasítja.
+      signup_email_regexp_label: Regexp e-mail regisztráció
+      site_name_hint: A fejlécben és láblécben használandó webhely neve.
+      site_name_label: Webhely neve
+      site_tagline_hint: A webhely fejlécében és láblécében használandó szlogenje.
+      site_tagline_label: Site Tagline
+      smtp_address_hint: Az e-mail küldéshez használandó SMTP-szerver címe.
+      smtp_address_label: SMTP szerver címe
+      smtp_authentication_hint: Az SMTP-szerverrel használandó hitelesítés típusa.
+      smtp_authentication_label: SMTP hitelesítés típusa
+      smtp_domain_hint: Az e-mail küldéshez használt SMTP-szerver tartománya.
+      smtp_domain_label: SMTP tartomány
+      smtp_enable_starttls_auto_hint: Érzékeli, hogy a STARTTLS engedélyezve van-e
+        az SMTP-kiszolgálón, és elkezdi használni. Alapértelmezés szerint igaz.
+      smtp_enable_starttls_auto_label: SMTP Automatikus STARTTLS
+      smtp_enable_starttls_hint: Használja a STARTTLS-t, amikor csatlakozik az SMTP-kiszolgálóhoz,
+        és sikertelen, ha nem támogatott. Alapértelmezés szerint false.
+      smtp_enable_starttls_label: SMTP STARTTLS engedélyezése
+      smtp_openssl_verify_mode_hint: Az SMTP-kiszolgálóhoz való csatlakozáskor használandó
+        OpenSSL-ellenőrzési mód.
+      smtp_openssl_verify_mode_label: SMTP OpenSSL ellenőrzési mód
+      smtp_password_hint: Az SMTP-szerverrel történő hitelesítéshez használt jelszó.
+      smtp_password_label: SMTP jelszó
+      smtp_port_hint: Az SMTP-kiszolgáló e-mail küldéséhez használt portja.
+      smtp_port_label: SMTP port
+      smtp_user_name_hint: Az SMTP-kiszolgálóval történő hitelesítéshez használandó
+        felhasználónév.
+      smtp_user_name_label: SMTP felhasználónév
+      storage_hint: A fájlok tárolására használt tárolótípus. Alapértelmezés szerint
+        a :local.
+      storage_label: Tárolás
+  notifiers:
+    pull:
+      response_notifier:
+        message: Az Ön %{url_token} azonosítója választ kapott. Le lesz zárva és lejár
+          az %{remaining}-ben.
+        now_closed_message: Az Ön %{url_token} azonosítója választ kapott. A kérelmet
+          azóta lezárták.
+  pulls:
+    access:
+      incorrect: Ez a jelszó hibás. Kérjük, próbálja újra, vagy lépjen kapcsolatba
+        azzal a személlyel vagy szervezettel, aki ezt a linket küldte Önnek.
+    audit:
+      1click_retrieval_step: 1-Kattintson a Visszakeresési lépésre
+      1click_retrieval_step_help: Segít elkerülni, hogy a csevegőrendszerek és az
+        URL-szkennerek elhasználják a megtekintéseket.
+      active: Aktív
+      attached_files: Csatolt fájlok
+      attached_files_help: Csatoltak fájlokat ehhez a kérelemhez?
+      audit_log_for: 'Audit napló a következőhöz: %{pull_id}'
+      closed: Zárt
+      contains_text: Szöveget tartalmaz
+      contains_text_help: Hozzáadtak ehhez a kéréshez szöveges adathordozót?
+      created: Létrehozva
+      created_by: 'Készítette: %{user}'
+      current_status: Jelenlegi állapot
+      deletable_by_viewers: A nézők törölhetik
+      deletable_by_viewers_help: Ez lehetővé teszi a végfelhasználók számára, hogy
+        a visszakeresés után töröljék a tartalmat.
+      detail: Részlet
+      end_audit_log: Ellenőrzési napló vége
+      event: Esemény
+      event_log: Ellenőrzési napló
+      expire_after: 'Lejárat után:'
+      expire_after_time_help: A kérelem a létrehozástól számított ennyi idő elteltével
+        lejár.
+      expire_after_view_help: A kérelem ennyi megtekintés után lejár.
+      expire_now: Lejár most
+      expire_now_confirm: Ezzel lejár ez a titkos hivatkozás, és örökre töröl minden
+        kapcsolódó tartalmat az adatbázisból. Az ellenőrzési napló (beleértve a jövőbeli
+        megkísérelt nézeteket is) a jövőben is megmarad. biztos vagy ebben?
+      expired: Lejárt
+      failed_view: Sikertelen megtekintési kísérlet
+      failed_view_attempts: Sikertelen megtekintési kísérletek
+      failed_view_attempts_help: A kérelem megtekintésére tett kísérletek száma a
+        lejárat után.
+      filename: Fájl név
+      files_deleted: Minden korábban csatolt fájl törölve lett, vagy nem volt csatolva."
+      log_note: Amint a kérés tevékenységet kap, mindegyikről napló jelenik meg azonosító
+        adatokkal.
+      manual_expiration: Kézi lejárat
+      message_length: Üzenet hossza
+      message_length_help: A csatolt szöveges adattartalom hossza.
+      none: Egyik sem
+      num_files_attached: Csatolt fájlok száma
+      num_files_attached_help: A kérelemhez csatolt fájlok száma.
+      open: Kérelem Megnyitás
+      passphrase_lock: Jelszózárolás
+      passphrase_lock_help: A kérelem megtekintéséhez a címzettektől meg kell adnia
+        egy jelszót.
+      payload: Hasznos teher
+      preview: Ossza meg
+      pull_creation: Létrehozta %{date}, %{name}
+      ready: Válasz kész
+      reference_note: Referencia jegyzet
+      request_date: 'Létrehozva: %{date}'
+      retrieve: Letöltés
+      secret_url: Titkos URL ehhez a kéréshez
+      size: 'Méret: %{size}'
+      start_audit_log: Ellenőrzési napló eleje
+      start_log: Ellenőrzési napló eleje
+      state: Állapot
+      state_help_closed: A kérelmet lezártuk, és a válasz tartalmát töröltük.
+      state_help_open: A kérelem nyitott, és még nem kapott választ.
+      state_help_ready: A címzett válaszolt a kérésre, és a tartalom készen áll a
+        visszakeresésre.
+      successful_view: Sikeres nézet
+      successful_views: Sikeres megtekintések
+      successful_views_help: A kérés sikeres megtekintésének száma.
+      time_remaining: Hátralevő idő
+      time_remaining_help: A kérés lezárása és a tartalom törlése előtt hátralévő
+        idő.
+      title: 'Ellenőrzési napló a kérelem azonosítójához: %{pull_id}'
+      visible_to: Csak Önnek látható
+      when: Amikor
+    close:
+      done: A válasz sikeresen törölve és a kérés lezárva.
+    copy_to_clipboard: Másolja a vágólapra
+    create:
+      need_subscription: A fájlok csatolásához elő kell fizetni.
+    day:
+      one: 1 nap
+      other: "%{count} napja"
+    deleted: Törölve
+    expiration_html: Ez a titkos link és az összes tartalom törlődik <strong>%{duration}</strong>
+      vagy <strong>%{count} további nézetekben</strong> , attól függően, hogy melyik
+      következik be előbb.
+    expire:
+      already_expired: Ez a kérelem már lejárt.
+      expired: A kérés tartalma törölve lett, és a titkos URL lejárt.
+      not_deletable: Ezt a kérést a nézők nem törölhetik.
+    form:
+      12_hours: 12 óra
+      15_minutes: 15 perc
+      1_day: 1 nap
+      1_hour: 1 óra
+      1_month: 1 hónap
+      1_week: 1 hét
+      1click: Kattintás után lehessen megtekinteni a jelszót
+      1click_tip: Segít elkerülni a csevegőrendszereket és az URL-szkennereket
+      2_days: 2 nap
+      2_months: 2 hónap
+      2_weeks: 2 hét
+      30_minutes: 30 perc
+      3_days: 3 nap
+      3_months: 3 hónap
+      3_weeks: 3 hét
+      45_minutes: 45 perc
+      4_days: 4 nap
+      5_days: 5 nap
+      6_days: 6 nap
+      6_hours: 6 óra
+      attach_files: Fájlok csatolása
+      attach_files_help: 'Példa: Egy kitöltendő űrlap.'
+      audit_tip: Ha bejelentkezik, a tevékenységről naplót vezetünk, amely korlátlan
+        ideig elérhető.
+      beta: Ez a funkció BÉTA, és változhat. A visszajelzést köszönjük!
+      day: nap
+      days: nap
+      deletable: Azonnali törlés engedélyezése
+      deletable_tip: Lehetővé teszi a felhasználóknak, hogy töröljék ezt a kérést
+        a lekérés után.
+      encryption_tip: A kéréshez egy megosztható titkos URL jön létre.
+      expiration_label: 'A válasz beérkezését követően a beküldött adatok törlésre
+        kerülnek, miután:'
+      expiration_tip: A titkos URL címzettje megtekintheti a kérést, és szöveggel
+        vagy fájlokkal válaszolhat.
+      generator_tip: Használja a fenti gombot egy véletlenszerű jelszó generálásához.
+      hour: óra
+      hours: Órák
+      login_to_upload: Fájlok feltöltéséhez és a kérelemhez csatolásához jelentkezzen
+        be...
+      minutes: Percek
+      month: hónap
+      months: Hónapok
+      note_label: Referencia jegyzet
+      note_placeholder: Privát megjegyzés ehhez a kéréshez. Titkosított és csak Ön
+        és csapata láthatja.
+      passphrase_label: Jelszó zárolása
+      passphrase_lockdown: Jelszózárolás
+      passphrase_placeholder: Kérje meg a címzettet, hogy adjon meg egy jelszót a
+        kérés megválaszolásához.
+      password_tip: 'Példa: Szia John, megadnád a felhasználónevedet és csatold ide
+        a dokumentumokat? Miután megkaptuk, hamarosan újra felvesszük Önnel a kapcsolatot.'
+      payload_url_placeholder: Adja meg az URL-t az átirányításhoz...
+      pull_it: Kérelem létrehozása
+      request_placeholder: Írja be ide kérését...
+      respond: Küldje el válaszát
+      response_placeholder: Adja meg válaszát ide...
+      tip_section_title: Biztonságosan kérhet bizalmas információkat ügyfeleitől,
+        kollégáitól vagy ügyfeleitől.
+      upload_limit: Kérelemenként legfeljebb %{count} fájlt tölthet fel.
+      url_pull_tip: A létrehozott kérelem a megadott URL-re irányít át.
+      view: Kilátás
+      views: megtekintés
+      week: Hét
+      weeks: Hetek
+    hour:
+      one: 1 óra
+      other: "%{count} óra"
+    index:
+      actions: Akciók
+      active: Aktív
+      all: Minden
+      clear_filters: Szűrők törlése
+      closed: Zárt
+      created: Létrehozva
+      created_by: Által
+      deletion: Törlés be
+      expired: Lejárt
+      expires: Lejár
+      file_count: Fájlok
+      note: jegyzet
+      nothing_here: Itt még nincs semmi.
+      open: Nyisd ki
+      pull_id: Kérjen azonosítót
+      pulls: Kérések
+      ready: Kész
+      remaining_time: Hátralevő idő
+      state: Állapot
+      status: Állapot
+      team_pulls: Csapatkérések
+      views: megtekintés
+      views_remaining: Hátralévő nézetek
+    minute:
+      one: 1 perc
+      other: "%{count} perce"
+    more_view:
+      one: 1 további megtekintés
+      other: "%{count} további megtekintések"
+    navbar:
+      files: Fájlok
+      text: Jelszavak és szöveg
+      url: URL-ek
+    new:
+      title: Biztonságosan küldjön jelszót, szöveget vagy fájlt
+    'no': Nem
+    none: Egyik sem
+    passphrase:
+      enter_passphrase: Írja be a jelszót
+      go: Megy
+      placeholder: Írja be az URL-hez mellékelt titkos jelszót
+      tip: Írja be a titkos jelszót
+    payload: Hasznos teher
+    payload_too_large: A hasznos teher túl nagy. Legfeljebb %{count} bájt adható meg.
+    preliminary:
+      click_proceed: Kattintson ide a folytatáshoz
+      title: Kattintson a Folytatáshoz
+    preview:
+      and: és
+      can_be: lehet
+      can_not_be: nem lehet
+      deleted_by_viewers: törölte a megtekintő
+      example: Példa
+      generate: generál
+      include_id: Tartalmazza az azonosítót
+      link_lang_auto: Alternatív megoldásként az automatikus észlelés a végfelhasználói
+        böngészőbeállítások alapján választ ki egy nyelvet.
+      link_lang_tip: 'Tipp: Nemzetközi felhasználónak küld egy kérést? Módosítsa a
+        titkos link nyelvét az URL-től jobbra található legördülő menü segítségével.'
+      message_example: Kérjük, gondoskodjon arról, hogy ezt a dokumentumot a visszakeresés
+        után biztonságosan megsemmisítse az érzékeny információk védelme és a titkosság
+        megőrzése érdekében.
+      message_placeholder: Opcionális egyéni üzenet
+      or: vagy
+      or_after: vagy utána
+      print_and_share: Nyomtatás és megosztás
+      print_and_share_tip: Nyomtatható oldal létrehozása a végfelhasználók számára
+      pull_another: Kérjen még egyet
+      pull_created: Kérése létrejött.
+      show_expiration: Lejárati adatok megjelenítése
+      use_link_to_share: 'Használja ezt a titkos linket a megosztáshoz:'
+      view_pull_now: Tekintse meg ezt a kérést most
+      will_burn_view: "(kiéget egy nézetet)"
+      will_expire_after: Ez a kérelem lejár
+      with_preliminary_step: Tartalmaz egy %{strong_start}1 kattintásos előzetes visszakeresési
+        lépést is %{strong_end}.
+    provide_text_or_file: Kérelem létrehozásához meg kell adnia szöveget, csatolnia
+      kell egy fájlt, vagy mindkettőt.
+    pull:
+      audit: Ellenőrzés
+      closed: Zárt
+      none: Egyik sem
+      not_applicable: N/A
+      open: Kérelem Megnyitás
+      preview: Előnézet
+      pull_controls: Kérelem vezérlők
+      ready: Válasz kész
+      retrieve: Letöltés
+      share: Ossza meg
+      title: Új kérés
+      unknown: Ismeretlen
+      view: Kilátás
+    retrieve:
+      attached_files: Csatolt fájlok
+      audit: Ellenőrzési napló
+      close_now: Közeli
+      close_now_confirm: A kérés lezárása azonnal törli az összes érzékeny információt
+        és fájlt. Az ellenőrzési naplót határozatlan ideig vezetjük. Biztos vagy benne?
+      close_warning: Ez a kérés automatikusan lezárásra kerül, és minden érzékeny
+        információ törlődik az %{duration}-ban.
+      closed: Ezt a kérést lezártuk, és minden érzékeny adatot töröltünk.
+      deleted: Minden tartalom törölve lett.
+      no_response: Válasz még nem érkezett.
+      preview: Ossza meg
+      pull_creation: Létrehozta %{date}, %{name}
+      reference_note: Referencia jegyzet
+      state: Állapot
+      state_closed: Zárt
+      state_help_closed: A kérelmet lezártuk, és a válasz tartalmát töröltük.
+      state_help_open: A kérelem nyitott, és még nem kapott választ.
+      state_help_ready: A címzett válaszolt a kérésre, és a tartalom készen áll a
+        visszakeresésre.
+      state_open: Nyisd ki
+      state_ready: Kész
+      the_request: A Kérelem
+      the_response: A címzett válasza
+      title: 'Lekérdezés a kérelem azonosítójához: %{pull_id}'
+      visible_to: Csak Önnek látható
+    settings: Beállítások
+    show:
+      blurred: A jelszava el van homályosítva. Kattintson az alábbiakra, hogy felfedje.
+      click_to_reveal: A tartalom elmosódott. Kattintson az alábbiakra, hogy felfedje.
+      delete_now: Törölje ezt a titkos linket most
+      delete_now_confirm: Ezzel lejár ez a titkos hivatkozás, és örökre töröl minden
+        kapcsolódó tartalmat az adatbázisból. biztos vagy ebben?
+      download_file: Fájl letöltése
+      intro: Az alábbi kérést elküldtük Önnek.
+      last_view: Ez az utolsó nézet.
+      open_file: Fájl megnyitása
+      please_download: Kérjük, töltse le és tárolja biztonságos helyen.
+      response_retrieval: Válasz visszakeresése
+      security_note: Az itt benyújtott információkat biztonságosan tároljuk, csak
+        a kérelmező számára hozzáférhetők, és teljes mértékben töröljük az %{duration}-on
+        belül.
+      will_be_deleted: Ez a titkos link és az összes tartalom törlődik az %{b_tag}%{time_count}
+        %{time_unit}%{b_tag} vagy %{b_tag}%{view_count} további %{view_unit}%{b_tag}
+        mappában (amelyik előbb következik be).
+      your_link: Kérés érkezett
+      your_response: Az Ön válasza
+    show_expired:
+      expired_help: Ha szükséges, lépjen kapcsolatba azzal a személlyel vagy szervezettel,
+        aki megadta ezt a titkos URL-t.
+      expired_message: Elnézést kérünk, de ez a titkos link lejárt.
+      link_expired: Titkos linkje lejárt
+    show_ready:
+      help: Ha bármilyen kérdése van, vagy további segítségre van szüksége, forduljon
+        ahhoz a személlyel vagy szervezethez, aki ezt a linket küldte Önnek.
+      message: Köszönöm válaszát. Az igénylőt értesítettük, hamarosan felveszi Önnel
+        a kapcsolatot.
+      title: Köszönöm válaszát.
+    too_many_files: Kérelemenként legfeljebb %{count} fájlt csatolhat.
+    update:
+      done: Köszönöm. Válaszát sikeresen megkaptuk.
+    view:
+      one: 1 nézet
+      other: "%{count} nézetek"
+    view_audit_log: Ellenőrzési napló megtekintése
+    whichever: "(amelyik előbb jön)"
+    'yes': Igen
+  words:
+    audit: Ellenőrzés
+    forbidden: Tiltott
+    not_found: Nem található
+    share: Ossza meg
+    expired: Lejárt
