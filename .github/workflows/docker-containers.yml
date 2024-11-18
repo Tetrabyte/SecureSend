@@ -10,6 +10,14 @@ on:
       - "stable"
       - "v*.*.*"
 
+  workflow_dispatch:
+    inputs:
+      dockerPush:
+        description: 'Push image to docker hub?'
+        required: true
+        type: boolean
+        default: false
+
 env:
   DOCKER_PUSH: true
 
@@ -57,7 +65,7 @@ jobs:
           labels: ${{ steps.meta.outputs.labels }}
           tags: ${{ steps.meta.outputs.tags }}
           cache-from: type=registry,ref=tetrabyteit/securesend:buildcache
-          cache-to: type=registry,ref=tetrabyteit/securesend:buildcache,mode=max
+          cache-to: type=registry,ref=tetrabyteit/securesend:buildcache,mode=max,ignore-error=${{env.DOCKER_PUSH == 'false'}}
 
   worker-container-master:
     needs: pwpush-container
@@ -78,8 +86,6 @@ jobs:
         uses: docker/metadata-action@v5
         with:
           images: tetrabyteit/pwpush-worker
-          flavor: |
-            latest=false
           tags: |
             type=match,pattern=stable
             type=schedule,pattern=nightly
@@ -125,8 +131,6 @@ jobs:
         uses: docker/metadata-action@v5
         with:
           images: tetrabyteit/pwpush-worker
-          flavor: |
-            latest=false
           tags: |
             type=match,pattern=stable
             type=schedule,pattern=nightly
@@ -145,7 +149,7 @@ jobs:
       - name: Build and push Docker image
         uses: docker/build-push-action@v6
         with:
-          file: ./containers/docker/Dockerfile.worker
+          file: ./containers/docker/Dockerfile.worker-dev
           platforms: linux/amd64
           push: true
           labels: ${{ steps.meta.outputs.labels }}
