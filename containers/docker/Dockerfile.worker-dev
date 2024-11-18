@@ -1,4 +1,4 @@
-FROM tetrabyteit/securesend:master
+FROM tetrabyteit/securesend:dev-tbyte
 
 ENV PWP_WORKER=true
 
