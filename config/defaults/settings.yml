@@ -582,7 +582,7 @@ gen:
   # The exact number of syllables that a generated password will have
   #
   # Environment variable override:
-  # PWP__GEN__SYLLABLE_COUNT=3
+  # PWP__GEN__SYLLABLES_COUNT=3
   #
   syllables_count: 3
 
@@ -772,14 +772,6 @@ mail:
   # See config/initializers/devise.rb where this is used
   # Environment Variable Override: PWP__MAIL__MAILER_SENDER='"Password Pusher" <pglombardo@pwpush.com>'
   # mailer_sender: '"Password Pusher" <oss@pwpush.com>'
-
-### Feedback Form
-feedback:
-  # The email that will receive the information filled out by users in the
-  # Feedback form.
-  #
-  # Environment Variable Override: PWP__FEEDBACK__EMAIL='my@email.com'
-  email: 'support@tbyte.com'
 
 ### Docker Pre-compilation
 #

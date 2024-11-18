@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pwpush 1.0\n"
 "Report-Msgid-Bugs-To: contact@translation.io\n"
-"POT-Creation-Date: 2024-08-14 12:34+0200\n"
-"PO-Revision-Date: 2024-08-14 12:34+0200\n"
+"POT-Creation-Date: 2024-11-13 23:27+0100\n"
+"PO-Revision-Date: 2024-11-13 23:27+0100\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: French\n"
 "Language: fr\n"
@@ -17,26 +17,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n>1;\n"
 "\n"
-
-#: ../../../app/controllers/feedbacks_controller.rb:15
-msgid ""
-"Our apologies but you failed the spam check.  You could try contacting us on G"
-"ithub instead."
-msgstr ""
-"Toutes nos excuses, mais vous avez échoué à la vérification anti-spam. Vous po"
-"uvez essayer de nous contacter sur Github à la place."
-
-#: ../../../app/controllers/feedbacks_controller.rb:21
-msgid "Feedback sent!  We will get back to you as soon as possible."
-msgstr "Commentaires envoyés ! Nous vous répondrons dès que possible."
-
-#: ../../../app/controllers/feedbacks_controller.rb:24
-msgid ""
-"Could not send feedback.  Did you pass the Humanity Test?  Valid email?  Try a"
-"gain?"
-msgstr ""
-"Impossible d'envoyer le commentaire. Avez-vous passé le test CAPTCHA ? L'email"
-" est valide ? Pouvez-vous recommencer ?"
 
 #: ../../../app/controllers/file_pushes_controller.rb:105
 #: ../../../app/controllers/passwords_controller.rb:104
@@ -48,39 +28,30 @@ msgstr ""
 "Cette passphrase est incorrecte. Veuillez réessayer ou contacter la personne o"
 "u l'organisation qui vous a envoyé ce lien."
 
-#: ../../../app/controllers/file_pushes_controller.rb:241
+#: ../../../app/controllers/file_pushes_controller.rb:242
 #: ../../../app/controllers/passwords_controller.rb:252
 #: ../../../app/controllers/urls_controller.rb:252
 msgid "That push doesn't belong to you."
 msgstr "Cette publication ne vous appartient pas."
 
-#: ../../../app/controllers/file_pushes_controller.rb:271
+#: ../../../app/controllers/file_pushes_controller.rb:269
+#: ../../../app/controllers/file_pushes_controller.rb:272
+#: ../../../app/controllers/passwords_controller.rb:279
 #: ../../../app/controllers/passwords_controller.rb:282
-#: ../../../app/controllers/urls_controller.rb:282
-#: ../../../app/controllers/urls_controller.rb:286
-msgid "That push does not belong to you."
-msgstr "Cette publication ne vous appartient pas."
+msgid "That push is not deletable by viewers and does not belong to you."
+msgstr ""
+"Ce push n'est pas supprimable par les téléspectateurs et ne vous appartient pa"
+"s."
 
-#: ../../../app/controllers/file_pushes_controller.rb:276
-#: ../../../app/controllers/passwords_controller.rb:287
-msgid "That push is not deletable by viewers."
-msgstr "Cette publication ne peut pas être supprimée par l'utilisateur"
-
-#: ../../../app/controllers/file_pushes_controller.rb:282
-#: ../../../app/controllers/file_pushes_controller.rb:283
-#: ../../../app/controllers/passwords_controller.rb:293
-#: ../../../app/controllers/passwords_controller.rb:294
-#: ../../../app/controllers/urls_controller.rb:292
-#: ../../../app/controllers/urls_controller.rb:293
+#: ../../../app/controllers/file_pushes_controller.rb:281
+#: ../../../app/controllers/passwords_controller.rb:291
+#: ../../../app/controllers/urls_controller.rb:287
 msgid "That push is already expired."
 msgstr "Cette publication est déjà expirée."
 
-#: ../../../app/controllers/file_pushes_controller.rb:301
-#: ../../../app/controllers/file_pushes_controller.rb:304
-#: ../../../app/controllers/passwords_controller.rb:311
-#: ../../../app/controllers/passwords_controller.rb:314
-#: ../../../app/controllers/urls_controller.rb:310
-#: ../../../app/controllers/urls_controller.rb:313
+#: ../../../app/controllers/file_pushes_controller.rb:297
+#: ../../../app/controllers/passwords_controller.rb:306
+#: ../../../app/controllers/urls_controller.rb:302
 #: ../../../app/views/file_pushes/audit.html.erb:97
 #: ../../../app/views/file_pushes/audit.html.erb:254
 #: ../../../app/views/passwords/audit.html.erb:97
@@ -93,6 +64,22 @@ msgstr "Le contenu a été supprimé et l'URL privée n'est plus valable."
 #: ../../../app/controllers/urls_controller.rb:155
 msgid "Invalid URL: Must have a valid URI scheme."
 msgstr "URL non valide : doit avoir un schéma d'URI valide."
+
+#: ../../../app/controllers/urls_controller.rb:278
+#: ../../../app/controllers/urls_controller.rb:279
+msgid "That push does not belong to you."
+msgstr "Cette publication ne vous appartient pas."
+
+#: ../../../app/views/application/_secret_url_bar.html.erb:17
+msgid "Secret Link Language"
+msgstr "Langue du lien secret"
+
+#: ../../../app/views/application/_secret_url_bar.html.erb:35
+#: ../../../app/views/pages/generate_key.html.erb:26
+#: ../../../app/views/pages/generate_key.html.erb:39
+#: ../../../app/views/shared/_copy_button.html.erb:2
+msgid "Copy to Clipboard"
+msgstr "Copier dans le presse-papier"
 
 #: ../../../app/views/devise/mailer/confirmation_instructions.html.erb:8
 #: ../../../app/views/devise/mailer/email_changed.html.erb:8
@@ -246,7 +233,7 @@ msgid "Current Password"
 msgstr "Mot de passe actuel"
 
 #: ../../../app/views/devise/registrations/token.html.erb:2
-#: ../../../app/views/shared/_header.html.erb:44
+#: ../../../app/views/shared/_header.html.erb:49
 msgid "API Token"
 msgstr "Token d'API"
 
@@ -349,48 +336,12 @@ msgid "Processing..."
 msgstr "Traitement…"
 
 #: ../../../app/views/devise/sessions/new.html.erb:7
-#: ../../../app/views/feedbacks/new.html.erb:20
 msgid "Email"
 msgstr "Email"
 
 #: ../../../app/views/devise/sessions/new.html.erb:12
 msgid "Password"
 msgstr "Mot de passe"
-
-#: ../../../app/views/feedbacks/new.html.erb:1
-#: ../../../app/views/feedbacks/new.html.erb:2
-#: ../../../app/views/feedbacks/new.html.erb:42
-#: ../../../app/views/shared/_footer.html.erb:53
-msgid "Send Feedback"
-msgstr "Envoyer le commentaire"
-
-#: ../../../app/views/feedbacks/new.html.erb:8
-msgid ""
-"Have an idea or wish?  Something you don't like?  Want to help out?  We want t"
-"o hear it!"
-msgstr ""
-"Une idée ou un souhait ? Quelque chose vous déplaît ? Vous voulez aider ? Dite"
-"s-le nous !"
-
-#: ../../../app/views/feedbacks/new.html.erb:15
-msgid "Your Name"
-msgstr "Votre nom"
-
-#: ../../../app/views/feedbacks/new.html.erb:29
-msgid "What is one hundred minus 3?"
-msgstr "Combien font cent moins 3 ?"
-
-#: ../../../app/views/feedbacks/new.html.erb:34
-msgid ""
-"Tip: Copy your message to the clipboard in the unlikely chance submission fail"
-"s."
-msgstr ""
-"Astuce : copiez votre message dans le presse-papiers dans le cas peu probable "
-"où l'envoi échouerait."
-
-#: ../../../app/views/feedbacks/new.html.erb:39
-msgid "Leave this field blank!"
-msgstr "Laissez ce champ vide !"
 
 #: ../../../app/views/file_pushes/active.html.erb:1
 #: ../../../app/views/file_pushes/active.html.erb:18
@@ -1184,8 +1135,6 @@ msgstr[1] "vues"
 #: ../../../app/views/file_pushes/preview.html.erb:65
 #: ../../../app/views/pages/about.html.erb:68
 #: ../../../app/views/pages/about.html.erb:91
-#: ../../../app/views/pages/faq.html.erb:75
-#: ../../../app/views/pages/faq.html.erb:143
 #: ../../../app/views/passwords/preview.html.erb:63
 #: ../../../app/views/passwords/preview.html.erb:65
 msgid "and"
@@ -1352,22 +1301,6 @@ msgstr ""
 #: ../../../app/views/shared/_header.html.erb:13
 msgid "Password Pusher Logo"
 msgstr "Logo de Password Pusher"
-
-#: ../../../app/views/layouts/login.html.erb:50
-msgid ""
-"Some domains may inadvertently block emails.  If you are having trouble receiv"
-"ing emails, "
-msgstr ""
-"Certains domaines bloquent par inadvertance nos e-mails. Si vous rencontrez de"
-"s difficultés pour recevoir des e-mails,"
-
-#: ../../../app/views/layouts/login.html.erb:51
-msgid "send a message"
-msgstr "envoyer un message"
-
-#: ../../../app/views/layouts/login.html.erb:52
-msgid "and we can help out."
-msgstr "et nous pouvons vous aider."
 
 #: ../../../app/views/pages/about.html.erb:1
 msgid "About Password Pusher"
@@ -1552,27 +1485,27 @@ msgstr "Keynote Mac"
 msgid "formats."
 msgstr "formats."
 
-#: ../../../app/views/pages/about.html.erb:102
+#: ../../../app/views/pages/about.html.erb:99
 msgid "Birthday"
 msgstr "Anniversaire"
 
-#: ../../../app/views/pages/about.html.erb:104
+#: ../../../app/views/pages/about.html.erb:101
 msgid "More Than 11 Years Old"
 msgstr "Plus de 11 ans"
 
-#: ../../../app/views/pages/about.html.erb:106
+#: ../../../app/views/pages/about.html.erb:103
 msgid "The first git commit to Password Pusher was on"
 msgstr "Le premier commit sur Git pour Password Pusher a eu lieu"
 
-#: ../../../app/views/pages/about.html.erb:110
+#: ../../../app/views/pages/about.html.erb:107
 msgid "pwpush.com went live shortly thereafter."
 msgstr "pwpush.com a été mis en ligne peu de temps après."
 
-#: ../../../app/views/pages/about.html.erb:116
+#: ../../../app/views/pages/about.html.erb:113
 msgid "The Original Theme"
 msgstr "Le thème initial"
 
-#: ../../../app/views/pages/about.html.erb:117
+#: ../../../app/views/pages/about.html.erb:114
 msgid ""
 "The original site design consisted of a dark background with a bold yellow fon"
 "t."
@@ -1580,541 +1513,9 @@ msgstr ""
 "Le design initial du site consistait en un fond sombre avec une police de cara"
 "ctère en jaune gras."
 
-#: ../../../app/views/pages/about.html.erb:120
+#: ../../../app/views/pages/about.html.erb:117
 msgid "Follow for news, changes & updates."
 msgstr "Suivez ici pour des actus, des modifs et des mises à jour"
-
-#: ../../../app/views/pages/faq.html.erb:1
-#: ../../../app/views/shared/_footer.html.erb:34
-msgid "FAQ"
-msgstr "FAQ"
-
-#: ../../../app/views/pages/faq.html.erb:3
-msgid "Frequently Asked Questions"
-msgstr "Foire aux questions"
-
-#: ../../../app/views/pages/faq.html.erb:5
-msgid "Trust and Security"
-msgstr "Confiance et sécurité"
-
-#: ../../../app/views/pages/faq.html.erb:11
-msgid "What purpose does Password Pusher serve?"
-msgstr "A quoi sert Password Pusher ?"
-
-#: ../../../app/views/pages/faq.html.erb:16
-msgid "Password Pusher exists as a better alternative to emailing passwords."
-msgstr ""
-"Password Pusher est une meilleure solution que l'envoi de mots de passe direct"
-" par email."
-
-#: ../../../app/views/pages/faq.html.erb:18
-msgid "Emailing passwords is inherently insecure."
-msgstr "Envoyer un mot de passe par email est fondamentalement non sécurisé"
-
-#: ../../../app/views/pages/faq.html.erb:18
-msgid "The greatest risks include"
-msgstr "Les risques les plus importants sont"
-
-#: ../../../app/views/pages/faq.html.erb:21
-msgid ""
-"Emailed passwords are usually sent with context to what they go to or can pote"
-"ntially be derived from email username, domain etc…"
-msgstr ""
-"Les mots de passe envoyés par e-mail sont généralement envoyés avec des inform"
-"ations de contexte ou qui peuvent potentiellement être déduites du nom d'utili"
-"sateur de l'e-mail, du domaine, etc."
-
-#: ../../../app/views/pages/faq.html.erb:22
-msgid ""
-"Email is inherently insecure and can be intercepted at multiple points by mali"
-"cious entities."
-msgstr ""
-"L'email est fondamentalement non sécurisé et peut être intercepté à de nombreu"
-"x endroits par des acteurs malveillants."
-
-#: ../../../app/views/pages/faq.html.erb:23
-msgid "Emailed passwords live in perpetuity (read: forever) in email archives."
-msgstr ""
-"Les mots de passe envoyés par e-mail restent en permanence stockés dans les ar"
-"chives des e-mails."
-
-#: ../../../app/views/pages/faq.html.erb:24
-msgid ""
-"Passwords in email can be retrieved and used later on if an email account is s"
-"tolen, cracked etc.."
-msgstr ""
-"Les mots de passe présent dans des emails peut être récupérés et réutilisés pl"
-"us tard si le compte a été volé ou fraudé, etc."
-
-#: ../../../app/views/pages/faq.html.erb:27
-msgid ""
-"The same risks persist when sending passwords via SMS, WhatsApp, Telegram, Cha"
-"t etc…  The data can and is often perpetual and out of your control."
-msgstr ""
-"Les mêmes risques sont présents lors de l'envoi de mots de passe par SMS, What"
-"sApp, Telegram, les outils de chat etc… Les données peuvent et sont souvent st"
-"ockées et hors de votre contrôle."
-
-#: ../../../app/views/pages/faq.html.erb:29
-msgid "By using Password Pusher, you bypass all of this."
-msgstr "En utilisant Password Pusher, vous contournez tout cela."
-
-#: ../../../app/views/pages/faq.html.erb:31
-msgid "For each password posted to Password Pusher, "
-msgstr "Pour chaque mot de passe publié sur Password Pusher,"
-
-#: ../../../app/views/pages/faq.html.erb:32
-msgid "a unique URL is generated that only you will know"
-msgstr "une URL unique est générée que vous êtes le seul à connaitre"
-
-#: ../../../app/views/pages/faq.html.erb:33
-msgid "Additionally, "
-msgstr "De plus,"
-
-#: ../../../app/views/pages/faq.html.erb:35
-msgid "passwords expire after a predefined set of views are hit or time passed."
-msgstr ""
-"les mots de passe expirent après un nombre de vues prédéfinies ou un temps éco"
-"ulé"
-
-#: ../../../app/views/pages/faq.html.erb:37
-msgid "Once expired, passwords are unequivocally deleted."
-msgstr "Une fois expirés, les mots de passe sont supprimés définitivement."
-
-#: ../../../app/views/pages/faq.html.erb:40
-msgid ""
-"If that sounds interesting to you, try it out or see the other frequently aske"
-"d questions below."
-msgstr ""
-"Si cela vous semble intéressant, essayez-le ou consultez les autres questions "
-"de la FAQ, ci-dessous."
-
-#: ../../../app/views/pages/faq.html.erb:47
-msgid "Trust is a concern. Why should I use Password Pusher?"
-msgstr "Pourquoi faire confiance à Password Pusher et l'utiliser ?"
-
-#: ../../../app/views/pages/faq.html.erb:52
-msgid ""
-"And rightfully so. All good security begins with healthy skepticism of all inv"
-"olved components."
-msgstr ""
-"Bonne question. Toute bonne sécurité comment par un sain scepticisme vis à vis"
-" de tous les composants en jeu. "
-
-#: ../../../app/views/pages/faq.html.erb:55
-msgid ""
-"Password Pusher exists as a better alternative to emailing passwords. It avoid"
-"s having passwords exist in email archives in perpetuity. It does not exist as"
-" a end-all security solution."
-msgstr ""
-"Password Pusher est une bien meilleure solution que l'envoi de mots de passe d"
-"irect par email. Il évite la conservation des mots de passe dans les archives "
-"des mails. Ce n'est pas non plus une solution de sécurité universelle."
-
-#: ../../../app/views/pages/faq.html.erb:59
-msgid "Password Pusher is open-source"
-msgstr "Password Pusher est open source"
-
-#: ../../../app/views/pages/faq.html.erb:60
-msgid ""
-"so the source can be publicly reviewed and can alternatively be run internally"
-" in your organization."
-msgstr ""
-"le code source peut donc être étudié par tout le monde et peut également être "
-"exécuté en interne dans votre organisation."
-
-#: ../../../app/views/pages/faq.html.erb:64
-msgid "Passwords are unequivocally deleted from the database once they expire."
-msgstr ""
-"Une fois expirés, les mots de passe sont supprimés définitivement de la base d"
-"e données."
-
-#: ../../../app/views/pages/faq.html.erb:65
-msgid ""
-"Additionally, random URL tokens are generated on the fly and passwords are pos"
-"ted without context for their use."
-msgstr ""
-"De plus, les URLs privées sont générées aléatoirement à la volée et les mots d"
-"e passe sont publiés sans information permettant de savoir comment les utilise"
-"r."
-
-#: ../../../app/views/pages/faq.html.erb:69
-msgid "A note for those with an interest in extreme security:"
-msgstr "Une note pour ceux qui s'intéressent à un niveau de sécurité :"
-
-#: ../../../app/views/pages/faq.html.erb:70
-msgid ""
-"there is no way I can reliably prove that the opensource code is the same that"
-" runs on pwpush.com (this is true for all sites in reality)."
-msgstr ""
-"il n'y a aucun moyen que je puisse vous prouver de manière sûre que le code en"
-" opensource est le même s'exécutant sur pwpush.com (c'est vrai pour tous les s"
-"ites web)"
-
-#: ../../../app/views/pages/faq.html.erb:71
-msgid "The only thing I can provide in this respect is my public reputation on"
-msgstr "La seule chose que je peux donner par rapport à ça est ma réputation sur"
-
-#: ../../../app/views/pages/faq.html.erb:76
-msgid "my blog"
-msgstr "mon blog"
-
-#: ../../../app/views/pages/faq.html.erb:77
-msgid ""
-"If this is a concern for you, feel free to review the code, post any questions"
-" that you may have and consider running it internally at your organization ins"
-"tead."
-msgstr ""
-"Si cela vous préoccupe, n'hésitez pas à examiner le code source, à poster tout"
-"es les questions que vous pourriez vous poser et à envisager plutôt de l'exécu"
-"ter en interne dans votre organisation."
-
-#: ../../../app/views/pages/faq.html.erb:84
-msgid "Tools, Utilities and Applications"
-msgstr "Outils, utilitaires et applications"
-
-#: ../../../app/views/pages/faq.html.erb:90
-msgid "Are there other ways I can access Password Pusher outside of a browser?"
-msgstr "Existe-t-il d'autres moyens d'utiliser Password Pusher que par un navigateur ?"
-
-#: ../../../app/views/pages/faq.html.erb:96
-msgid ""
-"Absolutely.  Password Pusher has a number of applications and command line uti"
-"lities (CLI) that interface with pwpush.com or privately run instances.  Push "
-"passwords from the CLI, Slack, Alfred App and more."
-msgstr ""
-"Absolument. Password Pusher dispose d'applications et d'utilitaires de ligne d"
-"e commande (CLI) qui s'interfacent avec pwpush.com ou des instances privées. V"
-"ous pouvez publier les mots de passe depuis une CLI, depuis Slack, depuis l'ap"
-"plication Alfred etc."
-
-#: ../../../app/views/pages/faq.html.erb:98
-msgid "See our"
-msgstr "Consultez notre page"
-
-#: ../../../app/views/pages/faq.html.erb:98
-msgid "Tools and Applications"
-msgstr "Outils et applications"
-
-#: ../../../app/views/pages/faq.html.erb:98
-msgid "page for more details."
-msgstr "pour plus d'informations."
-
-#: ../../../app/views/pages/faq.html.erb:105
-msgid "Can I automate my password distribution?"
-msgstr "Est-ce que je peux automatiser la distribution de mot de passe ?"
-
-#: ../../../app/views/pages/faq.html.erb:110
-msgid ""
-"Yes. Using the previously mentioned tools, many users and organizations integr"
-"ate Password Pusher into their security policies and processes."
-msgstr ""
-"Oui. À l'aide des outils précédemment cités, de nombreux utilisateurs et organ"
-"isations intègrent Password Pusher dans leurs politiques et processus de sécur"
-"ité."
-
-#: ../../../app/views/pages/faq.html.erb:111
-msgid "The"
-msgstr "La page"
-
-#: ../../../app/views/pages/faq.html.erb:111
-#: ../../../app/views/shared/_footer.html.erb:43
-msgid "Tools"
-msgstr "Outils"
-
-#: ../../../app/views/pages/faq.html.erb:111
-msgid ""
-"page outlines the resources available to automate the secure distribution of p"
-"asswords."
-msgstr ""
-"présente les ressources disponibles pour automatiser la distribution sécurisée"
-" des mots de passe."
-
-#: ../../../app/views/pages/faq.html.erb:118
-msgid "How many requests can I send to Password Pusher?"
-msgstr "Combien de requêtes puis-je envoyer à Password Pusher ?"
-
-#: ../../../app/views/pages/faq.html.erb:123
-msgid ""
-"There are no limits currently and I have no intention of adding any.  To minim"
-"ally assure site stability, Password Pusher is configured with a rate limiter "
-"by default."
-msgstr ""
-"Il n'y a pas de limites actuellement et je n'ai pas l'intention d'en ajouter. "
-"Pour assurer au minimum la stabilité du site, Password Pusher est configuré av"
-"ec un limiteur de requêtes paramétré par défaut."
-
-#: ../../../app/views/pages/faq.html.erb:129
-msgid "Running Your Own Private Instance"
-msgstr "Mettre en oeuvre votre propre installation"
-
-#: ../../../app/views/pages/faq.html.erb:135
-msgid "Can I run my own version for my organization internally?"
-msgstr "Puis-je avoir ma propre instance pour mon organisation en interne ?"
-
-#: ../../../app/views/pages/faq.html.erb:141
-msgid "Yes.  We provide"
-msgstr "Oui. Nous mettons à disposition"
-
-#: ../../../app/views/pages/faq.html.erb:142
-msgid "Docker containers"
-msgstr "Containers Docker"
-
-#: ../../../app/views/pages/faq.html.erb:144
-msgid "installation instructions"
-msgstr "Informations d'installation"
-
-#: ../../../app/views/pages/faq.html.erb:145
-msgid "for a wide variety of platforms and services."
-msgstr "pour divers plateformes et services."
-
-#: ../../../app/views/pages/faq.html.erb:147
-msgid "tldr;"
-msgstr "tldr ;"
-
-#: ../../../app/views/pages/faq.html.erb:154
-msgid "Can I apply a custom logo or change the design?"
-msgstr "Puis-je mettre un logo personnalisé ou modifier le design ?"
-
-#: ../../../app/views/pages/faq.html.erb:159
-msgid ""
-"Password Pusher supports re-branding \"out of the box\" allowing you to add a cu"
-"stom logo, text and even change images in the application."
-msgstr ""
-"Password Pusher supporte nativement le changement de marque, vous permettant d"
-"'ajouter un logo personnalisé, du texte et même de modifier des images dans l'"
-"application."
-
-#: ../../../app/views/pages/faq.html.erb:166
-msgid "Are there any licensing restrictions for me, my company or my organization?"
-msgstr ""
-"Est-ce qu'il y a des contraintes de licence pour moi, mon entreprise ou mon or"
-"ganisation ?"
-
-#: ../../../app/views/pages/faq.html.erb:172
-msgid ""
-"The source code is released under the Apache 2.0 License and that pretty much "
-"defines any and all limitations. There are quite a few rebranded and redesigne"
-"d clone sites of Password Pusher and I welcome them all."
-msgstr ""
-"Le code source est publié sous la licence Apache 2.0 et cela définit à peu prè"
-"s toutes les limitations. Il existe de nombreux sites clones renommés et repen"
-"sés de Password Pusher et je les accueille tous avec bienvenue."
-
-#: ../../../app/views/pages/faq.html.erb:180
-msgid "Why would I want to run my own private instance of Password Pusher?"
-msgstr "Pourquoi voudrais-je exécuter ma propre instance de Password Pusher ?"
-
-#: ../../../app/views/pages/faq.html.erb:186
-msgid ""
-"Some organizations are bound by security policies that prohibit the use of pub"
-"lic services for sensitive information such as passwords.  There are even orga"
-"nizations that require all tools to be on private intranets without access to "
-"the outside world."
-msgstr ""
-"Certaines organisations sont contraintes par des politiques de sécurité qui in"
-"terdisent l'utilisation de services cloud pour des informations sensibles tell"
-"es que les mots de passe. Il en existe même qui exigent que l'ensemble de leur"
-"s outils soient hébergées en intranet."
-
-#: ../../../app/views/pages/faq.html.erb:189
-msgid ""
-"It's for these reasons that we provide the ability (and encourage) users and o"
-"rganizations to run private instances when needed."
-msgstr ""
-"Ces pour ces raisons que nous donnons la possibilité aux utilisateurs et organ"
-"isations d'avoir leur propre instance privée si besoin (et nous l'encourageons"
-")."
-
-#: ../../../app/views/pages/faq.html.erb:197
-msgid "What are the potential security risks of running my own version internally?"
-msgstr ""
-"Quels sont les risques de sécurité possibles liés à l'exécution de ma propre i"
-"nstance en interne ?"
-
-#: ../../../app/views/pages/faq.html.erb:202
-msgid ""
-"Running an private instance of Password Pusher for your company or organizatio"
-"n gives you the peace of mind that you know exactly what code is running.  You"
-" can configure and run it as you like."
-msgstr ""
-"Exécuter une instance privée de Password Pusher pour votre entreprise ou organ"
-"isation vous donne la tranquillité d'esprit de savoir exactement quel code vou"
-"s faites tourner. Vous pouvez la configurer et l'exécuter comme vous le souhai"
-"tez."
-
-#: ../../../app/views/pages/faq.html.erb:203
-msgid ""
-"On the other hand, if your instance gets hacked and the encryption broken, mal"
-"icious entities now have a targeted dictionary of passwords to brute force acc"
-"ounts in your organization.  Note that this would be limited to pushes which h"
-"aven't yet hit their expiration limits."
-msgstr ""
-"D'un autre côté, si votre instance privée est hackée, les pirates disposeraien"
-"t d'un dictionnaire ciblé de mots de passe pour attaquer en \"brute force\" votr"
-"e organisation. Notez que cela se limiterait aux publications non expirées."
-
-#: ../../../app/views/pages/faq.html.erb:204
-msgid ""
-"In this respect, the public instance at pwpush.com may be superior in that it "
-"contains only passwords without identifying information mixed among users from"
-" around the globe."
-msgstr ""
-"À cet égard, l'instance publique sur pwpush.com peut être supérieure dans la m"
-"esure où elle ne contient que des mots de passe sans informations d'identifica"
-"tion mélangées entre utilisateurs du monde entier."
-
-#: ../../../app/views/pages/faq.html.erb:205
-msgid ""
-"The user should carefully weigh the pros and cons and decide which route is be"
-"st for them.  We happily support both strategies."
-msgstr ""
-"Pesez le pour et le contre et décidez ce qui est le mieux. Nous supportons les"
-" deux options."
-
-#: ../../../app/views/pages/faq.html.erb:211
-msgid "Other"
-msgstr "Autre"
-
-#: ../../../app/views/pages/faq.html.erb:217
-msgid ""
-"The URL I sent link seems to have not worked by the time it was received.  Doe"
-"s this happen occasionally and is there a way to prevent this?"
-msgstr ""
-"L'URL que j'ai envoyée ne semble ne pas avoir fonctionné quand elle a été reçu"
-"e. Cela arrive-t-il occasionnellement et comment éviter cela ?"
-
-#: ../../../app/views/pages/faq.html.erb:223
-msgid ""
-"Some systems such as email, firewalls and chat systems often have link scanner"
-"s that can eat up views."
-msgstr ""
-"Des systèmes tels que la messagerie, les pare-feu et les systèmes de chat ou c"
-"onversation en ligne ont souvent des analyseurs de liens qui peuvent consommer"
-" des vues."
-
-#: ../../../app/views/pages/faq.html.erb:224
-msgid "This is done for security or to simply generate a \"preview\" for chat systems."
-msgstr ""
-"Ceci est fait pour des raisons de sécurité ou simplement pour générer un aperç"
-"u pour les outils de conversation ou chat en ligne."
-
-#: ../../../app/views/pages/faq.html.erb:227
-msgid "To prevent this, use the 1-click retrieval step option when pushing passwords."
-msgstr ""
-"Pour éviter ça, utilisez l'option d'étape de récupération en 1 clic lors de la"
-" transmission des mots de passe."
-
-#: ../../../app/views/pages/faq.html.erb:228
-msgid ""
-"This requires the users to click through a preliminary page to protect views f"
-"rom such scanners."
-msgstr ""
-"Cela contraint les utilisateurs à cliquer sur une page intermédiaire pour prés"
-"erver le nombre de vues des accès de ces outils d'analyse."
-
-#: ../../../app/views/pages/faq.html.erb:232
-msgid ""
-"As an additional preventative measure, if you create an account, an audit log "
-"is provided for every push created."
-msgstr ""
-"En mesure de prévention complémentaire, si vous créez un compte, un journal d'"
-"audit est fourni pour chaque secret partagé."
-
-#: ../../../app/views/pages/faq.html.erb:233
-msgid "This audit log can reveal by who and when the push was viewed."
-msgstr ""
-"Ce journal d'audit peut révéler par qui et quand la publication a été consulté"
-"e."
-
-#: ../../../app/views/pages/faq.html.erb:242
-msgid "Can I use Password Pusher in my talk/presentation/conference?"
-msgstr ""
-"Puis-je intégrer Password Pusher dans mon exposé, ma présentation ou une confé"
-"rence ?"
-
-#: ../../../app/views/pages/faq.html.erb:247
-msgid ""
-"Absolutely.  If you need any resources such as statistics, graphics or anythin"
-"g else, don't hesitate to contact me: pglombardo at pwpush.com."
-msgstr ""
-"Tout à fait. Si vous avez besoin de ressources telles que des statistiques, de"
-"s graphiques ou autre, n'hésitez pas à me contacter : pglombardo at pwpush.com"
-"."
-
-#: ../../../app/views/pages/faq.html.erb:254
-msgid "Could you add a specific feature for my organization?"
-msgstr "Pourriez-vous ajouter une nouvelle fonctionnalité pour mon organisation ?"
-
-#: ../../../app/views/pages/faq.html.erb:259
-msgid ""
-"Very likely.  I love to hear all ideas and feedback. If you have any, please s"
-"ubmit them to the "
-msgstr ""
-"Sans doute. Je suis ouvert à toutes idées et commentaires. Si vous en avez une"
-", merci de les soumettre au"
-
-#: ../../../app/views/pages/faq.html.erb:260
-msgid "Github repository"
-msgstr "Dépôt Github"
-
-#: ../../../app/views/pages/faq.html.erb:260
-msgid "and I will respond as soon as possible."
-msgstr "et je vous répondrai aussi vite que possible."
-
-#: ../../../app/views/pages/faq.html.erb:267
-msgid "How do you make money?"
-msgstr "Comment vous gagnez de l'argent?"
-
-#: ../../../app/views/pages/faq.html.erb:272
-msgid ""
-"This is an opensource project made out of love for technology and a desire to "
-"improve the security (and daily lives) of the tech community."
-msgstr ""
-"C'est un projet open source fait d'amour pour la technologie et d'un désir d'a"
-"méliorer la sécurité (et la vie quotidienne) de la communauté tech."
-
-#: ../../../app/views/pages/faq.html.erb:275
-msgid ""
-"It doesn't make any money but it does incur hosting that are about $50/month f"
-"or pwpush.com."
-msgstr ""
-"Cela ne rapporte pas d'argent, mais cela implique un coût d'hébergement d'envi"
-"ron 50 $ / mois pour le site pwpush.com."
-
-#: ../../../app/views/pages/faq.html.erb:276
-msgid "These are happily paid out of pocket by myself for more than 10 years."
-msgstr "Ceux ci sont gracieusement payés de ma poche depuis plus de 10 ans."
-
-#: ../../../app/views/pages/faq.html.erb:280
-msgid ""
-"If you feel inclined to support Password Pusher, you can sign up to Digital Oc"
-"ean using the badge below."
-msgstr ""
-"Si vous êtes motivés pour soutenir Password Pusher, vous pouvez vous inscrire "
-"à Digital Ocean en utilisant le badge ci-dessous."
-
-#: ../../../app/views/pages/faq.html.erb:281
-msgid "Password Pusher will get a hosting credit for the first $25 you spend."
-msgstr ""
-"Password Pusher recevra un crédit d'hébergement pour les premiers 25 $ que vou"
-"s dépensez."
-
-#: ../../../app/views/pages/faq.html.erb:290
-msgid ""
-"For other ways to support Password Pusher, see also the \"Want to help out?\" se"
-"ction"
-msgstr ""
-"Pour trouver d'autres moyens de soutenir Password Pusher, consultez également "
-"la section \"Vous voulez aider ?\""
-
-#: ../../../app/views/pages/faq.html.erb:291
-msgid "on the about page"
-msgstr "sur la page à propos"
-
-#: ../../../app/views/pages/faq.html.erb:292
-msgid "Thank you!"
-msgstr "Merci!"
 
 #: ../../../app/views/pages/generate_key.html.erb:1
 msgid "Generate Key"
@@ -2152,13 +1553,6 @@ msgstr ""
 #: ../../../app/views/pages/generate_key.html.erb:22
 msgid "Generated Encryption Key"
 msgstr "Clé de chiffrement générée"
-
-#: ../../../app/views/pages/generate_key.html.erb:26
-#: ../../../app/views/pages/generate_key.html.erb:39
-#: ../../../app/views/shared/_copy_button.html.erb:2
-#: ../../../app/views/shared/_secret_url_bar.html.erb:37
-msgid "Copy to Clipboard"
-msgstr "Copier dans le presse-papier"
 
 #: ../../../app/views/pages/generate_key.html.erb:32
 msgid "You can apply this key to your application by setting the environment variable"
@@ -2228,184 +1622,6 @@ msgstr "Voir aussi Password Pusher"
 #: ../../../app/views/pages/generate_key.html.erb:80
 msgid "Configuration documentation"
 msgstr "Documentation de configuration"
-
-#: ../../../app/views/pages/tools.html.erb:1
-#: ../../../app/views/pages/tools.html.erb:3
-msgid "Tools & Applications"
-msgstr "Outils et applications"
-
-#: ../../../app/views/pages/tools.html.erb:5
-msgid ""
-"Using the JSON API, various tools exist to interface with Password Pusher to a"
-"utomate password distribution."
-msgstr ""
-"Il existe plusieurs solutions utilisant l'API JSON pour s'interfacer avec Pass"
-"word Pusher afin d'automatiser l'envoi de mots de passe."
-
-#: ../../../app/views/pages/tools.html.erb:7
-msgid ""
-"We have no limits on how many passwords you can push (and have no intentions o"
-"f adding limits) but we do have a rate limiter so the site doesn’t get taken d"
-"own by bad scripts or bad actors.  Limit your tools to maximum 1 password ever"
-"y few seconds and you should be fine."
-msgstr ""
-"Il n'existe pas de limite sur le nombre de mots de passe que vous pouvez envoy"
-"er (ce n'est pas prévu) mais il existe une limite de taux d'accès afin que l'a"
-"pplication ne soit pas mise hors-service par des scripts ou des utilisateurs m"
-"alveillants. Limitez l'accès de vos outils à 1 mot de passe maximum toutes les"
-" quelques secondes et tout devrait bien se passer."
-
-#: ../../../app/views/pages/tools.html.erb:11
-msgid "Command Line Utilities"
-msgstr "Outils en ligne de commande"
-
-#: ../../../app/views/pages/tools.html.erb:49
-msgid "Applications"
-msgstr "Applications"
-
-#: ../../../app/views/pages/tools.html.erb:74
-msgid ""
-"This API allows you to interface with Password Pusher via JSON.  This can be u"
-"tilized by existing utilities such as curl, wget or any programming language. "
-" See the examples below for some ideas."
-msgstr ""
-"Cette API permet de s'interfacer avec Password Pusher. Elle peut être utilisée"
-" par des utilitaires comme curl, wget ou même n'importe quel langage de progra"
-"mmation. Regardez les exemples plus bas pour vous en inspirer."
-
-#: ../../../app/views/pages/tools.html.erb:77
-msgid "API Endpoint Documentation"
-msgstr "Documentation sur les points de terminaison d'API"
-
-#: ../../../app/views/pages/tools.html.erb:78
-msgid "Walkthrough & Examples"
-msgstr "Procédure et exemples"
-
-#: ../../../app/views/pages/tools.html.erb:81
-msgid "Examples"
-msgstr "Exemples"
-
-#: ../../../app/views/pages/tools.html.erb:90
-msgid ""
-"You can test this in your browser Javascript console by going to the front pag"
-"e of Password Pusher and enter:"
-msgstr ""
-"Testez ceci dans la console Javascript de votre navigateur. Allez sur la page "
-"d'accueil de Password Pusher puis saisissez :"
-
-#: ../../../app/views/pages/tools.html.erb:112
-msgid "See more explanation and examples in our"
-msgstr "Plus d'explications et d'exemples sur cette page"
-
-#: ../../../app/views/pages/translate.html.erb:1
-msgid "Help Translate Password Pusher!"
-msgstr "Participez à la traduction de Password Pusher !"
-
-#: ../../../app/views/pages/translate.html.erb:3
-msgid "Help Translate"
-msgstr "Participez à la traduction !"
-
-#: ../../../app/views/pages/translate.html.erb:6
-msgid ""
-"We would love to add as many languages as possible but we need help from fluen"
-"t speakers in creating and verifying translations."
-msgstr ""
-"Nous aimerions proposer le plus de langues possibles, mais pour ça nous avons "
-"besoin de locuteurs à l'aise pour vérifier les traductions."
-
-#: ../../../app/views/pages/translate.html.erb:9
-msgid "How it Works"
-msgstr "Comment ça marche"
-
-#: ../../../app/views/pages/translate.html.erb:12
-msgid "We use"
-msgstr "Nous utilisons"
-
-#: ../../../app/views/pages/translate.html.erb:14
-msgid "to manage our translation effort.  It has a simple to use interface."
-msgstr "pour gérer le travail de traduction. C'est une interface simple à utiliser."
-
-#: ../../../app/views/pages/translate.html.erb:18
-msgid ""
-"Translations are done initially by machine using Google Translate.  It's the t"
-"ranslators job to select the correct translation\n"
-"and add any fixes as needed."
-msgstr ""
-"Les traductions sont d'abord effectuées automatiquement à l'aide de Google Tra"
-"nslate. C'est le travail des traducteurs de sélectionner la bonne traduction p"
-"armi\n"
-"celles proposées et de faire les corrections nécessaires."
-
-#: ../../../app/views/pages/translate.html.erb:23
-msgid ""
-"Translations for an entirely new language can be done in less than an hour for"
-" native speakers."
-msgstr ""
-"Les traductions pour une langue entièrement nouvellement incluse peuvent être "
-"effectuées en moins d'une heure pour les locuteurs natifs."
-
-#: ../../../app/views/pages/translate.html.erb:27
-msgid "Read more: "
-msgstr "Pour approfondir:"
-
-#: ../../../app/views/pages/translate.html.erb:28
-msgid "How to use our translation interface?"
-msgstr "Comment utiliser notre interface de traduction ?"
-
-#: ../../../app/views/pages/translate.html.erb:31
-msgid "How to Join"
-msgstr "Comment participer"
-
-#: ../../../app/views/pages/translate.html.erb:34
-msgid "To join the translation effort:"
-msgstr "Pour participer au travail de traduction :"
-
-#: ../../../app/views/pages/translate.html.erb:39
-msgid "Register for a free account on"
-msgstr "Créez un compte gratuitement sur"
-
-#: ../../../app/views/pages/translate.html.erb:43
-msgid "Send me a message"
-msgstr "M'envoyer un message"
-
-#: ../../../app/views/pages/translate.html.erb:44
-msgid ""
-"with your translation.io username and which language you would like to work on"
-"."
-msgstr ""
-"avec votre identifiant translation.io ainsi que la langue sur laquelle vous vo"
-"ulez travailler."
-
-#: ../../../app/views/pages/translate.html.erb:49
-msgid "...and I'll add you to our translation project."
-msgstr "...et je vous ajouterai à notre projet de traduction."
-
-#: ../../../app/views/pages/translate.html.erb:52
-msgid "Translation Tips"
-msgstr "Astuces de traduction"
-
-#: ../../../app/views/pages/translate.html.erb:54
-msgid ""
-"If the source text is capitalized, try to maintain similar capitalization in t"
-"he translated text as well (assuming it's permitted syntactically in the targe"
-"t language)."
-msgstr ""
-"Si le texte source est en majuscule, essayez de conserver la même casse dans l"
-"e texte traduit (en respectant la syntaxe de la langue cible)."
-
-#: ../../../app/views/pages/translate.html.erb:55
-msgid ""
-"If you see embedded codes such as \"%s\", {%file} or similar, leave those fully "
-"intact in the target translation.  These are substitution codes used in the ap"
-"plication."
-msgstr ""
-"Si vous voyez des balises telles que \"%s\", {%file} ou similaire, laissez-les i"
-"ntactes dans la traduction finale. Ce sont des codes de substitution utilisés "
-"dans l'application."
-
-#: ../../../app/views/pages/translate.html.erb:59
-msgid "Thanks for helping to translate Password Pusher!"
-msgstr "Merci d'aider à traduire Password Pusher !"
 
 #: ../../../app/views/passwords/active.html.erb:1
 #: ../../../app/views/passwords/active.html.erb:18
@@ -2583,6 +1799,10 @@ msgstr "Page d'accueil"
 msgid "Docker Containers"
 msgstr "Containers Docker"
 
+#: ../../../app/views/shared/_footer.html.erb:34
+msgid "FAQ"
+msgstr "FAQ"
+
 #: ../../../app/views/shared/_footer.html.erb:35
 msgid "JSON API"
 msgstr "API JSON"
@@ -2594,6 +1814,10 @@ msgstr "Générateur de clé"
 #: ../../../app/views/shared/_footer.html.erb:39
 msgid "Source Code"
 msgstr "Code source"
+
+#: ../../../app/views/shared/_footer.html.erb:43
+msgid "Tools"
+msgstr "Outils"
 
 #: ../../../app/views/shared/_footer.html.erb:51
 msgid "Overview"
@@ -2607,41 +1831,25 @@ msgstr "Documentation"
 msgid "Account"
 msgstr "Compte utilisateur"
 
-#: ../../../app/views/shared/_header.html.erb:41
+#: ../../../app/views/shared/_header.html.erb:42
+msgid "Admin Dashboard"
+msgstr "Tableau de bord d'administration"
+
+#: ../../../app/views/shared/_header.html.erb:46
 msgid "Edit Login Details"
 msgstr "Modifier les détails de connexion"
 
-#: ../../../app/views/shared/_header.html.erb:47
+#: ../../../app/views/shared/_header.html.erb:52
 msgid "Log Out"
 msgstr "Déconnexion"
 
-#: ../../../app/views/shared/_header.html.erb:53
+#: ../../../app/views/shared/_header.html.erb:58
 msgid "Log In"
 msgstr "S'authentifier"
 
-#: ../../../app/views/shared/_header.html.erb:57
+#: ../../../app/views/shared/_header.html.erb:62
 msgid "Sign Up"
 msgstr "S'inscrire"
-
-#: ../../../app/views/shared/_newsletter_sign_up.html.erb:3
-msgid "Get The Newsletter"
-msgstr "Recevez la newsletter"
-
-#: ../../../app/views/shared/_newsletter_sign_up.html.erb:5
-msgid ""
-"Updates on big releases, security issues, features, integrations, tips and mor"
-"e."
-msgstr ""
-"Mises à jour sur les grandes versions, les problèmes de sécurité, les fonction"
-"nalités, les intégrations, les conseils et plus encore."
-
-#: ../../../app/views/shared/_newsletter_sign_up.html.erb:13
-msgid "Enter your email..."
-msgstr "Entrer votre Email..."
-
-#: ../../../app/views/shared/_newsletter_sign_up.html.erb:14
-msgid "Subscribe"
-msgstr "S'abonner"
 
 #: ../../../app/views/shared/_pw_generator_modal.html.erb:5
 msgid "Configure Password Generation"
@@ -2694,10 +1902,6 @@ msgstr "Consonnes"
 #: ../../../app/views/shared/_pw_generator_modal.html.erb:71
 msgid "Reset to Defaults"
 msgstr "Paramètres par défaut"
-
-#: ../../../app/views/shared/_secret_url_bar.html.erb:19
-msgid "Secret Link Language"
-msgstr "Langue du lien secret"
 
 #: ../../../app/views/urls/active.html.erb:1
 #: ../../../app/views/urls/active.html.erb:18

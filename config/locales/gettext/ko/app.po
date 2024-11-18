@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pwpush 1.0\n"
 "Report-Msgid-Bugs-To: contact@translation.io\n"
-"POT-Creation-Date: 2024-08-14 12:34+0200\n"
-"PO-Revision-Date: 2024-08-14 12:34+0200\n"
+"POT-Creation-Date: 2024-11-13 23:27+0100\n"
+"PO-Revision-Date: 2024-11-13 23:27+0100\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Korean\n"
 "Language: ko\n"
@@ -18,22 +18,6 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "\n"
 
-#: ../../../app/controllers/feedbacks_controller.rb:15
-msgid ""
-"Our apologies but you failed the spam check.  You could try contacting us on G"
-"ithub instead."
-msgstr "죄송하지만 스팸 확인에 실패하셨습니다. 대신 Github에서 저희에게 연락하실 수 있습니다."
-
-#: ../../../app/controllers/feedbacks_controller.rb:21
-msgid "Feedback sent!  We will get back to you as soon as possible."
-msgstr "피드백을 보냈습니다! 최대한 빨리 연락드리겠습니다."
-
-#: ../../../app/controllers/feedbacks_controller.rb:24
-msgid ""
-"Could not send feedback.  Did you pass the Humanity Test?  Valid email?  Try a"
-"gain?"
-msgstr "피드백을 보낼 수 없습니다. 인성 테스트를 통과했습니까? 유효한 이메일? 다시 시도하십시오?"
-
 #: ../../../app/controllers/file_pushes_controller.rb:105
 #: ../../../app/controllers/passwords_controller.rb:104
 #: ../../../app/controllers/urls_controller.rb:104
@@ -42,39 +26,28 @@ msgid ""
 "ization that sent you this link."
 msgstr "해당 암호가 올바르지 않습니다. 다시 시도하거나 이 링크를 보낸 사람 또는 조직에 문의하십시오."
 
-#: ../../../app/controllers/file_pushes_controller.rb:241
+#: ../../../app/controllers/file_pushes_controller.rb:242
 #: ../../../app/controllers/passwords_controller.rb:252
 #: ../../../app/controllers/urls_controller.rb:252
 msgid "That push doesn't belong to you."
 msgstr "그 푸시는 당신의 것이 아닙니다."
 
-#: ../../../app/controllers/file_pushes_controller.rb:271
+#: ../../../app/controllers/file_pushes_controller.rb:269
+#: ../../../app/controllers/file_pushes_controller.rb:272
+#: ../../../app/controllers/passwords_controller.rb:279
 #: ../../../app/controllers/passwords_controller.rb:282
-#: ../../../app/controllers/urls_controller.rb:282
-#: ../../../app/controllers/urls_controller.rb:286
-msgid "That push does not belong to you."
-msgstr "그 푸시는 당신의 것이 아닙니다."
+msgid "That push is not deletable by viewers and does not belong to you."
+msgstr "해당 푸시는 시청자가 삭제할 수 없으며 귀하에게 속하지 않습니다."
 
-#: ../../../app/controllers/file_pushes_controller.rb:276
-#: ../../../app/controllers/passwords_controller.rb:287
-msgid "That push is not deletable by viewers."
-msgstr "그 푸시는 시청자가 삭제할 수 없습니다."
-
-#: ../../../app/controllers/file_pushes_controller.rb:282
-#: ../../../app/controllers/file_pushes_controller.rb:283
-#: ../../../app/controllers/passwords_controller.rb:293
-#: ../../../app/controllers/passwords_controller.rb:294
-#: ../../../app/controllers/urls_controller.rb:292
-#: ../../../app/controllers/urls_controller.rb:293
+#: ../../../app/controllers/file_pushes_controller.rb:281
+#: ../../../app/controllers/passwords_controller.rb:291
+#: ../../../app/controllers/urls_controller.rb:287
 msgid "That push is already expired."
 msgstr "해당 푸시는 이미 만료되었습니다."
 
-#: ../../../app/controllers/file_pushes_controller.rb:301
-#: ../../../app/controllers/file_pushes_controller.rb:304
-#: ../../../app/controllers/passwords_controller.rb:311
-#: ../../../app/controllers/passwords_controller.rb:314
-#: ../../../app/controllers/urls_controller.rb:310
-#: ../../../app/controllers/urls_controller.rb:313
+#: ../../../app/controllers/file_pushes_controller.rb:297
+#: ../../../app/controllers/passwords_controller.rb:306
+#: ../../../app/controllers/urls_controller.rb:302
 #: ../../../app/views/file_pushes/audit.html.erb:97
 #: ../../../app/views/file_pushes/audit.html.erb:254
 #: ../../../app/views/passwords/audit.html.erb:97
@@ -87,6 +60,22 @@ msgstr "푸시 콘텐츠가 삭제되었으며 비밀 URL이 만료되었습니�
 #: ../../../app/controllers/urls_controller.rb:155
 msgid "Invalid URL: Must have a valid URI scheme."
 msgstr "잘못된 URL: 유효한 URI 스키마가 있어야 합니다."
+
+#: ../../../app/controllers/urls_controller.rb:278
+#: ../../../app/controllers/urls_controller.rb:279
+msgid "That push does not belong to you."
+msgstr "그 푸시는 당신의 것이 아닙니다."
+
+#: ../../../app/views/application/_secret_url_bar.html.erb:17
+msgid "Secret Link Language"
+msgstr "비밀 링크 언어"
+
+#: ../../../app/views/application/_secret_url_bar.html.erb:35
+#: ../../../app/views/pages/generate_key.html.erb:26
+#: ../../../app/views/pages/generate_key.html.erb:39
+#: ../../../app/views/shared/_copy_button.html.erb:2
+msgid "Copy to Clipboard"
+msgstr "클립 보드에 복사"
 
 #: ../../../app/views/devise/mailer/confirmation_instructions.html.erb:8
 #: ../../../app/views/devise/mailer/email_changed.html.erb:8
@@ -223,7 +212,7 @@ msgid "Current Password"
 msgstr "현재 비밀번호"
 
 #: ../../../app/views/devise/registrations/token.html.erb:2
-#: ../../../app/views/shared/_header.html.erb:44
+#: ../../../app/views/shared/_header.html.erb:49
 msgid "API Token"
 msgstr "API 토큰"
 
@@ -315,44 +304,12 @@ msgid "Processing..."
 msgstr "처리 중..."
 
 #: ../../../app/views/devise/sessions/new.html.erb:7
-#: ../../../app/views/feedbacks/new.html.erb:20
 msgid "Email"
 msgstr "이메일"
 
 #: ../../../app/views/devise/sessions/new.html.erb:12
 msgid "Password"
 msgstr "비밀번호"
-
-#: ../../../app/views/feedbacks/new.html.erb:1
-#: ../../../app/views/feedbacks/new.html.erb:2
-#: ../../../app/views/feedbacks/new.html.erb:42
-#: ../../../app/views/shared/_footer.html.erb:53
-msgid "Send Feedback"
-msgstr "피드백 보내기"
-
-#: ../../../app/views/feedbacks/new.html.erb:8
-msgid ""
-"Have an idea or wish?  Something you don't like?  Want to help out?  We want t"
-"o hear it!"
-msgstr "아이디어나 소원이 있으신가요? 당신이 좋아하지 않는 뭔가? 도와주고 싶나요? 우리는 그것을 듣고 싶어!"
-
-#: ../../../app/views/feedbacks/new.html.erb:15
-msgid "Your Name"
-msgstr "당신의 이름"
-
-#: ../../../app/views/feedbacks/new.html.erb:29
-msgid "What is one hundred minus 3?"
-msgstr "100 빼기 3은 무엇인가요?"
-
-#: ../../../app/views/feedbacks/new.html.erb:34
-msgid ""
-"Tip: Copy your message to the clipboard in the unlikely chance submission fail"
-"s."
-msgstr "팁: 드물게 제출이 실패할 경우를 대비하여 메시지를 클립보드에 복사하십시오."
-
-#: ../../../app/views/feedbacks/new.html.erb:39
-msgid "Leave this field blank!"
-msgstr "이 필드는 비워두세요!"
 
 #: ../../../app/views/file_pushes/active.html.erb:1
 #: ../../../app/views/file_pushes/active.html.erb:18
@@ -1132,8 +1089,6 @@ msgstr[1] ""
 #: ../../../app/views/file_pushes/preview.html.erb:65
 #: ../../../app/views/pages/about.html.erb:68
 #: ../../../app/views/pages/about.html.erb:91
-#: ../../../app/views/pages/faq.html.erb:75
-#: ../../../app/views/pages/faq.html.erb:143
 #: ../../../app/views/passwords/preview.html.erb:63
 #: ../../../app/views/passwords/preview.html.erb:65
 msgid "and"
@@ -1298,20 +1253,6 @@ msgstr "필요한 경우 이 비밀 URL을 제공한 사람이나 조직에 문�
 #: ../../../app/views/shared/_header.html.erb:13
 msgid "Password Pusher Logo"
 msgstr "암호 푸셔 로고"
-
-#: ../../../app/views/layouts/login.html.erb:50
-msgid ""
-"Some domains may inadvertently block emails.  If you are having trouble receiv"
-"ing emails, "
-msgstr "일부 도메인은 실수로 이메일을 차단할 수 있습니다. 이메일 수신에 문제가 있는 경우,"
-
-#: ../../../app/views/layouts/login.html.erb:51
-msgid "send a message"
-msgstr "메세지를 보내다"
-
-#: ../../../app/views/layouts/login.html.erb:52
-msgid "and we can help out."
-msgstr "우리가 도울 수 있습니다."
 
 #: ../../../app/views/pages/about.html.erb:1
 msgid "About Password Pusher"
@@ -1479,482 +1420,35 @@ msgstr "맥 키노트"
 msgid "formats."
 msgstr "형식."
 
-#: ../../../app/views/pages/about.html.erb:102
+#: ../../../app/views/pages/about.html.erb:99
 msgid "Birthday"
 msgstr "생일"
 
-#: ../../../app/views/pages/about.html.erb:104
+#: ../../../app/views/pages/about.html.erb:101
 msgid "More Than 11 Years Old"
 msgstr "11세 이상"
 
-#: ../../../app/views/pages/about.html.erb:106
+#: ../../../app/views/pages/about.html.erb:103
 msgid "The first git commit to Password Pusher was on"
 msgstr "Password Pusher에 대한 첫 번째 git 커밋이 시작되었습니다."
 
-#: ../../../app/views/pages/about.html.erb:110
+#: ../../../app/views/pages/about.html.erb:107
 msgid "pwpush.com went live shortly thereafter."
 msgstr "pwpush.com은 그 직후에 생방송되었습니다."
 
-#: ../../../app/views/pages/about.html.erb:116
+#: ../../../app/views/pages/about.html.erb:113
 msgid "The Original Theme"
 msgstr "오리지널 테마"
 
-#: ../../../app/views/pages/about.html.erb:117
+#: ../../../app/views/pages/about.html.erb:114
 msgid ""
 "The original site design consisted of a dark background with a bold yellow fon"
 "t."
 msgstr "원래 사이트 디자인은 어두운 배경과 굵은 노란색 글꼴로 구성되었습니다."
 
-#: ../../../app/views/pages/about.html.erb:120
+#: ../../../app/views/pages/about.html.erb:117
 msgid "Follow for news, changes & updates."
 msgstr "뉴스, 변경 사항 및 업데이트를 따르십시오."
-
-#: ../../../app/views/pages/faq.html.erb:1
-#: ../../../app/views/shared/_footer.html.erb:34
-msgid "FAQ"
-msgstr "자주하는 질문"
-
-#: ../../../app/views/pages/faq.html.erb:3
-msgid "Frequently Asked Questions"
-msgstr "자주 묻는 질문"
-
-#: ../../../app/views/pages/faq.html.erb:5
-msgid "Trust and Security"
-msgstr "신뢰와 보안"
-
-#: ../../../app/views/pages/faq.html.erb:11
-msgid "What purpose does Password Pusher serve?"
-msgstr "Password Pusher는 어떤 용도로 사용됩니까?"
-
-#: ../../../app/views/pages/faq.html.erb:16
-msgid "Password Pusher exists as a better alternative to emailing passwords."
-msgstr "Password Pusher는 비밀번호를 이메일로 보내는 것보다 더 나은 대안으로 존재합니다."
-
-#: ../../../app/views/pages/faq.html.erb:18
-msgid "Emailing passwords is inherently insecure."
-msgstr "암호를 이메일로 보내는 것은 본질적으로 안전하지 않습니다."
-
-#: ../../../app/views/pages/faq.html.erb:18
-msgid "The greatest risks include"
-msgstr "가장 큰 위험은 다음과 같습니다."
-
-#: ../../../app/views/pages/faq.html.erb:21
-msgid ""
-"Emailed passwords are usually sent with context to what they go to or can pote"
-"ntially be derived from email username, domain etc…"
-msgstr ""
-"이메일로 전송된 비밀번호는 일반적으로 비밀번호가 어디로 가는지에 대한 컨텍스트와 함께 전송되거나 잠재적으로 이메일 사용자 이름, 도메인 등에"
-"서 파생될 수 있습니다."
-
-#: ../../../app/views/pages/faq.html.erb:22
-msgid ""
-"Email is inherently insecure and can be intercepted at multiple points by mali"
-"cious entities."
-msgstr "이메일은 본질적으로 안전하지 않으며 악의적인 개체가 여러 지점에서 가로챌 수 있습니다."
-
-#: ../../../app/views/pages/faq.html.erb:23
-msgid "Emailed passwords live in perpetuity (read: forever) in email archives."
-msgstr "이메일로 전송된 비밀번호는 이메일 아카이브에 영구적으로 보관됩니다(읽기: 영원히)."
-
-#: ../../../app/views/pages/faq.html.erb:24
-msgid ""
-"Passwords in email can be retrieved and used later on if an email account is s"
-"tolen, cracked etc.."
-msgstr "이메일 계정이 도난당하거나 해킹당하는 경우 이메일의 암호를 검색하여 나중에 사용할 수 있습니다."
-
-#: ../../../app/views/pages/faq.html.erb:27
-msgid ""
-"The same risks persist when sending passwords via SMS, WhatsApp, Telegram, Cha"
-"t etc…  The data can and is often perpetual and out of your control."
-msgstr ""
-"SMS, WhatsApp, Telegram, Chat 등을 통해 비밀번호를 보낼 때도 동일한 위험이 지속됩니다. 데이터는 영구적이며 통제할 "
-"수 없는 경우가 많습니다."
-
-#: ../../../app/views/pages/faq.html.erb:29
-msgid "By using Password Pusher, you bypass all of this."
-msgstr "Password Pusher를 사용하면 이 모든 것을 우회할 수 있습니다."
-
-#: ../../../app/views/pages/faq.html.erb:31
-msgid "For each password posted to Password Pusher, "
-msgstr "Password Pusher에 게시된 각 비밀번호에 대해"
-
-#: ../../../app/views/pages/faq.html.erb:32
-msgid "a unique URL is generated that only you will know"
-msgstr "본인만 알 수 있는 고유한 URL이 생성됩니다."
-
-#: ../../../app/views/pages/faq.html.erb:33
-msgid "Additionally, "
-msgstr "추가적으로,"
-
-#: ../../../app/views/pages/faq.html.erb:35
-msgid "passwords expire after a predefined set of views are hit or time passed."
-msgstr "암호는 미리 정의된 보기 집합에 도달하거나 시간이 지나면 만료됩니다."
-
-#: ../../../app/views/pages/faq.html.erb:37
-msgid "Once expired, passwords are unequivocally deleted."
-msgstr "만료되면 비밀번호는 명백히 삭제됩니다."
-
-#: ../../../app/views/pages/faq.html.erb:40
-msgid ""
-"If that sounds interesting to you, try it out or see the other frequently aske"
-"d questions below."
-msgstr "흥미롭게 들린다면 시도해 보거나 아래의 다른 자주 묻는 질문을 참조하십시오."
-
-#: ../../../app/views/pages/faq.html.erb:47
-msgid "Trust is a concern. Why should I use Password Pusher?"
-msgstr "신뢰는 관심사입니다. Password Pusher를 사용해야 하는 이유는 무엇입니까?"
-
-#: ../../../app/views/pages/faq.html.erb:52
-msgid ""
-"And rightfully so. All good security begins with healthy skepticism of all inv"
-"olved components."
-msgstr "그리고 당연히 그렇습니다. 모든 좋은 보안은 관련된 모든 구성 요소에 대한 건전한 회의론에서 시작됩니다."
-
-#: ../../../app/views/pages/faq.html.erb:55
-msgid ""
-"Password Pusher exists as a better alternative to emailing passwords. It avoid"
-"s having passwords exist in email archives in perpetuity. It does not exist as"
-" a end-all security solution."
-msgstr ""
-"Password Pusher는 비밀번호를 이메일로 보내는 것보다 더 나은 대안으로 존재합니다. 이메일 아카이브에 비밀번호가 영구적으로 존재하"
-"는 것을 방지합니다. 모든 보안 솔루션으로 존재하지 않습니다."
-
-#: ../../../app/views/pages/faq.html.erb:59
-msgid "Password Pusher is open-source"
-msgstr "비밀번호 푸셔는 오픈 소스입니다."
-
-#: ../../../app/views/pages/faq.html.erb:60
-msgid ""
-"so the source can be publicly reviewed and can alternatively be run internally"
-" in your organization."
-msgstr "따라서 소스를 공개적으로 검토하고 조직 내부에서 실행할 수도 있습니다."
-
-#: ../../../app/views/pages/faq.html.erb:64
-msgid "Passwords are unequivocally deleted from the database once they expire."
-msgstr "암호는 만료되면 데이터베이스에서 명백히 삭제됩니다."
-
-#: ../../../app/views/pages/faq.html.erb:65
-msgid ""
-"Additionally, random URL tokens are generated on the fly and passwords are pos"
-"ted without context for their use."
-msgstr "또한 임의의 URL 토큰이 즉시 생성되고 암호는 사용 컨텍스트 없이 게시됩니다."
-
-#: ../../../app/views/pages/faq.html.erb:69
-msgid "A note for those with an interest in extreme security:"
-msgstr "극한의 보안에 관심이 있는 사람들을 위한 참고 사항:"
-
-#: ../../../app/views/pages/faq.html.erb:70
-msgid ""
-"there is no way I can reliably prove that the opensource code is the same that"
-" runs on pwpush.com (this is true for all sites in reality)."
-msgstr ""
-"오픈 소스 코드가 pwpush.com에서 실행되는 것과 동일하다는 것을 확실하게 증명할 수 있는 방법이 없습니다(이는 실제로 모든 사이트에 "
-"해당됨)."
-
-#: ../../../app/views/pages/faq.html.erb:71
-msgid "The only thing I can provide in this respect is my public reputation on"
-msgstr "이와 관련하여 제가 제공할 수 있는 유일한 것은"
-
-#: ../../../app/views/pages/faq.html.erb:76
-msgid "my blog"
-msgstr "내 블로그"
-
-#: ../../../app/views/pages/faq.html.erb:77
-msgid ""
-"If this is a concern for you, feel free to review the code, post any questions"
-" that you may have and consider running it internally at your organization ins"
-"tead."
-msgstr "이것이 우려되는 경우 코드를 검토하고 질문을 게시하고 대신 조직에서 내부적으로 실행하는 것을 고려하십시오."
-
-#: ../../../app/views/pages/faq.html.erb:84
-msgid "Tools, Utilities and Applications"
-msgstr "도구, 유틸리티 및 애플리케이션"
-
-#: ../../../app/views/pages/faq.html.erb:90
-msgid "Are there other ways I can access Password Pusher outside of a browser?"
-msgstr "브라우저 외부에서 Password Pusher에 액세스할 수 있는 다른 방법이 있습니까?"
-
-#: ../../../app/views/pages/faq.html.erb:96
-msgid ""
-"Absolutely.  Password Pusher has a number of applications and command line uti"
-"lities (CLI) that interface with pwpush.com or privately run instances.  Push "
-"passwords from the CLI, Slack, Alfred App and more."
-msgstr ""
-"전적으로. Password Pusher에는 pwpush.com 또는 비공개로 실행되는 인스턴스와 인터페이스하는 여러 애플리케이션 및 명령줄 "
-"유틸리티(CLI)가 있습니다. CLI, Slack, Alfred 앱 등에서 비밀번호를 푸시하세요."
-
-#: ../../../app/views/pages/faq.html.erb:98
-msgid "See our"
-msgstr "우리를 참조하십시오"
-
-#: ../../../app/views/pages/faq.html.erb:98
-msgid "Tools and Applications"
-msgstr "도구 및 애플리케이션"
-
-#: ../../../app/views/pages/faq.html.erb:98
-msgid "page for more details."
-msgstr "자세한 내용은 페이지를 참조하십시오."
-
-#: ../../../app/views/pages/faq.html.erb:105
-msgid "Can I automate my password distribution?"
-msgstr "암호 배포를 자동화할 수 있습니까?"
-
-#: ../../../app/views/pages/faq.html.erb:110
-msgid ""
-"Yes. Using the previously mentioned tools, many users and organizations integr"
-"ate Password Pusher into their security policies and processes."
-msgstr "예. 앞에서 언급한 도구를 사용하여 많은 사용자와 조직에서 Password Pusher를 보안 정책 및 프로세스에 통합합니다."
-
-#: ../../../app/views/pages/faq.html.erb:111
-msgid "The"
-msgstr "그만큼"
-
-#: ../../../app/views/pages/faq.html.erb:111
-#: ../../../app/views/shared/_footer.html.erb:43
-msgid "Tools"
-msgstr "도구"
-
-#: ../../../app/views/pages/faq.html.erb:111
-msgid ""
-"page outlines the resources available to automate the secure distribution of p"
-"asswords."
-msgstr "페이지는 암호의 안전한 배포를 자동화하는 데 사용할 수 있는 리소스를 간략하게 설명합니다."
-
-#: ../../../app/views/pages/faq.html.erb:118
-msgid "How many requests can I send to Password Pusher?"
-msgstr "Password Pusher에 얼마나 많은 요청을 보낼 수 있습니까?"
-
-#: ../../../app/views/pages/faq.html.erb:123
-msgid ""
-"There are no limits currently and I have no intention of adding any.  To minim"
-"ally assure site stability, Password Pusher is configured with a rate limiter "
-"by default."
-msgstr ""
-"현재 제한이 없으며 추가할 생각이 없습니다. 사이트 안정성을 최소한으로 보장하기 위해 Password Pusher는 기본적으로 속도 제한기로"
-" 구성됩니다."
-
-#: ../../../app/views/pages/faq.html.erb:129
-msgid "Running Your Own Private Instance"
-msgstr "나만의 프라이빗 인스턴스 실행"
-
-#: ../../../app/views/pages/faq.html.erb:135
-msgid "Can I run my own version for my organization internally?"
-msgstr "조직 내부에서 자체 버전을 실행할 수 있습니까?"
-
-#: ../../../app/views/pages/faq.html.erb:141
-msgid "Yes.  We provide"
-msgstr "예. 우리가 제공하다"
-
-#: ../../../app/views/pages/faq.html.erb:142
-msgid "Docker containers"
-msgstr "도커 컨테이너"
-
-#: ../../../app/views/pages/faq.html.erb:144
-msgid "installation instructions"
-msgstr "설치 지침"
-
-#: ../../../app/views/pages/faq.html.erb:145
-msgid "for a wide variety of platforms and services."
-msgstr "다양한 플랫폼과 서비스를 위해"
-
-#: ../../../app/views/pages/faq.html.erb:147
-msgid "tldr;"
-msgstr "tldr;"
-
-#: ../../../app/views/pages/faq.html.erb:154
-msgid "Can I apply a custom logo or change the design?"
-msgstr "커스텀 로고를 적용하거나 디자인을 변경할 수 있나요?"
-
-#: ../../../app/views/pages/faq.html.erb:159
-msgid ""
-"Password Pusher supports re-branding \"out of the box\" allowing you to add a cu"
-"stom logo, text and even change images in the application."
-msgstr ""
-"Password Pusher는 \"즉시 사용 가능한\" 리브랜딩을 지원하여 사용자 지정 로고, 텍스트를 추가하고 응용 프로그램에서 이미지를 변경"
-"할 수도 있습니다."
-
-#: ../../../app/views/pages/faq.html.erb:166
-msgid "Are there any licensing restrictions for me, my company or my organization?"
-msgstr "나, 내 회사 또는 내 조직에 대한 라이선스 제한이 있습니까?"
-
-#: ../../../app/views/pages/faq.html.erb:172
-msgid ""
-"The source code is released under the Apache 2.0 License and that pretty much "
-"defines any and all limitations. There are quite a few rebranded and redesigne"
-"d clone sites of Password Pusher and I welcome them all."
-msgstr ""
-"소스 코드는 Apache 2.0 라이센스에 따라 릴리스되며 이는 거의 모든 제한 사항을 정의합니다. Password Pusher에는 브랜드가"
-" 변경되고 재설계된 복제 사이트가 꽤 많이 있으며 모두 환영합니다."
-
-#: ../../../app/views/pages/faq.html.erb:180
-msgid "Why would I want to run my own private instance of Password Pusher?"
-msgstr "Password Pusher의 개인 인스턴스를 실행하려는 이유는 무엇입니까?"
-
-#: ../../../app/views/pages/faq.html.erb:186
-msgid ""
-"Some organizations are bound by security policies that prohibit the use of pub"
-"lic services for sensitive information such as passwords.  There are even orga"
-"nizations that require all tools to be on private intranets without access to "
-"the outside world."
-msgstr ""
-"일부 조직은 암호와 같은 민감한 정보에 대한 공공 서비스 사용을 금지하는 보안 정책에 구속됩니다. 모든 도구가 외부 세계에 액세스할 수 없는"
-" 사설 인트라넷에 있어야 하는 조직도 있습니다."
-
-#: ../../../app/views/pages/faq.html.erb:189
-msgid ""
-"It's for these reasons that we provide the ability (and encourage) users and o"
-"rganizations to run private instances when needed."
-msgstr "이러한 이유로 사용자와 조직이 필요할 때 개인 인스턴스를 실행할 수 있는 기능을 제공하고 권장합니다."
-
-#: ../../../app/views/pages/faq.html.erb:197
-msgid "What are the potential security risks of running my own version internally?"
-msgstr "내 버전을 내부적으로 실행하면 잠재적인 보안 위험은 무엇입니까?"
-
-#: ../../../app/views/pages/faq.html.erb:202
-msgid ""
-"Running an private instance of Password Pusher for your company or organizatio"
-"n gives you the peace of mind that you know exactly what code is running.  You"
-" can configure and run it as you like."
-msgstr ""
-"회사 또는 조직을 위해 Password Pusher의 비공개 인스턴스를 실행하면 어떤 코드가 실행되고 있는지 정확히 알 수 있어 안심할 수 "
-"있습니다. 원하는 대로 구성하고 실행할 수 있습니다."
-
-#: ../../../app/views/pages/faq.html.erb:203
-msgid ""
-"On the other hand, if your instance gets hacked and the encryption broken, mal"
-"icious entities now have a targeted dictionary of passwords to brute force acc"
-"ounts in your organization.  Note that this would be limited to pushes which h"
-"aven't yet hit their expiration limits."
-msgstr ""
-"반면에 인스턴스가 해킹되고 암호화가 깨지면 악의적인 개체는 이제 조직의 무차별 암호 대입 계정에 대한 대상 암호 사전을 갖게 됩니다. 이는 "
-"아직 만료 제한에 도달하지 않은 푸시로 제한됩니다."
-
-#: ../../../app/views/pages/faq.html.erb:204
-msgid ""
-"In this respect, the public instance at pwpush.com may be superior in that it "
-"contains only passwords without identifying information mixed among users from"
-" around the globe."
-msgstr ""
-"이런 점에서 pwpush.com의 공개 인스턴스는 전 세계 사용자들 사이에 혼합된 식별 정보 없이 비밀번호만 포함하고 있다는 점에서 우수할 "
-"수 있습니다."
-
-#: ../../../app/views/pages/faq.html.erb:205
-msgid ""
-"The user should carefully weigh the pros and cons and decide which route is be"
-"st for them.  We happily support both strategies."
-msgstr "사용자는 장단점을 신중하게 평가하고 어떤 경로가 가장 적합한지 결정해야 합니다. 우리는 기꺼이 두 가지 전략을 모두 지원합니다."
-
-#: ../../../app/views/pages/faq.html.erb:211
-msgid "Other"
-msgstr "다른"
-
-#: ../../../app/views/pages/faq.html.erb:217
-msgid ""
-"The URL I sent link seems to have not worked by the time it was received.  Doe"
-"s this happen occasionally and is there a way to prevent this?"
-msgstr "링크를 보낸 URL이 수신 시점까지 작동하지 않는 것 같습니다. 때때로 이런 일이 발생하며 이를 방지할 수 있는 방법이 있습니까?"
-
-#: ../../../app/views/pages/faq.html.erb:223
-msgid ""
-"Some systems such as email, firewalls and chat systems often have link scanner"
-"s that can eat up views."
-msgstr "이메일, 방화벽 및 채팅 시스템과 같은 일부 시스템에는 종종 보기를 잠식할 수 있는 링크 스캐너가 있습니다."
-
-#: ../../../app/views/pages/faq.html.erb:224
-msgid "This is done for security or to simply generate a \"preview\" for chat systems."
-msgstr "이는 보안을 위해 또는 단순히 채팅 시스템에 대한 \"미리 보기\"를 생성하기 위해 수행됩니다."
-
-#: ../../../app/views/pages/faq.html.erb:227
-msgid "To prevent this, use the 1-click retrieval step option when pushing passwords."
-msgstr "이를 방지하려면 암호를 누를 때 원클릭 검색 단계 옵션을 사용하십시오."
-
-#: ../../../app/views/pages/faq.html.erb:228
-msgid ""
-"This requires the users to click through a preliminary page to protect views f"
-"rom such scanners."
-msgstr "이를 위해서는 사용자가 이러한 스캐너에서 보기를 보호하기 위해 예비 페이지를 클릭해야 합니다."
-
-#: ../../../app/views/pages/faq.html.erb:232
-msgid ""
-"As an additional preventative measure, if you create an account, an audit log "
-"is provided for every push created."
-msgstr "추가 예방 조치로 계정을 생성하면 생성된 모든 푸시에 대한 감사 로그가 제공됩니다."
-
-#: ../../../app/views/pages/faq.html.erb:233
-msgid "This audit log can reveal by who and when the push was viewed."
-msgstr "이 감사 로그는 푸시를 본 사람과 시기를 밝힐 수 있습니다."
-
-#: ../../../app/views/pages/faq.html.erb:242
-msgid "Can I use Password Pusher in my talk/presentation/conference?"
-msgstr "토크/프레젠테이션/컨퍼런스에서 Password Pusher를 사용할 수 있습니까?"
-
-#: ../../../app/views/pages/faq.html.erb:247
-msgid ""
-"Absolutely.  If you need any resources such as statistics, graphics or anythin"
-"g else, don't hesitate to contact me: pglombardo at pwpush.com."
-msgstr "전적으로. 통계, 그래픽 또는 기타 리소스가 필요한 경우 주저하지 말고 pglombardo(pwpush.com)로 문의하십시오."
-
-#: ../../../app/views/pages/faq.html.erb:254
-msgid "Could you add a specific feature for my organization?"
-msgstr "내 조직에 특정 기능을 추가할 수 있습니까?"
-
-#: ../../../app/views/pages/faq.html.erb:259
-msgid ""
-"Very likely.  I love to hear all ideas and feedback. If you have any, please s"
-"ubmit them to the "
-msgstr "가능성이 매우 높다. 나는 모든 아이디어와 피드백을 듣는 것을 좋아합니다. 있으신 분은 학회에 제출해 주십시오."
-
-#: ../../../app/views/pages/faq.html.erb:260
-msgid "Github repository"
-msgstr "Github 리포지토리"
-
-#: ../../../app/views/pages/faq.html.erb:260
-msgid "and I will respond as soon as possible."
-msgstr "그리고 나는 가능한 한 빨리 응답할 것입니다."
-
-#: ../../../app/views/pages/faq.html.erb:267
-msgid "How do you make money?"
-msgstr "어떻게 돈을 버나요?"
-
-#: ../../../app/views/pages/faq.html.erb:272
-msgid ""
-"This is an opensource project made out of love for technology and a desire to "
-"improve the security (and daily lives) of the tech community."
-msgstr "이것은 기술에 대한 사랑과 기술 커뮤니티의 보안(및 일상 생활)을 개선하려는 열망으로 만들어진 오픈 소스 프로젝트입니다."
-
-#: ../../../app/views/pages/faq.html.erb:275
-msgid ""
-"It doesn't make any money but it does incur hosting that are about $50/month f"
-"or pwpush.com."
-msgstr "돈을 벌지는 못하지만 pwpush.com에 대해 월 $50 정도의 호스팅이 발생합니다."
-
-#: ../../../app/views/pages/faq.html.erb:276
-msgid "These are happily paid out of pocket by myself for more than 10 years."
-msgstr "이것들은 10년 이상 나 자신의 주머니에서 행복하게 지불됩니다."
-
-#: ../../../app/views/pages/faq.html.erb:280
-msgid ""
-"If you feel inclined to support Password Pusher, you can sign up to Digital Oc"
-"ean using the badge below."
-msgstr "Password Pusher를 지원하고 싶다면 아래 배지를 사용하여 Digital Ocean에 가입할 수 있습니다."
-
-#: ../../../app/views/pages/faq.html.erb:281
-msgid "Password Pusher will get a hosting credit for the first $25 you spend."
-msgstr "Password Pusher는 처음 지출한 $25에 대해 호스팅 크레딧을 받습니다."
-
-#: ../../../app/views/pages/faq.html.erb:290
-msgid ""
-"For other ways to support Password Pusher, see also the \"Want to help out?\" se"
-"ction"
-msgstr "Password Pusher를 지원하는 다른 방법은 \"도움을 원하십니까?\" 부분"
-
-#: ../../../app/views/pages/faq.html.erb:291
-msgid "on the about page"
-msgstr "정보 페이지에서"
-
-#: ../../../app/views/pages/faq.html.erb:292
-msgid "Thank you!"
-msgstr "감사합니다!"
 
 #: ../../../app/views/pages/generate_key.html.erb:1
 msgid "Generate Key"
@@ -1987,13 +1481,6 @@ msgstr "아래에서 임의로 생성된 코드를 사용하여 Password Pusher 
 #: ../../../app/views/pages/generate_key.html.erb:22
 msgid "Generated Encryption Key"
 msgstr "생성된 암호화 키"
-
-#: ../../../app/views/pages/generate_key.html.erb:26
-#: ../../../app/views/pages/generate_key.html.erb:39
-#: ../../../app/views/shared/_copy_button.html.erb:2
-#: ../../../app/views/shared/_secret_url_bar.html.erb:37
-msgid "Copy to Clipboard"
-msgstr "클립 보드에 복사"
 
 #: ../../../app/views/pages/generate_key.html.erb:32
 msgid "You can apply this key to your application by setting the environment variable"
@@ -2052,163 +1539,6 @@ msgstr "암호 푸셔도 참조하십시오."
 #: ../../../app/views/pages/generate_key.html.erb:80
 msgid "Configuration documentation"
 msgstr "구성 문서"
-
-#: ../../../app/views/pages/tools.html.erb:1
-#: ../../../app/views/pages/tools.html.erb:3
-msgid "Tools & Applications"
-msgstr "도구 및 애플리케이션"
-
-#: ../../../app/views/pages/tools.html.erb:5
-msgid ""
-"Using the JSON API, various tools exist to interface with Password Pusher to a"
-"utomate password distribution."
-msgstr "JSON API를 사용하여 비밀번호 배포를 자동화하기 위해 Password Pusher와 인터페이스하는 다양한 도구가 있습니다."
-
-#: ../../../app/views/pages/tools.html.erb:7
-msgid ""
-"We have no limits on how many passwords you can push (and have no intentions o"
-"f adding limits) but we do have a rate limiter so the site doesn’t get taken d"
-"own by bad scripts or bad actors.  Limit your tools to maximum 1 password ever"
-"y few seconds and you should be fine."
-msgstr ""
-"푸시할 수 있는 암호의 수에 제한이 없으며 제한을 추가할 의도가 없습니다. 하지만 나쁜 스크립트나 나쁜 행위자에 의해 사이트가 중단되지 않도"
-"록 비율 제한 장치가 있습니다. 도구를 몇 초마다 최대 1개의 비밀번호로 제한하면 괜찮을 것입니다."
-
-#: ../../../app/views/pages/tools.html.erb:11
-msgid "Command Line Utilities"
-msgstr "명령줄 유틸리티"
-
-#: ../../../app/views/pages/tools.html.erb:49
-msgid "Applications"
-msgstr "애플리케이션"
-
-#: ../../../app/views/pages/tools.html.erb:74
-msgid ""
-"This API allows you to interface with Password Pusher via JSON.  This can be u"
-"tilized by existing utilities such as curl, wget or any programming language. "
-" See the examples below for some ideas."
-msgstr ""
-"이 API를 사용하면 JSON을 통해 Password Pusher와 인터페이스할 수 있습니다. 이것은 curl, wget 또는 모든 프로그래"
-"밍 언어와 같은 기존 유틸리티에서 활용할 수 있습니다. 몇 가지 아이디어는 아래 예를 참조하십시오."
-
-#: ../../../app/views/pages/tools.html.erb:77
-msgid "API Endpoint Documentation"
-msgstr "API 끝점 설명서"
-
-#: ../../../app/views/pages/tools.html.erb:78
-msgid "Walkthrough & Examples"
-msgstr "연습 및 예"
-
-#: ../../../app/views/pages/tools.html.erb:81
-msgid "Examples"
-msgstr "예"
-
-#: ../../../app/views/pages/tools.html.erb:90
-msgid ""
-"You can test this in your browser Javascript console by going to the front pag"
-"e of Password Pusher and enter:"
-msgstr "Password Pusher의 첫 페이지로 이동하고 다음을 입력하여 브라우저 Javascript 콘솔에서 이를 테스트할 수 있습니다."
-
-#: ../../../app/views/pages/tools.html.erb:112
-msgid "See more explanation and examples in our"
-msgstr "더 많은 설명과 예를 참조하십시오."
-
-#: ../../../app/views/pages/translate.html.erb:1
-msgid "Help Translate Password Pusher!"
-msgstr "Password Pusher 번역을 도와주세요!"
-
-#: ../../../app/views/pages/translate.html.erb:3
-msgid "Help Translate"
-msgstr "번역 도와주세요"
-
-#: ../../../app/views/pages/translate.html.erb:6
-msgid ""
-"We would love to add as many languages as possible but we need help from fluen"
-"t speakers in creating and verifying translations."
-msgstr "가능한 한 많은 언어를 추가하고 싶지만 번역을 만들고 확인하는 데 유창한 사용자의 도움이 필요합니다."
-
-#: ../../../app/views/pages/translate.html.erb:9
-msgid "How it Works"
-msgstr "작동 방식"
-
-#: ../../../app/views/pages/translate.html.erb:12
-msgid "We use"
-msgstr "우리는 사용"
-
-#: ../../../app/views/pages/translate.html.erb:14
-msgid "to manage our translation effort.  It has a simple to use interface."
-msgstr "우리의 번역 노력을 관리하기 위해. 그것은 사용하기 쉬운 인터페이스를 가지고 있습니다."
-
-#: ../../../app/views/pages/translate.html.erb:18
-msgid ""
-"Translations are done initially by machine using Google Translate.  It's the t"
-"ranslators job to select the correct translation\n"
-"and add any fixes as needed."
-msgstr ""
-"번역은 처음에 Google 번역을 사용하여 기계로 수행됩니다. 올바른 번역을 선택하고 필요에 따라 수정 사항을 추가하는 것은 번역가의 일입니"
-"다."
-
-#: ../../../app/views/pages/translate.html.erb:23
-msgid ""
-"Translations for an entirely new language can be done in less than an hour for"
-" native speakers."
-msgstr "완전히 새로운 언어에 대한 번역은 원어민의 경우 1시간 이내에 완료될 수 있습니다."
-
-#: ../../../app/views/pages/translate.html.erb:27
-msgid "Read more: "
-msgstr "더 읽어보기:"
-
-#: ../../../app/views/pages/translate.html.erb:28
-msgid "How to use our translation interface?"
-msgstr "번역 인터페이스를 사용하는 방법은 무엇입니까?"
-
-#: ../../../app/views/pages/translate.html.erb:31
-msgid "How to Join"
-msgstr "가입 방법"
-
-#: ../../../app/views/pages/translate.html.erb:34
-msgid "To join the translation effort:"
-msgstr "번역 작업에 참여하려면:"
-
-#: ../../../app/views/pages/translate.html.erb:39
-msgid "Register for a free account on"
-msgstr "에서 무료 계정 등록"
-
-#: ../../../app/views/pages/translate.html.erb:43
-msgid "Send me a message"
-msgstr "나에게 메세지를 보내"
-
-#: ../../../app/views/pages/translate.html.erb:44
-msgid ""
-"with your translation.io username and which language you would like to work on"
-"."
-msgstr "translation.io 사용자 이름과 작업하려는 언어를 입력합니다."
-
-#: ../../../app/views/pages/translate.html.erb:49
-msgid "...and I'll add you to our translation project."
-msgstr "...번역 프로젝트에 당신을 추가하겠습니다."
-
-#: ../../../app/views/pages/translate.html.erb:52
-msgid "Translation Tips"
-msgstr "번역 팁"
-
-#: ../../../app/views/pages/translate.html.erb:54
-msgid ""
-"If the source text is capitalized, try to maintain similar capitalization in t"
-"he translated text as well (assuming it's permitted syntactically in the targe"
-"t language)."
-msgstr "소스 텍스트가 대문자인 경우 번역된 텍스트에서도 유사한 대문자를 유지하려고 합니다(대상 언어에서 구문상 허용된다고 가정)."
-
-#: ../../../app/views/pages/translate.html.erb:55
-msgid ""
-"If you see embedded codes such as \"%s\", {%file} or similar, leave those fully "
-"intact in the target translation.  These are substitution codes used in the ap"
-"plication."
-msgstr "\"%s\", {%file} 또는 이와 유사한 코드가 삽입된 경우 대상 번역에서 그대로 두십시오. 응용 프로그램에서 사용되는 대체 코드입니다."
-
-#: ../../../app/views/pages/translate.html.erb:59
-msgid "Thanks for helping to translate Password Pusher!"
-msgstr "Password Pusher 번역에 도움을 주셔서 감사합니다!"
 
 #: ../../../app/views/passwords/active.html.erb:1
 #: ../../../app/views/passwords/active.html.erb:18
@@ -2379,6 +1709,10 @@ msgstr "첫 장"
 msgid "Docker Containers"
 msgstr "도커 컨테이너"
 
+#: ../../../app/views/shared/_footer.html.erb:34
+msgid "FAQ"
+msgstr "자주하는 질문"
+
 #: ../../../app/views/shared/_footer.html.erb:35
 msgid "JSON API"
 msgstr "JSON API"
@@ -2390,6 +1724,10 @@ msgstr "키 생성기"
 #: ../../../app/views/shared/_footer.html.erb:39
 msgid "Source Code"
 msgstr "소스 코드"
+
+#: ../../../app/views/shared/_footer.html.erb:43
+msgid "Tools"
+msgstr "도구"
 
 #: ../../../app/views/shared/_footer.html.erb:51
 msgid "Overview"
@@ -2403,39 +1741,25 @@ msgstr "선적 서류 비치"
 msgid "Account"
 msgstr "계정"
 
-#: ../../../app/views/shared/_header.html.erb:41
+#: ../../../app/views/shared/_header.html.erb:42
+msgid "Admin Dashboard"
+msgstr "관리자 대시보드"
+
+#: ../../../app/views/shared/_header.html.erb:46
 msgid "Edit Login Details"
 msgstr "로그인 정보 편집"
 
-#: ../../../app/views/shared/_header.html.erb:47
+#: ../../../app/views/shared/_header.html.erb:52
 msgid "Log Out"
 msgstr "로그 아웃"
 
-#: ../../../app/views/shared/_header.html.erb:53
+#: ../../../app/views/shared/_header.html.erb:58
 msgid "Log In"
 msgstr "로그인"
 
-#: ../../../app/views/shared/_header.html.erb:57
+#: ../../../app/views/shared/_header.html.erb:62
 msgid "Sign Up"
 msgstr "가입하기"
-
-#: ../../../app/views/shared/_newsletter_sign_up.html.erb:3
-msgid "Get The Newsletter"
-msgstr "뉴스레터 받기"
-
-#: ../../../app/views/shared/_newsletter_sign_up.html.erb:5
-msgid ""
-"Updates on big releases, security issues, features, integrations, tips and mor"
-"e."
-msgstr "주요 릴리스, 보안 문제, 기능, 통합, 팁 등에 대한 업데이트입니다."
-
-#: ../../../app/views/shared/_newsletter_sign_up.html.erb:13
-msgid "Enter your email..."
-msgstr "이메일을 입력하세요..."
-
-#: ../../../app/views/shared/_newsletter_sign_up.html.erb:14
-msgid "Subscribe"
-msgstr "구독하다"
 
 #: ../../../app/views/shared/_pw_generator_modal.html.erb:5
 msgid "Configure Password Generation"
@@ -2488,10 +1812,6 @@ msgstr "자음"
 #: ../../../app/views/shared/_pw_generator_modal.html.erb:71
 msgid "Reset to Defaults"
 msgstr "기본값으로 재설정"
-
-#: ../../../app/views/shared/_secret_url_bar.html.erb:19
-msgid "Secret Link Language"
-msgstr "비밀 링크 언어"
 
 #: ../../../app/views/urls/active.html.erb:1
 #: ../../../app/views/urls/active.html.erb:18

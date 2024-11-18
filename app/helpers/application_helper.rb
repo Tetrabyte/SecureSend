@@ -22,26 +22,26 @@ module ApplicationHelper
   # @param [Password, Url, FilePush] password - The push to generate a URL for
   # @param [Boolean] with_retrieval_step - Whether to include the retrieval step in the URL
   # @return [String] - The fully qualified URL
-  def secret_url(password, with_retrieval_step: true)
+  def secret_url(password, with_retrieval_step: true, locale: nil)
     raw_url = if password.retrieval_step && with_retrieval_step
       case password
       when Password
-        Settings.override_base_url ? preliminary_password_url(password, host: Settings.override_base_url) : preliminary_password_url(password)
+        Settings.override_base_url ? Settings.override_base_url + preliminary_password_path(password) : preliminary_password_url(password)
       when Url
-        Settings.override_base_url ? preliminary_url_url(password, host: Settings.override_base_url) : preliminary_url_url(password)
+        Settings.override_base_url ? Settings.override_base_url + preliminary_url_path(password) : preliminary_url_url(password)
       when FilePush
-        Settings.override_base_url ? preliminary_file_push_url(password, host: Settings.override_base_url) : preliminary_file_push_url(password)
+        Settings.override_base_url ? Settings.override_base_url + preliminary_file_push_path(password) : preliminary_file_push_url(password)
       else
         raise "Unknown push type: #{password.class}"
       end
     else
       case password
       when Password
-        Settings.override_base_url ? password_url(password, host: Settings.override_base_url) : password_url(password)
+        Settings.override_base_url ? Settings.override_base_url + password_path(password) : password_url(password)
       when Url
-        Settings.override_base_url ? url_url(password, host: Settings.override_base_url) : url_url(password)
+        Settings.override_base_url ? Settings.override_base_url + url_path(password) : url_url(password)
       when FilePush
-        Settings.override_base_url ? file_push_url(password, host: Settings.override_base_url) : file_push_url(password)
+        Settings.override_base_url ? Settings.override_base_url + file_push_path(password) : file_push_url(password)
       else
         raise "Unknown push type: #{password.class}"
       end
@@ -50,9 +50,11 @@ module ApplicationHelper
     # Delete any existing ?locale= query parameter
     raw_url = raw_url.split("?").first
 
+    # Append the locale query parameter
     if params["push_locale"].present? && Settings.enabled_language_codes.include?(params["push_locale"])
-      # Append the locale query parameter
       raw_url += "?locale=#{params["push_locale"]}"
+    elsif locale.present? && Settings.enabled_language_codes.include?(locale)
+      raw_url += "?locale=#{locale}"
     end
 
     # Support forced https links with FORCE_SSL env var
