@@ -3,6 +3,9 @@
         <center><p>Tetrabyte are now using this system to send sensitive information to clients. </br>
             Data stored in this system is deleted after a set period of time and/or a maximum number of views. </br>
             This means that sensitive information is no longer left in emails or tickets and your data is secure. </p></center>
-        <p> <%= link_to _("Click Here to Proceed"), @secret_url, "data-turbo-prefetch": false %> </p>
+        <p> <%= link_to _("Click Here to Proceed"), @secret_url, "data-turbo-prefetch": false,
+        "data-turbolinks": false,
+        "data-turbo": false,
+        rel: "no-prefetch" %> </p>
     </div>
 </div>
