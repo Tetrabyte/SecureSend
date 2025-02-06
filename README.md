@@ -35,7 +35,7 @@ Hosted at [pwpush.com](https://pwpush.com) but you can also easily run your own 
 * __Logins__: Invite your colleagues and track what is pushed and who retrieved it.
 * __Admin Dashboard:__ Manage your self-hosted instance with a built in admin dashboard.
 * __Internationalized:__ 29 language translations are bundled in.  Easily selectable via UI or URL
-* __Themes:__ [26 themes](https://docs.pwpush.com/docs/themes/) bundled in courtesy of Bootswatch.  Select with a simple environment variable.
+* __Themes:__ [26 themes](https://docs.pwpush.com/docs/themes/) bundled in courtesy of [Bootswatch](https://github.com/thomaspark/bootswatch).  Select with a simple environment variable.
 * __Unbranded delivery page:__ No logos, superfluous text or unrelated links to confuse end users.
 * __Customizable:__ Change text and default options via environment variables.
 * __Light & dark themes:__  Via CSS @media integration, the default site theme follows your local preferences.
@@ -58,10 +58,17 @@ Password Pusher is also [on Twitter](https://twitter.com/pwpush), [Gettr](https:
 [![](./app/assets/images/features/dark-theme-thumb.png)](./app/assets/images/features/dark-theme.gif)
 [![](./app/assets/images/features/preliminary-step-thumb.png)](./app/assets/images/features/preliminary-step.gif)
 
+# Editions
+
+If you wish the self-host, this open source version is available immediately.  You can try it out at [https://oss.pwpush.com](https://oss.pwpush.com) or read on for how to get started.
+
+In 2024, I introduced a set of **Pro features** exclusively on [pwpush.com](https://pwpush.com) to better support the project.  These Pro features are part of the new _Feature Pipeline_ and are migrated to the OSS edition periodically over time.  You can read more about how this works [here](https://docs.pwpush.com/docs/editions/).
+
+To see the differences between pwpush.com and the OSS edition take a look at the [Feature Matrix](https://pwpush.com/features#matrix).
 
 # ⚡️ Quick Start
 
-→ Go to [pwpush.com](https://pwpush.com) and try it out.
+→ Go to [https://pwpush.com](https://pwpush.com) and try it out.
 
 _or_
 
@@ -76,6 +83,12 @@ _or_
 See the full [Password Pusher documentation here](https://docs.pwpush.com).
 
 # 📼 Credits
+
+## Security Researchers
+
+* Kullai Metikala | [Github](https://github.com/kullaisec) | [LinkedIn](https://www.linkedin.com/in/kullai-metikala-8378b122a/)
+* [Positive Technologies](https://global.ptsecurity.com)
+* Igniter | [Github](https://github.com/igniter07)
 
 ## Translators
 

@@ -4,7 +4,7 @@ source "https://rubygems.org"
 
 ruby ENV["CUSTOM_RUBY_VERSION"] || ">=3.2"
 
-gem "rails", "~> 7.2.1"
+gem "rails", "~> 7.2.2"
 
 group :development do
   gem "listen"
@@ -43,7 +43,7 @@ group :development, :test do
   # Omakase Ruby styling [https://github.com/rails/rubocop-rails-omakase/]
   gem "rubocop-rails-omakase", require: false
 
-  gem "erb_lint", "~> 0.7.0"
+  gem "erb_lint", "~> 0.9.0"
   gem "standardrb", "~> 1.0"
 end
 
@@ -70,10 +70,11 @@ gem "bootsnap", require: false
 
 # Use SCSS for stylesheets
 gem "sass-rails", "~> 6.0", ">= 6.0.0"
+gem "cssbundling-rails", "~> 1.4"
 gem "terser", "~> 1.2"
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-gem "bootstrap", "5.2.3"
-gem "json", "~> 2.8" # Legacy carry-over
+gem "bootstrap"
+gem "json", "~> 2.9" # Legacy carry-over
 
 # Hotwire's SPA-like page accelerator [https://turbo.hotwired.dev]
 gem "turbo-rails"
@@ -107,7 +108,7 @@ gem "translation"
 # For File Uploads
 gem "aws-sdk-s3", require: false
 gem "azure-storage-blob", "~> 2.0", require: false
-gem "google-cloud-storage", "~> 1.52", require: false
+gem "google-cloud-storage", "~> 1.54", require: false
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem "tzinfo-data", platforms: %i[mingw mswin x64_mingw jruby]
@@ -127,6 +128,6 @@ gem "administrate", "~> 0.20.1"
 gem "rqrcode", "~> 2.2"
 gem "turnout2024", require: "turnout"
 
-gem "solid_queue", "~> 1.0"
+gem "solid_queue", "~> 1.1"
 
 gem "mission_control-jobs", "~> 0.5.0"
