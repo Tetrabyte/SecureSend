@@ -710,9 +710,9 @@ throttling:
 # PWP__TRUSTED_PROXIES='<ipaddress>'
 # PWP__TRUSTED_PROXIES='<ipaddress1>,<ipaddress2>'
 #
-# trusted_proxies:
-#   - '1.2.3.4'
-#   - '2.3.4.5'
+trusted_proxies:
+   - '77.44.80.226'
+   - '10.245.240.254'
 
 ## Cloudflare Proxy
 #
