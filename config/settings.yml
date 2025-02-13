@@ -727,7 +727,7 @@ throttling:
 # Environment Variable Override:
 # PWP__CLOUDFLARE_PROXY='false'
 #
-cloudflare_proxy: false
+cloudflare_proxy: true
 
 ### Mail Server Configuration
 #
