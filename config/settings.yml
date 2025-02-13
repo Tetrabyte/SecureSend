@@ -473,7 +473,7 @@ files:
   #   * microsoft - use Microsoft Azure Storage (and provide 'as' credentials below)
   #
   # Environment variable override:
-  # PWP__FILES_STORAGE='local'
+  # PWP__FILES__STORAGE='local'
   #
   storage: 'local'
 
@@ -686,14 +686,14 @@ throttling:
   # Default: 120
   #
   # Environment Variable Override: PWP__THROTTLING__MINUTE='60'
-  minute: 120
+  minute: 1200
 
   # ..maximum number of allowed HTTP requests per second
   #
   # Default: 60
   #
   # Environment Variable Override: PWP__THROTTLING__SECOND='20'
-  second: 60
+  second: 120
 
 ### Trusted Proxies
 #
@@ -727,7 +727,7 @@ throttling:
 # Environment Variable Override:
 # PWP__CLOUDFLARE_PROXY='false'
 #
-cloudflare_proxy: false
+cloudflare_proxy: true
 
 ### Mail Server Configuration
 #
@@ -982,7 +982,7 @@ country_codes:
 # Configure the logging verbosity of the application.
 #
 # Valid values are: :debug, :info, :warn, :error, :fatal
-log_level: :warn
+log_level: :info
 
 # In containers, it is usually desired to log to stdout
 # instead of using log files (e.g. log/production.log).
