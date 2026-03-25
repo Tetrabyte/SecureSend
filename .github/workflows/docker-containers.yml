@@ -26,19 +26,17 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Set up QEMU
-        uses: docker/setup-qemu-action@v3
+        uses: actions/checkout@v6
         with:
-          image: tonistiigi/binfmt:qemu-v8.1.5
+          ref: ${{ github.event_name == 'pull_request_target' && format('refs/pull/{0}/head', github.event.pull_request.number) || github.event_name == 'pull_request' && github.event.pull_request.head.sha || github.ref }}
+          fetch-depth: 1
 
       - name: Set up Docker Buildx
-        uses: docker/setup-buildx-action@v3
+        uses: docker/setup-buildx-action@v4
 
       - name: Populate Docker metadata
         id: meta
-        uses: docker/metadata-action@v5
+        uses: docker/metadata-action@v6
         with:
           images: tetrabyteit/securesend
           flavor: |
@@ -54,21 +52,34 @@ jobs:
             type=ref,event=branch
 
       - name: Login to DockerHub
-        uses: docker/login-action@v3
+        uses: docker/login-action@v4
         with:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
 
       - name: Build and push Docker image
-        uses: docker/build-push-action@v6
+        uses: docker/build-push-action@v7
         with:
           file: ./containers/docker/Dockerfile
           platforms: linux/amd64
           push: true
           labels: ${{ steps.meta.outputs.labels }}
           tags: ${{ steps.meta.outputs.tags }}
-          cache-from: type=registry,ref=tetrabyteit/securesend:buildcache
-          cache-to: type=registry,ref=tetrabyteit/securesend:buildcache,mode=max,ignore-error=${{env.DOCKER_PUSH == 'false'}}
+          cache-from: |
+            type=registry,ref=${{ secrets.DOCKER_USERNAME }}/pwpush:buildcache
+            type=gha
+          cache-to: |
+            type=registry,ref=${{ secrets.DOCKER_USERNAME }}/pwpush:buildcache,mode=max,ignore-error=${{env.DOCKER_PUSH == 'false'}}
+            type=gha,mode=max
+
+      - name: Post job failure details to Campfire
+        if: failure() && github.ref == 'refs/heads/master'
+        continue-on-error: true
+        uses: shane-lamb/campfire-notify-action@v1.1.6
+        with:
+          messages_url: ${{ secrets.CAMPFIRE_MESSAGES_URL }}
+          template: job_failed
+
 
   worker-container-master:
     needs: pwpush-container
@@ -76,19 +87,22 @@ jobs:
     if: github.ref == 'refs/heads/master'
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
+        with:
+          ref: ${{ github.event_name == 'pull_request_target' && format('refs/pull/{0}/head', github.event.pull_request.number) || github.event_name == 'pull_request' && github.event.pull_request.head.sha || github.ref }}
+          fetch-depth: 1
 
       - name: Set up QEMU
-        uses: docker/setup-qemu-action@v3
+        uses: docker/setup-qemu-action@v4
         with:
-          image: tonistiigi/binfmt:qemu-v8.1.5
+          image: tonistiigi/binfmt:master
 
       - name: Set up Docker Buildx
-        uses: docker/setup-buildx-action@v3
+        uses: docker/setup-buildx-action@v4
 
       - name: Populate Docker metadata
         id: meta
-        uses: docker/metadata-action@v5
+        uses: docker/metadata-action@v6
         with:
           images: tetrabyteit/pwpush-worker
           tags: |
@@ -102,21 +116,33 @@ jobs:
             type=ref,event=branch
 
       - name: Login to DockerHub
-        uses: docker/login-action@v3
+        uses: docker/login-action@v4
         with:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
 
       - name: Build and push Docker image
-        uses: docker/build-push-action@v6
+        uses: docker/build-push-action@v7
         with:
           file: ./containers/docker/Dockerfile.worker
           platforms: linux/amd64
           push: true
           labels: ${{ steps.meta.outputs.labels }}
           tags: ${{ steps.meta.outputs.tags }}
-          cache-from: type=registry,ref=tetrabyteit/pwpush-worker:buildcache
-          cache-to: type=registry,ref=tetrabyteit/pwpush-worker:buildcache,mode=max,ignore-error=${{ env.DOCKER_PUSH == 'false' }}
+          cache-from: |
+            type=registry,ref=${{ secrets.DOCKER_USERNAME }}/pwpush-public-gateway:buildcache
+            type=gha
+          cache-to: |
+            type=registry,ref=${{ secrets.DOCKER_USERNAME }}/pwpush-public-gateway:buildcache,mode=max,ignore-error=${{env.DOCKER_PUSH == 'false'}}
+            type=gha,mode=max
+
+      - name: Post job failure details to Campfire
+        if: failure() && github.ref == 'refs/heads/master'
+        continue-on-error: true
+        uses: shane-lamb/campfire-notify-action@v1.1.6
+        with:
+          messages_url: ${{ secrets.CAMPFIRE_MESSAGES_URL }}
+          template: job_failed
 
   worker-container-dev:
     needs: pwpush-container
@@ -124,19 +150,22 @@ jobs:
     if: github.ref == 'refs/heads/dev-tbyte'
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
+        with:
+          ref: ${{ github.event_name == 'pull_request_target' && format('refs/pull/{0}/head', github.event.pull_request.number) || github.event_name == 'pull_request' && github.event.pull_request.head.sha || github.ref }}
+          fetch-depth: 1
 
       - name: Set up QEMU
-        uses: docker/setup-qemu-action@v3
+        uses: docker/setup-qemu-action@v4
         with:
-          image: tonistiigi/binfmt:qemu-v8.1.5
+          image: tonistiigi/binfmt:master
 
       - name: Set up Docker Buildx
-        uses: docker/setup-buildx-action@v3
+        uses: docker/setup-buildx-action@v4
 
       - name: Populate Docker metadata
         id: meta
-        uses: docker/metadata-action@v5
+        uses: docker/metadata-action@v6
         with:
           images: tetrabyteit/pwpush-worker
           tags: |
@@ -150,18 +179,30 @@ jobs:
             type=ref,event=branch
 
       - name: Login to DockerHub
-        uses: docker/login-action@v3
+        uses: docker/login-action@v4
         with:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
 
       - name: Build and push Docker image
-        uses: docker/build-push-action@v6
+        uses: docker/build-push-action@v7
         with:
           file: ./containers/docker/Dockerfile.worker-dev
           platforms: linux/amd64
           push: true
           labels: ${{ steps.meta.outputs.labels }}
           tags: ${{ steps.meta.outputs.tags }}
-          cache-from: type=registry,ref=tetrabyteit/pwpush-worker:buildcache
-          cache-to: type=registry,ref=tetrabyteit/pwpush-worker:buildcache,mode=max,ignore-error=${{ env.DOCKER_PUSH == 'false' }}
+          cache-from: |
+            type=registry,ref=${{ secrets.DOCKER_USERNAME }}/pwpush-worker:buildcache
+            type=gha
+          cache-to: |
+            type=registry,ref=${{ secrets.DOCKER_USERNAME }}/pwpush-worker:buildcache,mode=max,ignore-error=${{env.DOCKER_PUSH == 'false'}}
+            type=gha,mode=max
+
+      - name: Post job failure details to Campfire
+        if: failure() && github.ref == 'refs/heads/master'
+        continue-on-error: true
+        uses: shane-lamb/campfire-notify-action@v1.1.6
+        with:
+          messages_url: ${{ secrets.CAMPFIRE_MESSAGES_URL }}
+          template: job_failed

@@ -191,7 +191,7 @@ Devise.setup do |config|
   # ==> Configuration for :timeoutable
   # The time you want to timeout the user session without activity. After this
   # time the user will be asked for credentials again. Default is 30 minutes.
-  config.timeout_in = 2.hours
+  config.timeout_in = Settings.login_session_timeout.to_s.strip.split(" ").then { |n, u| n.to_i.send(u.downcase.to_sym) }
 
   # ==> Configuration for :lockable
   # Defines which strategy will be used to lock an account.
@@ -231,7 +231,9 @@ Devise.setup do |config|
 
   # When set to false, does not sign a user in automatically after their password is
   # reset. Defaults to true, so a user is signed in automatically after a reset.
-  # config.sign_in_after_reset_password = true
+  # Per-user behavior (e.g. skip auto sign-in when 2FA is required) lives in
+  # Users::PasswordsController#sign_in_after_reset_password? — Devise only supports a boolean here.
+  config.sign_in_after_reset_password = true
 
   # ==> Configuration for :encryptable
   # Allow you to use another hashing or encryption algorithm besides bcrypt (default).
@@ -314,6 +316,6 @@ Devise.setup do |config|
 
   # For Hotwire Turbo integration
   # https://github.com/heartcombo/devise/wiki/How-To:-Upgrade-to-Devise-4.9.0-[Hotwire-Turbo-integration]
-  config.responder.error_status = :unprocessable_entity
+  config.responder.error_status = :unprocessable_content
   config.responder.redirect_status = :see_other
 end

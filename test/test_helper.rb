@@ -17,8 +17,39 @@ Minitest::Test.include(ActiveSupport::Testing::Assertions)
 # Uncomment for awesome colorful output
 # require "minitest/pride"
 
+# Unset all PWP__ environment variables before tests
+# This is to ensure that the test environment is not affected by the PWP__ environment variables
+# that may be set in .env files, local development, or other environments.
+ENV.keys.each do |key|
+  ENV.delete(key) if key.start_with?("PWP__")
+end
+
 class ActiveSupport::TestCase
   # Setup all fixtures in test/fixtures/*.yml for all tests in alphabetical order.
   fixtures :all
   # Add more helper methods to be used by all tests here...
+
+  def assert_audit_log_created(push, kind)
+    assert push.audit_logs.where(kind: kind).exists?,
+      "Expected audit log of kind #{kind} for push #{push.url_token}"
+  end
+
+  # User confirmable is optional (see Settings.enable_user_account_emails). The users fixture
+  # (luca, one, giuliana, mr_admin) already has confirmed_at set, so sign_in works without
+  # calling confirm_user. Use confirm_user only when you create a user in a test and need them
+  # confirmed. For an unconfirmed user, set confirmed_at (and confirmation_token if needed) to nil.
+  def confirm_user(user)
+    user.confirm if user.respond_to?(:confirm)
+  end
+
+  # Assert user is "confirmed": either confirmable is disabled or the user is confirmed.
+  def assert_user_confirmed(user)
+    assert !user.respond_to?(:confirmed?) || user.confirmed?, "Expected user to be confirmed"
+  end
+end
+
+module ActionDispatch
+  class IntegrationTest
+    include Devise::Test::IntegrationHelpers
+  end
 end
