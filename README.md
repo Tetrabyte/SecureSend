@@ -35,7 +35,7 @@ Use the [hosted service](https://pwpush.com) or run your own instance with Docke
 | **🔒 Secure by default** | Encrypted storage, optional passphrase, expiry by views and/or time. Sensitive data is removed entirely once expired. |
 | **📋 Full audit trail** | See when links were created, viewed, and by whom (with logins). |
 | **🏠 Self-host or use hosted** | Use [pwpush.com](https://pwpush.com) or deploy your own—Docker, Kubernetes, Helm, or cloud. |
-| **🌐 Ready for teams** | 31 languages, light/dark theme, JSON API, CLI, and [many integrations](https://docs.pwpush.com/docs/3rd-party-tools/). |
+| **🌐 Ready for teams** | 31 languages, light/dark theme, JSON API, [official CLI & Chrome Extension](#tools--extensions), and [many integrations](https://docs.pwpush.com/docs/3rd-party-tools/). |
 
 ---
 
@@ -45,7 +45,7 @@ Use the [hosted service](https://pwpush.com) or run your own instance with Docke
 
 - **Encrypted at rest** — Sensitive data is stored encrypted and deleted when expired.
 - **Expiry controls** — Limit by number of views and/or time; links can require a passphrase.
-- **Two-factor authentication** — TOTP (authenticator apps) for user accounts, with optional backup codes.
+- **Two-factor authentication (MFA)** — TOTP (authenticator apps) with backup codes; admins can require MFA instance-wide with `PWP__REQUIRE_MFA=true`.
 - **Audit logging** — Track what was shared and who viewed it (with optional logins).
 - **Unbranded delivery page** — No logos, superfluous text or unrelated links to confuse push recipients.
 
@@ -59,8 +59,9 @@ Use the [hosted service](https://pwpush.com) or run your own instance with Docke
 
 ### Integrations & API
 
-- **JSON API** — Integrate with scripts, `curl`, `wget`, or third-party tools.
-- **CLI** — Automate distribution with [CLI tools](https://docs.pwpush.com/docs/3rd-party-tools/) and scripts.
+- **JSON API v2** — Modern `/api/v2` endpoints for create/retrieve/audit/active/expired workflows.
+- **Legacy API compatibility** — Existing `/p`, `/f`, `/r` API routes (v1 style) remain available for backwards compatibility.
+- **CLI** — Official [pwpush CLI](https://github.com/pglombardo/pwpush-cli) plus [3rd-party tools](https://docs.pwpush.com/docs/3rd-party-tools/) and scripts.
 - **31 languages** — UI and secret-URL pages in 31 languages (courtesy of [Translation.io](https://translation.io/?utm_source=pwpush)).
 
 ### Trust & community
@@ -120,7 +121,7 @@ docker compose up -d
 
 Open `https://pwpush.example.com`. The Compose file includes persistent storage, health checks, and is suitable for production.
 
-_Note: If you didn't set `TLS_DOMAIN` visit the application on http://your-ip:5100_
+_Note: If you didn't set `TLS_DOMAIN`, uncomment port 5100 and visit the application on http://your-ip:5100_
 
 ### Cloud deploy & contributor setup
 
@@ -139,7 +140,29 @@ Production image build: [containers/docker/Dockerfile](containers/docker/Dockerf
 
 ### Use the API, CLI, or integrations
 
-See [3rd party tools & integrations](https://docs.pwpush.com/docs/3rd-party-tools/) for API usage, CLIs, and integrations.
+For API usage, CLI tools, and integrations:
+
+- **pwpush CLI**: [github.com/pglombardo/pwpush-cli](https://github.com/pglombardo/pwpush-cli) — Official command-line tool for pushing secrets from the terminal
+- API v2 docs: [docs.pwpush.com/docs/api-v2](https://docs.pwpush.com/docs/api-v2/)
+- OSS API endpoint reference in-app: `/api/v2/version` and `/api/v2/pushes`
+- 3rd-party tools: [docs.pwpush.com/docs/3rd-party-tools](https://docs.pwpush.com/docs/3rd-party-tools/)
+
+Quick API v2 smoke test:
+
+```bash
+curl -s https://YOUR_HOST/api/v2/version
+```
+
+---
+
+## Tools & Extensions
+
+Enhance Password Pusher with these official companion tools:
+
+| CLI | Chrome Extension |
+|:---:|:---:|
+| [![pwpush CLI](https://img.shields.io/badge/CLI-pwpush--cli-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://github.com/pglombardo/pwpush-cli) | [![Chrome Extension](https://img.shields.io/badge/Chrome-Extension-4285F4?style=for-the-badge&logo=googlechrome&logoColor=white)](https://chromewebstore.google.com/detail/djdnbhbnimfpfmnocchfhjahinieaacg) |
+| Command-line tool for pushing secrets from the terminal | Create pushes directly from your browser with self-hosted & APIv2 support |
 
 ---
 

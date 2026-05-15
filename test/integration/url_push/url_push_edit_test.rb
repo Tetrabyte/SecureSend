@@ -13,7 +13,8 @@ class UrlPushEditTest < ActionDispatch::IntegrationTest
   end
 
   teardown do
-    sign_out :user
+    Settings.reload!
+    Rails.application.reload_routes!
   end
 
   test "authenticated user can access edit page for their own url push" do
@@ -131,7 +132,7 @@ class UrlPushEditTest < ActionDispatch::IntegrationTest
     push.update_columns(expired: true, expired_on: Time.current, payload_ciphertext: nil)
 
     get edit_push_path(push)
-    assert_redirected_to push_path(push)
+    assert_redirected_to pushes_path
 
     patch push_path(push), params: {
       push: {
@@ -139,7 +140,7 @@ class UrlPushEditTest < ActionDispatch::IntegrationTest
         payload: "https://new-url.com"
       }
     }
-    assert_redirected_to push_path(push)
+    assert_redirected_to pushes_path
   end
 
   test "edit page shows update button for url push" do

@@ -209,6 +209,18 @@ disable_signups: false
 #
 disable_logins: false
 
+## Require Multi-Factor Authentication
+#
+# When true, all users must have two-factor authentication (TOTP) enabled.
+# Any signed-in user without TOTP set up will be redirected to the MFA setup
+# flow and cannot access the application until setup is complete.
+# Users will also be prevented from disabling MFA while this is enabled.
+#
+# Environment variable override:
+# PWP__REQUIRE_MFA='true'
+#
+require_mfa: false
+
 ## Limit Signups to Specific Email Domains
 #
 # By default, anyone can sign up for an account.  The following default regular
@@ -941,37 +953,23 @@ show_gdpr_consent_banner: false
 #
 # IMPORTANT NOTES:
 #   1. This setting can only be controlled by environment variable. (PWP__THEME) It cannot be set in this config file.
-#   2. If you set a custom theme, you must also set PWP_PRECOMPILE='true' to pre-compile the assets.  See next setting.
+#   2. Shipped Bootswatch themes are pre-built into the container image. PWP__THEME only selects which CSS bundle to serve; no extra compile at boot for standard themes.
 #
 theme: 'default'
 
-### Pre-compilation
+### Pre-compilation (DEPRECATED)
 #
-# This is useful if you modified the assets (e.g. CSS, JS, images) to customize
-# the theme etc...  Assets are precompiled before serving.
+# DEPRECATED: Precompilation now happens automatically when PWP__THEME is set.
+# This setting is kept for backward compatibility only.
 #
-# If you set a custom theme, you will need to precompile the assets on container boot.
+# Previously: Optional force `rails assets:precompile` on container boot.
+# Now: Assets are precompiled automatically when PWP__THEME is set.
 #
-# Pre-compilation isn't supported in this yaml file.  It is only supported
-# through the environment variable PWP_PRECOMPILE='true'.
-#
-# Environment Variable: PWP_PRECOMPILE='false'
+# Environment Variable: PWP_PRECOMPILE='true' (deprecated, no longer needed)
 
 # =============================================================================
 # Locale & internationalization
 # =============================================================================
-
-### Timezone
-#
-# Set the timezone for the application.  A full list of timezone strings
-# can be found here:
-# https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-#
-# Environment variable override:
-# PWP__TIMEZONE='America/New_York'
-#
-# Default: 'America/New_York'
-timezone: 'America/New_York'
 
 ### Site Default Locale
 #

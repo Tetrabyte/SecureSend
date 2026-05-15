@@ -10,10 +10,6 @@ class PasswordEditTest < ActionDispatch::IntegrationTest
     sign_in @luca
   end
 
-  teardown do
-    sign_out :user
-  end
-
   test "authenticated user can access edit page for their own push" do
     push = Push.create!(
       kind: "text",
@@ -95,7 +91,7 @@ class PasswordEditTest < ActionDispatch::IntegrationTest
     assert_select ".payload-reveal-zone", 1
     assert_match(/Content is hidden for privacy/, response.body)
   ensure
-    Settings.pw.enable_blur = true
+    Settings.reload!
   end
 
   test "can update push with valid data" do
@@ -188,7 +184,7 @@ class PasswordEditTest < ActionDispatch::IntegrationTest
     push.update_columns(expired: true, expired_on: Time.current, payload_ciphertext: nil)
 
     get edit_push_path(push)
-    assert_redirected_to push_path(push)
+    assert_redirected_to pushes_path
 
     patch push_path(push), params: {
       push: {
@@ -196,7 +192,7 @@ class PasswordEditTest < ActionDispatch::IntegrationTest
         payload: "New password"
       }
     }
-    assert_redirected_to push_path(push)
+    assert_redirected_to pushes_path
   end
 
   test "can update passphrase" do

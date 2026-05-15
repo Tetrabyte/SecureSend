@@ -17,9 +17,7 @@ gem "solid_cable"
 gem "bootsnap", require: false
 gem "kamal", require: false
 gem "thruster", require: false
-gem "sass-embedded"
 gem "cssbundling-rails"
-gem "jsbundling-rails"
 
 group :development do
   gem "listen"
@@ -99,7 +97,7 @@ gem "local_time"
 # For File Uploads
 gem "aws-sdk-s3", require: false
 gem "azure-blob", "~> 0.8.0", require: false
-gem "google-cloud-storage", "~> 1.59", require: false
+gem "google-cloud-storage", "~> 1.60", require: false
 
 # Database backends
 gem "mysql2"

@@ -11,8 +11,8 @@ class FilePushControllerTest < ActionDispatch::IntegrationTest
   end
 
   teardown do
-    @luca = users(:luca)
-    sign_out @luca
+    Settings.reload!
+    Rails.application.reload_routes!
   end
 
   test "New push form is NOT available anonymous" do
@@ -177,7 +177,7 @@ class FilePushControllerTest < ActionDispatch::IntegrationTest
 
     # Try to access edit page
     get edit_push_path(push)
-    assert_response :redirect
+    assert_redirected_to pushes_path
     follow_redirect!
     assert response.body.include?("That push has already expired and cannot be edited.")
   end
