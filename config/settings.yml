@@ -47,7 +47,7 @@ host_protocol: 'https'
 #
 # Set this value without a trailing slash ('/').
 #
-# override_base_url: 'https://pwpush.mydomain.com'
+override_base_url: 'https://securesend.remoteit.co.uk'
 
 ### Allowed Hosts
 #
@@ -89,23 +89,23 @@ host_protocol: 'https'
 #
 # Multiple IP addresses can be added by separating them with a comma.
 #
-# Environment variable override:
-# PWP__DISABLE_SIGNUPS='false'
+# Environment Variable Override:
+# PWP__TRUSTED_PROXIES='<ipaddress>'
+# PWP__TRUSTED_PROXIES='<ipaddress1>,<ipaddress2>'
 #
-disable_signups: false
+# trusted_proxies:
+#   - '1.2.3.4'
+#   - '2.3.4.5'
 
-## Limit Signups to Specific Email Domains
+## Cloudflare Proxy
 #
-# By default, anyone can sign up for an account.  The following default regular
-# expression just validates if it is a valid email address.
+# If you are using Cloudflare as a proxy, you will need to set the following
+# value to true.  This will cause the application to fetch the list of Cloudflare
+# proxy IP addresses and add them to the list of trusted proxies.
 #
-# signup_email_regexp: '\A[^@\s]+@[^@\s]+\z'
-#
-# If you would like to limit signups to specific email domains, you can extend
-# the regular expression below to include the domains you want to allow.
-#
-# For example, to only allow signups from the domain 'hey.com', you would
-# change the following to:
+# Note that on application boot, this will trigger two HTTPs requests to fetch
+# the list of Cloudflare IP addresses.  The requests each have a timeout of 15 seconds
+# and may delay on container boot.
 #
 # Environment Variable Override:
 # PWP__CLOUDFLARE_PROXY='false'
@@ -135,7 +135,7 @@ enable_url_pushes: true
 # Environment variable override:
 # PWP__ENABLE_FILE_PUSHES='false'
 #
-enable_file_pushes: true
+enable_file_pushes: false
 
 ### QR Code Pushes
 #
@@ -146,7 +146,7 @@ enable_file_pushes: true
 # Environment variable override:
 # PWP__ENABLE_QR_PUSHES='false'
 #
-enable_qr_pushes: true
+enable_qr_pushes: false
 
 ### Allow Anonymous
 #
@@ -184,7 +184,7 @@ allow_anonymous: true
 # Environment variable override:
 # PWP__LOGIN_SESSION_TIMEOUT='2 hours'
 #
-login_session_timeout: "2 hours"
+login_session_timeout: "1 month"
 
 ## Disable Signups
 #
@@ -196,7 +196,7 @@ login_session_timeout: "2 hours"
 # Environment variable override:
 # PWP__DISABLE_SIGNUPS='false'
 #
-disable_signups: false
+disable_signups: true
 
 ## Disable Logins
 #
@@ -226,9 +226,10 @@ require_mfa: false
 # By default, anyone can sign up for an account.  The following default regular
 # expression just validates if it is a valid email address.
 #
-# override_base_url: 'https://pwpush.mydomain.com'
-
-### Show version on the footer
+# signup_email_regexp: '\A[^@\s]+@[^@\s]+\z'
+#
+# If you would like to limit signups to specific email domains, you can extend
+# the regular expression below to include the domains you want to allow.
 #
 # For example, to only allow signups from the domain 'hey.com', you would
 # change the following to:
@@ -262,33 +263,92 @@ signup_email_regexp: '\A[^@\s]+@[^@\s]+\z'
 # Environment variable override:
 # PWP__ENABLE_USER_ACCOUNT_EMAILS='true'
 #
-# Default: 'America/New_York'
-timezone: 'America/New_York'
+enable_user_account_emails: false
 
-### Allowed Hosts
+# =============================================================================
+# Mail (required when logins are enabled)
+# =============================================================================
+
+### Mail Server Configuration
 #
-# This is a list of allowed hosts for the application.  This is used to
-# prevent host header attacks.
+# When logins are enabled, an SMTP server is required to send emails to users
+# for things such as forgot password, unlock account, confirm account etc.
+# The following _are required_ to be filled out with valid values when using
+# user account emails (confirmation, password reset, unlock).
 #
-# When set, the application will only respond to requests with a host header
-# that matches one of the values in this list.
+# These values are passed through to ActionMailer configuration.  The documentation
+# for ActionMailer is at:
+# https://guides.rubyonrails.org/action_mailer_basics.html#action-mailer-configuration
 #
-# This feature is generally only used when the application is behind a proxy.
+# IMPORTANT: Also set host_domain and host_protocol above for email links to work correctly!
 #
-# It's generally not required to use this unless you are getting the related error
-# in the application.  localhost and the IP that the application is running on
-# are always allowed.
-#
-# Note: If you need more than one value to the environment variable, separate
-# entries by a single space.
-#
-# Environment variable override:
-# PWP__ALLOWED_HOSTS='pwpush.com pwpush.mydomain.com pwpush.myotherdomain'
-#
-# allowed_hosts:
-#   - 'pwpush.com'
-#   - 'pwpush.mydomain.com'
-#   - 'pwpush.myotherdomain.com'
+mail:
+  # Email delivery errors will be shown in the application
+  # Environment Variable Override: PWP__MAIL__RAISE_DELIVERY_ERRORS='false'
+  raise_delivery_errors: false
+
+  # Allows you to use a remote mail server. Just change it from its default "localhost" setting.
+  # Environment Variable Override: PWP__MAIL__SMTP_ADDRESS='smtp.example.com'
+  # smtp_address: smtp.example.com
+
+  # If you need to specify a HELO domain, you can do it here.
+  # Environment Variable Override: PWP__MAIL__SMTP_DOMAIN='xyz.dev'
+  # smtp_domain: ''
+
+  # Port of the SMTP server
+  # Environment Variable Override: PWP__MAIL__SMTP_PORT='587'
+  smtp_port: 587
+
+  # If your mail server requires authentication, you need to specify the
+  # authentication type here. This is a string and one of :plain (will send
+  # the password in the clear), :login (will send password Base64 encoded)
+  # or :cram_md5 (combines a Challenge/Response mechanism to exchange
+  # information and a cryptographic Message Digest 5 algorithm to hash
+  # important information)
+  #
+  # Important: Comment this out if your server doesn't require authentication.
+  #
+  # Environment Variable Override: PWP__MAIL__SMTP_AUTHENTICATION='plain'
+  # smtp_authentication: 'plain'
+
+  # If your mail server requires authentication, set the username in this setting.
+  # Environment Variable Override: PWP__MAIL__SMTP_USER_NAME='apikey'
+  # smtp_user_name: 'apikey'
+
+  # If your mail server requires authentication, set the password in this setting.
+  # Environment Variable Override: PWP__MAIL__SMTP_PASSWORD='something@&#$'
+  # smtp_password: ''
+
+  # Use STARTTLS when connecting to your SMTP server and fail if unsupported.
+  # Environment Variable Override: PWP__MAIL__SMTP_STARTTLS='true'
+  # smtp_starttls: false
+
+  # Detects if STARTTLS is enabled in your SMTP server and starts to use it. Defaults to true.
+  # Environment Variable Override: PWP__MAIL__SMTP_ENABLE_STARTTLS_AUTO='false'
+  smtp_enable_starttls_auto: true
+
+  # Number of seconds to wait while attempting to open a connection.
+  # Environment Variable Override: PWP__MAIL__SMTP_OPEN_TIMEOUT='10'
+  smtp_open_timeout: 10
+
+  # Number of seconds to wait until timing-out a read(2) call.
+  # Environment Variable Override: PWP__MAIL__SMTP_READ_TIMEOUT='10'
+  smtp_read_timeout: 10
+
+  # When using TLS, you can set how OpenSSL checks the certificate. This is
+  # useful if you need to validate a self-signed and/or a wildcard certificate.
+  # This can be one of the OpenSSL verify constants, :none or :peer
+  # Environment Variable Override: PWP__MAIL__SMTP_OPENSSL_VERIFY_MODE='none'
+  # smtp_openssl_verify_mode: 'peer'
+
+  # Configure the e-mail address which will be shown as 'From' in emails
+  # See config/initializers/devise.rb where this is used
+  # Environment Variable Override: PWP__MAIL__MAILER_SENDER='"Password Pusher" <pglombardo@pwpush.com>'
+  # mailer_sender: '"Password Pusher" <oss@pwpush.com>'
+
+# =============================================================================
+# Push settings: Password (pw)
+# =============================================================================
 
 ## Expiration Settings for Password Pushes
 #
@@ -779,7 +839,7 @@ brand:
   #
   # Environment variable override: PWP__BRAND__TITLE='Acme Corp.'
   #
-  title: 'Tbyte Secure Send'
+  title: 'Tetrabyte Secure Send'
 
   ### Site Tagline
   #
@@ -799,7 +859,7 @@ brand:
   #
   # Environment variable override: PWP__BRAND__SHOW_FOOTER_MENU='true'
   #
-  show_footer_menu: false
+  show_footer_menu: true
 
   ### Site logo
   #
@@ -860,67 +920,27 @@ brand:
   # Environment variable override: PWP__BRAND__ICON_144x144='/path/to/image'
   # ms_icon_144x144: 'ms-icon-144x144.png'
 
-### Throttling
+### Show version on the footer
 #
-# Configure the application throttling limits.
+# Enable/disable PasswordPusher version on the footer.
 #
-# Throttling enforces a minimum time interval
-# between subsequent HTTP requests from a particular client, as
-# well as by defining a maximum number of allowed HTTP requests
-# per a given time period (per second or minute)
+# Environment variable override:
+# PWP__SHOW_VERSION=true
 #
-# See https://github.com/rack/rack-attack
-#
-throttling:
-  # ..maximum number of allowed HTTP requests per minute
-  #
-  # Default: 120
-  #
-  # Environment Variable Override: PWP__THROTTLING__MINUTE='60'
-  minute: 120
+# Default: true
+show_version: true
 
-  # ..maximum number of allowed HTTP requests per second
-  #
-  # Default: 60
-  #
-  # Environment Variable Override: PWP__THROTTLING__SECOND='20'
-  second: 60
+### Show the GDPR cookie consent banner
+#
+# Enable/disable the GDPR cookie consent banner.
+#
+# Environment variable override:
+# PWP__SHOW_GDPR_CONSENT_BANNER=true
+#
+# Default: true
+show_gdpr_consent_banner: false
 
-### Trusted Proxies
-#
-# By default, Password Pusher will only proxy related headers from proxies on
-# the local network.  If you are using a proxy that is not on the local network,
-# you will need to add the IP address of the proxy to the list below.
-#
-# This is useful if you are using a remote reverse proxy such as Cloudflare to
-# serve the application.  If local, you can leave this setting as is.
-# 
-# Multiple IP addresses can be added by separating them with a comma.
-#
-# Environment Variable Override:
-# PWP__TRUSTED_PROXIES='<ipaddress>'
-# PWP__TRUSTED_PROXIES='<ipaddress1>,<ipaddress2>'
-#
-# trusted_proxies:
-#   - '1.2.3.4'
-#   - '2.3.4.5'
-
-## Cloudflare Proxy
-#
-# If you are using Cloudflare as a proxy, you will need to set the following
-# value to true.  This will cause the application to fetch the list of Cloudflare
-# proxy IP addresses and add them to the list of trusted proxies.
-#
-# Note that on application boot, this will trigger two HTTPs requests to fetch
-# the list of Cloudflare IP addresses.  The requests each have a timeout of 15 seconds
-# and may delay on container boot.
-#
-# Environment Variable Override:
-# PWP__CLOUDFLARE_PROXY='false'
-#
-cloudflare_proxy: false
-
-### Mail Server Configuration
+### Themes
 #
 # Password Pusher uses Bootswatch themes from https://bootswatch.com/
 #
@@ -1156,7 +1176,7 @@ throttling:
 # Environment variable override:
 # PWP__PURGE_AFTER='3 months'
 #
-purge_after: "disabled"
+purge_after: "3 months"
 
 # =============================================================================
 # Logging
@@ -1165,7 +1185,7 @@ purge_after: "disabled"
 # Configure the logging verbosity of the application.
 #
 # Valid values are: :debug, :info, :warn, :error, :fatal
-log_level: :info
+log_level: :warn
 
 # In containers, it is usually desired to log to stdout
 # instead of using log files (e.g. log/production.log).
