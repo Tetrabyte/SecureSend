@@ -67,7 +67,7 @@ Use the [hosted service](https://pwpush.com) or run your own instance with Docke
 ### Trust & community
 
 - **Open source** — Apache 2.0; no black box. Written and maintained by [myself](https://github.com/pglombardo) and the team at [Apnotic](https://apnotic.com) with the help of contributors.
-- **14+ years in production** — Used to deliver millions of secrets; [actively maintained](https://github.com/pglombardo/PasswordPusher/graphs/contributors).
+- **15+ years in production** — Used to deliver millions of secrets; [actively maintained](https://github.com/pglombardo/PasswordPusher/graphs/contributors).
 - **Trusted worldwide** — Used by thousands of companies around the globe.
 
 ---
@@ -232,6 +232,10 @@ More: [Contributors](https://github.com/pglombardo/PasswordPusher/graphs/contrib
 ---
 
 ## Donations
+
+🛑 **Because of some abuse, the donation link is temporarily disabled.  Contact support@pwpush.com if you'd like to donate**
+
+--> _To those testing various cards and failing, do what you do but please not here.  We can't risk getting the account flagged in Stripe - we're not big enough to deal with that type of damage.  I hope you can understand our position._
 
 Donations are **optional**. Password Pusher is and will remain open source and free to use.
 
