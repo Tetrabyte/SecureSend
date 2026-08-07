@@ -337,7 +337,7 @@ mail:
 
   # When using TLS, you can set how OpenSSL checks the certificate. This is
   # useful if you need to validate a self-signed and/or a wildcard certificate.
-  # This can be one of the OpenSSL verify constants, :none or :peer
+  # Must be a string name of an OpenSSL verify constant: 'none' or 'peer'
   # Environment Variable Override: PWP__MAIL__SMTP_OPENSSL_VERIFY_MODE='none'
   # smtp_openssl_verify_mode: 'peer'
 
@@ -940,6 +940,17 @@ show_version: true
 # Default: true
 show_gdpr_consent_banner: false
 
+### Block search engine indexing
+#
+# When true, adds <meta name="robots" content="noindex, nofollow"> to HTML pages.
+# Use for internal/staging instances that should not appear in search results.
+#
+# Environment variable override:
+# PWP__NOINDEX=true
+#
+# Default: true
+noindex: true
+
 ### Themes
 #
 # Password Pusher uses Bootswatch themes from https://bootswatch.com/
@@ -1154,6 +1165,35 @@ throttling:
   #
   # Environment Variable Override: PWP__THROTTLING__SECOND='20'
   second: 60
+
+### Notify by Email
+#
+# Configure the "Notify by Email" feature.
+# When a signed-in user creates a push, they can optionally have the
+# application email the secret link to one or more recipients on their behalf ("auto-dispatch").
+# Also, recipients can be notified by email after the push is created.
+#
+# See https://docs.pwpush.com/docs/notify-by-email/
+#
+notify_by_email:
+  # Set to false to disable Auto-Dispatch entirely (hides UI, blocks API).
+  #
+  # Default: true
+  #
+  # Environment Variable Override: PWP__NOTIFY_BY_EMAIL__ENABLED='false'
+  enabled: true
+
+  # Per-user daily cap on the number of notification emails that may be
+  # dispatched. Applies across all pushes owned by the user.
+  #
+  # Set to 0 to block all sends (UI still visible with a limit message).
+  # Set to null (or leave unset) for no cap.
+  # To fully disable the feature, use enabled: false above.
+  #
+  # Default: 500
+  #
+  # Environment Variable Override: PWP__NOTIFY_BY_EMAIL__DAILY_LIMIT='100'
+  daily_limit: 500
 
 ### Purge After
 #

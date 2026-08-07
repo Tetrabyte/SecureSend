@@ -17,6 +17,18 @@ class ApiV2PushesTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
+  def test_help_api_page_documents_notify_emails_endpoint
+    get "/help/api"
+
+    assert_response :success
+    assert_includes response.body, "POST /api/v2/pushes/:url_token/notify_emails"
+    assert_includes response.body, "Authentication and ownership are required"
+    assert_includes response.body, "route is not registered and requests return 404 Not Found"
+    assert_includes response.body, "Recipient(s) are added to the queue to be sent."
+    assert_includes response.body, '"notify_emails_to": ["are not available"]'
+    assert_includes response.body, "Too many email notification requests (notify_emails endpoint only)"
+  end
+
   def test_legacy_api_v1_docs_are_redirected
     get "/api"
     assert_response :redirect
@@ -107,6 +119,27 @@ class ApiV2PushesTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
+  def test_show_passphrase_is_rate_limited_after_five_attempts_per_push
+    push = pushes(:test_push)
+    push.update!(passphrase: "super-secret")
+
+    5.times do
+      get "/api/v2/pushes/#{push.url_token}",
+        params: {passphrase: "wrong-passphrase"},
+        as: :json
+
+      assert_response :unauthorized
+    end
+
+    get "/api/v2/pushes/#{push.url_token}",
+      params: {passphrase: "wrong-passphrase"},
+      as: :json
+
+    assert_response :too_many_requests
+    body = response.parsed_body
+    assert_match(/Too many passphrase attempts/, body["error"])
+  end
+
   def test_active_requires_authentication
     get "/api/v2/pushes/active", as: :json
     assert_response :unauthorized
@@ -144,6 +177,49 @@ class ApiV2PushesTest < ActionDispatch::IntegrationTest
       as: :json
 
     assert_response :success
+  end
+
+  def test_audit_includes_notify_by_email_details
+    push = pushes(:test_push)
+    owner = users(:giuliana)
+
+    get "/api/v2/pushes/#{push.url_token}/audit",
+      headers: bearer_headers(owner),
+      as: :json
+
+    body = JSON.parse(response.body)
+    log = body["logs"].select { |view| view["kind"] == "creation_email_send" }.first
+
+    assert_equal "en", log["notify_by_email"]["locale"]
+    assert_equal "one@example.com", log["notify_by_email"]["recipients"]
+    assert_equal "pending", log["notify_by_email"]["status"]
+    assert_nil log["notify_by_email"]["successful_sends"]
+    assert_nil log["notify_by_email"]["proceed_at"]
+  end
+
+  def test_audit_includes_notify_by_email_details_for_completed_notify_by_email
+    push = pushes(:test_push)
+    notify_by_email = notify_by_emails(:one)
+    owner = users(:giuliana)
+
+    Settings.stub(:notify_by_email_available?, true) do
+      travel_to Time.zone.local(2026, 1, 1, 1, 0, 0) do
+        SendNotifyByEmailJob.perform_now(notify_by_email.id)
+      end
+    end
+
+    get "/api/v2/pushes/#{push.url_token}/audit",
+      headers: bearer_headers(owner),
+      as: :json
+
+    body = JSON.parse(response.body)
+    log = body["logs"].find { |log| log["kind"] == "creation_email_send" }
+
+    assert_equal "one@example.com", log["notify_by_email"]["recipients"]
+    assert_equal "en", log["notify_by_email"]["locale"]
+    assert_equal "completed", log["notify_by_email"]["status"]
+    assert_equal "one@example.com", log["notify_by_email"]["successful_sends"]
+    assert_equal "2026-01-01T01:00:00.000Z", log["notify_by_email"]["proceed_at"]
   end
 
   def test_active_allows_authenticated_access
@@ -190,6 +266,27 @@ class ApiV2PushesTest < ActionDispatch::IntegrationTest
 
     assert_response :success
     assert push.reload.expired?
+  end
+
+  def test_destroy_forbidden_for_anonymous_push_when_not_deletable_by_viewer
+    post "/api/v2/pushes",
+      params: {
+        push: {
+          payload: "anonymous-secret",
+          deletable_by_viewer: false
+        }
+      },
+      as: :json
+    assert_response :created
+
+    token = JSON.parse(@response.body)["url_token"]
+    push = Push.find_by!(url_token: token)
+    assert_nil push.user_id
+    assert_equal false, push.deletable_by_viewer
+
+    delete "/api/v2/pushes/#{token}", as: :json
+    assert_response :unauthorized
+    assert_not push.reload.expired?
   end
 
   def test_create_requires_auth_when_allow_anonymous_disabled
@@ -320,5 +417,210 @@ class ApiV2PushesTest < ActionDispatch::IntegrationTest
     assert_equal "application/json; charset=utf-8", response.content_type
     body = JSON.parse(response.body)
     assert body["error"].present?
+  end
+
+  def test_create_with_notify_by_email_params_adds_a_job_to_the_queue
+    Settings.mail.smtp_address = "smtp.example.com"
+    user = users(:one)
+
+    send_email_job = assert_enqueued_with(job: SendNotifyByEmailJob) do
+      post "/api/v2/pushes",
+        params: {
+          push: {
+            payload: "some-secret",
+            notify_emails_to: "recipient@example.com",
+            notify_emails_to_locale: "en"
+          }
+        },
+        headers: bearer_headers(user),
+        as: :json
+
+      assert_response :success
+    end
+
+    notify_by_email_id = send_email_job.arguments.first
+    notify_by_email = NotifyByEmail.find(notify_by_email_id)
+
+    assert_equal "recipient@example.com", notify_by_email.recipients
+    assert_equal "en", notify_by_email.locale
+
+    body = JSON.parse(response.body)
+    assert_equal "recipient@example.com", body["notify_emails_to"]
+    assert_equal "en", body["notify_emails_to_locale"]
+  end
+
+  def test_create_with_notify_by_email_params_fails_when_feature_is_disabled
+    Settings.mail.smtp_address = "smtp.example.com"
+    Settings.notify_by_email.enabled = false
+    user = users(:one)
+
+    post "/api/v2/pushes",
+      params: {
+        push: {
+          payload: "some-secret",
+          notify_emails_to: "recipient@example.com",
+          notify_emails_to_locale: "en"
+        }
+      },
+      headers: bearer_headers(user),
+      as: :json
+
+    assert_response :unprocessable_entity
+    body = JSON.parse(response.body)
+    assert_equal "are not available", body["notify_emails_to"][0]
+    assert_equal "is not available", body["notify_emails_to_locale"][0]
+  end
+
+  def test_create_with_notify_by_email_params_fails_when_email_service_is_not_configured
+    user = users(:one)
+
+    post "/api/v2/pushes",
+      params: {
+        push: {
+          payload: "some-secret",
+          notify_emails_to: "recipient@example.com",
+          notify_emails_to_locale: "en"
+        }
+      },
+      headers: bearer_headers(user),
+      as: :json
+
+    assert_response :unprocessable_entity
+    body = JSON.parse(response.body)
+    assert_equal "are not available", body["notify_emails_to"][0]
+    assert_equal "is not available", body["notify_emails_to_locale"][0]
+  end
+
+  def test_create_with_notify_by_email_params_fails_when_user_is_not_signed_in
+    Settings.mail.smtp_address = "smtp.example.com"
+
+    post "/api/v2/pushes",
+      params: {
+        push: {
+          payload: "some-secret",
+          notify_emails_to: "recipient@example.com",
+          notify_emails_to_locale: "en"
+        }
+      },
+      as: :json
+
+    assert_response :unprocessable_entity
+    body = JSON.parse(response.body)
+    assert_equal "are not allowed for unknown users", body["notify_emails_to"][0]
+    assert_equal "is not allowed for unknown users", body["notify_emails_to_locale"][0]
+  end
+
+  def test_notify_emails_with_valid_params_returns_json_created
+    Settings.mail.smtp_address = "smtp.example.com"
+    push = pushes(:test_push)
+    owner = push.user
+
+    send_email_job = assert_enqueued_with(job: SendNotifyByEmailJob) do
+      post "/api/v2/pushes/#{push.url_token}/notify_emails",
+        params: {
+          notify_emails_to: "recipient@example.com",
+          notify_emails_to_locale: "en"
+        },
+        headers: bearer_headers(owner),
+        as: :json
+
+      assert_response :success
+      assert_equal "Recipient(s) are added to the queue to be sent.", JSON.parse(response.body)["message"]
+    end
+
+    notify_by_email_id = send_email_job.arguments.first
+    notify_by_email = NotifyByEmail.find(notify_by_email_id)
+
+    assert_equal "recipient@example.com", notify_by_email.recipients
+    assert_equal "en", notify_by_email.locale
+    assert_equal push, notify_by_email.push
+  end
+
+  def test_notify_emails_returns_not_found_when_feature_is_disabled
+    Settings.mail.smtp_address = "smtp.example.com"
+    Settings.notify_by_email.enabled = false
+    Rails.application.reload_routes!
+    push = pushes(:test_push)
+    owner = push.user
+
+    post "/api/v2/pushes/#{push.url_token}/notify_emails",
+      params: {
+        notify_emails_to: "recipient@example.com",
+        notify_emails_to_locale: "en"
+      },
+      headers: bearer_headers(owner),
+      as: :json
+
+    assert_response :not_found
+  end
+
+  def test_notify_emails_with_valid_params_returns_error_when_email_service_is_not_configured
+    push = pushes(:test_push)
+    owner = push.user
+
+    post "/api/v2/pushes/#{push.url_token}/notify_emails",
+      params: {
+        notify_emails_to: "recipient@example.com",
+        notify_emails_to_locale: "en"
+      },
+      headers: bearer_headers(owner),
+      as: :json
+
+    assert_response :unprocessable_entity
+
+    body = JSON.parse(response.body)
+    assert_equal "are not available", body["notify_emails_to"][0]
+    assert_equal "is not available", body["notify_emails_to_locale"][0]
+  end
+
+  def test_notify_emails_requires_authentication
+    push = pushes(:test_push)
+
+    post "/api/v2/pushes/#{push.url_token}/notify_emails",
+      params: {
+        notify_emails_to: "recipient@example.com",
+        notify_emails_to_locale: "en"
+      },
+      as: :json
+
+    assert_response :unauthorized
+  end
+
+  def test_notify_emails_forbidden_for_non_owner
+    push = pushes(:test_push)
+    non_owner = users(:one)
+
+    post "/api/v2/pushes/#{push.url_token}/notify_emails",
+      params: {
+        notify_emails_to: "recipient@example.com",
+        notify_emails_to_locale: "en"
+      },
+      headers: bearer_headers(non_owner),
+      as: :json
+
+    assert_response :forbidden
+  end
+
+  def test_notify_emails_is_rate_limited_after_five_bursts_per_user
+    Rails.cache.clear
+    Settings.mail.smtp_address = "smtp.example.com"
+    push = pushes(:test_push)
+    owner = push.user
+
+    5.times do |i|
+      post "/api/v2/pushes/#{push.url_token}/notify_emails",
+        params: {notify_emails_to: "recipient#{i}@example.com", notify_emails_to_locale: "en"},
+        headers: bearer_headers(owner),
+        as: :json
+    end
+
+    post "/api/v2/pushes/#{push.url_token}/notify_emails",
+      params: {notify_emails_to: "recipient5@example.com", notify_emails_to_locale: "en"},
+      headers: bearer_headers(owner),
+      as: :json
+
+    assert_response :too_many_requests
+    body = JSON.parse(response.body)
+    assert_match(/Too many email notification requests/, body["error"])
   end
 end

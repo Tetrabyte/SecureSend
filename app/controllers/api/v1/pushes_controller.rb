@@ -3,8 +3,15 @@
 class Api::V1::PushesController < Api::BaseController
   include SetPushAttributes
   include LogEvents
+  include Pwpush::AssignNotifiableByEmailFields
 
   before_action :set_push, only: %i[show preview audit destroy]
+
+  rate_limit to: 5, within: 1.minute, only: :show,
+    if: -> { params[:passphrase].present? },
+    by: -> { params[:id] },
+    scope: :passphrase_attempts, name: "per-push",
+    with: -> { render json: {error: I18n._("Too many passphrase attempts. Please try again in a minute.")}, status: :too_many_requests }
 
   resource_description do
     name "Pushes"
@@ -176,6 +183,8 @@ class Api::V1::PushesController < Api::BaseController
     assign_deletable_by_viewer(@push, permitted_params)
     assign_retrieval_step(@push, permitted_params)
 
+    assign_notify_by_email_fields(@push, required: false)
+
     if @push.save
       log_creation(@push)
 
@@ -253,7 +262,7 @@ class Api::V1::PushesController < Api::BaseController
     https://docs.pwpush.com/docs/json-api/
   EOS
   def audit
-    if @push.user != current_user
+    unless @push.owned_by?(current_user)
       render json: {error: I18n._("That push doesn't belong to you.")}, status: :forbidden
       return
     end
@@ -299,7 +308,7 @@ class Api::V1::PushesController < Api::BaseController
     https://docs.pwpush.com/docs/json-api/
   EOS
   def destroy
-    if (@push.user == current_user) || @push.deletable_by_viewer
+    if @push.deletable_by?(current_user)
       unless @push.expired?
         # Deletable by the owner or viewer
         @push.expire!

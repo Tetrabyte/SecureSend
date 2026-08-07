@@ -8,6 +8,7 @@ constraints(format: :json) do
         get "audit", on: :member
         get "active", on: :collection
         get "expired", on: :collection
+        post "notify_emails", on: :member if Settings.notify_by_email.enabled != false
       end
     end
   end

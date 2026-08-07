@@ -4,7 +4,7 @@ source "https://rubygems.org"
 
 ruby ENV["CUSTOM_RUBY_VERSION"] || ">=3.4.3"
 
-gem "rails", "~> 8.1.1"
+gem "rails", "~> 8.1.3"
 gem "propshaft"
 gem "importmap-rails"
 gem "turbo-rails"
@@ -60,7 +60,7 @@ gem "kramdown", require: false
 gem "lockbox"
 gem "terser", "~> 1.2"
 gem "bootstrap"
-gem "json", "~> 2.20" # Legacy carry-over
+gem "json", "~> 2.21" # Legacy carry-over
 gem "apipie-rails"
 gem "config"
 gem "devise", "~> 5.0"
@@ -79,7 +79,7 @@ gem "local_time"
 # For File Uploads
 gem "aws-sdk-s3", require: false
 gem "azure-blob", "~> 0.8.0", require: false
-gem "google-cloud-storage", "~> 1.61", require: false
+gem "google-cloud-storage", "~> 1.62", require: false
 
 # Database backends
 gem "mysql2"

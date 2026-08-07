@@ -3,6 +3,8 @@
 require "addressable/uri"
 
 class Push < ApplicationRecord
+  include Pwpush::NotifiableByEmail
+
   enum :kind, [:text, :file, :url, :qr], validate: true
 
   validate :check_enabled_push_kinds, on: :create
@@ -191,6 +193,19 @@ class Push < ApplicationRecord
     save!
   end
 
+  # True when +user+ is the authenticated owner of this push.
+  # Require a real owner id on both sides so nil == nil (anonymous push /
+  # non-persisted User.new) never counts as ownership.
+  def owned_by?(user)
+    user_id.present? && user.present? && user_id == user.id
+  end
+
+  # True when +user+ is the authenticated owner, or when viewer deletion is
+  # explicitly enabled.
+  def deletable_by?(user)
+    owned_by?(user) || deletable_by_viewer == true
+  end
+
   def settings_for_kind
     if text?
       Settings.pw
@@ -224,12 +239,22 @@ class Push < ApplicationRecord
   end
 
   def valid_url?(url)
-    !Addressable::URI.parse(url).scheme.nil?
+    scheme = Addressable::URI.parse(url)&.scheme&.downcase
+    %w[http https].include?(scheme)
   rescue Addressable::URI::InvalidURIError
     false
   end
 
   def deleted
     audit_logs.where(kind: AuditLog.kinds[:expire]).exists?
+  end
+
+  private
+
+  def notify_by_email_custom_validations
+    if expired?
+      errors.add(:notify_emails_to, _("are not available for expired pushes")) if notify_emails_to.present?
+      errors.add(:notify_emails_to_locale, _("is not available for expired pushes")) if notify_emails_to_locale.present?
+    end
   end
 end

@@ -3,10 +3,26 @@
 class PushesController < BaseController
   include SetPushAttributes
   include LogEvents
+  include Pwpush::AssignNotifiableByEmailFields
 
   before_action :clear_flash_for_delivery_pages, only: %i[show preliminary], prepend: true
   before_action :set_push, except: %i[new create index]
   before_action :check_allowed
+
+  rate_limit to: 5, within: 1.minute, only: :notify_emails,
+    by: -> { current_user&.id },
+    with: -> { redirect_to preview_push_path(@push), alert: I18n._("Too many email notification requests. Please try again in a minute.") }
+
+  rate_limit to: 5, within: 1.minute, only: :access,
+    by: -> { params[:id] },
+    scope: :passphrase_attempts, name: "per-push",
+    with: -> { redirect_to passphrase_push_path(@push), alert: I18n._("Too many passphrase attempts. Please try again in a minute.") }
+
+  rate_limit to: 5, within: 1.minute, only: :show,
+    if: -> { params[:passphrase].present? },
+    by: -> { params[:id] },
+    scope: :passphrase_attempts, name: "per-push",
+    with: -> { redirect_to passphrase_push_path(@push), alert: I18n._("Too many passphrase attempts. Please try again in a minute.") }
 
   def show
     # This push may have expired since the last view.  Validate the push
@@ -114,7 +130,7 @@ class PushesController < BaseController
   # GET /p/:url_token/edit
   def edit
     # Verify the push belongs to the current user
-    if @push.user_id != current_user.id
+    unless @push.owned_by?(current_user)
       redirect_to :root, notice: I18n._("That push doesn't belong to you.")
       return
     end
@@ -130,9 +146,11 @@ class PushesController < BaseController
 
     assign_deletable_by_viewer(@push, push_params)
     assign_retrieval_step(@push, push_params)
+    assign_notify_by_email_fields(@push, required: false)
 
     if @push.save
       log_creation(@push)
+      log_creation_email_send(@push)
 
       redirect_to preview_push_path(@push)
     else
@@ -154,7 +172,7 @@ class PushesController < BaseController
   # PATCH/PUT /p/:url_token
   def update
     # Verify the push belongs to the current user
-    if @push.user_id != current_user.id
+    unless @push.owned_by?(current_user)
       redirect_to :root, notice: I18n._("That push doesn't belong to you.")
       return
     end
@@ -245,6 +263,28 @@ class PushesController < BaseController
     @share_message = helpers.push_share_message_text(@push, secret_url: @secret_url)
   end
 
+  def notify_emails
+    authenticate_user!
+
+    unless @push.owned_by?(current_user)
+      redirect_to :root, notice: I18n._("That push doesn't belong to you.")
+      return
+    end
+
+    @push.assign_attributes(notify_emails_params)
+    assign_notify_by_email_fields(@push, required: true)
+
+    if @push.valid?
+      log_creation_email_send(@push)
+      redirect_to preview_push_path(@push), notice: I18n._("Recipient(s) are added to the queue to be sent.")
+    else
+      @secret_url = helpers.secret_url(@push)
+      @qr_code = helpers.qr_code(@secret_url)
+
+      render action: "preview", status: :unprocessable_content
+    end
+  end
+
   def print_preview
     @secret_url = helpers.secret_url(@push)
     @qr_code = helpers.qr_code(@secret_url)
@@ -282,7 +322,7 @@ class PushesController < BaseController
       end
       return
     end
-    if @push.user_id != current_user.id
+    unless @push.owned_by?(current_user)
       redirect_to :root, notice: I18n._("That push doesn't belong to you.")
       return
     end
@@ -292,7 +332,7 @@ class PushesController < BaseController
 
   def expire
     # Check if the push is deletable by the viewer or if the user is the owner
-    unless @push.deletable_by_viewer || (@push.user == current_user)
+    unless @push.deletable_by?(current_user)
       redirect_to :root, notice: I18n._("That push is not deletable by viewers and does not belong to you.")
       return
     end
@@ -312,7 +352,7 @@ class PushesController < BaseController
 
   def delete_file
     # Verify the push belongs to the current user
-    if @push.user_id != current_user.id
+    unless @push.owned_by?(current_user)
       redirect_to :root, notice: I18n._("That push doesn't belong to you.")
       return
     end
@@ -363,7 +403,12 @@ class PushesController < BaseController
   end
 
   def set_push
-    @push = Push.includes(:audit_logs).find_by!(url_token: params[:id])
+    @push = if action_name == "audit"
+      # If notify_by_email is included unnecessarily, it will cause memory usage unnecessarily.
+      Push.includes(audit_logs: :notify_by_email).find_by!(url_token: params[:id])
+    else
+      Push.includes(:audit_logs).find_by!(url_token: params[:id])
+    end
   rescue ActiveRecord::RecordNotFound
     # Showing a 404 reveals that this Secret URL never existed
     # which is an information leak (not a secret anymore)
@@ -380,16 +425,14 @@ class PushesController < BaseController
   end
 
   def push_params
+    base = %i[kind name expire_after_days expire_after_views retrieval_step payload note passphrase notify_emails_to notify_emails_to_locale]
     case params.dig(:push, :kind)
     when "url"
-      params.require(:push).permit(:kind, :name, :expire_after_days, :expire_after_views,
-        :retrieval_step, :payload, :note, :passphrase)
+      params.require(:push).permit(*base)
     when "file"
-      params.require(:push).permit(:kind, :name, :expire_after_days, :expire_after_views, :deletable_by_viewer,
-        :retrieval_step, :payload, :note, :passphrase, files: [])
+      params.require(:push).permit(*(base + [:deletable_by_viewer, {files: []}]))
     else
-      params.require(:push).permit(:kind, :name, :expire_after_days, :expire_after_views, :deletable_by_viewer,
-        :retrieval_step, :payload, :note, :passphrase)
+      params.require(:push).permit(*(base + [:deletable_by_viewer]))
     end
   rescue => e
     Rails.logger.error("Error in push_params: #{e.message}")
@@ -397,17 +440,15 @@ class PushesController < BaseController
   end
 
   def update_params
+    base = %i[name expire_after_days expire_after_views retrieval_step payload note passphrase]
     # Don't allow kind to be changed after creation for security
     case @push.kind
     when "url"
-      params.require(:push).permit(:name, :expire_after_days, :expire_after_views,
-        :retrieval_step, :payload, :note, :passphrase)
+      params.require(:push).permit(*base)
     when "file"
-      params.require(:push).permit(:name, :expire_after_days, :expire_after_views, :deletable_by_viewer,
-        :retrieval_step, :payload, :note, :passphrase, files: [])
+      params.require(:push).permit(*(base + [:deletable_by_viewer, {files: []}]))
     else
-      params.require(:push).permit(:name, :expire_after_days, :expire_after_views, :deletable_by_viewer,
-        :retrieval_step, :payload, :note, :passphrase)
+      params.require(:push).permit(*(base + [:deletable_by_viewer]))
     end
   rescue => e
     Rails.logger.error("Error in update_params: #{e.message}")
@@ -416,6 +457,10 @@ class PushesController < BaseController
 
   def print_preview_params
     params.permit(:id, :locale, :message, :show_expiration, :show_id)
+  end
+
+  def notify_emails_params
+    params.require(:push).permit(:notify_emails_to, :notify_emails_to_locale)
   end
 
   def set_kind_by_tab
@@ -459,7 +504,7 @@ class PushesController < BaseController
       return
     end
 
-    @push_kind = if %w[preview print_preview preliminary passphrase access show expire audit edit update delete_file].include?(action_name)
+    @push_kind = if %w[preview print_preview preliminary passphrase access show expire audit edit update delete_file notify_emails].include?(action_name)
       @push.kind
     elsif action_name == "new"
       case params["tab"]

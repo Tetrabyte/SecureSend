@@ -11,7 +11,7 @@ module LogEvents
     elsif user_signed_in? && current_user.admin?
       # Admin views take precedence over owner views
       log_event(push, :admin_view)
-    elsif user_signed_in? && push.user_id == current_user.id
+    elsif push.owned_by?(current_user)
       log_event(push, :owner_view)
     else
       log_event(push, :view)
@@ -21,6 +21,12 @@ module LogEvents
 
   def log_creation(push)
     log_event(push, :creation)
+  end
+
+  def log_creation_email_send(push)
+    return unless push.notify_by_email_recipients.present?
+
+    log_event(push, :creation_email_send)
   end
 
   def log_update(push)
@@ -38,7 +44,7 @@ module LogEvents
   def log_event(push, kind)
     return if audit_log_limit_reached?(push.audit_logs)
 
-    ip = request.env["HTTP_X_FORWARDED_FOR"].blank? ? request.env["REMOTE_ADDR"] : request.env["HTTP_X_FORWARDED_FOR"]
+    ip = request.remote_ip
 
     # Limit retrieved values to 256 characters
     user_agent = request.env["HTTP_USER_AGENT"].to_s[0, 255]
